@@ -1,0 +1,201 @@
+\documentclass[12pt]{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+\usepackage{color,soul}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{systeme}
+\usepackage{tkz-tab}
+\author{Destiné à la TerminaleS2\\Au Lycée de Dindéferlo}
+\title{\textbf{Fonction Exponentielle}}
+\date{\today}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage[a4paper,left=20mm,right=20mm,top=15mm,bottom=15mm]{geometry}
+\usepackage{mathtools}
+\usepackage{systeme}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+
+\DecimalMathComma
+
+\begin{document}
+
+\maketitle
+\newpage
+\subsection*{\underline{\textbf{\textcolor{red}{Exercice 1:}}}}
+1.Résoudre dans $\mathbb{R}$ les équations et inéquations suivantes :\\
+1. $(e^{x}-7)(e^{x}+4)=0$\quad\quad 2. $e^{\ln(1-x^{2}}=-2x+1$\quad\quad 3. $(e^{x}-7)(e^{x}+4)\geq 0$\\
+1. $2e^{2x}-11e^{x}+15=0$\quad\quad 2. $(x^{2}-1)e^{\ln(x-2)}={\ln}e^{x+1}$\quad\quad 
+3. $5e^{2x}+7e^{x}-6<0$\\
+\section*{\underline{\textbf{\textcolor{red}{Exercice 2:}}}}
+1. Déterminer la fonction dérivée de la fonction $f$. On précisera l’ensemble de définition de $f$ et celui de sa fonction dérivée $f'$\\
+1.$f(x)=e^{x^{2}}$\quad\quad\quad  4.$f(x)=e^{3x}-6e^{2x}+9e^{x}<0$\quad\quad\quad  
+7.$\frac{e^{x}-1}{e^{x}+2}$\\
+2.$f(x)=e^{2x}-2e^{x}$\quad\quad\quad  5.$f(x)=(x+3)e^{-x}$\quad\quad\quad  
+8.$f(x)=\frac{2e^{x}-1}{e^{x}-1}$\\
+3.$f(x)=(e^{x}-1)^{2}$\quad\quad\quad  6.$f(x)=x+4e^{-x}$\quad\quad\quad  
+9.$f(x)=xe^{\frac{1}{x+3}}$\\
+Déterminer les primitives sur $\mathbb{R}$ de la fonction $f$\\
+1.$f(x)=e^{3x}$\quad\quad 2.$f(x)=xe^{x^{2}}$\quad\quad 3.\(f(x)=\cos(x)e^{{\sin(x)}}\)\quad
+4.$f(x)=\frac{e^{x}}{e^{x}+1}$
+\subsection*{\underline{\textbf{\textcolor{red}{Exercice 3:}}}}
+Calculer les limites suivantes :\\
+\[1.\lim_{x \to +\infty}(e^{x}-1)\quad\quad 2.\lim_{x \to -\infty}(e^{x}-1)\quad\quad  3.\lim_{x \to +\infty}\frac{e^{x}-1}{e^{2x}+2}\quad\quad 4.\lim_{x \to -\infty}(e^{2x}-e^{x}) \quad\quad 5. \lim_{x \to 0}\frac{e^{x^{2}}-1}{1-\cos(x)}\]
+\[6.\lim_{x \to 0} e^{x}-x\ln|x|\quad\quad 7.\lim_{x \to -\infty} e^{x}-x\ln|x| 
+\quad\quad 8.\lim_{x \to +\infty}\frac{e^{2x}+1}{e^{x}-3}\quad\quad
+9.\lim_{x \to +\infty}\ln\vert\frac{e^{2x}+5}{e^{x}-2}\vert\]
+\[10.\lim_{x \to -\infty}{xe^{-\frac{1}{x^{2}}}}\quad\quad
+11.\lim_{x \to 0}\frac{{e^{3x}-1}}{2x}\quad\quad 12.\lim_{x \to +\infty} x-\ln(1+e^{x})\quad\quad 13.\lim_{x \to +\infty} \ln(e^{x}-1)-x\]
+\[14.\lim_{x \to 1^{+}}(x-1)e^{\frac{1}{x-1}}\quad\quad 
+15.\lim_{x \to 0}\frac{e^{3x}-e^{2x}}{x}\]
+\section*{\underline{\textbf{\textcolor{red}{Exercice 4: }}}}
+I.Soit la fonction $f$ définie par $f(x)=e^{x}+x+1$\\
+1. Étudier les variations de $f$.\\
+2. Montrer que l’équation $f (x) = 0$ admet une solution unique $\alpha$ dans $\mathbb{R}$.\\
+Montrer que $-1,28 \leq \alpha \leq -1,27.$\\
+3. En déduire le signe de $f (x)$ sur $\mathbb{R}$.\\
+II.Soit $g(x)=\frac{xe^{x}}{e^{x}+1}$ On note $C_{g}$ la courbe représentative de $g$ dans un repère orthonormé.\\
+1. Montrer que $g'(x)=\frac{e^{x}f(x)}{(e^{x}+1)^{2}}$\\
+En déduire le sens de variation de $g$ sur $\mathbb{R}$.\\
+2. Montrer que $g(\alpha) = \alpha + 1$.\\
+En déduire un encadrement de $g(\alpha)$.\\
+3. Soit $(T)$la tangente à $C_{g}$ en un point d’abscisse $0$.\\
+Étudier la position de $C_{g}$ par rapport à $(T)$.\\
+4. Démontrer que la droite $(D) : y = x$ est asymptote à $C_{g}$\\
+Étudier la position de $C_{g}$ par rapport à $(D)$.\\
+5. Dresser le tableau de variation de g.\\
+Tracer $C_{g}$, $(T)$ et $(D)$ dans le repère $(O;\vec{i};\vec{j})$.
+\subsection*{\underline{\textbf{\textcolor{red}{Exercice 5:}}}}
+On considère la fonction $f$ définie sur $\mathbb{R}$ par :\\
+\[ f(x) = \begin{cases} 
+  2x+(1-x)e^{x}, & \text{si } x < 0 \\
+  xe^{-2x}, & \text{si } \geq 0
+\end{cases} \]
+et $C_{f}$ sa courbe dans un repère orthonormé $(O,\vec{i},\vec{j})$ d’unité 2 cm.\\
+1. Déterminer l’ensemble de définition de f.\\
+2. (a) Etudier les limites de $f$ en $-\infty$ et en $+\infty$.\\
+(b) Interpréter graphiquement, si possible, les résultats obtenus.\\
+(c) Montrer que la droite $(\delta)$ d’équation $y = 2x$ est\\
+une asymptote oblique à $C_{f}$ en $-\infty$.\\
+3. Etudier la continuité de $f$ en 0.\\
+4. Soit $h$ la fonction définie sur $\left] -\infty;0  \right[$ par : $h(x) = 2 - xe^{x}$\\
+(a) Dresser le tableau de variations de $h$ sur $\left]-\infty; 0\right[ $.\\
+(b) En déduire son signe sur $\left] -\infty; 0\right[$ .\\
+5. (a) Etudier la dérivabilité de $f$ en $0$.\\
+(b) Interpréter graphiquement, si possible, les résultats obtenus.\\
+(c) Calculer $f'(x)$ dans chaque intervalle où $f$ est dérivable\\
+(d) Dresser le tableau de variations de $f$ sur $\mathbb{R}$.\\
+6. tracer la courbe $C_{f}$ dans le repère $(O,\vec{i},\vec{j})$.\\
+\section*{\underline{\textbf{\textcolor{red}{Exercice 6:}}}}
+Soit f la fonction définie par
+\[ f(x) = \begin{cases} 
+  1-\ln(x^{2}+1), & \text{si } x \leq 0 \\
+  -x^{2}+e^{-x}, & \text{si } > 0
+\end{cases} \]
+On désigne par $C_{f}$ sa courbe représentative.\\
+1. Etudier la dérivabilité de $f$ en 0.\\
+2. Etudier les branches infinies de $C_{f}$; démontrer que la parabole $(\Gamma)$ d’équation $y=-x^{2}$ est asymptote à $C_{f}$
+en $+\infty$.\\
+3. Compléter l’étude de f et construire $(\Gamma)$ et $C_{f}$.\\
+4. (a) Déduire de cette étude que $C_{f}$ coupe l’axe des abscisses en deux points dont l’un a une abscisse négative que l’on calculera.\\
+(b) Déterminer une valeur approchée à $10^{-1}$ près de\\ l’abscisse du deuxième point d’intersection.\\
+\subsection*{\underline{\textbf{\textcolor{red}{Exercice 7:}}}}
+I. On considère la fonction $g$ définie sur $\mathbb{R}^{*}$ par :\\
+$g(x)=(1+\frac{1}{x})e^{\frac{1}{x}}+1$\\
+1. Déterminer les limites aux bornes de l’ensemble de définition de g.\\
+2. Dresser le tableau de variations de g.\\
+3. En déduire que $\forall x \in \mathbb{R}^{*}, g(x)>0.$
+Soit f la fonction définie par :\\
+\[ \begin{cases} 
+  f(x)=\frac{x}{1+e^{\frac{1}{x}}}, & \text{si } x < 0 \\
+  fx)=x[1-\ln(x)]^{2}, & \text{si } > 0 \\
+  f(0)=0
+\end{cases} \]
+On désigne par (Cf ) sa courbe représentative dans un repère orthonormé 
+$(O,\vec{i},\vec{j})$. (unité 2 cm).\\
+1. Justifier que $f$ est définie sur $\mathbb{R}$.\\
+2. Calculer les limites aux bornes de $D_{f}$ .\\
+3. Etudier la continuité et la dérivabilité de f en 0. Interpréter les résultats.\\
+4. Montrer que la droite (D) d’équation $y=\frac{1}{2}x-\frac{1}{4}$ est asymptote à $C_{f}$ en $-\infty$. (On pourra poser $X=\frac{1}{x}$\\
+5. Etudier la nature de la branche infinies en $+\infty$.\\
+6. Montrer que $\forall x \in \left] -\infty; 0\right[$ , $f'(x)=\frac{g(x)}{(1+e^{\frac{1}{x}})^{2}}$\\
+7. Dresser le tableau de variation de f.\\
+8. Construire (Cf ) dans le repère $(O,\vec{i},\vec{j})$.\\
+III.Soit $h$ la restriction de $f$ à l’intervalle $I=\left[ e;+\infty\right[ $\\
+1. Montrer que h réalise une bijection de $I$ vers un intervalle $J$ à préciser. Dresser le tableau de variation de $h^{-1}$, la bijection réciproque de $h$.\\
+2. Etudier la dérivabilité de $h^{-1}$ sur $J$.\\
+3. Calculer $h(e^{2})$ puis $(h^{-1})'(e^{2})$\\
+4. Construire $(C_{h^{-1}})$, la courbe de $h^{-1}$ dans le repère $(O,\vec{i},\vec{j})$\\
+\section*{\underline{\textbf{\textcolor{red}{Exercice 8: }}}}
+Soit f la fonction de la variable réelle x définie par :\\
+$f(x)=\frac{e^{x}}{e^{x}+1}-\ln(1+e^{x})$\\
+1. (a) Étudier les variations de f.\\
+(b) Montrer que $\lim_{x \to +\infty} \left[f(x)-1+x \right]=0$. Que peut-on en déduire pour la courbe représentative de $f$?\\
+Tracer cette courbe (unité : 2cm).\\
+(c) Montrer que f réalise une bijection de $ \left] -\infty ; +\infty \right[ $
+vers $\left] -\infty ; 0\right[ $.\\
+2. Soit g la fonction de la variable réelle x définie par :\\
+$g(x)=e^{-x}\ln(1+e^{x})$.\\
+(a) Démontrer que g est dérivable sur $\mathbb{R}$.\\
+(b) Montrer que quel que soit le réel x, $g'(x)=e^{-x}f(x)$.\\
+(c) Montrer que :\[\lim_{x \to +\infty}g(x)=0\quad et \lim_{x \to -\infty}g(x)=1\]
+(d) Étudier les variations de g et tracer sa courbe représentative dans le repère précédent.\\
+3. Montrer que $g$ est une bijection de $\mathbb{R}$ sur un intervalle J à préciser.\\
+4. (a) Calculer $g(0)$.\\
+(b) Montrer que $g^{-1}$ est dérivable en ln(2).\\
+(c) Déterminer l’équation de la tangente à $C^{-1}_{g}$ au point d’abscisse ln(2).
+\subsection*{\underline{\textbf{\textcolor{red}{Exercice 9:}}}}
+\[ \begin{cases} 
+  f(x)=\frac{1}{x^{2}}e^{\frac{1}{x}}, & \text{si } x < 0 \\
+  fx)=x^{2}\ln(x), & \text{si } > 0 \\
+  f(0)=0
+\end{cases} \]
+1. (a) Étudier la continuité de $f$ en 0.\\
+(b) Étudier la dérivabilité de $f$ en 0. Interpréter les
+résultats.\\
+2. (a) Calculer les limites de $f$ en $-\infty$ et en $+\infty$.\\
+(b) Calculer $f'(x$), on précisera le domaine de dérivabilité de $f$.\\
+(c) Étudier le signe de $f'(x)$ et établir le tableau de variation de $f$.\\
+3. Étudier les branches infinies de la courbe de $f$.\\
+4. Tracer la courbe représentative de $f$ dans le plan muni du repère orthonormé 
+$(O,\vec{u},\vec{v})$\\ (unité : 4 cm).\\
+\section*{\underline{\textbf{\textcolor{red}{Exercice 10: }}}}
+\textbf{Partie A}\\ 
+1. Étudier sur $\mathbb{R}$ le signe de $4e^{2x}-5e^{x}+1.$\\
+2. Soit $\varphi$ la fonction définie par : $\varphi(x)=\ln(x)-2\sqrt{x}+2.$\\
+(a) Déterminer son domaine de définition $D_{\varphi}$ et calculer ses limites aux bornes de $D_{\varphi}$\\
+(b) Étudier ses variations et dresser son tableau de variations.\\
+(c) En déduire son signe.\\
+\textbf{Partie B}\\
+Soit f la fonction définie par :
+\[f(x)=\begin{cases} 
+  x+\frac{e^{x}}{2e^{x}-1}, & \text{si } x \leq 0 \\
+  1-x+\sqrt{x}\ln(x), & \text{si } > 0 
+\end{cases} \]
+On désigne par $C_{f}$ la courbe représentative de f dans un repère orthonormé d’unité 2 cm\\
+1. (a) Déterminer $D_{f}$ le domaine de définition de $f$.\\
+(b) Déterminer les limites de $f$ aux bornes de $D_{f}$ et étudier les branches infinies de $C_{f}$ .\\
+(c) Étudier la position de $C_{f}$ par rapport à l’asymptote non parallèle aux axes dans 
+$\left] -\infty, 0\right] $\\
+2. (a) Étudier la continuité de $f$ en 0.\\
+(b) Étudier la dérivabilité de f en 0 et interpréter graphiquement les résultats.\\
+3. Déterminer la dérivée de f et dresser le tableau de variations de f.\\
+4. Construire dans le repère les asymptotes, la courbe $C_{f}$ et les demi-tangentes. On remarquera que $f(1) = 0$ et $f'(1) = 0$\\
+\subsection*{\underline{\textbf{\textcolor{red}{Exercice 11:}}}}
+\section*{\underline{\textbf{\textcolor{red}{Exercice 12: }}}}
+\subsection*{\underline{\textbf{\textcolor{red}{Exercice 13:}}}}
+\section*{\underline{\textbf{\textcolor{red}{Exercice 14: }}}}
+\subsection*{\underline{\textbf{\textcolor{red}{Exercice 15:}}}}
+\section*{\underline{\textbf{\textcolor{red}{Exercice 16: }}}}
+\end{document}

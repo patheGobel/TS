@@ -1,0 +1,170 @@
+\documentclass[12pt]{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+\usepackage{color, soul}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+
+\author{Lycée de Dindéfelo\\Mr BA}
+\title{\textbf{Statistiques}}
+\date{\today}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, fit}
+
+% Commande pour la couleur d'accentuation
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\begin{document}
+\maketitle
+\newpage
+\section*{\underline{\textbf{\textcolor{red}{I Rappels : Série statistique à une variable}}}}
+Soit X une série statistique quantitative
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{Modalités} \( x_i \) & \( x_1 \) & \( x_2 \) & \( x_3 \) & \ldots & \( x_p \) \\
+\hline
+\textbf{Effectifs} \( n_i \) & \( n_1 \) & \( n_2 \) & \( n_3 \) & \ldots & \( n_p \) \\
+\hline
+\end{tabular}
+\end{table}
+\subsection*{\underline{\textbf{\textcolor{red}{1. Fréquence :}}}}
+La fréquence de la modalité $x_{i}$ est le nombre $\frac{n_{i}}{N}$ ou $n_{i}$ est l’effectif de la modalité $x_{i}$ et $N$ l’effectif total \[N=n_{1}+n_{2}+\cdots+n_{p}=\sum_{i=1}^{p}n_{i}\] 
+Remarque : \[\sum_{i=1}^{p}f_{i}=\frac{n_{1}+n_{2}+\cdots+n_{p}}{N}=1\]
+\subsection*{\underline{\textbf{\textcolor{red}{2.	Moyenne :}}}}
+La moyenne de cette série est le réel noté  $\overline{x}$  définie par : 
+
+\[\overline{x}=\frac{n_{1}x_{1}+n_{2}x_{2}+\cdots+n_{p}x_{p}}{N}=\frac{\sum_{i=1}^{p}n_{i}x_{i}}{N}\]
+ou \[\overline{x}=f_{1}x_{1}+f_{2}x_{2}+\cdots+f_{p}x_{p}=\sum_{i=1}^{p}f_{i}x_{i}\]
+\subsection*{\underline{\textbf{\textcolor{red}{3.	Variance :}}}}
+La variance de cette série est le réel positif $V(x)$ définie par :
+
+\[V(x)=\frac{n_{1}(x_{1}-\overline{x})^{2}+n_{2}(x_{2}-\overline{x})^{2}\cdots+...+ 
+n_{p}(x_{p}-\overline{x})^{2}}{N}=\frac{1}{N}\sum_{i=1}^{p}n_{i}(x_{i}-\overline{x})^{2} \]
+ou
+\[V(x)=f_{1}(x_{1}-\overline{x})^{2}+f_{2}(x_{2}-\overline{x})^{2}\cdots+...+ 
+f_{p}(x_{p}-\overline{x})^{2}=\sum_{i=1}^{p}f_{i}(x_{i}-\overline{x})^{2}\]
+ou
+\[V(x)=\frac{1}{N}(n_{1}x_{1}^{2}+n_{2}x_{2}^{2}+\cdots+n_{p}x_{p}^{2})\quad\textbf{moyenne des carrés – le carré de la moyenne}\]
+\subsection*{\underline{\textbf{\textcolor{red}{Remarque :}}}}
+Pour effectuer un calcul de la variance, la formule (3)  qui porte le nom de formule de König est en général plus simple à utiliser. 
+\subsection*{\underline{\textbf{\textcolor{red}{4.	Ecart type  }}}}
+l’écart type d’une série statistique est la racine carrée de la variance on le note 
+
+$\sigma_{X}=\sqrt{V(x)}$
+\subsection*{\underline{\textbf{\textcolor{red}{5.	Exercice d’application }}}}
+On donne les notes de 20 élèves à un devoir de mathématiques :
+12;  9; 11; 14;  9; 8 ; 15 ; 7 ; 4 ; 18 ; 12 ; 7 ; 14 ; 12 ; 15 ; 8 ; 15 ; 11 ; 12 ; 11.
+
+1.	Dresser le tableau des effectifs et des fréquences de cette série notée X.
+
+2.	Calculer la moyenne, la variance et l’écart type de cette série.
+
+3.	regrouper les notes par classe d’amplitude 4, puis calculer la moyenne, la variance et l’écart type correspondant
+\subsection*{\underline{\textbf{\textcolor{red}{Solution :}}}}
+1.	Tableau des effectifs et des fréquences
+
+\begin{table}[h]
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\textbf{Notes} \( x_i \) & 4 & 7 & 8 & 9 & 11 & 12 & 14 & 15 & 18 \\
+\hline
+\textbf{Effectifs} \( n_i \) & 1 & 2 & 2 & 2 & 3 & 4 & 2 & 3 & 1 \\
+\hline
+\textbf{Fréquence} \( f_i \) & 0.05 & 0.10 & 0.10 & 0.10 & 0.15 & 0.20 & 0.10 & 0.15 & 0.05 \\
+\hline
+\end{tabular}
+\end{table}
+2.	la moyenne de cette série est                                                                         
+
+Soit $\overline{x}=\frac{224}{20}=11.2$
+
+$\overline{x}= (4 1 +7 2 + 8 2 + 9 2 + 11 3 + 12 4 +14 2 +15 3 +18 1)$
+
+Calcule de la variance
+\[
+V(x) = \left( 4^2 \times 1 + 7^2 \times 2 + 8^2 \times 2 + 9^2 \times 2 + 11^2 \times 3 + 12^2 \times 4 + 14^2 \times 2 + 15^2 \times 3 + 18^2 \times 1 \right) - 11,2^2
+\]
+
+Soit \[V(x)=\frac{2734}{20}-11,2^{2}=11,26\]
+L'écart type est $\sigma_{X}=\sqrt{11,26}$ soit $\sigma_{X}=3.33$
+
+\begin{table}[h]
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Classe}  & $[4 ; 8[$ & $[8 ; 12[$ & $[12 ; 16[$ & $[16 ; 20[$ \\
+\hline
+\textbf{Effectifs}  & $3$ & $7$  & $9$ & $1$  \\
+\hline
+\textbf{centre}  & $6$ & $10$ & $14$ & $18$  \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Rappel :} le centre de l’intervalle   
+
+ $[4 ; 8[$ est le nombre $\frac{a+b}{2}$  
+ 
+Les centres des intervalles seront considérés comme les modalités  
+
+On trouve  $=\frac{232}{20}=11,6$, $V(X)=\frac{2896}{20}-(11,6)^{2}$ soit $V(X)=10,24$ et $\sigma_{X}=3,2$
+\section*{\underline{\textbf{\textcolor{red}{II. Série statistique double}}}}
+L’étude simultanée de deux caractères $X$ et $Y$ sur une même population   donne une série statistique double ${(x_{i} , y_{j}, n_{ij})}$   $1\leq i\leq  p$ et $1\leq j\leq q$
+
+Où les $xi$ sont les modalités du caractère $X$ et les $y_{j}$ celles de $Y$ et les nij l’effectif du couple   $(x_{i} , y_{j})$.
+
+Exemple : On relevé les notes sur $10$ de dictée $(X)$ et de calcul $(Y$) d’une classe de $CM2$ de $30$ élèves. On a obtenu les résultats suivants
+
+\begin{table}[h]
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$X\setminus Y$  & $2$ & $3$ & $4$ & $5$ & $7$ &  \\
+\hline
+$0$ & $1$ & $1$ & $2$ & $1$ & $1$ & $n_{1}=6$ \\
+\hline
+$1$  & $3$ & $1$ & $1$ & $1$ & $1$ & $n_{2}=7$ \\
+\hline
+$3$ & $0$ & $0$ & $1$ & $1$ & $1$ & $n_{3}=3$ \\
+\hline
+$4$  & $0$ & $1$ & $0$ & $0$ & $1$ & $n_{4}=2$ \\
+\hline
+$5$ & $0$ & $0$ & $1$ & $0$ & $1$ & $n_{5}=2$ \\
+\hline
+$6$  & $1$ & $0$ & $1$ & $1$ & $0$ & $n_{6}=3$ \\
+\hline
+$7$ & $1$ & $2$ & $0$ & $1$ & $0$ & $n_{7}=4$ \\
+\hline
+$8$  & $1$ & $0$ & $0$ & $1$ & $0$ & $n_{8}=3$ \\
+\hline
+  & $n_{1}=7$ & $n_{2}=5$ & $n_{3}=7$ & $n_{4}=6$ & $n_{5}=5$ & $N=30$ \\
+\hline
+\end{tabular}
+\end{table}
+
+Tableau de contingence, l’élément de la $i^{iéme}$ ligne et de la $j^{ième}$ colonne est l’effectif $n_{ij}$ du couple $(x_{i},y_{j})$
+
+L’ensemble des triplets 
+$\left\lbrace (x_{i},y_{i},n_{ij}) \right\rbrace^{1\leq i \leq 8}_{1\leq j \leq8} $
+\subsection*{\textbf{\textcolor{red}{Première série marginale :}}}
+C’est l’ensemble des couples $(x_{i},y_{j}) 1\leq i\leq p$  où les $n_{i}=\sum_{j=1}^{q}n_{ij}$ (la somme des effectifs $n_{ij}$ de la $i^{ième}$ ligne)  La première série marginale de l’exemple précédent est : 
+$\left\lbrace (x_{1}, n_{1}) ; (x_{2}, n_{2}) ; …  ; (x_{8}, n_{8})\right\rbrace $   où  
+
+$\left\lbrace (0,6) ; (1,7) ; (3,3) ; (4,2) ; (5,2) ; (6,3) ; (7,4) ; (8,3)\right\rbrace $
+\section*{\underline{\textbf{\textcolor{red}{I. Définitions}}}}
+\section*{\underline{\textbf{\textcolor{red}{I. Définitions}}}}
+\section*{\underline{\textbf{\textcolor{red}{I. Définitions}}}}
+\section*{\underline{\textbf{\textcolor{red}{I. Définitions}}}}
+\section*{\underline{\textbf{\textcolor{red}{I. Définitions}}}}
+\end{document}

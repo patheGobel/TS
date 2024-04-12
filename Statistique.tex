@@ -125,9 +125,8 @@ L’étude simultanée de deux caractères $X$ et $Y$ sur une même population  
 
 Où les $xi$ sont les modalités du caractère $X$ et les $y_{j}$ celles de $Y$ et les nij l’effectif du couple   $(x_{i} , y_{j})$.
 
-Exemple : On relevé les notes sur $10$ de dictée $(X)$ et de calcul $(Y$) d’une classe de $CM2$ de $30$ élèves. On a obtenu les résultats suivants
-
-\begin{table}[h]
+Exemple : On relevé les notes sur $10$ de dictée $(X)$ et de calcul $(Y$) d’une classe de $CM2$ de $30$ élèves. On a obtenu les résultats suivants\\
+\\
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
 $X\setminus Y$  & $2$ & $3$ & $4$ & $5$ & $7$ &  \\
@@ -151,20 +150,302 @@ $8$  & $1$ & $0$ & $0$ & $1$ & $0$ & $n_{8}=3$ \\
   & $n_{1}=7$ & $n_{2}=5$ & $n_{3}=7$ & $n_{4}=6$ & $n_{5}=5$ & $N=30$ \\
 \hline
 \end{tabular}
-\end{table}
 
 Tableau de contingence, l’élément de la $i^{iéme}$ ligne et de la $j^{ième}$ colonne est l’effectif $n_{ij}$ du couple $(x_{i},y_{j})$
 
 L’ensemble des triplets 
 $\left\lbrace (x_{i},y_{i},n_{ij}) \right\rbrace^{1\leq i \leq 8}_{1\leq j \leq8} $
+
 \subsection*{\textbf{\textcolor{red}{Première série marginale :}}}
 C’est l’ensemble des couples $(x_{i},y_{j}) 1\leq i\leq p$  où les $n_{i}=\sum_{j=1}^{q}n_{ij}$ (la somme des effectifs $n_{ij}$ de la $i^{ième}$ ligne)  La première série marginale de l’exemple précédent est : 
 $\left\lbrace (x_{1}, n_{1}) ; (x_{2}, n_{2}) ; …  ; (x_{8}, n_{8})\right\rbrace $   où  
 
 $\left\lbrace (0,6) ; (1,7) ; (3,3) ; (4,2) ; (5,2) ; (6,3) ; (7,4) ; (8,3)\right\rbrace $
-\section*{\underline{\textbf{\textcolor{red}{I. Définitions}}}}
-\section*{\underline{\textbf{\textcolor{red}{I. Définitions}}}}
-\section*{\underline{\textbf{\textcolor{red}{I. Définitions}}}}
-\section*{\underline{\textbf{\textcolor{red}{I. Définitions}}}}
-\section*{\underline{\textbf{\textcolor{red}{I. Définitions}}}}
+
+\begin{table}[h]
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+$x_{i}$  & $0$ & $1$ & $3$ & $4$ & $5$ & $6$ & $7$ \\
+\hline
+$n_{i}$  & $6$ & $7$  & $3$ & $2$ & $2$ & $3$ & $3$  \\
+\hline
+\end{tabular}
+\end{table}
+\subsection*{\textbf{\textcolor{red}{Moyenne et variance de X :}}}
+on applique les formules 
+\[\overline{x}=\frac{1}{N}\sum_{i=1}^{p}n_{i}x_{i}\quad;\quad (\sigma_{X})^{2}=\frac{1}{N}\sum_{i=1}^{p}n_{i}(x_{i}-\overline{x})^{2}\]
+\subsection*{\textbf{\textcolor{red}{Deuxième série marginale :}}}
+c’est l’ensemble des couples $(y_{j},n_{j})1\leq j\leq q$
+
+\[n_{j}=\sum_{i=1}^{p}n_{ij} \textbf{(la somme des effectifs $n_{ij}$ de la $j^{ième}$ colonne)} \]   
+\subsection*{\textbf{\textcolor{red}{Moyenne et variance de Y:}}}
+on applique les formules 
+\[\overline{y}=\frac{1}{N}\sum_{j=1}^{q}n_{j}x_{j}\quad;\quad (\sigma_{y})^{2}=\frac{1}{N}\sum_{j=1}^{q}n_{j}(y_{j}-\overline{y})^{2}\]
+\subsection*{\underline{\textbf{\textcolor{red}{Remarque : série statistique double injective}}}}
+Une série statistique est dite injective lors que : 
+\[n_{ij}=\delta_{ij}=
+\left\{
+\begin{array}{rcl}
+0 & \textbf{si}\quad i\neq j \\
+1 & \textbf{si}\quad i = j
+\end{array}
+\right.
+\]
+lors que X et Y ont le même nombre de valeur ont lui fait correspondre un tableau statistique du type 
+
+\begin{table}[h]
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$X$  & $X_{1}$ & $X_{2}$ & $\cdots$ & $X_{n}$ \\
+\hline
+$Y$  & $Y_{1}$ & $Y_{2}$ & $\cdots$ & $Y_{n}$   \\
+\hline
+\end{tabular}
+\end{table}
+Dans ce tableau chaque couple $(x_{i}, y_{i})$ a pour effectif 1
+
+Pour une série statistique injective on a : \[\overline{x}=\frac{1}{n}\sum_{i=1}^{p}x_{i}\quad;\quad (\sigma_{X})^{2}=\frac{1}{n}\sum_{i=1}^{p}(x_{i}-\overline{x})^{2}=\frac{1}{n}\sum_{i=1}^{p}(x_{i}^{2}-\overline{x}^{2})\]
+
+\[\overline{y}=\frac{1}{n}\sum_{i=1}^{p}y_{i}\quad;\quad (\sigma_{Y})^{2}=\frac{1}{n}\sum_{i=1}^{p}(y_{i}-\overline{y})^{2}=\frac{1}{n}\sum_{i=1}^{p}(y_{i}^{2}-\overline{y}^{2})\]
+\subsection*{\underline{\textbf{\textcolor{red}{Représentation graphique d’une série double}}}}
+Dans un repère orthogonal, on porte en abscisse $x_{i}$ et en ordonnées les $y_{j}$, les points 
+$M_{ij}(x_{i} ; y_{j})$ auront un coefficient égal à $n_{ij}$ et on note $M_{ij}(n_{ij})$
+
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-1.360000000000001,
+xmax=32.360000000000014,
+ymin=-1,
+ymax=11.96,
+xtick={-3,-2,...,32},
+ytick={-7,-6,...,11},]
+\clip(-3.36,-7) rectangle (32.36,11.96);
+\draw [line width=2pt] (1,0)-- (1,2);
+\draw [line width=2pt] (0,2)-- (1,2);
+\draw [line width=2pt] (0,1)-- (2,1);
+\draw [line width=2pt] (2,0)-- (2,1);
+\draw [line width=2pt] (3,0)-- (3,3);
+\draw [line width=2pt] (0,3)-- (3,3);
+\draw [line width=2pt] (4,0)-- (4,4);
+\draw [line width=2pt] (0,4)-- (4,4);
+\draw [line width=2pt] (4,3)-- (3,3);
+\draw [line width=2pt] (3,4)-- (3,3);
+\begin{scriptsize}
+\draw [fill=xdxdff] (1,0) circle (2.5pt);
+\draw[color=xdxdff] (0.96,-0.7) node {$x_{1}$};
+\draw [fill=ududff] (1,2) circle (2.5pt);
+\draw[color=ududff] (1.16,2.43) node {$M_{12}$};
+\draw [fill=xdxdff] (0,2) circle (2.5pt);
+\draw[color=xdxdff] (-0.52,2.33) node {$y_{2}$};
+\draw [fill=xdxdff] (0,1) circle (2.5pt);
+\draw[color=xdxdff] (-0.44,1.29) node {$y_{1}$};
+\draw [fill=ududff] (2,1) circle (2.5pt);
+\draw[color=ududff] (2.16,1.43) node {$M_{21}$};
+\draw[color=ududff] (1.4,1.43) node {$M_{21}$};
+\draw [fill=xdxdff] (2,0) circle (2.5pt);
+\draw[color=xdxdff] (2.02,-0.7) node {$x_{2}$};
+\draw [fill=xdxdff] (3,0) circle (2.5pt);
+\draw[color=xdxdff] (2.86,-0.7) node {$x_{3}$};
+\draw [fill=ududff] (3,3) circle (2.5pt);
+\draw[color=ududff] (3.35,3.43) node {$M_{33}$};
+\draw [fill=xdxdff] (0,3) circle (2.5pt);
+\draw[color=xdxdff] (-0.48,3.31) node {$y_{3}$};
+\draw [fill=xdxdff] (4,0) circle (2.5pt);
+\draw[color=xdxdff] (4.02,-0.7) node {$x_{4}$};
+\draw [fill=ududff] (4,4) circle (2.5pt);
+\draw[color=ududff] (4.16,4.43) node {$M_{44}$};
+\draw [fill=xdxdff] (0,4) circle (2.5pt);
+\draw[color=xdxdff] (-0.4,4.39) node {$y_{4}$};
+\draw [fill=xdxdff] (4,3) circle (2.5pt);
+\draw[color=xdxdff] (4.4,3.43) node {$M_{43}$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+
+L’ensemble des points $M_{ij}(n_{ij})$ est appelé \textbf{nuage de points} de la série double   
+$\left\lbrace (x_{i} , y_{j}, n_{ij}) \right\rbrace $
+
+Le barycentre des points pondérés $( M_{ij}, n_{ij})$ est appelé \textbf{point moyen} du nuage de point $G( , )$.
+Cas d’une série injective ${(x_{i} , y_{i})}$, le nuage de point est formé des points 
+$M_{i} (x_{i} , y_{i})$
+\subsection*{\underline{\textbf{\textcolor{red}{Ajustement linéaire}}}}
+$\bullet$ \textbf{la méthode des moindres carrés} 
+Lors que les points $M_{i}$ du nuage sont alignés on dit qu’il y’a une corrélation parfaite entre les grandeurs $X$ et $Y$ : ces deux grandeurs varient dans le même sens ou dans le sens contraire ; il existe alors une relation affine du type $y= ax + b$ entre les valeurs de $X$ et de $Y$ permettant de prévoir l’une des grandeurs à partir de l’autre.
+Lors que les points $M_{i}$ ne sont pas alignés, on essaie de trouver une droite $(D)$ « la moins éloignée possible » des points Mi du nuage ; on dit qu’on fait un ajustement linéaire et la droite $(D)$ sera appelée droite d’ajustement.
+Ceci se fait lors que les points du nuage semblent être distribués autour d’une droite.
+
+\textbf{Droite de régression$D_{Y/X}$}
+
+\subsection*{\textbf{\textcolor{red}{Graphe}}}
+
+\textbf{Covariance}
+
+La covariance d’une série double $(X,Y)$ est le réel noté $cov(X,Y)$ ou défini par $\sigma_{XY}$ 
+
+\[\sigma_{XY}=\frac{n_{11}x_{1}y_{1}+n_{12}x_{1}y_{2}+\cdots}{N}=\frac{1}{N}\sum_{i=1}^{n}n_{ij}x_{i}y_{j}-\overline{x}\overline{y}\]
+Si la série est injective on aura                                                           
+\[\sigma_{XY}=\frac{x_{1}y_{1}+x_{2}y_{2}+\cdots}{N}=\frac{1}{N}\sum_{i=1}^{n}x_{i}y_{j}-\overline{x}\overline{y}=\frac{1}{N}\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})\]
+\textbf{La droite $D_{Y/X}$  a pour équation $D_{Y/X}$ : $ax+( \overline{y}-a\overline{x}$ )}
+\textbf{Soit $D_{Y/X} : y -\overline{y}= a(x -\overline{x})$ avec  $a = \frac{\sigma_{XY}}{\sigma_{X}^{2}}$ ou $y = ax + b$   avec $b = y-a\overline{x}$}
+
+\textbf{Droite de régression de  $X$ en $Y$ : $D_{X/Y}$}
+
+La droite  $D_{X/Y} :  x-\overline{x} =\alpha(y-\overline{y})$  ou $x = \alpha y +\beta $        
+avec $\alpha = \frac{\sigma_{XY}}{\sigma_{Y}^{2}}$ et $\beta = \overline{x}-\beta \overline{y}$
+
+$\bullet$ \textbf{Méthode de MAYER} 
+
+Elle consiste à partager la série statistique double en deux séries doubles et de déterminer les points moyens $G1$ et $G2$ de chaque série.
+
+La droite $(G1G2)$ est appelée droite d’ajustement de MAYER
+
+\subsection*{\underline{\textbf{\textcolor{red}{Exemple}}}}
+On  a fait uine enquête sur cent familles portant sur le nombre d’enfants par famille $(X)$ et le nombre de piéces d’habitation par famille $(Y)$.
+Les résultats sont donnés dans le tableau ci-dessous :\\
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+$Y\setminus X$  & $0$ & $1$ & $2$ & $3$ & $4$ &$5$ & $Y$\\
+\hline
+$1$ & $8$ & $2$ & $1$ & $0$ & $0$ & $0$ &\\
+\hline
+$2	$  & $3$ & $11$ & $10$ & $5$ & $1$ & $0$ &\\
+\hline
+$3$ & $1$ & $3$ & $16$ & $13$ & $4$ & $1$ &\\
+\hline
+$4$  & $0$ & $1$ & $3$ & $5$ & $8$ & $4$ &\\
+\hline
+$X$ &  &  &  & & & &\\
+\hline
+\end{tabular}\\
+\\
+\begin{itemize}
+\item[1].A l’aide de ce tableau reconstituer les séries statistiques marginales.
+
+\item[2].On partage la série statistique en deux séries statistiques doubles $S1$ et $S2$\\
+\end{itemize}
+\textbf{S1}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$Y\setminus X$  & $0$ & $1$ & $2$ & $Y$ \\
+\hline
+$1$ & $8$ & $2$ & $1$ &   \\
+\hline
+$2	$  & $3$ & $11$ & $10$ &   \\
+\hline
+$3$ & $1$ & $3$ & $16$ & \\
+\hline
+$4$  & $0$ & $1$ & $3$ &   \\
+\hline
+$X$ &  &  &  &   \\
+\hline
+\end{tabular}
+\textbf{S2}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$Y\setminus X$  & $3$ & $4$ & $5$ & $Y$ \\
+\hline
+$1$ & $0$ & $0$ & $0$ &   \\
+\hline
+$2	$  & $5$ & $1$ & $0$ &   \\
+\hline
+$3$ & $13$ & $4$ & $1$ & \\
+\hline
+$4$  & $5$ & $8$ & $4$ &   \\
+\hline
+$X$ &  &  &  &   \\
+\hline
+\end{tabular}\\
+\\
+\begin{itemize}
+\item[3]. déterminer leur point moyen respectif $G1$ et $G2$ 
+
+\item[4]. déterminer une équation de la droite $(G1G2)$
+
+\item[5]. estimer le nombre de pièces d’habitation d’une famille ayant $6$ enfants
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{Coefficient de corrélation linéaire :}}}}
+Le réel $r =\frac{\sigma_{XY}}{\sigma_{X}\sigma_{Y}}$ avec $\sigma_{X}$ et $\sigma_{X}$ non nuls est appelé coefficient de corrélation linéaire de X et de Y.
+
+On a  $a=\frac{r\sigma_{Y}}{\sigma_{Y}}$ et $\alpha=\frac{r\sigma_{Y}}{\sigma_{Y}}$
+\subsection*{\underline{\textbf{\textcolor{red}{Remarque :}}}}
+•	Lors que r<0, X et Y varient en sens inverse, on dit qu’il y’a une corrélation négative entre X et Y.
+
+•	Lors que r<0 X et Y varient dans le même sens, on dit qu’il y’a une corrélation positive entre X et Y.
+
+•	Si r = 0, on ne peut trouver aucune relation affine entre X et Y ; on dit que les caractères X et Y sont indépendants.
+
+•	Si r est proche de 1 en valeur absolue on dit qu’il y’a une bonne corrélation
+
+•	Si r est proche de 0, on dit que la corrélation est faible.
+
+\textbf{Exercice 1}
+
+Dans une classe de première S de 20 élèves, on a relevé les poids (X) en kg et tailles (Y) en cm des élèves.
+
+\begin{table}[h]
+%\centering
+%\caption{Poids et tailles des élèves}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{X (kg)} & 54 & 63 & 60 & 58 & 63 & 83 & 83 & 83 & 72 & 68 \\ 
+\hline
+\textbf{Y (cm)} & 165 & 183 & 178 & 168 & 175 & 180 & 173 & 180 & 173 & 179 \\ 
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Poids et tailles des élèves (suite)}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{X (kg)} & 66 & 72 & 66 & 67 & 72 & 68 & 83 & 76 & 76 & 68 \\ 
+\hline
+\textbf{Y (cm)} & 175 & 180 & 168 & 171 & 173 & 178 & 183 & 168 & 173 & 178 \\ 
+\hline
+\end{tabular}
+\end{table}
+
+\begin{enumerate}
+\item Dresser le tableau de contingence.
+\item Calculer $\sigma_x$, $\sigma_y$ et $\sigma_{xy}$.
+\item En déduire le coefficient de corrélation.
+\item 
+    \begin{enumerate}
+    \item On s'intéresse maintenant à tous les élèves dont le poids est 83 kg. Combien y en a-t-il ?
+    \item Calculer les fréquences: $f(173/83)$ et $f(165/83)$.
+    \end{enumerate}
+\item 
+    \begin{enumerate}
+    \item On s'intéresse maintenant à tous les élèves dont la taille est 180 cm. Combien y en a-t-il ?
+    \item Calculer les fréquences $f(54/180)$ et $f(58/180)$.
+    \end{enumerate}
+\end{enumerate}
+
+\section*{Exercice 2}
+
+Une entreprise a mis au point un nouveau produit et cherche à en fixer le prix de vente. Une enquête est réalisée auprès des clients potentiels ; les résultats sont donnés dans le tableau suivant où les $y_i$ représentent le nombre d'exemplaires du produit que les clients sont disposés à acheter si le prix de vente, exprimé en milliers de francs, est $x_i$.
+
+\[
+\begin{array}{|c|c|c|c|c|c|c|c|c|}
+\hline
+x_i & 60 & 80 & 100 & 120 & 140 & 160 & 180 & 200 \\
+\hline
+y_i & 952 & 805 & 630 & 522 & 510 & 324 & 205 & 84 \\
+\hline
+\end{array}
+\]
+
+\subsection*{Questions}
+\begin{enumerate}
+    \item Calculer le coefficient de corrélation linéaire de $x$ et $y$. La valeur trouvée justifie-t-elle la recherche d’un ajustement linéaire ?
+    \item Déterminer l’équation de la droite de régression de $y$ en $x$.
+\end{enumerate}
 \end{document}

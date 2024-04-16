@@ -1,0 +1,616 @@
+\documentclass[12pt]{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+
+\usepackage{color, soul}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+\author{\\Lycée de Dindéfelo\\Mr BA}
+\title{\textbf{Probabilité}}
+\date{\today}
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, fit}
+
+% Commande pour la couleur d'accentuation
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\begin{document}
+\maketitle
+\newpage
+\section*{\underline{\textbf{\textcolor{red}{I.Vocabulaire Et Notation}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{1.Expérience aléatoire}}}}
+Une expérience est dite aléatoire si l'issue est impossible à prevoir.\\
+\subsection*{\underline{\textbf{\textcolor{red}{Exemple}}}}
+Le lancer d'une pièce de monnaie est une expérience aléatoire car on ne peut pas prédire avec certitude si elle va tomber sur pile ou face.\\
+\subsection*{\underline{\textbf{\textcolor{red}{2.Univers des possibles}}}}
+L'unvers des possibles noté $\Omega$ désigne l'ensemble de toutes les issues possibles d'une expérience aléatoire.\\
+Cet ensemble comprend tous les résultats que l'expérince pourrait produire
+\subsection*{\underline{\textbf{\textcolor{red}{Exemple}}}}
+\begin{itemize}
+\item Dans le lancé d'un dé à six faces, l'univers des possibles est\\ 
+$\Omega=\left\lbrace 1, 2, 3, 4, 5, 6\right\rbrace$, car ce sont les six valeurs que le dé peut afficher.\\
+\item Dans le lancé d'un dé à six faces, l'univers des possibles est\\ 
+$\Omega=\left\lbrace pile, face\right\rbrace$
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{3.Evènement}}}}
+Soit $\Omega=\left\lbrace pile, face\right\rbrace$ l'unvers d'une expérience aléatoire.\\
+On appelle évènement une partie ou un sous ensemble de
+$\Omega=\left\lbrace pile, face\right\rbrace$
+\subsection*{\underline{\textbf{\textcolor{red}{Exemple}}}}
+Soit un dé numéroté de 1 à 6.\\
+l'univers de de cette expérience est $\Omega=\left\lbrace 1, 2, 3, 4, 5, 6\right\rbrace$\\
+$A=\left\lbrace 1,5,2 \right\rbrace $ est un évènement de $\Omega=\left\lbrace 1, 2, 3, 4, 5, 6\right\rbrace$ \\
+$B=\left\lbrace  6,4 \right\rbrace $ est un évènement de $\Omega=\left\lbrace 1, 2, 3, 4, 5, 6\right\rbrace$\\
+\subsection*{\underline{\textbf{\textcolor{red}{4.Evènement Elémentaire}}}}
+Soit $\Omega$ un univers associé à l'expérience aléatoire.\\
+On appelle évènement élémentaire tout singleton de $\Omega$\\
+\subsection*{\underline{\textbf{\textcolor{red}{Exemple}}}}
+Un dé numéroté de 1 à 6.\\
+$A=\left\lbrace 1 \right\rbrace $ et $B=\left\lbrace 3 \right\rbrace $ sont des évènements élémentaires\\
+\subsection*{\underline{\textbf{\textcolor{red}{5.Evènement réalisé}}}}
+Un évèment est réalisé s'il contient le résultat de l'expérience.\\
+\underline{\textbf{\textcolor{red}{Exemple}}}\\
+Soit un dé numéroté de 1 à 6.\\
+$\Omega = \left\lbrace 1, 2, 3, 4, 5, 6 \right\rbrace $.\\
+$A = \left\lbrace 1, 2, 6 \right\rbrace $ est un évèvement de $\Omega$.\\
+Si au cours d'un lancé le numéro 2 apparait on dit que A est réalisé.
+\subsection*{\underline{\textbf{\textcolor{red}{6. Évènement certain}}}}
+Soit $\Omega$ l'univers d'une expérience aléatoire. Un évènement est dit certain s'il correspond à l'ensemble de l'univers, c'est-à-dire s'il inclut toutes les issues possibles de l'expérience.
+\subsection*{\underline{\textbf{\textcolor{red}{Exemple}}}}
+Supposons que $\Omega = \left\lbrace 1, 2, 3, 4, 5, 6\right\rbrace $ soit l'univers des possibles lors du lancer d'un dé à six faces.\\
+L'évènement avoir A:"Avoir une face inférieur à 7" est certain.
+\subsection*{\underline{\textbf{\textcolor{red}{7. Évènement impossible}}}}
+Un évènement est considéré comme impossible s'il correspond à l'ensemble vide, c'est-à-dire s'il ne contient aucune issue possible de l'expérience aléatoire.
+\subsection*{\underline{\textbf{\textcolor{red}{Exemple}}}}
+Supposons que $\Omega = \left\lbrace 1, 2, 3, 4, 5, 6 \right\rbrace  $ soit l'univers des possibles lors du lancer d'un dé à six faces.\\\\
+
+Un événement impossible serait un événement qui ne peut pas se produire. Par exemple, si nous définissons l'événement $A = \left\lbrace 7 \right\rbrace $, cet événement est impossible car le dé ne peut afficher que des valeurs de 1 à 6 incluses.\\\\
+
+En notation mathématique :\\
+$A=\left\lbrace 7 \right\rbrace $
+\subsection*{\underline{\textbf{\textcolor{red}{8. Évènement contraire}}}}
+
+L'évènement contraire d'un évènement $A$ dans $\Omega$, noté $\overline{A}$, est l'ensemble des issues de l'expérience aléatoire qui ne sont pas dans $A$.
+
+On dit que $\overline{A}$ est le complémentaire de A dans $\Omega$ et on note 
+$\overline{A}=C^{A}_{\Omega}$
+\subsection*{\underline{\textbf{\textcolor{red}{Exemple}}}}
+
+Supposons que lors du lancer d'un dé à six faces, $A$ représente l'évènement "obtenir un nombre pair". Alors, l'évènement contraire, $\overline{A}$, serait "obtenir un nombre impair".
+
+En notation mathématique :
+\[ A = \{2, 4, 6\} \]
+\[ \overline{A} = \{1, 3, 5\} \]
+
+Ainsi, si $A$ est l'évènement "obtenir un nombre pair", alors $\overline{A}$ est l'évènement "obtenir un nombre impair".
+
+\subsection*{\underline{\textbf{\textcolor{red}{Remarque}}}}
+Si A et $\overline{A}$ sont deux évènements contraires alors:
+
+$A\cap\overline{A}=\emptyset$ ; $A\cup\overline{A}=\Omega$
+
+\subsection*{\underline{\textbf{\textcolor{red}{8. Évènements incompatibles}}}}
+
+Deux événements sont dits incompatibles s'ils ne peuvent pas se produire simultanément, c'est-à-dire s'ils n'ont aucune issue en commun.
+
+\subsection*{\underline{\textbf{\textcolor{red}{Exemple}}}}
+
+Supposons que dans un lancer de dé à six faces, nous définissons les événements suivants :
+
+\[ A = \{\text{lancer un nombre pair}\} = \{2, 4, 6\} \]
+\[ B = \{\text{lancer un nombre impair}\} = \{1, 3, 5\} \]
+
+Comme aucun nombre ne peut être à la fois pair et impair, les événements \(A\) et \(B\) sont incompatibles.
+
+\subsection*{\underline{\textbf{\textcolor{red}{Remarque}}}}
+
+Si $A$ et $B$ sont deux évènements incompatibles alors: $A\cap B$ 
+
+\section*{\underline{\textbf{\textcolor{red}{II. Généralités sur la probabilité}}}}
+
+\subsection*{\underline{\textbf{\textcolor{red}{1. Probabilité d'un évènement}}}}
+
+Considérons un dé numéroté de 1 à 6.
+
+Soit $\Omega$ l'univers de cette expérience, donné par $\Omega=\{1, 2, 3, 4, 5, 6\}$.
+
+Supposons l'évènement $A=\{5\}$.Il y a une chance sur 6 de réaliser cette possibilité.
+
+La probabilité de l'évènement $A$ est donc égale à $\frac{1}{6}$, que l'on note
+
+ $P(A)=\frac{1}{6}$.
+
+De même, considérons l'évènement $B=\{1, 6\}$. Il y a deux chances sur 6 de réaliser l'évènement $B$.
+
+La probabilité de l'évènement $B$ est donc égale à $\frac{2}{6}$. On note $P(B)=\frac{1}{3}$.
+\subsection*{\underline{\textbf{\textcolor{red}{2. Probabilité uniforme}}}}
+Lorsque les évènements élémentaires ont la même probabilité, on dit que on a une équiprobabilité.
+
+Une probabilité est dite uniforme si tous les évènements élémentaire sont équibrobables.\\
+\subsection*{\underline{\textbf{\textcolor{red}{3.Formule de probabilité uniforme}}}}
+Soit $\Omega$ un univers et $p$ une probabilité définit dans cet univers.
+
+$\Omega=\left\lbrace w_{1}, w_{2},...,w_{n}\right\rbrace $ on suppose que on a une probabilité uniforme.
+Donc $p\left\lbrace w_{1} \right\rbrace =p\left\lbrace w_{2} \right\rbrace =...
+=p\left\lbrace w_{n} \right\rbrace$\\
+Comme $\Omega$ est formé des évènements $w_{1}, w_{2},...,w_{n}$ Donc
+
+
+$p\left\lbrace \Omega\right\rbrace =p\left\lbrace w_{1} \right\rbrace +p\left\lbrace w_{2} \right\rbrace +...+p\left\lbrace w_{n} \right\rbrace$\\
+Puisqu'il y a équiprobabilité 
+$p\left\lbrace \Omega\right\rbrace =n\times p\left\lbrace w_{1} \right\rbrace$
+
+Or $\Omega$ est un évènement certain donc $p(\Omega)=1$
+
+Ainsi, $p\left\lbrace w_{1} \right\rbrace=\frac{1}{n}$ avec $n=card(\Omega)$, 
+$p\left\lbrace w_{1} \right\rbrace=\frac{1}{card(\Omega)}$
+
+De façon général, \[ P(A) = \frac{\text{Nombre d'issues favorables à } A}{\text{Nombre total d'issues dans } \Omega} \]
+Autrement dit, \[ P(A) = \frac{\text{card} (A)}{\text{card} (\Omega)} \]
+\subsection*{\underline{\textbf{\textcolor{red}{Exerice d'application}}}}
+Supposons que vous lanciez un dé équilibré à six faces. Calculez la probabilité des événements suivants :
+
+\begin{enumerate}
+    \item Événement A : Obtenir un nombre pair.
+    \item Événement B : Obtenir un nombre impair.
+    \item Événement C : Obtenir un nombre inférieur ou égal à 3.
+\end{enumerate}
+
+\subsection*{\underline{\textbf{\textcolor{red}{Solution}}}}
+Soit $\Omega$ l'univers associé a cette expérience aléatoire on a
+
+$\Omega=\left\lbrace 1, 2, 3, 4, 5, 6 \right\rbrace $ et $card(\Omega)=6$ 
+%Pour un dé équilibré à six faces, chaque face a la même probabilité d'apparaître, ce qui signifie que la probabilité de chaque nombre de 1 à 6 est $\frac{1}{6}$.
+
+\begin{enumerate}
+    \item Pour l'événement A (obtenir un nombre pair), les issues favorables sont 2, 4 et 6.
+      On a $A=\left\lbrace 2, 4, 6 \right\rbrace $ et $card(A)=3$
+          
+     Ainsi, la probabilité de l'événement A est :
+    
+    \[ P(A) =\frac{card(A)}{card(\Omega)}=\frac{3}{6} = \frac{1}{2} \]
+    
+    \item Pour l'événement B (obtenir un nombre impair), les issues favorables sont 1, 3 et 5.On a $B=\left\lbrace 1, 3, 5 \right\rbrace $ et $card(B)=3$
+    
+     Ainsi, la probabilité de l'événement B est également :
+    
+    \[ P(B) =\frac{card(B)}{card(\Omega)}=\frac{3}{6} = \frac{1}{2} \]
+    
+    \item Pour l'événement C (obtenir un nombre inférieur ou égal à 3), les issues favorables sont 1, 2 et 3.On a $C=\left\lbrace 1, 2, 3 \right\rbrace $ et $card(C)=3$.
+    La probabilité de l'événement C est donc :
+    
+    \[ P(C) =\frac{card(C)}{card(\Omega)}=\frac{3}{6} = \frac{1}{2} \]
+\end{enumerate}
+
+Ainsi, dans tous les cas, la probabilité est $\frac{1}{2}$, ce qui est conforme à la notion de probabilité uniforme pour un dé équilibré à six faces.
+\subsection*{\underline{\textbf{\textcolor{red}{4. Définition de Probabilité}}}}
+Soit $\Omega$ un univers associé à une expérience aléatoires.
+On appelle probabilité sur un univers $\omega$ toute application 
+$P:\Omega \Longrightarrow [0;1]$ vérifiant:
+\begin{enumerate}
+\item $p(\Omega)=1$
+\item Si A et B deux évènements de $\Omega$ alors :
+
+$A\cap B=\emptyset \Longrightarrow p(A\cup B)=p(A)+p(B)$
+\end{enumerate}
+\underline{\textbf{\textcolor{red}{Conséquence}}}\\
+\begin{enumerate}
+\item $\forall A$ la probabilité de l'évènement est compris entre $[0,1]$\\
+$0 \leq p(A)\leq 1$
+\item $p(\emptyset)=0$
+\item$p(\overline{A})=1-p(A)$
+\item $p(A \cup B)=p(A)+p(B)-p(A\cap B)$\\
+\underline{\textbf{\textcolor{red}{Exercice 1}}}\\
+On considère l’ensemble E des entiers de 20 à 40. On choisit l’un de ces nombres au hasard.
+\end{enumerate}
+\begin{itemize}
+\item[•] A est l’événement : « le nombre est multiple de 3 »
+\item[•] B est l’événement : « le nombre est multiple de 2 »
+\item[•] C est l’événement : « le nombre est multiple de 6 ».
+\end{itemize}
+Calculer $p(A)$, $p(B)$, $p(C)$, $p(A\cap B)$, $p(A\cup B)$, $p(A\cap C)$ et $p(A\cup C)$.
+
+\section*{\underline{\textbf{\textcolor{red}{III. Probabilité conditionnelle et indépendance}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{A. Probabilité conditionnelle}}}}
+\underline{\textbf{\textcolor{red}{1.Définition}}}\\
+Soit $\Omega$ un univers, associe à une expérience aléatoire et $p$ la probabilité définie dans cet univers. $A$ et $B$ deux évèvenements de $\Omega$ tel que $p(B)\neq 0$
+
+$p_{\frac{A}{B}}=p_{B}(A)=\frac{p(A\cap B)}{p(B)}=\frac{card(A\cap B)}{card(B)}$
+
+\underline{\textbf{\textcolor{red}{Exemple}}}\\
+Soit une expérience aléatoire comportant les évènements A et B. On sait que
+P(A)=0,4,  P(B)=0,7 et P($A\cap B$)=0,2. Calcule $p_{B}(A)$ et $p_{A}(B)$.
+
+Pour calculer la $1^{re}$ probabilité conditionnelle, on utilise la formule.
+
+$p_{B}(A)=\frac{p(A\cap B)}{p(B)}$
+
+$p_{B}(A)=\frac{0,2}{0,7}$
+
+$p_{B}(A)=\frac{2}{7}$
+
+Pour calculer la $2^{e}$ probabilité conditionnelle, on utilise aussi la formule. Il est important de remarquer que l’intersection est \textbf{commutative}, donc 
+$p(A\cap B)=p(B\cap A)$
+
+$p_{A}(B)=\frac{p(A\cap B)}{p(A)}$
+
+$p_{A}(B)=\frac{0,2}{0,4}$
+
+$p_{A}(B)=\frac{1}{2}$
+
+$p_{A}(B)=0,5$
+\subsection*{\underline{\textbf{\textcolor{red}{B.Arbre pondéré}}}}
+Un arbre pondéré permet de représenter une situation probabiliste qui comporte des probabilités conditionnelles.
+
+\underline{\textbf{\textcolor{red}{Exemple }}}\\
+Dans un lycée comportant 800 élèves, $55\%$ sont des filles. Parmi les filles, $10\%$ sont des pensionnaires. Ce pourcentage est le même chez les garçons.
+
+On choisit un élève au hasard dans ce lycée et admet que ces choix sont équiprobables.
+
+On note F(resp. P) l'événement "l'élève choisi est une fille (resp. une pensionnaire)".
+
+On obtient l'arbre probabiliste suivante:
+
+\begin{tikzpicture}[level distance=3cm,
+  level 1/.style={sibling distance=5cm},%Ecarte les branches des 1eme ramifications
+  level 2/.style={sibling distance=4cm},%Ecarte les branches des  2eme ramifications
+  %level 3/.style={sibling distance=2cm}]%Ecarte les branches des 3eme ramifications
+    every node/.style={text width=2cm, align=center}]%Permet de spécifier une largeur pour chaque nœud
+  \node {}
+    child {node {$\overline{F}$}
+     child {node {$\overline{P}$}    
+      }
+      child {node {$P$}    
+      }
+    }% 1ere branche      
+    child {node {$F$}  
+         child {node {$\overline{P}$}    
+      }
+      child {node {$P$}    
+      }  
+    };
+\node at (-3,-1.5) [right] {$0,45$};
+\node at (0.8,-1.5) [right] {$0,55$};
+
+\node at (-5,-4) [right] {$0,90$};
+\node at (-2.5,-4) [right] {$0,10$};
+
+\node at (-0.1,-4) [right] {$0,90$};
+\node at (2.5,-4) [right] {$0,10$};
+
+\end{tikzpicture}\\
+\begin{itemize}
+\item La somme des probabilités des deux premières branches (c'est-à-dire issues de la racine) est 1.
+\item La somme des probabilités des probabilités des branches issues du noeud F est 1.
+\item La somme des probabilité des probabilité des branches issues du noeud $\overline{F}$ est 1.
+\end{itemize}
+\underline{\textbf{\textcolor{red}{Propriété 1}}}\\
+La somme des probabilités inscrites sur les branches issues d'un même noeud est égale à 1.
+
+\underline{\textbf{\textcolor{red}{Propriété 2}}}\\
+La probabilité de l'évènement représenté par un chemin est égale au produit des probabilités inscrites sur les branches de ce chemin.
+
+En considérant l'exemple précédent, la probabilité de l'évèvenement $F\cap \overline{P}$ est:
+
+$p(F\cap \overline{P})=p(F)\times p_{F}(\overline{P})$
+
+On obtient:
+
+$p(F\cap \overline{P})=0,55\times 0,90$
+
+$p(F\cap \overline{P})=0,495$
+
+\underline{\textbf{\textcolor{red}{La lecture d'un arbre pondéré}}}\\
+\begin{tikzpicture}[level distance=3cm,
+  level 1/.style={sibling distance=5cm},%Ecarte les branches des 1eme ramifications
+  level 2/.style={sibling distance=4cm},%Ecarte les branches des  2eme ramifications
+  %level 3/.style={sibling distance=2cm}]%Ecarte les branches des 3eme ramifications
+    every node/.style={text width=2cm, align=center}]%Permet de spécifier une largeur pour chaque nœud
+  \node {}
+    child {node {$\overline{A}$}
+     child {node {$\overline{B}$}    
+      }
+      child {node {$B$}    
+      }
+    }% 1ere branche      
+    child {node {$A$}  
+         child {node {$\overline{B}$}    
+      }
+      child {node {$B$}    
+      }  
+    };
+\node at (-3,-1.5) [right] {$p(\overline{A})$};
+\node at (0.8,-1.5) [right] {$p(A)$};
+
+\node at (-5,-4) [right] {$p_{\overline{A}}(\overline{B})$};
+\node at (-2.2,-4) [right] {$p_{\overline{A}}(B)$};
+
+\node at (-0.1,-4) [right] {$p_{A}(\overline{B})$};
+\node at (2.8,-4) [right] {$p_{A}(B)$};
+
+\end{tikzpicture}
+
+La probabilité de $\overline{A}$ et $\overline{B}$ est : 
+$p(\overline{A}\cap \overline{B})=p_{\overline{A}}(\overline{B})\times p(\overline{A})$\\
+La probabilité de $\overline{A}$ et $B$ est : $p(\overline{A}\cap B)=
+p_{\overline{A}}(B)\times p(\overline{A}) $\\
+La probabilité de $A$ et $\overline{B}$ est : $p(A\cap \overline{B})=
+p_{A}(\overline{B})\times p(A)$\\
+La probabilité de $A$ et $B$ est : $p(A\cap B)=p_{A}(B)\times p(A)$ \\
+\underline{\textbf{\textcolor{red}{Propriété 3:Probabilités totales}}}\\
+Soit l'univers $\Omega$ d'une expérience aléatoire $A_{1}, A_{2},...,A_{n}$ des évènements tels que $\left\lbrace A_{1}, A_{2},...,A_{n}\right\rbrace $ forme une parition de l'univers $\Omega$.\\
+Alors, pour tout événement B, on a:\\
+\textcolor{blue}{$p(B)=p(B\cap A_{1})+p(B\cap A_{2})+...+p(B\cap A_{n})$}.
+
+\textbf{\textcolor{blue}{Cette formule est appelé formule des probabilité totale}}
+
+Et, si pour tout $p(A_{i}) \neq 0$, alors:
+
+\textcolor{blue}{$p(B)=p(A_{1})\times p_{A_{1}}(B)+p(A_{2})\times p_{A_{2}}(B)+...+p(A_{n})\times p_{A_{n}}(B)$}
+\subsection*{\underline{\textbf{\textcolor{red}{C.L'indépendance de deux évènements}}}}
+\underline{\textbf{\textcolor{red}{1.Définition}}}\\
+On dit que deux événement $A$ et $B$ de probabilités non nulles sont indépendants lorsque:\\
+$p(A\cap B)=p(A)\times p(B)$
+
+\underline{\textbf{\textcolor{red}{Exemple}}}\\
+En considérant l'exemple précédent, montre que F et P sont deux événements indépendants.\\
+\underline{\textbf{\textcolor{red}{Solution}}}\\
+\textbf{Already solve but think first}
+%On a:
+%\begin{itemize}
+%\item[•]$p(F)=0,55$
+%\item[•] $p(F\cap P)=p(F)\times p_{F}(p)=0,55\times 0,10 $
+%\item[•] $p(\overline{F}\cap P)=p(\overline{F})\times p_{\overline{F}}(p)=0,45\times 0,10$
+%\end{itemize}
+%L'ensemble $\left\lbrace F, \overline{F} \right\rbrace $ formant une partition de l'univers, on a, d'après la formule des probabilité totales :\\
+%$p(P)=p(F\cap P)+p(\overline{F}\cap P)$
+
+%Alors:
+%\begin{itemize}
+%\item[•] $p(F\cap P)=0,055$
+%\item[•] $p(F)\times p(P)=0,55\times 0,10$
+%\end{itemize}
+%Les événement $F$ et $P$ sont donc indépendants
+\underline{\textbf{\textcolor{red}{Exercice}}}\\
+Soit $A$ et $B$ deux événements indépendantes de probabilité non nulle.
+
+Montrer que $\overline{A}$ et $\overline{B}$ sont aussi indépendantes.
+\section*{\underline{\textbf{\textcolor{red}{IV. LOIS DE PROBABILITE}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{A. Epreuve de Bernoulli}}}}
+\underline{\textbf{\textcolor{red}{1.Définition}}}\\
+On appelle une epreuve de bernoulli toute expérience aléatoire qui n'a que deux issue possible. L'un des issue est appelé succé, l'autre est appelé echec.
+\underline{\textbf{\textcolor{orange}{2.Probabilté sur une epreuve de Bernoulli}}}\\
+Avec une epreuve de Bernoulli, la probabilité du sucé est noté $p$ et celle de l'echec est notée $1-p$.
+
+\underline{\textbf{\textcolor{orange}{3.Schéma de Bernoulli}}}\\
+On appelle en schéma de bernoulli toute épreuve où on a n répétition qui sont identiques et indépendantes.
+
+\underline{\textbf{\textcolor{orange}{Propriété}}}\\
+Soit un schéma de Bernoulli à n épreuves où pour chaque épreuve la probabilité du succé est notée $p$ et celle de l'echec est noté 1-p. 
+
+La probabilité d'avoir exactement k succé avec $0\leq k\leq n$.
+
+$p_{k}=C^{k}_{n}p^{k}(1-p)^{n-k}$
+
+k=nombre de succés
+
+n=le nombre de répétition
+
+\underline{\textbf{\textcolor{red}{Exercice d'application}}}
+
+On soumet à un candidat 10 questions.
+
+Chaque question est assortie de 3 réponses parmi lesquelles une seule est exacte.
+
+Le candidat répond au hasard aux questions.
+
+\begin{enumerate}
+    \item Déterminez la probabilité pour que le candidat trouve 3 bonnes réponses.
+    
+    \item Déterminez la probabilité pour que le candidat trouve au moins une bonne réponse.
+\end{enumerate}
+
+\underline{\textbf{\textcolor{red}{Correction :}}}
+
+\textbf{Already solve but think first}
+
+%Pour chaque question, la probabilité que le candidat trouve la bonne réponse est $p=\frac{1}{3}$, car il choisit au hasard parmi 3 réponses dont une seule est correcte.
+
+%Donc $1-p=\frac{2}{3}$
+%\begin{enumerate}
+%    \item Déterminons la probabilité pour que le candidat trouve 3 réponses.
+%	$p_{k}=C_{n}^{k}p^{k}(1-p)^{n-k}$ : $k=3$, $n=10$, $p=\frac{1}{3}$ et $1-p=\frac{2}{3}$
+	
+%	$p_{3}=C_{10}^{3}p^{3}(1-p)^{10-3}$
+%    \item Déterminons la probabilité pour que le candidat trouve au moins une bonne réponse.
+    
+%    Soit A:"trouver une bonne réponse" donc $\overline{A}$:"Pas de bonne réponse"
+    
+%    p($A$)=1-p($\overline{A}$) donc p($\overline{A}$)=1-p($A$)
+    
+%    $p(\overline{A})=p_{k}(k>0)=C_{n}^{k}p^{k}(1-p)^{n-k}$
+    
+%    $p(\overline{A})=p_{k}(k=0)=C_{10}^{0}p^{0}(1-p)^{10}$
+    
+%    $p(\overline{A})=p_{k}(k=0)=(\frac{2}{3})^{10}$
+    
+%    Or $p(A)=1-p(\overline{A})$
+    
+%    donc $p(A)=1-(\frac{2}{3})^{10}$
+%\end{enumerate}
+\subsection*{\underline{\textbf{\textcolor{red}{B. Loi Binomiale}}}}
+\underline{\textbf{\textcolor{red}{1.Variables aléatoires}}}
+
+\underline{\textbf{\textcolor{red}{Exemple}}}
+
+On lance trois fois de suite une pièce de monnaie équilibrée.\\ On gagne 2 $\$ $ pour chaque résultat
+
+« pile » et on perd 1 $\$ $ pour chaque résultat « face ».
+
+1°) Quel est l’ensemble E des issues possibles ?
+
+2°) Soit X l’application de E dans $\mathbb{R}$ qui, à chaque issue, associe le gain correspondant.
+
+	a) Quelles sont les valeurs prises par X ?
+
+	b) Quelle est la probabilité de l’événement « obtenir un gain de 3 $\$ $ » ? On note cette probabilité $p(X = 3)$.
+	
+\underline{\textbf{\textcolor{red}{Solution}}}
+
+On obtient une nouvelle loi de probabilité sur l’ensemble des gains\\
+$E’ = X(E) = \left\lbrace -3 ;0 ;3 ;6 \right\rbrace $ ; nous la nommons loi de probabilité de X :
+\\
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Gain $x_{i}$ & $X_{1}=-3$ & $X_{2}=0$ & $X_{3}=3$&$X_{4}=6$\\
+\hline
+Probabilité $p_{i} = p(X = x_{i}) $ &$\frac{1}{8}$ &$\frac{3}{8}$&$\frac{3}{8}$&$\frac{1}{8}$ \\
+\hline
+\end{tabular}
+\\
+\underline{\textbf{\textcolor{red}{2.Définition}}}
+\begin{itemize}
+\item[•] Une variable aléatoire X est une application définie sur un ensemble E muni d’une
+probabilité P, à valeurs dans $\mathbb{R}$.
+\item[•] X prend les valeurs $x_{1}, x_{2}, …, x_{n}$ avec les probabilités $p_{1}, p_{2}, …, p_{n}$ définies par : $p_{i} = p(X = x_{i})$.
+\item[•] L’affectation des $p_{i}$ aux $x_{i}$ permet de définir une nouvelle loi de probabilité. Cette loi notée $P_{X}$, est appelée
+loi de probabilité de X
+\end{itemize} 
+\underline{\textbf{\textcolor{red}{Remarque}}}
+
+Soit X une variable aléatoire prenant les valeurs $x_{1}, x_{2}, …, x_{n}$ avec les probabilités $p_{1}, p_{2}, …, p_{n}$. On appelle respectivement espérance mathématique de X,
+variance de X et écart-type de X , les nombres suivants :
+\begin{itemize}
+\item[•] L’espérance mathématique est le nombre E(X) défini par : \[E(X)=\sum_{i=1}^{n}(p_{i}x_{i})\]
+\item[•] La variance est le nombre V défini par : V(X)=\[\sum_{i=1}^{n}p_{i}(x_{i}-E(X))^{2}=\sum_{i=1}^{n}p_{i}x_{i}^{2}-E(X)^{2}\]
+\item[•]  L’écart-type est le nombre $\sigma$ défini par : $\sigma = \sqrt{V}$
+\end{itemize}
+\underline{\textbf{\textcolor{red}{Exercice:}}}
+
+Un joueur lance un dé : si le numéro est un nombre premier, le joueur gagne une somme égale au nombre considéré (en euros) ; sinon il perd ce même nombre d’euros.
+
+1°) Si X est le gain algébrique réalisé, donner la loi de probabilité de X et calculer son espérance mathématique et son écart-type.
+
+2°) Le jeu est-il favorable au joueur ?
+
+\underline{\textbf{\textcolor{red}{3. Loi Binomiale}}}
+
+Soit un schéma de Bernoulli constitué d’une suite de n épreuves.
+Soit X la variable aléatoire égale au nombre de succès obtenus, alors :\\
+$P(X=k)=C_{n}^{k}\times p^{k}\times (1-p)^{n-k}$ avec $(0\leq k\leq n)$
+
+\underline{\textbf{\textcolor{red}{Exemple}}}
+
+Un dé cubique est mal équilibré : la probabilité d’obtenir 6 est de 1/7.
+
+On appelle succès l’événement « obtenir 6 » et échec « obtenir un numéro différent de 6 ».
+
+on appelle X la variable aléatoire comptant le nombre de succès à l’issue des 5 lancés. On obtient les probabilités suivantes :
+
+$P_{0}=P(X=0)=C_{5}^{0}(\frac{1}{7})^{0}(\frac{6}{7})^{5}$
+
+$P_{1} =0,3856$ ; $P_{2} = 0,1285$ ; $P_{3} = 0,0214$ ; $P_{4} = 0,0018$ ; $P_{5} = 0,0001$.
+
+\underline{\textbf{\textcolor{red}{4.Espérence et Ecart-type :}}}
+
+\begin{itemize}
+\item[•] Pour une loi de Bernoulli de paramètre p, l’espérance est p et l’écart type est $\sqrt{pq}$
+\item[•] Pour une loi Binomiale de paramètres n et p, l’espérance est np et l’écart type est 
+$\sqrt{npq} $
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{5.Fonction de répartition}}}}
+La fonction de répartition d'une variable aléatoire est la fonction définie sur $\mathbb{R}$ par :\\
+$p(X=x_{i})=p_{i}$
+
+\begin{equation*}
+F(x)=\begin{cases}
+0 & \text{si } x < x_{1}\\
+p_{1} & \text{si } x_{1} \leq x < x_{2}\\
+p_{1} + p_{2} & \text{si } x_{2} \leq x < x_{3}\\
+\vdots \\
+p_{1} + p_{2} + p_{3} + \ldots + p_{k} & \text{si } x_{k} \leq x < x_{k+1}\\
+\vdots \\
+p_{1} + p_{2} + p_{3} + \ldots + p_{n-1} & \text{si } x_{n-1} \leq x < x_{n}\\
+1 & \text{si } x \geq x_{n}
+\end{cases}
+\end{equation*}
+F  est une fonction en escalier.
+
+\underline{\textbf{\textcolor{red}{Exemple}}}
+
+En considérant le tableau suivant
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$x_{i}$ & $0$ & $1$ & $2$ & $3$\\
+\hline
+$p(X = x_{i}) $ &$\frac{8}{27}$&$\frac{4}{9}$&$\frac{2}{9}$&$\frac{1}{27}$\\
+\hline
+\end{tabular}
+
+Ce qui entraine
+
+\begin{equation*}
+F(x)=\begin{cases}
+0 & \text{si } x < 0\\
+\frac{8}{27} & \text{si } 0 \leq x < 1\\
+\frac{20}{27} & \text{si } 1 \leq x < 2\\
+\frac{26}{27} & \text{si } 2 \leq x < 3\\
+1 & \text{si } x \geq 3
+\end{cases}
+\end{equation*}
+
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-8.580000000000005,
+xmax=11.220000000000006,
+ymin=-3.1299999999999963,
+ymax=5.129999999999994,
+xtick={-8,-7,...,11},
+ytick={-3,-2,-1,0,1,2,3,4,5},]
+\clip(-8.58,-3.13) rectangle (11.22,5.13);
+\draw [line width=2pt] (-6,0)-- (0,0);
+\draw [line width=2pt] (0,0.59)-- (1,0.57);
+\draw [line width=2pt] (1,2)-- (2,2);
+\draw [line width=2pt] (3,3)-- (11,3);
+\draw [line width=2pt] (2,2.65)-- (2.98,2.65);
+\begin{scriptsize}
+\draw [fill=xdxdff] (-6,0) circle (2.5pt);
+%\draw[color=xdxdff] (-5.84,0.42) node {$A$};
+%\draw[color=black] (-2.92,-0.08) node {$f$};
+\draw [fill=xdxdff] (0,0.59) circle (2.5pt);
+%\draw[color=xdxdff] (0.16,1.02) node {$C$};
+%\draw[color=black] (0.56,0.5) node {$g$};
+\draw [fill=ududff] (1,2) circle (2.5pt);
+%\draw[color=ududff] (1.16,2.44) node {$E$};
+%\draw[color=black] (1.58,1.92) node {$h$};
+\draw [fill=ududff] (3,3) circle (2.5pt);
+%\draw[color=ududff] (3.16,3.44) node {$G$};
+%\draw[color=black] (7.06,2.92) node {$i$};
+\draw [fill=ududff] (2,2.65) circle (2.5pt);
+%\draw[color=ududff] (2.16,3.08) node {$I$};
+%\draw[color=black] (2.56,2.58) node {$j$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\end{document}

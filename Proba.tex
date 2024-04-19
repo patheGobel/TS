@@ -230,6 +230,7 @@ Calculer $p(A)$, $p(B)$, $p(C)$, $p(A\cap B)$, $p(A\cup B)$, $p(A\cap C)$ et $p(
 \underline{\textbf{\textcolor{red}{1.Définition}}}\\
 Soit $\Omega$ un univers, associe à une expérience aléatoire et $p$ la probabilité définie dans cet univers. $A$ et $B$ deux évèvenements de $\Omega$ tel que $p(B)\neq 0$
 
+<<<<<<< HEAD
 $p_{\frac{A}{B}}=p_{B}(A)=\frac{p(A\cap B)}{p(B)}=\frac{card(A\cap B)}{card(B)}$
 
 \underline{\textbf{\textcolor{red}{Exemple}}}\\
@@ -237,6 +238,17 @@ Soit une expérience aléatoire comportant les évènements A et B. On sait que
 P(A)=0,4,  P(B)=0,7 et P($A\cap B$)=0,2. Calcule $p_{B}(A)$ et $p_{A}(B)$.
 
 Pour calculer la $1^{re}$ probabilité conditionnelle, on utilise la formule.
+=======
+$p_{A/B}=p_{B}(A)=\frac{p(A\cap B)}{p(B)}=\frac{card(A\cap B)}{card(B)}$
+
+\underline{\textbf{\textcolor{red}{Exemple}}}\\
+Soit une expérience aléatoire comportant les évènements A et B.
+
+On donne
+P(A)=0,4,  P(B)=0,7 et P($A\cap B$)=0,2. Calcule $p_{B}(A)$ et $p_{A}(B)$.
+
+Pour calculer la $1^{re}$ probabilité conditionnelle  \textcolor{red}{($p_{B}(A)$)}, on utilise la\\ formule.
+>>>>>>> b03b5d1 (Présentation de l'arbre pondéré)
 
 $p_{B}(A)=\frac{p(A\cap B)}{p(B)}$
 
@@ -244,7 +256,11 @@ $p_{B}(A)=\frac{0,2}{0,7}$
 
 $p_{B}(A)=\frac{2}{7}$
 
+<<<<<<< HEAD
 Pour calculer la $2^{e}$ probabilité conditionnelle, on utilise aussi la formule. Il est important de remarquer que l’intersection est \textbf{commutative}, donc 
+=======
+Pour calculer la $2^{e}$ probabilité conditionnelle \textcolor{red}{($p_{A}(B)$)}, on utilise aussi la formule. Il est important de remarquer que l’intersection est \textbf{commutative}, donc 
+>>>>>>> b03b5d1 (Présentation de l'arbre pondéré)
 $p(A\cap B)=p(B\cap A)$
 
 $p_{A}(B)=\frac{p(A\cap B)}{p(A)}$
@@ -260,7 +276,11 @@ Un arbre pondéré permet de représenter une situation probabiliste qui comport
 \underline{\textbf{\textcolor{red}{Exemple }}}\\
 Dans un lycée comportant 800 élèves, $55\%$ sont des filles. Parmi les filles, $10\%$ sont des pensionnaires. Ce pourcentage est le même chez les garçons.
 
+<<<<<<< HEAD
 On choisit un élève au hasard dans ce lycée et admet que ces choix sont équiprobables.
+=======
+On choisit un élève au hasard dans ce lycée et on admet que ces choix sont équiprobables.
+>>>>>>> b03b5d1 (Présentation de l'arbre pondéré)
 
 On note F(resp. P) l'événement "l'élève choisi est une fille (resp. une pensionnaire)".
 
@@ -285,7 +305,11 @@ On obtient l'arbre probabiliste suivante:
       }  
     };
 \node at (-3,-1.5) [right] {$0,45$};
+<<<<<<< HEAD
 \node at (0.8,-1.5) [right] {$0,55$};
+=======
+\node at (0.8,-1.5) [right] {$\frac{55}{100}=0,55$};
+>>>>>>> b03b5d1 (Présentation de l'arbre pondéré)
 
 \node at (-5,-4) [right] {$0,90$};
 \node at (-2.5,-4) [right] {$0,10$};
@@ -296,6 +320,7 @@ On obtient l'arbre probabiliste suivante:
 \end{tikzpicture}\\
 \begin{itemize}
 \item La somme des probabilités des deux premières branches (c'est-à-dire issues de la racine) est 1.
+<<<<<<< HEAD
 \item La somme des probabilités des probabilités des branches issues du noeud F est 1.
 \item La somme des probabilité des probabilité des branches issues du noeud $\overline{F}$ est 1.
 \end{itemize}
@@ -303,6 +328,15 @@ On obtient l'arbre probabiliste suivante:
 La somme des probabilités inscrites sur les branches issues d'un même noeud est égale à 1.
 
 \underline{\textbf{\textcolor{red}{Propriété 2}}}\\
+=======
+%\item La somme des probabilités des probabilités des branches issues du noeud F est 1.
+%\item La somme des probabilité des probabilité des branches issues du noeud $\overline{F}$ est 1.
+\end{itemize}
+%\underline{\textbf{\textcolor{red}{Propriété 1}}}\\
+%La somme des probabilités inscrites sur les branches issues d'un même noeud est égale à 1.
+
+\underline{\textbf{\textcolor{red}{Propriété}}}\\
+>>>>>>> b03b5d1 (Présentation de l'arbre pondéré)
 La probabilité de l'évènement représenté par un chemin est égale au produit des probabilités inscrites sur les branches de ce chemin.
 
 En considérant l'exemple précédent, la probabilité de l'évèvenement $F\cap \overline{P}$ est:

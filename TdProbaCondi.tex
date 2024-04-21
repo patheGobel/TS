@@ -1,0 +1,176 @@
+\documentclass[12pt]{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+
+\usepackage{color, soul}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+\author{\\Lycée de Dindéfelo\\Mr BA}
+\title{\textbf{Variables aléatoires et Probabilités conditionnelles}}
+\date{\today}
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, fit}
+
+% Commande pour la couleur d'accentuation
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\begin{document}
+\maketitle
+\newpage
+\section*{\underline{\textbf{\textcolor{red}{Exercice 1}}}}
+Exercice 1
+Dans un jeu de 32 cartes on a quatre « couleurs » : pique, trèfle, carreau et cœur ; chaque « couleur » comprend huit cartes dont une carte as.
+
+1) On tire simultanément 3 cartes d’un jeu de 32 cartes bien battu.Calculer la probabilité de chacun des événements suivants :
+
+  A : « les trois cartes sont des as »
+  
+  B : « il y a au moins 2 couleurs parmi ces 3 cartes »
+  
+  C : « il n’y a pas d’as parmi les 3 cartes »
+  
+2) On tire successivement avec remise 3 cartes du jeu de 32 cartes. Le nombre de coeurs tiré définit une variable aléatoire X. Déterminer la loi de probabilité de  X, son espérance mathématique et son écart- type
+\section*{\underline{\textbf{\textcolor{red}{Exercice 2}}}}
+1. On dispose d’une urne U1 contenant trois boules rouges et sept boules noires.
+On extrait simultanément deux boules de cette urne, on considère que tous les tirages sont équiprobables.
+
+a. Quelle est la probabilité P1 que les deux boules tirées soient rouges ?
+
+    b. Quelle est la probabilité P2 que les deux boules tirées soient noires ?
+    
+    c. Quelle est la probabilité P3 que les deus boules tirées soient de même couleur ?
+    
+    d. Quelle est la probabilité P3 que les deus boules tirées soient de couleurs différentes ?
+    
+2. On dispose aussi d’une deuxième urne U2 contenant quatre boules rouges et six boules noires.
+
+On tire simultanément deux boules de l’urne U1 et une boule de l’urne U2. On suppose que tous les tirages sont équiprobables. On considère les événements suivants.
+
+R « les trois boules tirées sont rouges »   
+
+D « les trois boules tirées ne sont pas toute de même couleur. »
+
+B « la boule tirée dans l’urneU2 est rouge »
+
+      a. Calculer P(R).
+      
+      b. Quelle est la probabilité de tirer trois boules de même couleur ?
+      
+      c. Calculer la probabilité de l’événement B sachant que l’événement D est réalisé. 
+      
+\section*{\underline{\textbf{\textcolor{red}{Exercice 3}}}}
+Pour un examen dix examinateurs ont prépare chacun deux sujets. On dispose donc de vingt sujets que l’on place dans des enveloppes identiques. Deux candidats se présentent : chacun choisit au hasard deux sujets ; de plus les sujets choisis par le premier candidats ne seront plus disponibles pour le deuxième.
+
+On note A1 l’événement : «  les deux sujets obtenus par le premier candidat provienne du même examinateur » et A2 « les deux sujets obtenus par le deuxième candidat proviennent du même examinateur ».   
+
+1. Montrer que la probabilité de l’événement $A_{1}$ est égale à $\frac{1}{19}$
+
+2. a. Calculer directement la probabilité conditionnelle $p(A_{2}/A_{1})$
+
+  b. Montrer que la probabilité que les deux candidats obtiennent chacun deux sujets provenant d’un même examinateur est $\frac{1}{323}$
+  
+3) a. Calculer $p(A_{2}/\overline{A_{1}})$
+
+b. En remarquant que $A_{2}=(A_{2}\cap A_{1})\cup(A_{2}\cap \overline{A_{1}})$
+
+Calculer $p(A_{2})$ puis en déduire que $p(A_{2}\cup A_{1})=\frac{33}{323}$
+
+4. Soit X la variable aléatoire égale au nombre de candidats qui ont choisi chacun deux sujets provenant d’un même examinateur. La variable aléatoire X prend donc les deux valeurs 0,1 ou 2.
+
+      a. Déterminer la loi de probabilité de X.
+      
+      b. Calculer l’espérance mathématique de la variable aléatoire X.
+\section*{\underline{\textbf{\textcolor{red}{Exercice 4}}}}
+Une urne contient six boules indiscernables au toucher : Quatre boules grises et deux boules jaunes.
+
+    1. On tire simultanément au hasard deux boules de l’urne. On note X la variable aléatoire qui à chaque tirage de deux boules associe le nombre de boules grises tirées. 
+    
+      Déterminer la loi de probabilité de X et calculer son espérance.
+      
+    2. On tire au hasard deux fois de suite deux boules simultanément, les boules n’étant pas remises dans l’urne.  On note A, B, C, D les événements suivants :
+    
+     A « aucune boule grise n’est tirée au cours du premier tirage de deux boules »
+     
+     B « une boule grise et une boule jaune sont tirées au cours du premier tirage de deux boules »
+     
+     C « deux boules grises sont tirées au cours du premier tirage de deux boules »
+     
+     D « une boule grise et une boule jaune sont tirée au cours du deuxième tirage de deux boules »
+     
+      a. Calculer $P (D/A)$ ; $P (D/B)$ ; $P (D/C)$
+      
+      b. En déduire les probabilités des événements $D\cup A$ $D\cup B$ $D\cup C$
+      
+      c. Calculer la probabilité de l’événement D.
+\section*{\underline{\textbf{\textcolor{red}{Exercice 5}}}}
+1. Un industriel produit des balances dans deux usines A et B. Pour une période donnée, l’usine A fabrique 2400 balances dont $6\%$ présentent des défauts, l’usine B fabrique 4000 balances dont $7\%$ présentent des défauts. Ces deux productions sont stockées au centre d’expédition. On prélève au hasard l’une de ces balances.
+
+    b. Quelle est la probabilité que la balance présente un défaut.
+    
+    c. Quelle est la probabilité que la balance ne soit pas défectueuse?
+    
+    d. Sachant que la balance est défectueuse, quelle est la probabilité qu’elle soit de l’usine A ? de l’usine B ?
+
+3. Des tests effectués sur les balances vendues ont montré que $90\%$ de ces balances fonctionnaient encore parfaitement à la fin de la garantie d’un an.
+
+4. Un hôtelier en achète six. Notons $X$ la variable aléatoire qui compte le nombre de balances qui fonctionnent parfaitement au bout d’un an.
+
+    a. Expliquer pourquoi la loi de probabilité de $X$ est une loi binomiale.
+    
+    b. Quelle est la probabilité qu’au bout d’un an :
+    
+        $\bullet$ Toutes les balances fonctionnent
+        
+        $\bullet$ Aucune balance ne fonctionne
+        
+        $\bullet$ Au moins la moitié des balances fonctionnent
+        
+        $\bullet$ Au plus la moitié des balances fonctionnent.
+
+\section*{\underline{\textbf{\textcolor{red}{Exercice 6}}}}
+Une maladie atteint $7\%$ de la population. On dispose d’un test biologique pour la détecter. Ce test donne les résultats suivants :
+\begin{itemize}
+    \item Chez les bien-portants, $4\%$ des réponses sont positives et $96\%$ des réponses sont négatives.
+    \item Chez les malades, $92\%$ des réponses sont positives et $8\%$ des réponses sont négatives.
+\end{itemize}
+
+On décide d’hospitaliser tous les individus positifs.
+
+On pose :
+\begin{itemize}
+    \item $M$ l’événement : « être malade »
+    \item $T$ l’événement : « avoir le test positif »
+\end{itemize}
+
+a. Traduire les trois probabilités ci-dessus.
+
+b. Déterminer $P(T)$.
+
+c. Déterminer le pourcentage de bien-portants parmi les individus hospitalisés et le pourcentage d’individus malades parmi ceux qui ne sont pas hospitalisés.
+
+\section*{\underline{\textbf{\textcolor{red}{Exercice 7}}}}
+Une urne contient 10 boules : une boule porte le chiffre 0 ; trois boules portent le chiffre 1 et six boules portent le chiffre 2. On extrait simultanément 3 boules de l’urne ; on suppose que les boules ont la même chance d’être prélevées.
+
+1) 
+a) Quelle est la probabilité d’obtenir au moins une boule portant le chiffre 2 ?
+b) Quelle est la probabilité d’obtenir 3 boules portant le même chiffre ?
+
+2) On désigne par X la somme des chiffres portés par les trois boules.
+a) Déterminer la loi de probabilité de X ; son espérance mathématique.
+b) Définir et représenter sa fonction de répartition F.
+
+\end{document}

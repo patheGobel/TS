@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+
+\usepackage{color, soul}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+\author{\\Lycée de Dindéfelo\\Mr BA}
+\title{\textbf{Correction}}
+\date{\today}
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, fit}
+
+% Commande pour la couleur d'accentuation
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\begin{document}
+\maketitle
+\newpage
+\section*{\underline{\textbf{\textcolor{red}{Exercice 1}}}}
+
+Soient, dans le plan complexe $\mathbb{P}$, deux points $M$ et $M'$ d’affixes respectives $z$ et $z'$ tels que l’on ait : $z' = (1 + i) z + 1$
+
+1°) Calculer le module et un argument de $1 + i$.
+
+2°) Déterminer les éléments géométriques de la transformation du plan complexe qui, à tout point $M$ d’affixe $z$, associe le point $M'$ d’affixe $(1 + i) z +1$.
+
+3°) Déterminer l’ensemble des $M$ du plan complexe tels que les vecteurs $\vec{OM}$ et $\vec{OM'}$ aient la même norme.
+
+\section*{\underline{\textbf{\textcolor{red}{Exercice 2}}}}
+
+Dans le plan complexe soit $ƒ$ la similitude qui, à tout point $M$ d’affixe $z$, associe le point $M'$ d’affixe $z'$ définie par : $z' = (1 - i) z + 2i$.
+
+1°) Déterminer le rapport, l’angle et le centre de $ƒ$.
+
+2°) Soient $z = x + iy$ et $z' = x' + iy'$, les formes algébriques des nombres complexes $z$ et $z'$. Exprimer $x'$ et $y'$ en fonction de $x$ et de $y$. 
+
+3°) Quelle est l’image par $ƒ$ de la droite d’équation $x + 2y -1 = 0$ ?
+
+4°) Quelle est l’image par $ƒ$ du cercle $(C)$ de centre le point d’affixe $i$ et de rayon $\sqrt{2}$ ?
+
+\section*{\underline{\textbf{\textcolor{red}{Exercice 3}}}}
+
+Soit $ƒ$ la transformation du plan complexe qui, à tout point $M$ d’affixe $z$, associe le point $M'$ d’affixe $z'$ définie par : $z' = 2(1 + i\sqrt{3})z + 3$.
+
+1°) Quelle est la nature de $ƒ$ ? Préciser ses éléments caractéristiques.
+
+2°) Soit $D$ une droite d’équation $x - y\sqrt{3} = 0$. Quelle est l’équation de l’image $ƒ(D)$ de $D$ ?
+
+3°) Quelle est l’image par $ƒ$ du cercle de rayon $2$ dont le centre est le point $I(2i)$ ?
+
+\section*{\underline{\textbf{\textcolor{red}{Exercice 4}}}}
+
+Dans le plan complexe, soit $ƒ$ la transformation qui au point $M$ d’affixe $z$ associe le point $M'$ d’affixe $z'$ définie par : $z' = (1 + i\sqrt{3})z +\sqrt{3}(1 – i)$.
+
+1°) Démontrer que $ƒ$ admet un unique point invariant $I$ ; déterminer l’affixe de $I$. Caractériser géométriquement $ƒ$.
+
+2°) Soit $G$ le barycentre des points $I$, $M$, $M'$ affectés respectivement des coefficients $3$, $2$, $1$. Calculer les coordonnées de $G$ en fonction de celles de $M$.
+
+3°) On suppose que le point $M$ décrit la droite d’équation $y = x$. Quel est l’ensemble décrit par le point $G$ ?
+
+\section*{\underline{\textbf{\textcolor{red}{Exercice 5}}}}
+
+Soit $b$ un nombre complexe. Soit $ƒ$ l’application de $\mathbb{C}$ dans $\mathbb{C}$ définie par : $\forall z \in \mathbb{C}$, $ƒ(z) = (1 + 3i)z + b$. Soit $F$ l’application du plan complexe dans lui-même qui, à tout point $M$ d’affixe $z$, associe le point $M'$ d’affixe $ƒ(z)$.
+
+1°) Déterminer $b$ pour que le point $A(1, 1)$ de coordonnées soit invariant par $F$.
+
+2°) Déterminer les éléments géométriques de $F$.
+
+\section*{\underline{\textbf{\textcolor{red}{Exercice 6}}}}
+
+Dans le plan affine euclidien muni d’un repère orthonormé $(O, \vec{u}, \vec{v})$, on considère les points $A$ et $B$ d’affixes respectives $1 + 3i$ et $2i$.
+
+1°) Soit $S$ la similitude plane directe de centre $B$ qui transforme $O$ en $A$. On note $z'$ l’affixe du point $M'$ transformé par $S$ du point $M$ d’affixe $z$.
+
+a) Calculer le module et un argument du nombre complexe affixe du vecteur $\vec{AB}$.
+
+b) Calculer l’angle et le rapport de la similitude $S$.
+
+c) Exprimer $z'$ en fonction de $z$.
+
+2°) Soit $T$ la transformation qui, à tout point $M$ d’affixe $z$, associe le point $M''$ d’affixe $z'' = iz + 3$. Donner la nature de $T$ en précisant ses éléments caractéristiques. On note $\Omega$ le point invariant par la transformation $T$.
+
+3°) Montrer que les points $A$, $\Omega$, $B$ sont les sommets d’un triangle isocèle.
+
+\end{document}

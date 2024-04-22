@@ -320,7 +320,6 @@ On obtient l'arbre probabiliste suivante:
 \end{tikzpicture}\\
 \begin{itemize}
 \item La somme des probabilités des deux premières branches (c'est-à-dire issues de la racine) est 1.
-<<<<<<< HEAD
 \item La somme des probabilités des probabilités des branches issues du noeud F est 1.
 \item La somme des probabilité des probabilité des branches issues du noeud $\overline{F}$ est 1.
 \end{itemize}
@@ -328,15 +327,14 @@ On obtient l'arbre probabiliste suivante:
 La somme des probabilités inscrites sur les branches issues d'un même noeud est égale à 1.
 
 \underline{\textbf{\textcolor{red}{Propriété 2}}}\\
-=======
 %\item La somme des probabilités des probabilités des branches issues du noeud F est 1.
 %\item La somme des probabilité des probabilité des branches issues du noeud $\overline{F}$ est 1.
-\end{itemize}
+%\end{itemize}
 %\underline{\textbf{\textcolor{red}{Propriété 1}}}\\
 %La somme des probabilités inscrites sur les branches issues d'un même noeud est égale à 1.
 
 \underline{\textbf{\textcolor{red}{Propriété}}}\\
->>>>>>> b03b5d1 (Présentation de l'arbre pondéré)
+(Présentation de l'arbre pondéré)
 La probabilité de l'évènement représenté par un chemin est égale au produit des probabilités inscrites sur les branches de ce chemin.
 
 En considérant l'exemple précédent, la probabilité de l'évèvenement $F\cap \overline{P}$ est:
@@ -405,21 +403,23 @@ $p(A\cap B)=p(A)\times p(B)$
 En considérant l'exemple précédent, montre que F et P sont deux événements indépendants.\\
 \underline{\textbf{\textcolor{red}{Solution}}}\\
 \textbf{Already solve but think first}
-%On a:
-%\begin{itemize}
-%\item[•]$p(F)=0,55$
-%\item[•] $p(F\cap P)=p(F)\times p_{F}(p)=0,55\times 0,10 $
-%\item[•] $p(\overline{F}\cap P)=p(\overline{F})\times p_{\overline{F}}(p)=0,45\times 0,10$
-%\end{itemize}
-%L'ensemble $\left\lbrace F, \overline{F} \right\rbrace $ formant une partition de l'univers, on a, d'après la formule des probabilité totales :\\
-%$p(P)=p(F\cap P)+p(\overline{F}\cap P)$
 
-%Alors:
-%\begin{itemize}
-%\item[•] $p(F\cap P)=0,055$
-%\item[•] $p(F)\times p(P)=0,55\times 0,10$
-%\end{itemize}
-%Les événement $F$ et $P$ sont donc indépendants
+On a:
+\begin{itemize}
+\item[•]$p(F)=0,55$
+\item[•] $p(F\cap P)=p(F)\times p_{F}(p)=0,55\times 0,10 $
+\item[•] $p(\overline{F}\cap P)=p(\overline{F})\times p_{\overline{F}}(p)=0,45\times 0,10$
+\end{itemize}
+L'ensemble $\left\lbrace F, \overline{F} \right\rbrace $ formant une partition de l'univers, on a, d'après la formule des probabilité totales :\\
+$p(P)=p(F\cap P)+p(\overline{F}\cap P)$
+
+Alors:
+\begin{itemize}
+\item[•] $p(F\cap P)=0,055$
+\item[•] $p(F)\times p(P)=0,55\times 0,10$
+\end{itemize}
+Les événement $F$ et $P$ sont donc indépendants
+
 \underline{\textbf{\textcolor{red}{Exercice}}}\\
 Soit $A$ et $B$ deux événements indépendantes de probabilité non nulle.
 
@@ -427,12 +427,12 @@ Montrer que $\overline{A}$ et $\overline{B}$ sont aussi indépendantes.
 \section*{\underline{\textbf{\textcolor{red}{IV. LOIS DE PROBABILITE}}}}
 \subsection*{\underline{\textbf{\textcolor{red}{A. Epreuve de Bernoulli}}}}
 \underline{\textbf{\textcolor{red}{1.Définition}}}\\
-On appelle une epreuve de bernoulli toute expérience aléatoire qui n'a que deux issue possible. L'un des issue est appelé succé, l'autre est appelé echec.
+On appelle une epreuve de bernoulli toute expérience aléatoire qui n'a que deux issueS possible. L'un des issue est appelé succès, l'autre est appelé echec.
 \underline{\textbf{\textcolor{orange}{2.Probabilté sur une epreuve de Bernoulli}}}\\
-Avec une epreuve de Bernoulli, la probabilité du sucé est noté $p$ et celle de l'echec est notée $1-p$.
+Avec une epreuve de Bernoulli, la probabilité du succès est noté $p$ et celle de l'echec est notée $1-p$.
 
 \underline{\textbf{\textcolor{orange}{3.Schéma de Bernoulli}}}\\
-On appelle en schéma de bernoulli toute épreuve où on a n répétition qui sont identiques et indépendantes.
+On appelle schéma de bernoulli toute épreuve où on a n répétitions qui sont identiques et indépendantes.
 
 \underline{\textbf{\textcolor{orange}{Propriété}}}\\
 Soit un schéma de Bernoulli à n épreuves où pour chaque épreuve la probabilité du succé est notée $p$ et celle de l'echec est noté 1-p. 
@@ -492,9 +492,7 @@ Le candidat répond au hasard aux questions.
 
 \underline{\textbf{\textcolor{red}{Exemple}}}
 
-On lance trois fois de suite une pièce de monnaie équilibrée.\\ On gagne 2 $\$ $ pour chaque résultat
-
-« pile » et on perd 1 $\$ $ pour chaque résultat « face ».
+On lance trois fois de suite une pièce de monnaie équilibrée.\\ On gagne 2 $\$ $ pour chaque résultat « pile » et on perd 1 $\$ $ pour chaque résultat « face ».
 
 1°) Quel est l’ensemble E des issues possibles ?
 

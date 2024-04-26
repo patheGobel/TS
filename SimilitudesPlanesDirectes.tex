@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+
+\usepackage{color, soul}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+%\author{\\Lycée de Dindéfelo\\Mr BA}
+\title{\textbf{Similitude}}
+\date{\today}
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, fit}
+
+% Commande pour la couleur d'accentuation
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\begin{document}
+\maketitle
+\newpage
+\section*{\underline{\textbf{\textcolor{red}{I. Définitions}}}}
+On appelle similitude plane directe toute transformation du plan qui multiplie les distances par un réel $k > 0$ et qui conserve la mesure des angles orientés. $k$ est appelé le rapport de la similitude.
+\begin{itemize}
+    \item Les translations et les rotations sont des similitudes de rapport $1$.
+    \item L'homothétie de rapport $k$ est une similitude de rapport $|k|$.
+    \item Les composées d'homothétie et de rotation sont des similitudes.
+    \item Les rotations, les homothéties, les composées d'homothétie et de rotation sont appelées des similitudes à centre.
+    \item La réciproque d'une similitude de rapport $k$ est une similitude de rapport $k^{-1}$.
+    \item La composée de deux similitudes $s$ et $s'$ de rapports respectifs $k$ et $k'$ est une similitude de rapport $kk'$.
+    \item Si la similitude est la composée d'une rotation $r(\Omega,\theta)$ et d'une homothétie de centre $\Omega$ et de rapport $k > 0$, on dira que $S = h \circ r$ est une similitude de rapport $k$, d'angle $\theta$ et de centre $\Omega$ notée $s(\Omega,k,\theta)$.
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{II. Expression complexe}}}}
+Si $s$ est une similitude définie par $z' = az + b$, alors :
+\begin{itemize}
+    \item Si $a = 1$, alors $s$ est une translation de vecteur $\overrightarrow{u}(b)$.
+    \item Si $a \in \mathbb{R}^*_+ \backslash \{1\}$, alors $s$ est une homothétie de rapport $a$ et de centre $\Omega$ tels que $z_\Omega = az_\Omega + b$.
+    \item Si $a \in \mathbb{C} \backslash \mathbb{R}$ et $|a| = 1$, alors $s$ est une rotation d'angle $\theta$ tel que $\theta = \arg(a)$ et de centre $\Omega$ tels que $z_\Omega = \frac{b}{1-a}$.
+    \item Si $a \in \mathbb{C} \backslash \mathbb{R}$ et $|a| = 1$, alors $z = ke^{i\theta}z + b$ où $k = |a|$ et $\theta = \arg(a)$. On dira que $s$ est une similitude de rapport $k$, d'angle $\theta$ et de centre $\Omega$ tels que $z_\Omega = \frac{b}{1-a}$.\\
+%$s = h(\Omega,|a|) \circ r_{(\Omega,\theta)}$.
+    \item Soit $s = s(\Omega,k,\theta)$ définie par $z - z_\Omega = ke^{i\theta} (z - z_\Omega)$ ou $z' = ke^{i\theta} z + \alpha$.
+  Sa réciproque $s^{-1}$ est donnée par $s^{-1} = s_{(\Omega, \frac{1}{k} ,- \theta)}$.\\
+    \item Considérons deux similitudes $s_1$ et $s_2$ définies par :
+    \begin{align*}
+        s_1 &= s_{(\Omega,k_1 ,\theta_1)} ; z' = k_1 e^{i\theta_1} z + \alpha_1 \\
+        s_2 &= s_{(\Omega,k_2 ,\theta_2)} ; z' = k_2 e^{i\theta_2} z + \alpha_2
+    \end{align*}
+\end{itemize}
+\textbf{Leur composée notée $s_1 \circ s_2$ sera définie par}
+\[ z' = k_1 e^{i\theta_1} (k_2 e^{i\theta_2} z + \alpha_2) + \alpha_1 = k_1 k_2 e^{i(\theta_1 + \theta_2)} + \alpha \]
+
+\begin{itemize}
+    \item Si $\theta_1 + \theta_2 = 0[2\pi]$ et $k_1 k_2 = 1$ alors, $s_1 \circ s_2 = t$
+    \item Si $\theta_1 + \theta_2 = 0[2\pi]$ et $k_1 k_2 \neq 1$ alors, $s_1 \circ s_2 = h$ de rapport $k_1 k_2$
+    \item Si $\theta_1 + \theta_2 \neq 0[2\pi]$ et $k_1 k_2 = 1$ alors, $s_1 \circ s_2 = r$ d’angle $\theta_1 + \theta_2$
+    \item Si $\theta_1 + \theta_2 \neq 0[2\pi]$ et $k_1 k_2 \neq 1$ alors, $s_1 \circ s_2 = r$ est une similitude de rapport $k_1 + k_2$, d’angle $\theta_1 + \theta_2$ et de centre $\Omega$
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{Exercice d’application}}}}
+Le plan est muni d’un repère $(O; \vec{I}, \vec{J})$ orthonormé. Déterminer les écritures complexes des transformations du plan suivantes :
+\begin{enumerate}
+    \item La translation $t$ de vecteur $\overrightarrow{u}(3, -2)$.
+    \item L’homothétie $h$ de centre $A(-2, 1)$ et de rapport $\frac{3}{2}$.
+    \item L’homothétie de centre $A(2, 3)$ qui transforme $B(-1, -3)$ en $C(1, 1)$.
+    \item L’homothétie $h$ qui applique le point $A(1, 2)$ sur le point $B(-1, -3)$ et le point $C(-2, 3)$ sur le point $D(5, -5)$.
+    \item La rotation $r$ de centre $O$ et d’angle orienté $\frac{2\pi}{3}$.
+    \item La rotation $r$ de centre $A(2; -2)$ qui transforme le point $B(3; -2)$ en $C(1; -2)$.
+    \item La similitude directe $s$ de centre $\Omega(1 - i)$ de rapport $2$ et d’angle orienté $-\frac{5\pi}{6}$.
+    \item La similitude de centre $A(-1)$ qui transforme le point $B(-1 - i)$ en $C(-i)$.
+    \item La similitude qui transforme les points $A$ et $B$ respectivement en $C$ et $D$ avec $z_A = 3 + i$, $z_B = -1 + 2i$, $z_C = 6 - 3i$ et $z_D = 3 + 2i$.
+\end{enumerate}
+\subsection*{\underline{\textbf{\textcolor{red}{III. Propriétés}}}}
+
+\end{document}

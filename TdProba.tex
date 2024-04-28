@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+
+\usepackage{color, soul}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+\author{\\Lycée de Dindéfelo\\Mr BA}
+\title{\textbf{Td Similitude}}
+\date{\today}
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, fit}
+
+% Commande pour la couleur d'accentuation
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\begin{document}
+
+\begin{minipage}{0.5\textwidth}
+	Ministère de l'éducation nationale  \\
+	Inspection académique de Kédougou   \\
+	Lycée de Dindéfelo            \\
+	Cellule de mathématiques            \\
+	M. BA                          \\
+	Classe : TS2  \\
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+	Année scolaire 2023-2024 \\
+\end{minipage}
+
+\begin{center}
+	\textbf{{\underline{TD de Prbabilité}}}
+\end{center}
+\section*{EXERCICE 1}
+Une urne contient 15 boules identiques numérotées de 1 à 15. On tire une boule au hasard et on note $N$ son numéro. Soient les événements :
+\begin{itemize}
+   \item $A$ : $\ll N$ est divisible par 2 $\gg$
+   \item $B$ : $\ll N$ est divisible par 3 $\gg$
+\end{itemize}
+Calculer les probabilités des événements $A$, $B$, $A \cup B$, $A \cap B$, $\overline{A}$, $\overline{B}$ ,$\overline{A} \cap \overline{B}$ ,$\overline{A} \cup \overline{B}$.
+
+\section*{EXERCICE 2 : Chaussettes}
+Dans le tiroir de son armoire, Abdou possède 5 paires de chaussettes noires, 3 paires de chaussettes vertes et 2 paires de chaussettes rouge. Ces chaussettes sont mélangées dans le plus grand désordre et indiscernables au toucher.
+Au moment où il s’habille, survient une panne d’électricité. Abdou, qui est pressé et n’a ni lampe de poche, ni boite d’allumettes, prend au hasard deux chaussettes dans le tiroir.
+\begin{enumerate}
+    \item Quelle est la probabilité pour qu’il ait tiré deux chaussettes de même couleur ?
+    \item En supposant que le nombre de chaussettes vertes et le nombre de chaussettes rouges reste inchangé, quel devrait être le nombre $n$ de chaussettes noires contenues dans le tiroir pour que la probabilité d’avoir deux chaussettes noires soit égale à ?
+\end{enumerate}
+
+\section*{EXERCICE 3 : Urne avec boules}
+Soit un entier $n \geq 4$. Une urne contient $n$ boules blanches et $n$ boules noires. On tire simultanément de cette urne 4 boules au hasard et on compte le nombre de boules blanches obtenues.
+\begin{enumerate}
+    \item Quelle est la probabilité $P_n(2)$ pour que ce nombre soit égal à 2 ?
+    \item Quelle est la limite de $P_n(2)$ lorsque $n \rightarrow +\infty$ ?
+\end{enumerate}
+
+\section*{EXERCICE 4 : Pollution}
+Un milieu biologique risque d’être pollué par des bactéries ou par des champignons. Ces deux sources de pollution sont indépendantes. Un milieu pollué le reste définitivement.
+Au cours d’une journée d’exposition, la probabilité d’être pollué par des bactéries est 0,2 et celle d’être pollué par des champignons est 0,3.
+Déterminer en fonction de $n$ la probabilité d’avoir été pollué au cours de $n$ journées d’exposition.
+
+\section*{EXERCICE 5 : Maintenance}
+Dans une entreprise, on fait appel à un technicien lors de son passage hebdomadaire, pour l’entretien des machines.
+Chaque semaine, on décide donc pour chaque appareil de faire appel ou non au technicien. Pour un certain type de machines, le technicien constate :
+\begin{itemize}
+    \item[•] qu'il doit intervenir la première semaine ;
+   \item[•] que s'il est intervenu la $n^{ième}$ semaine, la probabilité qu'il intervienne à la $(n+1)^{ième}$ semaine est égale à $p$ ;
+    \item[•] que s’il n’est pas intervenu à la $n^{ième}$ semaine, la probabilité qu’il intervienne à la $(n+1)^{ième}$ semaine est égale à $q$.
+\end{itemize}
+On désigne par $E_n$ l’événement $\ll$ le technicien intervient la $n^{ième}$ semaine $\gg$ et par $P_n$ la probabilité de cet événement.
+\begin{enumerate}
+    \item Déterminer les nombres $P(E_1)$, $P(E_{n+1}/E_n)$, $P(E_{n+1}/\overline{E_n})$ puis en fonction de $P_n$ déterminer $P(E_{n+1} \cap E_n)$.
+   \item En déduire que pour tout entier $n$ non nul : $P_{n+1} = P_n + p(1-P_n) + qP_n$.
+   \item On pose $q_n = p_n - \frac{2}{7}$. Montrer que la suite $(q_n)$ est géométrique. En déduire l’expression de $P_n$ en fonction de $n$. Pour quelles valeurs de $n$ a-t-on $P_n \leq$ ?
+\end{enumerate}
+\end{document}

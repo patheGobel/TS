@@ -1,0 +1,526 @@
+\documentclass[12pt]{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+\usepackage{color,soul}
+\usepackage{amsmath}
+\usepackage[table]{xcolor}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{systeme}
+\usepackage{tkz-tab}
+\author{Destiné à la TerminaleS2\\Au Lycée de Dindéfelo}
+\title{\textbf{Dénombrement}}
+\date{\today}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage[a4paper,left=20mm,right=20mm,top=15mm,bottom=15mm]{geometry}
+\usepackage{mathtools}
+\usepackage{systeme}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+
+\DecimalMathComma
+
+\begin{document}
+
+\maketitle
+\newpage
+\section*{\underline{\textbf{\textcolor{red}{I.Introduction}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{1.Définition des objets :}}}}
+Dénombrer, c’est compter des objets.
+
+Ces objets sont créés à partir d’un ensemble E, formé d’éléments.
+A partir des éléments de cet ensemble, les objets que l’on peut former sont soit des 
+\textbf{\textcolor{red}{listes}}
+d’éléments de E soit des \textbf{\textcolor{red}{sous-ensembles}} de E.
+
+A la différence des sous-ensembles,
+les listes peuvent utiliser plusieurs fois un même élément, et surtout, possèdent un ordre.\\
+Dans les exercices, les objets obtenus sont le résultat d’une expérience aléatoire, c’est à dire que le hasard intervient dans leur formation.\\
+
+%Le dénombrement de ces objets, lui, n’a rien d’aléatoire,
+%il est un décompte organisé de tous les résultats possibles d’une telle expérience.
+
+%Nous allons maintenant définir avec plus de précisions les différents objets que l’on peut rencontrer et pour ce, nous allons prendre comme exemple
+%l’ensemble suivant :
+\subsection*{\underline{\textbf{\textcolor{red}{2.Cardinale d'un ensemble}}}}
+Soit E un ensemble à n éléments.
+Le nombre d’éléments de E est appelé cardinal de E on note card E = n.\\
+\textbf{\textcolor{red}{Exemple}}\\
+Soit E un ensemble à 5 éléments : E = $\lbrace a ; b ; c ; d ; e \rbrace$
+le nombre d’éléments de E est appelé cardinal de E et noté card E = 5
+\subsection*{\underline{\textbf{\textcolor{red}{3.Dénombrement de parites d'ensemles finis}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{3.1.Cardinal de la réunion de deux parties}}}}
+%$A$ et $B$ étant deux parties non vides d'un ensemble fini, $A \setminus B$, $B %%\setminus A$ et $A \cap B \neq 0$\\
+%sont des ensemble disjoints deux à deux, dont la réunion est égale à $A \cup B$.\\
+%Donc $card(A \cup B)=card(A \setminus B)+card(B \setminus A)+card(A \cup B)$\\
+%			or
+%		$card(A)=card(A \setminus B)+card(A \cap B)$\\
+%		$card(B)=card(B \setminus A)+card(A \cap B)$\\
+si $A \cap B \neq \emptyset $ alors $card(A \cup B)=card(A)+card(B)-card(A \cap B)$\\
+\begin{center}
+\begin{tikzpicture}
+% Cercle A
+\draw (0,0) circle (2cm);
+\node at (0,0) [left] {$A$};
+% Cercle B
+\draw (2,0) circle (2cm);
+\node at (2.5,0) [right] {$B$};
+\node at (0.5,0) [right] {$A\cap B$};
+\end{tikzpicture}
+\end{center}
+\subsection*{\underline{\textbf{\textcolor{red}{3.2.Cardinal de la réunion de deux parties disjointes}}}}
+si $A \cap B=\emptyset $ alors $card(A \cap B)=card(A)+card(B)$ 
+\begin{center}
+\begin{tikzpicture}
+% Cercle A
+\draw (0,0) circle (1.5cm);
+\node at (0,0) [left] {$A$};
+% Cercle B
+\draw (5,0) circle (1.5cm);
+\node at (4.5,0) [right] {$B$};
+\end{tikzpicture}
+\end{center}
+\textbf{\textcolor{red}{Exercice:}}\\
+Montrer que $card(A \cup B)=card(A)+card(B)-card(A \cap B)$\\
+\textbf{\textcolor{red}{Exemple1:}}\\
+Les 50 élèves d'une classe de TS disposent de deux options sportives, l'athlétisme et la natation.\\27 élèves pratiquent l'athlétisme:\\ 29 élèves pratiquent la natation et 5 élèves ne pratiquent aucun des deux sports.\\
+Trouver le nombre d'élèves qui pratiquent uniquement l'athlétisme, ceux qui pratiquent uniquement la nation  et ceux qui pratiquent les deux sports.\\
+\textbf{\textcolor{red}{Solution:}}\\
+\textbf{\textcolor{red}{Traduction des données en termes d'ensembles:}}\\
+E est l'ensemble des élèves de la classe de TS;\\
+A l'ensemble des élèves pratiquant l'athlétisme;\\
+B l'ensemble des élèves pratiquant la natation.\\
+Donc:\\
+$A\cup B$ est l'ensemble des élèves pratiquant l'athlétisme ou la natation;\\
+$A\cap B$ est l'ensemble des élèves pratiquant l'athlétisme et la natation;\\
+$A\setminus B$ est l'ensemble des élèves pratiquant uniquement l'athlétisme;\\
+$B\setminus A$ est l'ensemble des élèves pratiquant uniquement la natation;\\
+$C_{E}(A\cup B)$ est l'ensemble des élèves ne pratiquant aucun des deux sports.\\
+On a: card(E)=50 ; card(A)=27 ; card(B)=29 ; card($C_{E}(A\cup B)$)=5\\
+\textbf{\textcolor{red}{Résolution du problème:}}\\
+card($A\cup B$)=50-5\\
+card($A\cap B$)=card(A)+card(B)-card($A \cup B$)\\
+card($A\cap B$)=27+29-45=11\\
+card($A\setminus B$)=card(A)-card($A \cap B$)=27-11=16\\
+card($B\setminus A$)=card(B)-card($A \cap B$)=29-11=18\\
+\textbf{\textcolor{red}{Conclusion en langage courant:}}\\
+11 élèves pratiquent les deux sports.\\
+16 élèves pratiquement uniquement l'athlétisme.\\
+18 élèves pratiquent uniquement la natation.\\
+\textbf{\textcolor{red}{Exemple2:}}\\
+Une enquete sur la lecture des 3 journaux $\mathcal{A}$,$\mathcal{B}$,$\mathcal{C}$ d'une ville a donné les résultats suivants.\\
+Sur 1500 personnes intérrogées: \\
+900 lisent $\mathcal{A}$ ; \\
+750 lisent $\mathcal{B}$ ; \\
+750 lisent $\mathcal{C}$ ; \\
+300 lisent $\mathcal{B}$ et $\mathcal{C}$ ; \\
+450 lisent $\mathcal{C}$ et $\mathcal{A}$ ; \\
+450 lisent $\mathcal{A}$ et $\mathcal{B}$ ; \\
+100 lisent $\mathcal{A}$ ; $\mathcal{B}$ et $\mathcal{C}$.\\
+1.Combien de personnes lisent deux journaux et deux seulement?\\
+2.Combien de personne ne lisent aucun de ces journaux.\\
+\textbf{\textcolor{red}{Solution:}}\\
+\textbf{\textcolor{red}{Traduction des données en termes d'ensembles:}}\\
+E l'ensemble des personnes interrogées;\\
+A l'ensemble des personnes qui lisent le journal $A$;\\
+B l'ensemble des personnes qui lisent le journal $B$;\\
+B l'ensemble des personnes qui lisent le journal $C$.\\
+Donc:\\ A$\cup$B$\cup$C est l'ensemble des personnes qui lisent au moins un des trois journaux.
+\\
+A$\cap$B est l'enseble des personnes qui lisent les journaux $A$ et $B$,\\
+B$\cap$C est l'enseble des personnes qui lisent les journaux $B$ et $C$;\\
+A$\cap$C est l'enseble des personnes qui lisent les journaux $A$ et $C$;\\
+A$\cap$B$\cap$C est l'enseble des personnes qui lisent les trois journaux $A$,$B$ et $C$;\\
+On a :\\
+card(E)=1500 ; card(A)=900 ; card(B)=750 ; card(C)=750 ; card($A\cap B$)=450 ; 
+card($A\cap C$)=450 ; card($B\cap C$)=300 ; card($A\cap B\cap C$)=100\\
+\textbf{\textcolor{red}{Résolution du problème:}}\\
+\textbf{\textcolor{red}{Question 1:}}\\
+Nombre de personnes qui lisent $A$ et $B$ mais ne lisent pas $C$:\\
+\quad\quad card($A\cap B$)-card($A\cap B\cap C$)=450-100=350\\
+Nombre de personnes qui lisent $A$ et $C$ mais ne lisent pas $B$;\\
+\quad\quad card($A\cap C$)-card($A\cap B\cap C$)=450-100=350\\
+Nombre de personnes qui lisent $B$ et $C$ mais ne lisent pas $A$;\\
+\quad\quad card($B\cap C$)-card($A\cap B\cap C$)=300-100=200\\
+Nombre de personnes qui lisent seulement deux journaux.\\
+			350+350+200=900\\
+\textbf{\textcolor{red}{Question 2:}}\\
+Nombre de personnes qui lisent uniquement le journal $A$:\\
+\quad\quad 900-(350+350+100)=100\\
+Nombre de personnes qui lisent uniquement le journal $B$:\\
+\quad\quad 750-(350+200+100)=100\\
+Nombre de personnes qui lisent uniquement le journal $C$:\\
+\quad\quad 750-(50+200+100)=100\\
+Nombre de personnes qui lisent au moins un de ces deux journaux:\\
+100+100+100+100+350+350+200=1300\\
+Nombre de personnes qui ne lisent aucun de ces deux journaux:\\
+1500-1300=200
+\subsection*{\underline{\textbf{\textcolor{red}{2.Cardinale d'un ensemble}}}}
+\textbf{\textcolor{red}{Expérience aléatoire:}}\\
+Prenons 4 jetons indiscernables au toucher.\\
+Inscrivons sur le premier : a, sur le deuxième : b, sur le troisième : c, sur le dernier : d et plaçons-les dans un sac.
+\subsection*{\underline{\textbf{\textcolor{red}{2.P-uplets(P-liste)}}}}
+\textbf{\textcolor{red}{Expérience n°1 :Tirages successifs avec remise.}}\\
+* On pioche un premier jeton, par exemple : b et on le remet dans le sac.\\
+* On pioche un deuxième jeton, par exemple : a et on le remet dans le sac.\\
+* On pioche un troisième jeton, par exemple : a et on le remet dans le sac.\\
+L’expérience est terminée. \\
+Le résultat est noté à l’aide de \textbf{\textcolor{blue}{parenthèses}} : ( b ; a ; a )\\
+Les résultats possibles de cette expérience sont des \textbf{\textcolor{blue}{listes}} de 3 éléments de E,  \textbf{\textcolor{blue}{avec répétition}} d’éléments possible. \\
+- Une liste de 3 éléments est appelée un triplet.\\
+- Plus généralement, une liste de p éléments \textbf{\textcolor{blue}{appelée un un p-uplet}} ou une \textbf{\textcolor{blue}{p-liste}}.\\
+\textbf{\textcolor{blue}{Attention!}}\\
+Une liste respecte un ordre : ( b ; a ; a ) $\neq$ ( a ; a ; b )
+Dans une liste, il y a un premier élément, un deuxième élément, etc… 
+\subsection*{\underline{\textbf{\textcolor{red}{3.Arrangements}}}}
+\textbf{\textcolor{red}{Expérience n°2 :Tirages successifs sans remise}}\\
+* On pioche un premier jeton, par exemple : b que l’on ne remet pas dans le sac.\\
+* On pioche un deuxième jeton, par exemple : a que l’on ne remet pas dans le sac.\\
+* On pioche un troisième jeton, par exemple : c que l’on ne remet pas dans le sac.\\
+L’expérience est terminée.\\
+
+Le résultat est noté à l’aide de \textbf{\textcolor{red}{parenthèses :}} ( b ; a ; c )\\
+Les résultats possibles de cette expérience sont des \textbf{\textcolor{blue}{listes}} de 3 éléments de E,
+\textbf{\textcolor{blue}{sans répétition}} d’éléments possible.\\
+
+- Une liste de 3 éléments sans répétition possible est appelée un arrangement de 3 éléments.\\
+- Plus généralement, une liste de p éléments sans répétition possible est appelée\\ \textbf{\textcolor{blue}{un arrangement de p éléments de E.}}\\
+Remarques :\\
+1) Cette dénomination a pour avantage de bien marquer l’importance de l’ordre dans une telle liste.\\
+
+2) Un arrangement de p éléments de E est un cas particulier de p-uplet d’éléments de E.\\
+\subsection*{\underline{\textbf{\textcolor{red}{4.Permutations(Cas particulier d’arrangement:)}}}}
+\textbf{\textcolor{red}{Expérience n°3 :Tirages successifs sans remise}}\\
+Si l’on réalise autant de pioches sans remise qu’il y a de jetons dans le sac, on obtient alors une liste de tous les éléments de E rangés dans un certain ordre. \\
+Une telle liste est appelée une permutation des éléments de E.\\
+
+Par exemple : ( d ; b ; c ; a ) est une permutation des éléments de E.\\
+Et : ( c ; a ; d ; b ) en est une autre.\\
+Plus généralement : un arrangement de n éléments d’un ensemble E à n éléments est appelé permutation des éléments de E.\\
+\subsection*{\underline{\textbf{\textcolor{red}{5.Combinaisons}}}}
+\textbf{\textcolor{red}{Expérience n°4 :Tirages simultanés.}}\\
+On pioche trois jetons en une seule fois, par exemple : a, d et c.\\
+Le résultat est noté à l’aide d’accolades : $\lbrace a ; d ; c \rbrace$\\
+Les résultats possibles de cette expérience sont des sous-ensembles de E ou parties de E, possédant 3 éléments.\\
+
+Un sous-ensemble de E comportant 3 éléments est appelé une combinaison de 3 éléments de E.\\
+
+Plus généralement, une partie de E possédant p éléments est appelée une combinaison de p éléments de E.\\
+
+- L’ensemble $\lbrace d ; a ; c \rbrace$ possède les mêmes éléments que l’ensemble $\lbrace a ; d ; c \rbrace$ ils sont donc égaux.\\
+Par conséquent, contrairement aux listes, \textbf{\textcolor{blue}{l’ordre d’écriture des éléments d’une combinaison n'est pas important.}}\\
+
+Cette absence d’importance de l’ordre est marquée par l’utilisation de 
+\textbf{\textcolor{blue}{l’écriture avec accolades, écriture réservée aux ensembles.}}
+\section*{\underline{\textbf{\textcolor{red}{III.Dénombrement}}}}
+Nous savons ce qu’est, par exemple, un arrangement de 3 éléments de E, mais le problème est maintenant de trouver combien on peut former de listes de ce type.\\
+Deux grandes techniques de dénombrement existent. 
+\subsection*{\underline{\textbf{\textcolor{red}{1.Arrangements}}}}
+Nous savons ce qu’est, par exemple, un arrangement de 3 éléments de E,
+mais le problème est maintenant de trouver combien on peut former de listes de ce type.\\
+
+Deux grandes techniques de dénombrement existent.\\
+
+Voici la première de ces techniques, appliquée au dénombrement des arrangements de 3 éléments
+de l’ensemble E, défini plus haut : \\
+\subsection*{\underline{\textbf{\textcolor{red}{Technique de l’arbre :}}}}
+Pour compter le nombre d'arrangements possibles de 3 éléments d'un ensemble E, nous utilisons une méthode appelée la "technique de l'arbre".\\
+
+    1.Pour le premier élément de la liste, nous avons 4 choix possibles car nous choisissons parmi les 4 éléments de E.\\
+
+    2.Pour le deuxième élément, une fois que le premier élément est choisi, il reste 3 éléments dans E parmi lesquels choisir, car nous ne permettons pas de répétition dans la liste.\\
+
+    3.Enfin, pour le troisième élément, une fois que les deux premiers sont choisis, il reste 2 éléments dans E  parmi lesquels choisir, toujours sans répétition.\\
+
+En multipliant ces nombres de choix ensemble (4 pour le premier élément, 3 pour le deuxième et 2 pour le troisième), nous obtenons le nombre total d'arrangements possibles, qui est\\ 4x3x2 = 24.\\
+\begin{tikzpicture}[level distance=3cm,
+  level 1/.style={sibling distance=3cm},%Ecarte les branches des 1eme ramifications
+  level 2/.style={sibling distance=1cm},%Ecarte les branches des  2eme ramifications
+  level 3/.style={sibling distance=0.5cm}]%Ecarte les branches des 3eme ramifications
+  \node {}
+    child {node {a}
+      child {node {b}
+		child {node {c}}
+        child {node {d}}      
+      }
+      child {node {c}
+		child {node {b}}
+        child {node {d}}      
+      }
+      child {node {d}
+		child {node {b}}
+        child {node {c}}       
+      }
+    }% 1ere branche 
+    child {node {b}
+      child {node {a}
+      	child {node {c}}
+        child {node {d}}
+      }
+      child {node {c}
+		child {node {a}}
+        child {node {d}}      
+      }
+      child {node {d}
+		child {node {a}}
+        child {node {c}}      
+      }
+    }   
+    child {node {c}
+      child {node {a}
+		child {node {b}}
+        child {node {d}}      
+      }
+      child {node {b}
+		child {node {a}}
+        child {node {d}}      
+      }
+      child {node {d}
+		child {node {a}}
+        child {node {b}}      
+      }
+    }
+    child {node {d}
+      child {node {a}
+		child {node {b}}
+        child {node {c}}      
+      }
+      child {node {b}
+		child {node {a}}
+        child {node {c}}      
+      }
+      child {node {c}
+		child {node {a}}
+        child {node {b}}      
+      }
+    };
+\end{tikzpicture}\\
+Cette méthode utilise une approche systématique pour compter toutes les possibilités, en organisant les choix en étapes successives pour garantir que chaque arrangement unique est pris en compte.
+\subsection*{\underline{\textbf{\textcolor{red}{Technique des cases :Principe Multiplicatif}}}}
+« Fabriquer » un arrangement de 3 éléments de E, équivaut à remplir les 3 cases suivantes avec des éléments 2 à 2 distincts :\\
+Il y a 4 choix possibles pour le premier élément.\\
+
+Puis le choix du premier élément étant fait, il reste 3 choix possibles pour le deuxième.\\
+
+Et enfin, le choix des deux premiers éléments étant fait, il reste 2 choix possibles pour le dernier.\\
+\begin{tikzpicture}
+  % Case 1
+  \draw (0,0) rectangle (1,1);
+  \node at (0.5,1.5) {Case 1};
+  \node at (0.5,-0.5) {1ère élément de la liste};
+  \node at (0.5,0.5) {a};
+  
+  % Case 2
+  \draw (5,0) rectangle (6,1);
+  \node at (5.5,1.5) {Case 2};
+  \node at (5.5,-0.5) {2ème élément de la liste};
+  \node at (5.5,0.5) {b};
+  
+  % Case 3
+  \draw (10,0) rectangle (11,1);
+  \node at (10.5,1.5) {Case 3};
+  \node at (10.5,-0.5) {3ème élément de la liste};
+  \node at (10.5,0.5) {c};
+\end{tikzpicture}\\
+Il y a 4 choix possibles pour le premier élément.\\
+
+Puis le choix du premier élément étant fait, il reste 3 choix possibles pour le deuxième.\\
+
+Et enfin, le choix des deux premiers éléments étant fait, il reste 2 choix possibles pour le dernier.\\
+\begin{tikzpicture}
+  % Case 1
+  \draw (0,0) rectangle (1.5,1.5);
+  \node at (0.5,1.9) {Case 1};
+  \node at (0.5,-0.5) {1ère élément de la liste};
+  \node at (0.8,0.8) {4 choix};
+  \node at (3,0.8) {X};
+  \node at (-1.6,0.8) {nombre de liste=};
+  
+  % Case 2
+  \draw (5,0) rectangle (6.5,1.5);
+  \node at (5.7,1.8) {Case 2};
+  \node at (5.7,0.8) {3 choix};
+  \node at (7.9,0.8) {X};
+  \node at (5.5,-0.5) {2ème élément de la liste};
+  
+  % Case 3
+  \draw (10,0) rectangle (11.5,1.5);
+  \node at (10.9,1.9) {Case 3};
+  \node at (10.5,-0.5) {3ème élément de la liste};
+  \node at (10.7,0.8) {2 choix};
+  \node at (11.9,0.8) {=24};
+\end{tikzpicture}\\ 
+\underline{\textbf{\textcolor{red}{Remarque:}}}\\
+cette technique équivalente à celle de l’arbre, est parfois plus pratique quand par exemple un élément de la liste est connu ainsi que sa position.\\
+
+\underline{\textbf{\textcolor{red}{Généralisation:}}}\\
+soit un entier naturel $n > 1$, et soit p entier naturel tel que : $1 < p < n$.\\
+Le nombre d’arrangements de p éléments d’un ensemble E à n éléments est noté : $A_{n}^{p}$\\
+Et en généralisant le raisonnement tenu sur le cas particulier, on a : \\
+$A_{n}^{p}=n\times(n-1)\times(n-2)\times...\times[n-(n-p)]$\\
+$A_{n}^{p}=\frac{n!}{(n-p)!}$\\
+\underline{\textbf{\textcolor{red}{Exemple:}}}\\
+Dans un parking de 5 places, combien y a-t-il de facon de garer trois voiture?\\
+\underline{\textbf{\textcolor{red}{Solution:}}}\\
+\subsection*{\underline{\textbf{\textcolor{red}{2.Permutations :}}}}
+* Si p = n, on dénombre alors les permutations d’éléments de E.\\
+Sur notre cas particulier, en utilisant par exemple la technique des cases, on trouve qu’il existe : 4x3x2x1 permutations des éléments de E.\\
+Soit : 24 permutations des 4 éléments de E.\\
+Plus généralement, une permutation étant un arrangement de n éléments de E, il en existe :
+$n\times(n-1)\times(n-2)\times...\times[n-(n-1)]$\\
+Soit :$n\times(n-1)\times(n-2)\times...\times2\times1$\\
+\underline{\textbf{\textcolor{red}{Généralisation:}}}\\
+pour tout entier $n \geq 1$,\\
+Le nombre de permutations d’un ensemble à n éléments est noté : n! (se lit "factoriel n")\\
+Avec: n!=$n\times(n-1)\times(n-2)\times...\times2\times1$\\
+Par convention : 0! = 1\\
+\underline{\textbf{\textcolor{red}{Exemple:}}}\\
+De combien de facon differentes peut-on disposer 4 personnes sur 4 chaises numérotés ?\\
+\underline{\textbf{\textcolor{red}{Solution:}}}\\
+\subsection*{\underline{\textbf{\textcolor{red}{3.p-uplets :}}}}
+Toujours avec notre exemple, en dénombrant à l’aide de la technique des cases et en tenant compte du fait que la répétition d’un même élément est possible :\\
+
+on trouve qu’il existe : 4x4x4 triplets possibles, soit 64 triplets formés avec les éléments de E.\\
+\underline{\textbf{\textcolor{red}{Généralisation:}}}\\
+Soit un entier naturel $n > 1$, et soit p entier naturel tel que : $p > 1$
+Le nombre de p-uplets d’un ensemble à n éléments est : $n^{p}$\\
+\underline{\textbf{\textcolor{red}{Remarque :}}}\\
+Comme il peut y avoir répétition des éléments de E, p peut être strictement plus grand que n.\\
+\underline{\textbf{\textcolor{red}{Exemple:}}}\\ 
+\underline{\textbf{\textcolor{red}{Solution:}}}\\
+\subsection*{\underline{\textbf{\textcolor{red}{4.combinaisons :}}}}
+ Considérons la combinaison de 3 éléments de E : $\lbrace a ; b ; c \rbrace$\\
+En permutant ses éléments, il est possible de former des arrangements de 3 éléments de E.\\
+
+Et le nombre de permutations d’un ensemble de 3 éléments étant : 3!, il est donc possible à partir de cette combinaison de former 6 arrangements de 3 éléments de E.\\
+On peut évidemment faire de même avec les autres combinaisons de 3 éléments de E, obtenant ainsi tous les arrangements de 3 éléments de E.\\
+
+De plus, deux combinaisons différentes ne peuvent générer deux arrangements identiques.\\
+Donc, si nous notons $C^{3}_{4}$ le nombre de combinaisons de 3 éléments de E, par analogie avec la notation $A^{3}_{4}$ des arrangements de 3 éléments de E, on a alors : $A^{3}_{4}=6 \times C^{3}_{4}$ or 
+$A^{3}_{4}=4\times3\times2=24$\\ Donc $C^{3}_{4}=4$\\
+En effet, les combinaisons possibles sont : $\lbrace a ; b ; c \rbrace$,$\lbrace a ; b ; d \rbrace$,
+$\lbrace a ; c ; d \rbrace$, $\lbrace b ; c ; d \rbrace$\\
+\underline{\textbf{\textcolor{red}{Généralisation:}}}\\
+Généralisons ce raisonnement au cas d’une combinaison de p éléments
+d’un ensemble E à n éléments.\\
+
+Chaque combinaison de p éléments, par permutations, génère p! arrangements
+de p éléments de E.\\
+Donc, avec les notations utilisées précédemment :$ A^{p}_{n}=p! \times C^{p}_{n}$ or, 
+$A_{n}^{p}=n\times(n-1)\times(n-2)\times...\times[n-(p-1)]$\\
+Donc $C^{p}_{n}=\frac{n\times(n-1)\times(n-2)\times...\times[n-(p-1)]}{p!}=\frac{A^{p}_{n}}{p!}
+=\frac{\frac{n!}{(n-p)!}}{p!}=\frac{n!}{p!(n-p)!}$\\
+D'où $C^{p}_{n}=\frac{n!}{p!(n-p)!}$.\\ $C^{p}_{n}$ se lit:"p parmi n" \\
+\underline{\textbf{\textcolor{red}{Que dirais cette formule si elle pouvait parler?}}}\\
+Le nombre de combinaisons de p éléments d'un ensemble de E à n éléments est noté:$C^{p}_{n}$\\
+D'un point de vu pratique, n correspond au nombre de façon de choisir p élément parmi n, l'ordre de choix ne comptant pas.\\
+\underline{\textbf{\textcolor{red}{Cas particlier sur la formule:}}}\\
+\textbf{\textcolor{red}{Cas p = 0 :}} \\
+Nous avons démontré cette égalité pour $p \geq 1$ mais non pour p = 0 car alors la notion de liste n’a plus de sens.\\
+Par contre, un sous-ensemble de E possédant 0 éléments existe, il est unique et il s’agit de l’ensemble vide.
+On a donc :$C^{0}_{n}=1$ \\
+\textbf{\textcolor{red}{Cas p = 1 :}} \\
+Il existe autant de sous-ensembles de E à 1 élément que d’éléments de E donc :$C^{1}_{n}=1$\\
+\textbf{\textcolor{red}{Cas p = n :}} \\
+Il n’existe qu’un sous-ensemble de E à n éléments c’est E donc : $C^{n}_{n}=1$\\
+\textbf{\textcolor{red}{Exemple1}} \\
+Calculons le nombre de combinaisons de 3 éléments d’un ensemble de cardinal 8.\\
+nombre de listes de 3 éléments, sans répétitions. \\
+\underline{\textbf{\textcolor{red}{Solution:}}}\\
+$C^{3}_{8}=\frac{8!}{3!5!}$\\
+\textbf{\textcolor{red}{Exemple2}} \\
+L'éclairage d'une salle est assurée par cinq ampoules commandées chacune par un interrupteur.\\
+De combien de manière peut-on éclarer cette salle en allunment exactement trois lampes?
+\underline{\textbf{\textcolor{red}{Solution:}}}\\
+Le nombre de manière que l'on éclarer cette salle en allunment exactement trois lampes:\\
+Soient $L_{1}$,$L_{2}$,$L_{3}$,$L_{4}$et$L_{5}$ les differentes lampes.\\
+Pas d'ordre\\
+Pas de répétition\\
+Donc $C^{3}_{5}=\frac{5!}{3!(5-3)!}=10$
+\subsection*{\underline{\textbf{\textcolor{red}{5.Annagramme :}}}}
+\section*{\underline{\textbf{\textcolor{red}{III.Grosse Résumé:}}}}
+Récapitulons les différentes questions que l'on doit se poser, confronté a un problème de dénombrement. Cela nous permettra de choisir le concepte à utiliser en fonction de la situation.\\
+\begin{tikzpicture}[level distance=3cm,
+  level 1/.style={sibling distance=5cm},%Ecarte les branches des 1eme ramifications
+  level 2/.style={sibling distance=9cm},%Ecarte les branches des  2eme ramifications
+  level 3/.style={sibling distance=2cm}]%Ecarte les branches des 3eme ramifications
+    every node/.style={text width=2cm, align=center}]%Permet de spécifier une largeur pour chaque nœud
+  \node {résultat ordonné?}
+    child {node {Répétition?}
+     child {node {p-uplet $n^{p}$}    
+      }
+      child {node {}
+        child {node {$n!$}} 
+      	child {node {$A^{p}_{n}$}}     
+      }
+    }% 1ere branche      
+    child {node {$C^{p}_{n}$}
+    };
+\node at (0.5,-5) [right] {$Non$};
+\node at (0.8,-1) [right] {$Non$};
+\node at (-2,-1) [right] {$Oui$};
+\node at (-7,-5) [right] {$Oui$};
+\end{tikzpicture}\\
+\subsection*{\underline{\textbf{\textcolor{red}{Exemples:}}}}
+\underline{\textbf{\textcolor{red}{Exemples1:}}}\\
+Combien de mots composés de 3 lettres de l'alphabet peut-on former?\\
+\underline{\textbf{\textcolor{red}{Exemples2:}}}\\
+On dispose de 26 jetons marqués des 26 lettres de l'alphabet. On tire successivement et sans remise 3 jetons.\\
+Combien de mots de 3 lettres peut-on former?\\
+\underline{\textbf{\textcolor{red}{Exemples3:}}}\\
+Quel est le nombre d'anagramme du mot "MDR".\\
+\underline{\textbf{\textcolor{red}{Exemples4:}}}\\
+On dispose de 6 jetons marqués des 6 couleurs différentes. On tire simultanément 3 jetons.\\
+Combien de possibilités existe-t-il ?
+\subsection*{\underline{\textbf{\textcolor{red}{6.Formules :}}}}
+$C^{n-p}_{n}=C^{p}_{n}$\\
+$C^{p-1}_{n-1}+C^{p}_{n-1}=C^{p}_{n}$\\
+\underline{\textbf{\textcolor{red}{Triangle de Pascal:}}}\\
+ce qui peut être utile pour la formule qui suit : \\
+\begin{equation*}
+\begin{array}{c|ccccccccc}
+n \backslash p & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+\hline
+0 & 1 \\
+1 & 1 & 1 \\
+2 & 1 & 2 & 1 \\
+3 & 1 & 3 & 3 & 1 \\
+4 & 1 & 4 & 6 & 4 & 1 \\
+5 & 1 & 5 & 10 & 10 & 5 & 1 \\
+6 & 1 & 6 & 15 & 20 & 15 & 6 & 1 \\
+7 & 1 & 7 & 21 & 35 & 35 & 21 & 7 & 1 \\
+8 & 1 & 8 & 28 & 56 & 70 & 56 & 28 & 8 & 1 \\
+\end{array}
+\end{equation*}
+\underline{\textbf{\textcolor{red}{Formule du binôme de Newton :}}}\\
+Pour tout a et b, et $n\geq 1$:\\
+\[(a+b)^{n}=\sum_{k=0}^{n}C_{n}^{p}a^{n-k}b^{k}\]
+\underline{\textbf{\textcolor{red}{Exemple:}}}\\
+Calculons $(1+x)^{5}$\\
+$(1+x)^{5}=\sum_{k=0}^{5}C_{5}^{k}1^{5-k}x^{k}$=$C_{5}^{0}1^{5-0}x^{0}+C_{5}^{1}1^{5-1}x^{1}+C_{5}^{2}1^{5-2}x^{2}+C_{5}^{3}1^{5-3}x^{3}+C_{5}^{4}1^{5-4}x^{4}+C_{5}^{5}1^{5-5}x^{5}$\\
+\underline{\textbf{\textcolor{red}{Remarque:}}}\\
+Les coefficients binomiaux pouvait également être trouvés en remplissant le triangle de Pascal jusqu’à la ligne 5. 
+\begin{equation*}
+\begin{array}{c|cccccc}
+n \backslash p & 0 & 1 & 2 & 3 & 4 & 5 \\
+\hline
+0 & 1 \\
+1 & 1 & 1 \\
+2 & 1 & 2 & 1 \\
+3 & 1 & 3 & 3 & 1 \\
+4 & 1 & 4 & 6 & 4 & 1 \\
+5 & \cellcolor{red!25}1 & \cellcolor{red!25}5 & \cellcolor{red!25}10 & \cellcolor{red!25}10 & \cellcolor{red!25}5 & \cellcolor{red!25}1 \\
+\end{array}
+\end{equation*}
+\end{document}

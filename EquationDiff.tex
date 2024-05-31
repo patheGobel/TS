@@ -31,30 +31,43 @@
 \newpage
 \section*{\underline{\textbf{\textcolor{red}{I. Définitions}}}}
 Soient $a_{0},a_{1},...,a_{n}$ des constantes réelles, $y=y(x)$ une fonction de 
-$x$. On appelle équation différentielle linéaire d'ordre $n$ à coefficients constants, une équation liant une fonction $y$ et ses dérivées successives $y',y'',\cdots , y^{n}$. On a $a_{n}y^{n}+a_{n-1}y^{n-1}+\cdots +a_{2}y''+a_{1}y'+a_{0}y=g(x)$ où $g(x)$ est une fonction et $a_{n}\neq 0$
+$x$. On appelle équation différentielle linéaire d'ordre $n$ à coefficients constants, une équation liant une fonction $y$ et ses dérivées successives $y',y'',\cdots , y^{n}$. On a $a_{n}y^{n}(x)+a_{n-1}y^{n-1}(x)+\cdots +a_{2}y''(x)+a_{1}y'(x)+a_{0}y(x)=g(x)$ où $g(x)$ est une fonction et $a_{n}\neq 0$
 \subsection*{\underline{\textbf{\textcolor{red}{Exemple}}}}
 $2y''-3y'+4y=\sin 2x$ est une équation différentielle linéaire du $2^{nd}$ ordre, à coefficients constants.
 \begin{itemize}
-    \item pour $a_{n}\neq 0$, $(E):a_{n}y^{n}+a_{n-1}y^{n-1}+\cdots+a_{2}y"+a_{1}y'+a_{0}y=g(x)$ est une équation différentielle Lineaire d'ordre $n$, à coefficients constants, non homogène ou avec $2^{nd}$ membre. 
+    \item pour $a_{n}\neq 0$, \textbf{(E)}$:a_{n}y^{n}(x)+a_{n-1}y^{n-1}(x)+\cdots+a_{2}y''(x)+a_{1}y'(x)+a_{0}y(x)=g(x)$ est une équation différentielle Linéaire d'ordre $n$, à coefficients constants, non homogène ou avec second membre. 
+    \item pour $a_{n}\neq 0$, \textbf{(E)}$:a_{n}y^{n}+a_{n-1}y^{n-1}+\cdots+a_{2}y''+a_{1}y'+a_{0}y=0$ est une équation différentielle linéaire d'ordre $n$, à coefficients constants, non homogène ou sans second membre ou homogène. 	   
     \item \textbf{(E')} est associée à \textbf{(E)}
     \item  Les solutions d'une équation différentielle sont des fonctions.
-    \item $f$ est une solution d'une équation différentielle d'ordre $n$, à coefficients constants sur $I$, si $f$ est $n$ fois dérivables sur $I$ et $f$ vérifie l'équation.
+    \item $f$ est une solution d'une équation différentielle d'ordre $n$, à coefficients constants sur \textbf{I}, si $f$ est $n$ fois dérivables sur \textbf{I} et $f$ vérifie l'équation.
     \item L'ensemble des solutions d'une équation différentielle est appelé solution générale de l'équation différentielle.
     \item Toute fonction vérifiant l'équation différentielle est appelée solution particulière.
     \item Une solution qui vérifie des conditions initiales est appelée solution singulière.
 \end{itemize}
 \section*{\underline{\textbf{\textcolor{red}{II. Théorèmes}}}}
-Soit l'équation différentielle linéaire d'ordre $n$ à coefficients constants avec $2^{nd}$ membre $(E):a_{n}y^{(n)}+a_{n-1}y^{(n-1)}+\cdot+a_{2}y''+a_{1}y'+a_{0}y=g(x)$ et l'équation différentielle linéaire d'ordre $n$ à coefficients constants sans $2^{nd}$ membre $(E):a_{n}y^{(n)}+a_{n-1}y^{(n-1)}+\cdot+a_{2}y''+a_{1}y'+a_{0}y=0$.
+Soit l'équation différentielle linéaire d'ordre $n$ à coefficients constants avec $2^{nd}$ membre.
+ 
+\textbf{(E)}$:a_{n}y^{(n)}(x)+a_{n-1}y^{(n-1)}(x)+\cdot+a_{2}y''(x)+a_{1}y'(x)+a_{0}y(x)=g(x)$ et l'équation différentielle linéaire d'ordre $n$ à coefficients constants sans $2^{nd}$ membre.
+
+\textbf{(E')}$:a_{n}y^{(n)}+a_{n-1}y^{(n-1)}+\cdot+a_{2}y''+a_{1}y'+a_{0}y=0$.
+
 Si $f_{1}$ est une solution particulière de \textbf{(E)} et $f_{2}$ une solution générale de \textbf{(E')} alors, $f(x)=f_{1}(x)+f_{2}(x)$ est une solution générale de \textbf{(E)}.
 
-\subsection*{\underline{\textbf{\textcolor{red}{Preuve}}}}
+\subsection*{\underline{\textbf{\textcolor{green}{Preuve}}}}
 Soit $f_1$ une solution particulière de l'équation \textbf{(E)} avec second membre, et $f_2$ une solution générale de l'équation homogène associée \textbf{(E')}. Nous devons montrer que $f(x) = f_1(x) + f_2(x)$ est une solution générale de l'équation \textbf{(E)}.
 
-Puisque $f_1$ est une solution particulière de \textbf{(E)}, cela signifie que lorsque nous remplaçons $y$ par $f_1$ dans \textbf{(E)}, nous obtenons une équation vraie. De même, puisque $f_2$ est une solution générale de \textbf{(E')}, lorsque nous remplaçons $y$ par $f_2$ dans \textbf{(E')}, nous obtenons une équation vraie.
+Puisque $f_1$ est une solution particulière de \textbf{(E)}, cela signifie que lorsque nous remplaçons $y$ par $f_1$ dans \textbf{(E)}, nous obtenons une équation vraie. 
+
+C'est-à-dire: \textcolor{green}{\[a_{n}f_1^{(n)}(x) + a_{n-1}f_1^{(n-1)}(x) + \ldots + a_{2}f_{1}''(x) + a_{1}f_{1}'(x) + a_{0}f_{1}(x)=0\]}
+
+De même, puisque $f_2$ est une solution générale de \textbf{(E')}, lorsque nous remplaçons $y$ par $f_2$ dans \textbf{(E')}, nous obtenons une équation vraie.
+
+C'est-à-dire: \textcolor{blue}{\[a_{n}f_{2}^{(n)}(x)+a_{n-1}f_{2}^{(n-1)}(x)+\cdots+a_{2}f_{2}^{''}(x)+a_{1}f_{2}^{'}(x)+a_{0}f_{2}(x)=g(x)\]}
 
 En ajoutant les deux équations, nous obtenons l'équation :
 
-\[a_{n}f_1^{(n)} + a_{n-1}f_1^{(n-1)} + \ldots + a_{2}f_1'' + a_{1}f_1' + a_{0}f_1 + a_{n}f_2^{(n)} + a_{n-1}f_2^{(n-1)} + \ldots + a_{2}f_2'' + a_{1}f_2' + a_{0}f_2 = g(x) + 0\]
+$\textcolor{green}{a_{n}f_1^{(n)}(x) + a_{n-1}f_1^{(n-1)}(x) + \ldots + a_{2}f_{1}''(x) + a_{1}f_{1}'(x) + a_{0}f_{1}(x)} + \textcolor{blue}{a_{n}f_2^{(n)} + a_{n-1}f_2^{(n-1)} + \ldots + a_{2}f_2'' + a_{1}f_2' + a_{0}f_2}$ 
+\[=\textcolor{green}{0}+\textcolor{blue}{g(x)}\]
 
 \[a_{n}(f_{1}+f{2})^{(n)}(x)+a_{n-1}(f_{1}+f{2})^{(n-1)}(x)+\cdot+a_{2}(f_{1}+f{2})^{"}(x)+a_{1}(f_{1}+f{2})^{(')}(x)+a_{0}(f_{1}+f{2})(x)=g(x)\]
 Puisque $f_1$ est une solution de l'équation avec second membre \textbf{(E)} et $f_2$ est une solution de l'équation homogène \textbf{(E')}, la partie gauche de l'équation ci-dessus est égale à $g(x) + 0$, ce qui est simplement $g(x)$. Ainsi,\\ $f(x) = f_1(x) + f_2(x)$ satisfait l'équation différentielle \textbf{(E)}, ce qui prouve que c'est une solution générale de \textbf{(E)}.

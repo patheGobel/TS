@@ -73,7 +73,9 @@ $\textcolor{green}{a_{n}f_1^{(n)}(x) + a_{n-1}f_1^{(n-1)}(x) + \ldots + a_{2}f_{
 \[a_{n}(f_{1}+f{2})^{(n)}(x)+a_{n-1}(f_{1}+f{2})^{(n-1)}(x)+\cdots+a_{2}(f_{1}+f{2})^{''}(x)+a_{1}(f_{1}+f{2})^{(')}(x)+a_{0}(f_{1}+f{2})(x)=g(x)\]
 Puisque $f_1$ est une solution de l'équation avec second membre \textbf{(E)} et $f_2$ est une solution de l'équation homogène \textbf{(E')}, la partie gauche de l'équation ci-dessus est égale à $g(x) + 0$, ce qui est simplement $g(x)$. Ainsi,\\ $f(x) = f_1(x) + f_2(x)$ satisfait l'équation différentielle \textbf{(E)}, ce qui prouve que c'est une solution générale de \textbf{(E)}.
 
-\section*{\underline{\textbf{\textcolor{red}{III. Équations différentielles linéaires d'ordre 1, à coefficients constants}}}}
+\section*{\underline{\textbf{\textcolor{red}{
+\begin{minipage}[t]{\textwidth}III. Équations différentielles linéaires d'ordre 1, à coefficients constants
+\end{minipage}}}}}
 Une équation différentielle linéaire d'ordre 1, à coefficients constants est une équation de la forme
  \[\textbf{(E)}: ay'+by=g(x)\textbf{(avec second membre)} \]
  \[\textbf{(E')}: ay'+by=0\textbf{(sans second membre ou équation homogène)}\]
@@ -216,13 +218,13 @@ C'est une équation de la forme
 
 $f$ est une solution de \textbf{(E):}(respectivement de \textbf{(E')}) sur \textbf{I} si $f$ est deux fois dérivables sur \textbf{I}  et $f$ vérifie \textbf{(E)}(respectivement $f$ vérifie \textbf{(E')})
 \subsection*{\underline{\textbf{\textcolor{red}{1. Recherche de la solution générale de (E')}}}}
-Soit $\textbf{(E':)}ay''+by'+cy=0$ avec $a\neq 0$, nous appelons équation\\\ caractéristique associée à \textbf{(E')} l'équation $a^{2}+br+c=0$
+Soit $\textbf{(E':)}ay''+by'+cy=0$ avec $a\neq 0$, nous appelons équation\\\ caractéristique associée à \textbf{(E')} l'équation $ar^{2}+br+c=0$
 \subsection*{\underline{\textbf{\textcolor{red}{Théorème}}}}
-Soit \textbf{(E')}:$ay''+by'+cy=0$ et $a^{2}+br+c=0$ équation caractéristique associée de discriminant $\Delta=b^{2}-4ac$, alors:
+Soit \textbf{(E')}:$ay''+by'+cy=0$ et $ar^{2}+br+c=0$ équation caractéristique associée de discriminant $\Delta=b^{2}-4ac$, alors:
 \begin{itemize}
-    \item[$\bullet$] Si $\Delta >0$ alors, l'équation $ar^{2}+br+c=0$ admet deux solutions réelles distinctes \[r_{1}=\frac{-b-\sqrt{\Delta}}{2a}, r_{1}=\frac{-b+\sqrt{\Delta}}{2a}\]
+    \item[$\bullet$] Si $\Delta >0$ alors, l'équation $ar^{2}+br+c=0$ admet deux solutions réelles distinctes \[r_{1}=\frac{-b-\sqrt{\Delta}}{2a}, r_{2}=\frac{-b+\sqrt{\Delta}}{2a}\]
     Dans ce cas, \textbf{(E')}:$ay''+by'+cy=0$ admet comme solution générale $y_{2}$ de la forme\\
-    \[\textcolor{red}{ \boxed{ y_{2}(x)=Ae^{r_{1}x}+Be^{r_{2}x} } }\]
+    \[\textcolor{red}{ \boxed{ y_{2}(x)=Ae^{r_{1}x}+Be^{r_{2}x} } }\text{ Avec A et B des Constants déterminées par les conditions initales}\]
     \item[$\bullet$] Si $\Delta = 0$ alors, l'équation $ar^{2}+br+c=0$ admet une solutions double réelle \[r_{0}=\frac{-b}{2a}\]
     Et l'équation $(E')$ admet une solution générale de la forme 
     \[\textcolor{red}{ \boxed{ y_{2}(x)=(Ax+B)e^{r_{0}x} } }\]

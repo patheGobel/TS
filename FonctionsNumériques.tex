@@ -78,7 +78,7 @@
     
     \item	\textbf{\textcolor{blue}{\underline{Quelques théorèmes sur les limites}}}
 \begin{enumerate}[label=\alph*)]
-       \item \textcolor{green}{\underline{Théorème de majoration, minoration[Schéma]}}
+       \item \textcolor{green}{\underline{Théorème de comparaison}}
        
 Soient \( f \) et \( g \) trois fonctions définies sur un intervalle \( I \) au voisianage \( \alpha \), \( \alpha \) étant un réel, \( +\infty \) ou \( -\infty \).
 
@@ -110,7 +110,19 @@ Alors \( \lim_{x \to \alpha}f(x)=-\infty \)
 \label{fig:monimage}
 \end{figure}
 
-
+       	\textbf{\underline{Exemple 1}}
+       	\[ \text{Soit \( f(x)=-x+\sin x \) Calculer }\lim_{x \to +\infty} f(x) \]
+       	\textbf{\underline{Solution}}
+       	\[ \text{Posons \( g(x)=-x+1 \) Comme, pour tout \(x\), \(\sin x\leq 1\), on a, pour tout \(x\), \( f(x)\leq g(x) \).} \]
+       	\[ \text{Or,} \lim_{x \to +\infty}g(x)=-\infty, \text{donc} \lim_{x \to +\infty}f(x)=-\infty\]       	
+       	
+       	 \textbf{\underline{Exemple 2}}
+       	\[ \text{Soit \( g(x)=\frac{\sqrt{1+x^{2}}}{x^{2}} \). Calculer }\lim_{x \to 0} g(x) \]
+       	\textbf{\underline{Solution}}
+       	 \[ \text{Posons \( f(x)=\frac{1}{x^{2}} \). Comme, pour tout \(x\neq 0\), on a, \( 1\leq \sqrt{1+x^{2}} \)., on a, pour tout }, x\neq 0 \]
+       	\[ f(x)\geq g(x) \text{ Or,} \lim_{x \to 0}g(x)=+\infty, \text{donc} \lim_{x \to 0}f(x)=+\infty\]
+       	
+       	
 			       		
  %      	\textbf{\underline{Exercice d'application}}
        	

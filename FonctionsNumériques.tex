@@ -345,74 +345,113 @@ Cette propriété reste valable lorsque 	\(x \rightarrow -\infty\)
 		
 \end{enumerate}
 
-%\subsection*{\underline{\textbf{\textcolor{red}{II.Continuité}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{II.Continuité}}}}
 
-%\begin{enumerate}[label=\arabic*)]
-%\item \textbf{\textcolor{blue}{\underline{Définition}}}
+\begin{enumerate}[label=\arabic*)]
+\item \textbf{\textcolor{blue}{\underline{Définition}}}
+
+Soit f une fonction definie en \( x_{0} \) on dit que f est continue en \( x_{0} \) si
+\( \lim_{x \to x_{0}} f(x)=f(x_{0}) \).
+
+\begin{center}
+\underline{\textbf{\textcolor{red}{Revoir}}}
+\end{center}
+
+\(\left[
+\textbf{\textcolor{red}{\underline{Continuité à gauche et continuité à droite}}} 
+\right] \)
+			
+\(\left[ 
+\textbf{\textcolor{red}{\underline{Continuité à gauche et continuité à droite}}} 
+\right] \)
+
+\(\left[ 
+\textbf{\textcolor{red}{\underline{Prolongement par continuité}}}	
+\right] \) 
+
+\(\left[ 		
+\textbf{\textcolor{red}{\underline{Continuité sur un intervalle}}}
+\right] \) 
+
+\(\left[
+\textbf{\textcolor{red}{\underline{Continuité de fonctions usuelles}}}
+\right] \)
+
+\(\left[
+\textbf{\textcolor{red}{\underline{Opérations sur les fonctions continues}}}
+\right] \)
+\item \textbf{\textcolor{blue}{\underline{Compositions de deux fonctions continues}}}
+
+Si f est continue en \(x_{0}\) et g est continue en \( f(x_{0}) \) alors gof est est continue en \(x_{0}\) composition de deux fonctions continues est une fonction continue.
+
+		\textbf{\underline{\exerciceapp}}
+
+		\begin{enumerate}[label=\alph*)]
+			\item Soit 	\( f(x)=\sqrt{|2x^{5}|} \)		
+
+		  	Etudier la continuité de 	\( f \) sur \( \mathbb{R} \)
+		  
+		 	\item Soit \( f(x)=x\sqrt{1-x} \)
+		 
+		 		Etudier la continuité de f sur son domaine de définition.
+		\end{enumerate}	
+
+		\textbf{\underline{Solution}}
+
+\item \textbf{\textcolor{blue}{\underline{Image d’un intervalle par une fonction continue et stritement monotone}}}
+\begin{itemize}
+\item L’image d’un intervalle par une fonction continue est un intervalle.
+\[
+\text{C’est à dire}
+\begin{cases}
+\text{\( f \) est continue sur \( I \)}\\
+\text{\( I \) est un intervalle}
+\end{cases}
+\text{alors \( f(I) \) est un intervalle}
+\]
+
+\item Lorsqu’une fonction \( f \) est continue et strictement monotone sur \( K \), \( f(K) \) est un intervalle de même nature que \( K \) et ses bornes sont les limites de \( f \) aux bornes de \( K \).
+
+Le tableau ci-dessous précise \( f(K) \) suivant la nature de \( K \) et le sens de variation de \( f \).
+\end{itemize}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\( K \) & \( f(K) \) & \( f(K) \)\\
+\hline
+				& \( f \) stictement croissante & \( f \) strictement décroissante\\
+\hline
+[a;b]		& \( [f(a);f(b)] \) & \( [f(b);f(a)] \)       \\
+\hline
+[a;b[	& \( [f(a);\lim_{x\to b^{-}}f(x)[ \) &	\( [\lim_{x\to b^{-}}f(x);f(a)[ \)	\\
+\hline
+]a;b[		& \( ]\lim_{x\to b^{+}}f(x);\lim_{x\to b^{-}}f(x)[ \) &	\( ]\lim_{x\to b^{-}}f(x);\lim_{x\to b^{+}}f(x)[ \)	\\
+\hline
+\( [a;+\infty[ \)	& \( [f(a);\lim_{x\to +\infty}f(x)[ \) &\( [\lim_{x\to +\infty}f(x);f(a)[ \)		\\
+\hline
+\( \mathbb{R} \)& \( ]\lim_{x\to -\infty}f(x);\lim_{x\to +\infty}f(x)[ \)&\( ]\lim_{x\to +\infty}f(x);\lim_{x\to -\infty}f(x)[ \)\\
+\hline
+\end{tabular}
+\item \textbf{\textcolor{blue}{\underline{Théorème des valeurs intermediaries}}}
 
 %			\textbf{\underline{Exercice d'application}}
 			
 %			\textbf{\underline{Solution}}
-			
-%\item \textbf{\textcolor{blue}{\underline{Continuité à gauche et continuité à droite}}}
+
+\item \textbf{\textcolor{blue}{\underline{Théorème d’existence d’une bijection}}}
 
 %			\textbf{\underline{Exercice d'application}}
 			
 %			\textbf{\underline{Solution}}
 
-%\item \textbf{\textcolor{blue}{\underline{Prolongement par continuité}}}	
-
-%			\textbf{\underline{Exercice d'application}}
-			
-%			\textbf{\underline{Solution}}	
-			
-%\item \textbf{\textcolor{blue}{\underline{Continuité sur un intervalle}}}
-
-%\item \textbf{\textcolor{blue}{\underline{Continuité de fonctions usuelles}}}
-
-%\textbf{\underline{Propriété}}
-
-%\item \textbf{\textcolor{blue}{\underline{Opérations sur les fonctions continues}}}
-
-%\item \textbf{\textcolor{blue}{\underline{Compositions de deux fonctions continues}}}
-
-%\item \textbf{\textcolor{blue}{\underline{Continuité à gauche et continuité à droite}}}
+\item \textbf{\textcolor{blue}{\underline{Théorème d’existence et d’unicité d’une solution}}}
 
 %			\textbf{\underline{Exercice d'application}}
 			
 %			\textbf{\underline{Solution}}
 
-%\item \textbf{\textcolor{blue}{\underline{Propriété des fonctions continues sur un intervalle}}}
+\item \textbf{\textcolor{blue}{\underline{Encadrement de la racine \( \alpha \) à \( \epsilon \) près}}}
 
-%			\textbf{\underline{Théorème}}
-
-%\item \textbf{\textcolor{blue}{\underline{Image d’unintervalle par une fonction continue et stritement monotone}}}
-
-%			\textbf{\underline{Exercice d'application}}
-			
-%			\textbf{\underline{Solution}}
-
-%\item \textbf{\textcolor{blue}{\underline{Théorème des valeurs intermediaries}}}
-
-%			\textbf{\underline{Exercice d'application}}
-			
-%			\textbf{\underline{Solution}}
-
-%\item \textbf{\textcolor{blue}{\underline{Théorème d’existence d’une bijection}}}
-
-%			\textbf{\underline{Exercice d'application}}
-			
-%			\textbf{\underline{Solution}}
-
-%\item \textbf{\textcolor{blue}{\underline{Théorème d’existence et d’unicité d’une solution}}}
-
-%			\textbf{\underline{Exercice d'application}}
-			
-%			\textbf{\underline{Solution}}
-
-%\item \textbf{\textcolor{blue}{\underline{Encadrement de la racine \( \alpha \) à \( \epsilon \) près}}}
-
-%			\textbf{\underline{Méthode de balayage(Approche par exemple)}}
+			\textbf{\underline{Méthode de balayage(Approche par exemple)}}
 
 %			\textbf{\underline{Solution}}			
 
@@ -434,7 +473,7 @@ Cette propriété reste valable lorsque 	\(x \rightarrow -\infty\)
 
 %\item \textbf{\textcolor{blue}{\underline{Bijection réciproque d’une fonction continue et steictement monotone }}}
 
-%\end{enumerate}
+\end{enumerate}
 
 %\section*{\underline{\textbf{\textcolor{red}{B. DÉRIVATION ET ÉTUDES DE FONCTIONS}}}}
 \end{document}

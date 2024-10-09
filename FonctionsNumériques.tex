@@ -172,8 +172,54 @@ On commence par la fonction la plus à l'intérieur :
        	\item \[ \lim_{x \to 0} \frac{\cos x -1 }{x}=0 \]
        	\end{itemize}
 \end{enumerate}
-%		\item \textbf{\textcolor{blue}{\underline{Interprétations gémétriques des limites}}}
-		
+		%\item \textbf{\textcolor{blue}{\underline{Interprétations gémétriques des limites}}}
+
+\item \textbf{\textcolor{blue}{\underline{Interprétations géométriques des limites}}}
+
+Les limites peuvent être interprétées géométriquement de plusieurs manières en fonction du contexte. Voici quelques exemples typiques :
+
+\begin{enumerate}[label=\alph*)]
+   \item \textcolor{green}{\underline{\textbf{Asymptote horizontale (AH)[Parllèle à \((ox)\)]}}}:
+    
+    Une fonction \( f \) a une asymptote horizontale en \( y = L \) lorsque
+\[
+\lim_{x \to +\infty} f(x) = L \text{ on dit que: \( y = L \) est une AH à \( (C_{f}) \) en }+\infty
+\]
+    
+\[
+\lim_{x \to -\infty} f(x) = L \text{ on dit que: \( y = L \) est une AH à \( (C_{f}) \) en }-\infty
+\]
+    
+    Cela signifie que la courbe de la fonction se rapproche de la droite \( y = L \) à mesure que \( x \to +\infty \) ou \( x \to -\infty \).
+
+    \item \textcolor{green}{\underline{\textbf{Asymptote verticale (AV)[Parllèle à \((oy)\)]}}} :
+    
+    Soit \( x = a \in \mathbb{R} \) 
+    \[
+    \text{si }\lim_{x \to a} f(x) = \pm\infty \text{ alors \(x = a\) est une AV à \(C_{f}\)}
+    \]
+    Cela signifie que la courbe de la fonction tend vers l'infini lorsque \( x \) approche \( a \) par la droite (ou la gauche).
+
+    \item \textcolor{green}{\underline{\textbf{Asymptote oblique (AO)}}} :
+    
+    Si une fonction \( f(x) \) a une asymptote oblique en \( x \to +\infty \) (ou \( x \to -\infty \)), cela signifie que la courbe de la fonction se rapproche d'une droite de pente non nulle. Pour déterminer cette asymptote, on résout
+    \[
+    \lim_{x \to +\infty} \left( f(x) - (mx + b) \right) = 0
+    \]
+    où \( m \) est la pente de l'asymptote et \( b \) est l'ordonnée à l'origine.
+    
+\end{enumerate}
+
+Ces interprétations géométriques sont très utiles pour visualiser le comportement des fonctions à l'infini ou autour de points particuliers.
+
+\textbf{\underline{Exemple graphique :}}\\
+Si \( f(x) = \frac{1}{x} \), on peut voir que
+\[
+\lim_{x \to 0^{+}} f(x) = +\infty \quad \text{et} \quad \lim_{x \to 0^{-}} f(x) = -\infty,
+\]
+ce qui signifie que la fonction a une asymptote verticale en \( x = 0 \).
+
+
 %		\begin{enumerate}[label=\alph*)]
 %		\item \textcolor{green}{\underline{Asymptote horizontale (AH) ou asymptote parllèle à \( (ox) \)}}
 		

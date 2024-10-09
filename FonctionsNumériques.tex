@@ -1,6 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage{stmaryrd}
-\usepackage{graphicx}
+\usepackage{graphicx} % Pour l'insertion d'images
+\usepackage{float}    % Pour contrôler précisément le placement
 \usepackage[utf8]{inputenc}
 
 \usepackage[french]{babel}
@@ -79,72 +80,37 @@
 \begin{enumerate}[label=\alph*)]
        \item \textcolor{green}{\underline{Théorème de majoration, minoration[Schéma]}}
        
-       Soit \( f \) et \( g \) deux fonctions dfinies sur un intervalle \( ]a;+\infty[ \), \( a \) réel, telles que pour tout \( x > a \), on a \( f(x)\leq g(x) \).
+Soient \( f \) et \( g \) trois fonctions définies sur un intervalle \( I \) au voisianage \( \alpha \), \( \alpha \) étant un réel, \( +\infty \) ou \( -\infty \).
+
+Si:
        \begin{itemize}
-       \item Si \( \lim_{x \to +\infty}f(x)=+\infty \) alors \( \lim_{x \to +\infty}g(x)=+\infty \)
-        \item Si \( \lim_{x \to +\infty}g(x)=-\infty \) alors \( \lim_{x \to +\infty}f(x)=-\infty \)
+       \item Pour tout \( x\in I \) \( f(x)\geq g(x) \) 
+        \item \( \lim_{x \to \alpha}g(x)=+\infty \)
        \end{itemize}
+Alors \( \lim_{x \to \alpha}f(x)=+\infty \)\\
 
-Soit \( f \) et \( g \) deux fonctions dfinies sur un intervalle \( ]-\infty;b[ \), \( b \) réel, telles que pour tout \( x < b \), on a \( f(x)\leq g(x) \).
+\begin{figure}[H]% Forcer l'image à cet endroit
+\centering
+\includegraphics[width=0.8\textwidth]{comp1.png}
+\caption{Courbe de (Cf)}
+\label{fig:monimage}
+\end{figure}
+
+Si:
        \begin{itemize}
-       \item Si \( \lim_{x \to -\infty}f(x)=+\infty \) alors \( \lim_{x \to -\infty}g(x)=+\infty \)
-        \item Si \( \lim_{x \to -\infty}g(x)=-\infty \) alors \( \lim_{x \to -\infty}f(x)=-\infty \)
-       \end{itemize} 
-       
+       \item Pour tout \( x\in I \) \( f(x)\leq g(x) \) 
+        \item \( \lim_{x \to \alpha}g(x)=-\infty \)
+       \end{itemize}
+Alors \( \lim_{x \to \alpha}f(x)=-\infty \)
+   
+\begin{figure}[H]% Forcer l'image à cet endroit
+\centering
+\includegraphics[width=0.8\textwidth]{comp2.png}
+\caption{Courbe de (Cf)}
+\label{fig:monimage}
+\end{figure}
 
-       	\textbf{\underline{Exemple 1}}
-       	\[ \text{Soit \( f(x)=-x+\sin x \) Calculer }\lim_{x \to +\infty} f(x) \]
-       	\textbf{\underline{Solution}}
-       	\[ \text{Posons \( g(x)=-x+1 \) Comme, pour tout \(x\), \(\sin x\leq 1\), on a, pour tout \(x\), \( f(x)\leq g(x) \).} \]
-       	\[ \text{Or,} \lim_{x \to +\infty}g(x)=-\infty, \text{donc} \lim_{x \to +\infty}f(x)=-\infty\]
 
-\textcolor{green}{\underline{Remarque[Le théorème et précédent reste vrai en un point]}}    	
-
-La version en un point du théorème de majoration et minoration, souvent appelée théorème de comparaison des limites en un point.
-
-Soit \( f \) et \( g \) deux fonctions définies sur un intervalle \( I \) contenant un point \( x_0 \), sauf peut-être en \( x_0 \). Supposons que pour tout \( x \in I \) suffisamment proche de \( x_0 \), on a :
-\[
-f(x) \leq g(x).
-\]       	
-       	
-       	 \textbf{\underline{Exemple 2}}
-       	\[ \text{Soit \( g(x)=\frac{\sqrt{1+x^{2}}}{x^{2}} \). Calculer }\lim_{x \to 0} g(x) \]
-       	\textbf{\underline{Solution}}
-       	 \[ \text{Posons \( f(x)=\frac{1}{x^{2}} \). Comme, pour tout \(x\neq 0\), on a, \( 1\leq \sqrt{1+x^{2}} \)., on a, pour tout }, x\neq 0 \]
-       	\[ f(x)\geq g(x) \text{Or,} \lim_{x \to 0}g(x)=+\infty, \text{donc} \lim_{x \to 0}f(x)=+\infty\]
-       	\item \textcolor{green}{\underline{Théorème d’encadrement ou théorème des gendarmes}}
-       	
-Soient \( f \), \( g \) et \( h \) trois fonctions définies au voisianage \( x_{0} \) de \( I \).
-
-Si \( \forall x\in I g(x)\leq f(x)\leq h(x) \) et \( \lim_{x \to +\infty}g(x)=\lim_{x \to +\infty}h(x)=l,\)
-
-\(l\in\mathbb{R} \) alors \( \lim_{x \to +\infty}f(x)=l \)
-
-       	\textbf{Remarque}
-       	
-Le théorème d’encadrement reste valable lorsque \( x_{0}=+\infty \) ou \( x_{0}=+\infty \) ou
-
- \( x_{0}=a, a\in\mathbb{R} \)
-       	
-%       	\textbf{\underline{Exercice d'application}}
-       	
-%       	\textbf{\underline{Solution}}
-
-%				\item \textcolor{green}{\underline{Théorème de l’unicité de la limite}}      	
-
-%				\textbf{Propriété}       	
-       	
- %      	\textbf{\underline{Exercice d'application}}
-       	
- %      	\item \textcolor{green}{\underline{Limite et composition de fonctions}}
-
-%			  \textbf{Preuve}
-			       		
-%       	\textbf{\underline{Exercice d'application}}	
-       	
-%       	\item \textcolor{green}{\underline{Théorème du changement de variable}}
-       	
-%       	\textbf{Preuve}
 			       		
  %      	\textbf{\underline{Exercice d'application}}
        	

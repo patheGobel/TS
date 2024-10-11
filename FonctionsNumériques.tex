@@ -70,7 +70,7 @@
 \begin{enumerate}[label=\arabic*)]
     \item \textbf{\textcolor{blue}{\underline{Quelques limites usuelles}}}
     
-\[\forall n\in\mathbb{N}^{*} \lim_{x \to +\infty} x^{n} \text{ , } \lim_{x \to +\infty} \frac{1}{x^{n}}=0^{+}  \]
+\[\forall n\in\mathbb{N}^{*} \lim_{x \to +\infty} x^{n}=+\infty  \text{ , } \lim_{x \to +\infty} \frac{1}{x^{n}}=0^{+}  \]
 
 \[ \forall n\in\mathbb{N}^{*}
  \lim_{x \to -\infty} x^{n} =
@@ -91,10 +91,10 @@
 \[ \lim_{x \to a^{+}} \frac{1}{x-a}=+\infty \text{ , } \lim_{x \to a^{-}} \frac{1}{x-a}=-\infty  \]
 
 		\textbf{Autre Notation}
-\[x\rightarrow a^{+} \Leftrightarrow x\rightarrow a^{+} \text{ et } x > a \text{ , } x\rightarrow a^{-} \Leftrightarrow x\rightarrow a^{-} \text{ et } x < a \]
-\[ \lim_{x \to a^{+}} \frac{1}{x-a}=+\infty \text{ se note aussi } \lim_{x \to a>} \frac{1}{x-a}=+\infty  \]	
+\[( x\rightarrow a^{+} ) \Leftrightarrow ( x\rightarrow a_{>} ) \text{ , } ( x\rightarrow a^{-} ) \Leftrightarrow ( x\rightarrow a_{<} ) \]
+\[ \lim_{x \to a^{+}} f(x)=+\infty \text{ se note aussi } \lim_{x \to a_{>}} f(x)=+\infty  \]	
 
-\[ \lim_{x \to a^{-}} \frac{1}{x-a}=-\infty \text{ se note aussi } \lim_{x \to a<} \frac{1}{x-a}=-\infty  \]	
+\[ \lim_{x \to a^{-}} f(x)=-\infty \text{ se note aussi } \lim_{x \to a_{<}} f(x)=-\infty  \]	
     
     \item	\textbf{\textcolor{blue}{\underline{Quelques théorèmes sur les limites}}}
 \begin{enumerate}[label=\alph*)]
@@ -102,12 +102,13 @@
        
 Soient \( f \) et \( g \) trois fonctions définies sur un intervalle \( I \) au voisianage \( \alpha \), \( \alpha \) étant un réel, \( +\infty \) ou \( -\infty \).
 
-Si:
-       \begin{itemize}
-       \item Pour tout \( x\in I \) \( f(x)\geq g(x) \) 
-        \item \( \lim_{x \to \alpha}g(x)=+\infty \)
-       \end{itemize}
-Alors \( \lim_{x \to \alpha}f(x)=+\infty \)\\
+\[ \text{Si pour tout \( x\in  I \): }
+  \begin{cases}
+    f(x)\geq g(x)\\
+    \lim_{x \to \alpha}g(x)=+\infty 
+  \end{cases}
+\text{ alors }  \lim_{x \to \alpha}f(x)=+\infty 
+\]
 
 \begin{figure}[H]% Forcer l'image à cet endroit
 \centering
@@ -116,13 +117,14 @@ Alors \( \lim_{x \to \alpha}f(x)=+\infty \)\\
 \label{fig:monimage}
 \end{figure}
 
-Si:
-       \begin{itemize}
-       \item Pour tout \( x\in I \) \( f(x)\leq g(x) \) 
-        \item \( \lim_{x \to \alpha}g(x)=-\infty \)
-       \end{itemize}
-Alors \( \lim_{x \to \alpha}f(x)=-\infty \)
-   
+\[ \text{Si pour tout \( x\in  I \): }
+  \begin{cases}
+    f(x)\leq g(x)\\
+    \lim_{x \to \alpha}g(x)=-\infty 
+  \end{cases}
+\text{ alors }  \lim_{x \to \alpha}f(x)=-\infty 
+\]
+
 \begin{figure}[H]% Forcer l'image à cet endroit
 \centering
 \includegraphics[width=0.8\textwidth]{comp2.png}
@@ -132,8 +134,11 @@ Alors \( \lim_{x \to \alpha}f(x)=-\infty \)
 
        	\textbf{\underline{\exemple:}}
        	\[ \text{Soit \( f(x)=-x+\sin x \) Calculer }\lim_{x \to +\infty} f(x) \]
+       	
+       	\newpage
        	\textbf{\underline{Solution}}
-       	\[ \text{Posons \( g(x)=-x+1 \) Comme, pour tout \(x\), \(\sin x\leq 1\), on a, pour tout \(x\), \( f(x)\leq g(x) \).} \]
+       	\[ \text{Pour tout \(x\), \( \sin x\leq 1 \implies -x + \sin x \leq 1 - x \implies f(x)\leq 1 - x \).} \]
+       	\[	\text{Posons \( g(x)=1-x \) donc \( f(x)\leq g(x) \).} \]
        	\[ \text{Or,} \lim_{x \to +\infty}g(x)=-\infty, \text{donc} \lim_{x \to +\infty}f(x)=-\infty\]       	
        	
        	 \textbf{\underline{\exemple:}}
@@ -507,9 +512,11 @@ Si la fonction \( f \) est \textcolor{red}{ continue } et \textcolor{red}{ stric
 			
 			\textbf{\textcolor{orange}{\underline{Solution}}}
 
-%			\textbf{\underline{Exercice d'application}}
+			\textbf{\underline{\exerciceapp}}
+
+			Trouve un exercice complet reunissant tous les théorème cités plus haut		
 			
-%			\textbf{\underline{Solution}}
+			\textbf{\textcolor{myorange}{\underline{Solution}}}
 
 \item \textbf{\textcolor{blue}{\underline{Encadrement de la racine \( \alpha \) à \( \epsilon \) près}}}
 

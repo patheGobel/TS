@@ -33,7 +33,7 @@
 \usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
 
 \usepackage{enumitem}
-
+%---------------------------------------
 % Définir un compteur pour les exemples
 \newcounter{exemple}
 
@@ -42,7 +42,15 @@
   \refstepcounter{exemple}% Incrémenter le compteur
   \textbf{\textcolor{orange}{Exemple \theexemple : }} \ignorespaces
 }
+%---------------------------------------
+\newcounter{solution}
 
+% Définir la commande \solutione pour afficher un solution numéroté
+\newcommand{\solution}{%
+  \refstepcounter{solution}% Incrémenter le compteur
+  \textbf{\textcolor{orange}{Solution \thesolution : }} \ignorespaces
+}
+%---------------------------------------
 \definecolor{myorange}{rgb}{1.0, 0.8, 0.0}
 
 % Définir un compteur pour les exercices d'application
@@ -53,7 +61,15 @@
   \refstepcounter{exerciceapp}%
   \textbf{\textcolor{myorange}{Exercice d'application \theexerciceapp :}} \ignorespaces
 }
+%--------------------------------------
+% Définir un compteur pour les exercices d'application
+\newcounter{correction}
 
+% Définir la commande pour afficher un exercice d'application numéroté
+\newcommand{\correction}{%
+  \refstepcounter{correction}%
+  \textbf{\textcolor{myorange}{Correction \thecorrection :}} \ignorespaces
+}
 % Commande pour ajouter du texte en arrière-plan
 \AddToShipoutPicture{
     \AtTextCenter{%
@@ -136,14 +152,14 @@ Soient \( f \) et \( g \) trois fonctions définies sur un intervalle \( I \) au
        	\[ \text{Soit \( f(x)=-x+\sin x \) Calculer }\lim_{x \to +\infty} f(x) \]
        	
        	\newpage
-       	\textbf{\underline{Solution}}
+       	\textbf{\underline{\solution:}}
        	\[ \text{Pour tout \(x\), \( \sin x\leq 1 \implies -x + \sin x \leq 1 - x \implies f(x)\leq 1 - x \).} \]
        	\[	\text{Posons \( g(x)=1-x \) donc \( f(x)\leq g(x) \).} \]
        	\[ \text{Or,} \lim_{x \to +\infty}g(x)=-\infty, \text{donc} \lim_{x \to +\infty}f(x)=-\infty\]       	
        	
        	 \textbf{\underline{\exemple:}}
        	\[ \text{Soit \( g(x)=\frac{\sqrt{1+x^{2}}}{x^{2}} \). Calculer }\lim_{x \to 0} g(x) \]
-       	\textbf{\underline{Solution}}
+       	 \textbf{\underline{\solution:}}
        	 \[ \text{Posons \( f(x)=\frac{1}{x^{2}} \). Comme, pour tout \(x\neq 0\), on a, \( 1\leq \sqrt{1+x^{2}} \)., on a, pour tout }, x\neq 0 \]
        	\[ f(x)\geq g(x) \text{ Or,} \lim_{x \to 0}g(x)=+\infty, \text{donc} \lim_{x \to 0}f(x)=+\infty\]
        	
@@ -155,7 +171,7 @@ Si \( \forall x\in I \quad g(x) \leq f(x)\leq h(x) \) et \( \lim_{x \to \alpha}g
        	
        	\textbf{\underline{\exerciceapp}}
 \[\text{ Calculer } \lim_{ x\to +\infty} \frac{x-\sin x}{x^{2}} \]   	
-       	\textbf{\underline{Solution}}
+       	\textbf{\underline{\correction}}
        	
 \item \textcolor{green}{\underline{Limite et composition de fonctions}}
 
@@ -170,7 +186,7 @@ Alors \( \lim_{x \to \alpha}v(u(x))=\gamma \)
        	\textbf{\underline{\exerciceapp}}	
 \[\text{Calculer }\lim_{x \to +\infty}\sqrt{\frac{9}{x}+7} \]
 
-				\textbf{\underline{Correction}}
+				\textbf{\underline{\correction}}
 				
 On commence par la fonction la plus à l'intérieur :
 
@@ -187,7 +203,7 @@ On commence par la fonction la plus à l'intérieur :
 				 \[ \lim_{x \to +\infty}x\tan \frac{3}{x} \] 
 				 \[ \lim_{x \to +\infty}x^{2}\left( 1 - \cos \frac{2}{x} \right) \] 	
 
-				\textbf{\underline{Correction}}       	
+				\textbf{\underline{\correction}}       	
 
 \item \textcolor{green}{\underline{Limites des fonctions trigonométriques}}      
        	\begin{itemize}
@@ -250,7 +266,7 @@ Soit \( f \) une fonction et \( (C_{f}) \) sa courbe représentative.
 
 Montrer que \( y = x + 2 \) est AO à \( (C_{f}) \) en \( \pm\infty \)
 
-\textbf{\textcolor{orange}{\underline{Solution:}}}
+\textbf{\underline{\solution:}}
 
 \( y = x + 2 \) est AO à \( (C_{f}) \) en \( \pm\infty \) si
 \(\lim_{x \to +\infty}\left[ f(x)-y\right] =0 \)
@@ -296,7 +312,7 @@ Déterminer \(Df\) et  montrer que \(x=-1\) est une AV à \( (C_{f}) \).
 	\end{enumerate}
 
 \end{enumerate}
-\textbf{\underline{\textcolor{myorange}{Correction}}}
+\textbf{\underline{\correction}}
 
 \item \textcolor{green}{\underline{Branche parabolique de direction (oy)}}
 \[
@@ -344,7 +360,7 @@ Cette propriété reste valable lorsque 	\(x \rightarrow -\infty\)
 
 \item \( h(x)=x\sqrt{\frac{x+1}{x-1}}\)
 \end{enumerate}
-\textbf{\underline{\textcolor{myorange}{Correction}}}
+\textbf{\underline{\correction}}
 
 \end{enumerate}
 		
@@ -401,7 +417,7 @@ Si f est continue en \(x_{0}\) et g est continue en \( f(x_{0}) \) alors gof est
 		 		Etudier la continuité de f sur son domaine de définition.
 		\end{enumerate}	
 
-		\textbf{\underline{Solution}}
+		\textbf{\underline{\correction}}
 
 \item \textbf{\textcolor{blue}{\underline{Image d’un intervalle par une fonction continue et stritement monotone}}}
 \begin{itemize}
@@ -443,7 +459,7 @@ Le tableau ci-dessous précise \( f(K) \) suivant la nature de \( K \) et le sen
 				
 				Déterminer l’image par \( f \) des intervalles \( [-2;0] \) et \( ]1;+\infty[ \)
 				
-			\textbf{\underline{Solution}}
+			\textbf{\underline{\correction}}
 			
 \item \textbf{\textcolor{blue}{\underline{Théorème des valeurs intermediaries}}}
 
@@ -453,7 +469,7 @@ Si la fonction \( f \) est \textcolor{red}{ continue }  sur \( [a ; b] \) et si 
 
 Soit la fonction \( f(x)=\frac{1}{2}x^{3}+x-5 \) continue sur \( [-2 ; 4] \).
 
-\textbf{\textcolor{orange}{\underline{Solution}}}
+\textbf{\underline{\solution:}}
 
 \(f( [-2 ; 4] ) = [\lim_{x \to -2} f(x) ; \lim_{x \to 4} f(x)] = [-8,6 ; 11,8] \).
 
@@ -472,7 +488,7 @@ D'après le théorème précédent, comme  \(5\in [-8,6 ; 11,8] \) donc l'équat
 
 Montrer que l’équation \( f(x) = 0 \) admet au moins une solution dans \( [1 ; 2] \).
 
-\textbf{\textcolor{myorange}{\underline{Solution}}}
+\textbf{\underline{\correction}}
 
 \item \textbf{\textcolor{blue}{\underline{Théorème d’existence d’une bijection}}}
 
@@ -484,7 +500,7 @@ Si \( f \) est continue et strictement monotone sur un intervalle \( I \) alors 
 			
 			Montrer que \( f \) est une bijection de \( \mathbb{R} \) vers un intervalle \( J \) à préciser.			
 			
-			\textbf{\textcolor{orange}{\underline{Solution}}}
+			\textbf{\underline{\solution:}}
 			
 			\( f \) est une fonction polynôme donc elle est continue et dérivable sur \( \mathbb{R} \).(1)
 			
@@ -510,13 +526,13 @@ Si la fonction \( f \) est \textcolor{red}{ continue } et \textcolor{red}{ stric
 
 			Montrer que l’équation \( f(x) = 0 \) admet une unique solution sur \( \mathbb{R} \).			
 			
-			\textbf{\textcolor{orange}{\underline{Solution}}}
+			\textbf{\underline{\solution:}}
 
 			\textbf{\underline{\exerciceapp}}
 
 			Trouve un exercice complet reunissant tous les théorème cités plus haut		
 			
-			\textbf{\textcolor{myorange}{\underline{Solution}}}
+			\textbf{\underline{\correction}}
 
 \item \textbf{\textcolor{blue}{\underline{Encadrement de la racine \( \alpha \) à \( \epsilon \) près}}}
 

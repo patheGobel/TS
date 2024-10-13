@@ -65,10 +65,21 @@
 % Définir un compteur pour les exercices d'application
 \newcounter{correction}
 
-% Définir la commande pour afficher un exercice d'application numéroté
+% Définir la commande pour afficher un correction exercice d'application numéroté
 \newcommand{\correction}{%
   \refstepcounter{correction}%
   \textbf{\textcolor{myorange}{Correction \thecorrection :}} \ignorespaces
+}
+%--------------------------------------
+% Définir un compteur pour les remarque d'application
+\newcounter{remarque}
+
+%----------------------------------------
+\definecolor{myorange1}{rgb}{1.0, 1.5, 0}
+% Définir la commande pour afficher un remarque numéroté
+\newcommand{\remarque}{%
+  \refstepcounter{remarque}%
+  \textbf{\textcolor{myorange1}{Remarque \theremarque :}} \ignorespaces
 }
 % Commande pour ajouter du texte en arrière-plan
 \AddToShipoutPicture{
@@ -330,7 +341,7 @@ Déterminer \(Df\) et  montrer que \(x=-1\) est une AV à \( (C_{f}) \).
 \[
 \text{ alors \((C_{f})\) admet une branche parabolique de direction  \((oy))\) en \( +\infty \)} 
  \]
-		\textbf{Remarque}		
+		\textbf{\underline{\remarque}}		
 
 Cette propriété reste valable lorsque 	\(x \rightarrow -\infty\)	
 		
@@ -342,7 +353,7 @@ Cette propriété reste valable lorsque 	\(x \rightarrow -\infty\)
 \[
 \text{ alors \((C_{f})\) admet une branche parabolique de direction  \((ox))\) en \( +\infty \)} 
  \]
-		\textbf{Remarque}	
+		\textbf{\underline{\remarque}}	
 				
 Cette propriété reste valable lorsque 	\(x \rightarrow -\infty\)	
 
@@ -354,7 +365,7 @@ Cette propriété reste valable lorsque 	\(x \rightarrow -\infty\)
 \[
 \text{ alors \((C_{f})\) admet une branche parabolique de direction  \(y=ax\) en \( +\infty \)} 
 \]
-		\textbf{Remarque}	
+		\textbf{\underline{\remarque}}	
 				
 Cette propriété reste valable lorsque 	\(x \rightarrow -\infty\)	
 	
@@ -374,7 +385,7 @@ Cette propriété reste valable lorsque 	\(x \rightarrow -\infty\)
 		
 \end{enumerate}
 
-\subsection*{\underline{\textbf{\textcolor{red}{II.Continuité}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{II.Continuité et  Dérivabilité}}}}
 
 \begin{enumerate}[label=\arabic*)]
 \item \textbf{\textcolor{blue}{\underline{Définition}}}
@@ -411,7 +422,7 @@ Soit f une fonction definie en \( x_{0} \) on dit que f est continue en \( x_{0}
 \right] \)
 \item \textbf{\textcolor{blue}{\underline{Compositions de deux fonctions continues}}}
 
-Si f est continue en \(x_{0}\) et g est continue en \( f(x_{0}) \) alors gof est est continue en \(x_{0}\) composition de deux fonctions continues est une fonction continue.
+Si \( f \) est continue en \(x_{0}\) et \( g \) est continue en \( f(x_{0}) \) alors \( gof \) est continue en \(x_{0}\) donc la composition de deux fonctions continues est une fonction continue.
 
 		\textbf{\underline{\exerciceapp}}
 
@@ -471,7 +482,13 @@ Le tableau ci-dessous précise \( f(K) \) suivant la nature de \( K \) et le sen
 			
 \item \textbf{\textcolor{blue}{\underline{Théorème des valeurs intermediaries}}}
 
-Si la fonction \( f \) est \textcolor{red}{ continue }  sur \( [a ; b] \) et si le réel \( m \) est compris entre \( f(a) \) et \( f(b) \), alors l'équation \( f(x) = m \) a une seule solution dans \( [a ; b] \).
+Si la fonction \( f \) est \textcolor{red}{ continue }  sur \( [a ; b] \) et si le réel \( m \) est compris entre \( f(a) \) et \( f(b) \), alors l'équation \( f(x) = m \) admet \textcolor{red}{ au moins } une seule solution dans \( [a ; b] \).
+
+Autrement dit, il existe \textcolor{red}{ au moins } un réel \textcolor{red}{ c } entre \textcolor{red}{ \( a \) } et \textcolor{red}{ \( b \) } tel que \textcolor{red}{ \( f(c) = m \) }
+
+\textbf{\textcolor{blue}{\underline{Ilustration graphique}}}
+
+[Image]
 
 \textbf{\underline{\exemple:}}
 
@@ -497,6 +514,30 @@ D'après le théorème précédent, comme  \(5\in [-8,6 ; 11,8] \) donc l'équat
 Montrer que l’équation \( f(x) = 0 \) admet au moins une solution dans \( [1 ; 2] \).
 
 \textbf{\underline{\correction}}
+
+\item \textbf{\textcolor{blue}{\underline{Théorème d’existence et d’unicité d’une solution}}}
+
+Si la fonction \( f \) est \textcolor{red}{ continue } et \textcolor{red}{ strictement monotone } (croissante ou bien décroissante) sur \( [a ; b] \). Pour tout réel \( m \) compris entre \( f(a) \) et \( f(b) \), alors l'équation \( f(x) = m \) admet une \textcolor{red}{unique continue } dans \(\alpha\in [a ; b] \).
+
+\textbf{\textcolor{blue}{\underline{Ilustration graphique}}}
+
+[Image]
+
+\textbf{\textcolor{blue}{\underline{Cas particulier}}}
+
+Si la fonction \( f \) réalise une bijection(continue et strictement monotone) de \( [a ; b] \) de plus si \( f(a) \times f(b) < 0 \) alors l'équation \( f(x) =0 \) admet une unique solution \( \alpha \) sur l'intervalle 
+\( [a ; b] \).
+\textbf{\textcolor{blue}{\underline{Ilustration graphique}}}
+
+[Image]
+
+			\textbf{\underline{\exemple:}}
+			
+			Soit \( f(x)=x^{3} + x + 1 \)
+
+			Montrer que l’équation \( f(x) = 0 \) admet une unique solution sur \( [-0,8 ; -0,6] \).			
+			
+			\textbf{\underline{\solution:}}
 
 \item \textbf{\textcolor{blue}{\underline{Théorème d’existence d’une bijection}}}
 
@@ -524,31 +565,19 @@ Si \( f \) est continue et strictement monotone sur un intervalle \( I \) alors 
 			 
 			 D’après (1) et (2), \( f \) est une bijection de \( \mathbb{R} \) vers \( f(IR) = IR \)
 
-\item \textbf{\textcolor{blue}{\underline{Théorème d’existence et d’unicité d’une solution}}}
-
-Si la fonction \( f \) est \textcolor{red}{ continue } et \textcolor{red}{ strictement monotone } (croissante ou bien décroissante) sur \( [a ; b] \) et si le réel \( m \) est compris entre \( f(a) \) et \( f(b) \), alors l'équation \( f(x) = m \) a une seule solution dans \( [a ; b] \).
-
-			\textbf{\underline{\exemple:}}
-			
-			Soit \( f(x)=x^{3} + x + 1 \)
-
-			Montrer que l’équation \( f(x) = 0 \) admet une unique solution sur \( \mathbb{R} \).			
-			
-			\textbf{\underline{\solution:}}
-
 			\textbf{\underline{\exerciceapp}}
 
 			Trouve un exercice complet reunissant tous les théorème cités plus haut		
 			
 			\textbf{\underline{\correction}}
 
-\item \textbf{\textcolor{blue}{\underline{Encadrement de la racine \( \alpha \) à \( \epsilon \) près}}}
+
+
+\textbf{\underline{\correction}}
 
 			\textbf{\textcolor{blue}{\underline{Méthode de balayage(Approche par exemple)}}}
 
 %			\textbf{\underline{Solution}}			
-
-			\textbf{\textcolor{blue}{\underline{Méthode de dichotomie)}}}
 			
 %			\textbf{\underline{Exercice d'application}}
 			
@@ -570,5 +599,5 @@ Si la fonction \( f \) est \textcolor{red}{ continue } et \textcolor{red}{ stric
 
 \end{enumerate}
 
-%\section*{\underline{\textbf{\textcolor{red}{B. DÉRIVATION ET ÉTUDES DE FONCTIONS}}}}
+%\section*{\underline{\textbf{\textcolor{red}{B. ET ÉTUDES DE FONCTIONS}}}}
 \end{document}

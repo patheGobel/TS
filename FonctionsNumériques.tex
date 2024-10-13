@@ -539,37 +539,41 @@ Si la fonction \( f \) réalise une bijection(continue et strictement monotone) 
 			
 			\textbf{\underline{\solution:}}
 
-\item \textbf{\textcolor{blue}{\underline{Théorème d’existence d’une bijection}}}
+\item \textbf{\textcolor{blue}{\underline{Théorème d’existence d’une bijection et de sa réciproque}}}
 
-Si \( f \) est continue et strictement monotone sur un intervalle \( I \) alors \( f \) est une bijection de \( I \) vers \( J = f(I) \).
+Si \( f \) est continue et strictement monotone sur un intervalle \( I \), alors \( f \) est une bijection de \( I \) vers \( J = f(I) \). Dans ce cas, \( f \) admet une fonction réciproque \( f^{-1} \) qui est également continue et strictement monotone sur l'intervalle \( J \), avec les propriétés suivantes :
+\begin{itemize}
+    \item La fonction réciproque \( f^{-1} \) est telle que \( f(f^{-1}(y)) = y \) pour tout \( y \in J \) et \( f^{-1}(f(x)) = x \) pour tout \( x \in I \).
+    \item La monotonie de \( f^{-1} \) est de même sens que celle de \( f \) si \( f \) est strictement croissante et de sens contraire si \( f \) est strictement décroissante.
+\end{itemize}
 
 			\textbf{\underline{\exemple:}}
-			
-			Soit \( f(x) = x^{3} + x^{2} + x + 1 \)
-			
-			Montrer que \( f \) est une bijection de \( \mathbb{R} \) vers un intervalle \( J \) à préciser.			
-			
-			\textbf{\underline{\solution:}}
-			
-			\( f \) est une fonction polynôme donc elle est continue et dérivable sur \( \mathbb{R} \).(1)
-			
-			\( f'(x) = 3x^{2} + 2x + 1 \) 
-			
-			Etudions le signe de \( f' \) 
-			
-			Posons \( 3x^{2} + 2x + 1 =0  \)
-			
-			 \( \Delta' < 0 \) donc \( \forall x\in \mathbb{R}, f'(x) > 0\)
-			 
-			 D’où \( f \) est strictement croissante sur \( \mathbb{R} \).(2)
-			 
-			 D’après (1) et (2), \( f \) est une bijection de \( \mathbb{R} \) vers \( f(IR) = IR \)
 
-			\textbf{\underline{\exerciceapp}}
+Considérons la fonction \( f : \mathbb{R} \to \mathbb{R} \) définie par :
+\[
+f(x) = 2x + 3
+\]
 
-			Trouve un exercice complet reunissant tous les théorème cités plus haut		
-			
-			\textbf{\underline{\correction}}
+\begin{enumerate}
+    \item La fonction \( f \) est-elle continue sur \(\mathbb{R}\) ?
+    \item La fonction \( f \) est-elle strictement monotone sur \(\mathbb{R}\) ?
+    \item La fonction \( f \) est-elle une bijection de \(\mathbb{R}\) vers \(\mathbb{R}\) ?
+    \item Quelle est la fonction réciproque \( f^{-1} \) de la fonction \( f \) ?
+    \item La fonction réciproque \( f^{-1} \) est-elle continue et strictement monotone ?
+\end{enumerate}
+
+\textbf{\underline{\solution:}}
+\begin{enumerate}
+    \item Oui, la fonction \( f(x) = 2x + 3 \) est continue sur \(\mathbb{R}\) car elle est une fonction affine (polynomiale de degré 1).
+    \item Oui, la fonction \( f \) est strictement croissante sur \(\mathbb{R}\), car sa dérivée est \( f'(x) = 2 > 0 \), ce qui signifie que la pente est positive.
+    \item Oui, comme \( f \) est continue et strictement croissante, elle est bijective de \(\mathbb{R}\) vers \(\mathbb{R}\).
+    \item Pour trouver la fonction réciproque \( f^{-1} \), nous résolvons l'équation \( y = 2x + 3 \) pour \( x \) :
+    \[
+    y = 2x + 3 \implies x = \frac{y - 3}{2}
+    \]
+    Donc, la fonction réciproque est \( f^{-1}(y) = \frac{y - 3}{2} \).
+    \item Oui, la fonction réciproque \( f^{-1}(y) = \frac{y - 3}{2} \) est également continue et strictement croissante sur \(\mathbb{R}\) car elle est une fonction affine avec une pente positive.
+\end{enumerate}
 
 \item \textbf{\textcolor{blue}{\underline{Encadrement de la racine \( \alpha \) à \( \epsilon \) près}}}
 
@@ -597,15 +601,7 @@ Soit la fonction \(f(x)=x^{3}-7x \)
 
 \textbf{\underline{\correction}}
 
-			\textbf{\textcolor{blue}{\underline{Méthode de balayage(Approche par exemple)[Exercice]}}}
-
-%			\textbf{\underline{Solution}}			
-			
-%			\textbf{\underline{Exercice d'application}}
-			
-%			\textbf{\underline{Solution}}			
-			
-%\item \textbf{\textcolor{blue}{\underline{Calcul de \( f^{-1}(y_{0}) \) sans connaître l'expression \( f^{-1} \) }}}
+			\textbf{\textcolor{blue}{\underline{Méthode de balayage(Approche par exemple)[Exercice]}}}			
 
 			%\textbf{\underline{Exercice d'application}}
 			

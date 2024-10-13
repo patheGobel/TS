@@ -571,11 +571,33 @@ Si \( f \) est continue et strictement monotone sur un intervalle \( I \) alors 
 			
 			\textbf{\underline{\correction}}
 
+\item \textbf{\textcolor{blue}{\underline{Encadrement de la racine \( \alpha \) à \( \epsilon \) près}}}
 
+      \textbf{\textcolor{blue}{\underline{Méthode de dichotomie(Approche par exemple)}}}
+      
+      Si \( f \) fonction \textcolor{red}{strictement contenu} sur un intervalle \( [a;b] \), telle que \( f(a)\geq 0 \) et \( f(b) \leq 0\); alors il existe au moins un réel \( \alpha \) dans  l'intervalle \( [a;b] \) tel que \( f(\alpha) = 0 \).
+
+L'idée est alors de trouver le signe de \( f \) au \textcolor{red}{ milieu } de \( [a;b] \), et de distinguer les deux cas
+\begin{itemize}
+\item Si \( f\left( \frac{a+b}{2}\right) \leq 0  \), alors \( \alpha \) est dans l'intervalle 
+\( \left[\frac{a+b}{2} ; b \right] \)
+\item Sinon \( f\left( \frac{a+b}{2}\right) > 0  \), alors \( \alpha \) est dans l'intervalle 
+\( \left[a ; \frac{a+b}{2} \right] \)
+\end{itemize}
+Dans les deux cas, on a trouvé un intervalle de longueur moité dans lequel est située une racine \( \alpha \) de l'équation \( f(x)=0 \).
+
+On recommence alors avec cet intervalle, et ainsi de suite,jusqu'à ce qu'on trouve une approximation qui nous convienne.
+
+\textbf{\underline{\exerciceapp}}
+Soit la fonction \(f(x)=x^{3}-7x \)
+\begin{enumerate}[label=\alph*)]
+\item Montrer que l'équation \( f(x)=0 \) admet une unique solution \( \alpha \) sur l'intervalle \( [2;4] \).
+\item Donner un encadrement de \( \alpha \) à 0.1 près
+\end{enumerate}
 
 \textbf{\underline{\correction}}
 
-			\textbf{\textcolor{blue}{\underline{Méthode de balayage(Approche par exemple)}}}
+%			\textbf{\textcolor{blue}{\underline{Méthode de balayage(Approche par exemple)}}}
 
 %			\textbf{\underline{Solution}}			
 			

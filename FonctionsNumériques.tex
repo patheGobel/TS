@@ -178,8 +178,14 @@ Soient \( f \) et \( g \) trois fonctions définies sur un intervalle \( I \) au
        	
 Soient \( f \), \( g \) et \( h \) trois fonctions définies sur un intervalle \( I \) au voisianage \( \alpha \), \( \alpha \) étant un réel, \( +\infty \) ou \( -\infty \).
 
-Si \( \forall x\in I \quad g(x) \leq f(x)\leq h(x) \) et \( \lim_{x \to \alpha}g(x)=\lim_{x \to \alpha}h(x)=\ell,\) alors \( \lim_{x \to \alpha}f(x)=\ell \)
-       	
+\[
+\text{ Si \( \forall x\in I \) }
+\begin{cases}
+  \quad g(x) \leq f(x)\leq h(x) \\
+  \lim_{x \to \alpha}g(x)=\lim_{x \to \alpha}h(x)=\ell,
+\end{cases}
+\text{ alors } \lim_{x \to \alpha}f(x)=\ell 
+ \]      	
        	\textbf{\underline{\exerciceapp}}
 \[\text{ Calculer } \lim_{ x\to +\infty} \frac{x-\sin x}{x^{2}} \]   	
        	\textbf{\underline{\correction}}
@@ -187,13 +193,15 @@ Si \( \forall x\in I \quad g(x) \leq f(x)\leq h(x) \) et \( \lim_{x \to \alpha}g
 \item \textcolor{green}{\underline{Limite et composition de fonctions}}
 
 Soit \( \alpha \), \( \beta \) et \( \gamma \) des réels ou \( \pm\infty \) On considère deux fonctions \( u \) et \( v \) telles que
-\begin{itemize}
-\item[•] \( \lim_{x \to \alpha}u(x)=\beta  \)
-\item[•] \( \lim_{x \to \beta}v(x)=\gamma \)
-\end{itemize}
-
-Alors \( \lim_{x \to \alpha}v(u(x))=\gamma \) 	
 	
+\[
+\text{ Si }
+\begin{cases}
+  \lim_{x \to \alpha}u(x)=\beta \\
+  \lim_{x \to \beta}v(x)=\gamma
+\end{cases} 
+\text{ alors } \lim_{x \to \alpha}v(u(x))=\gamma 
+ \]
        	\textbf{\underline{\exerciceapp}}	
 \[\text{Calculer }\lim_{x \to +\infty}\sqrt{\frac{9}{x}+7} \]
 
@@ -202,20 +210,15 @@ Alors \( \lim_{x \to \alpha}v(u(x))=\gamma \)
 On commence par la fonction la plus à l'intérieur :
 
 \[\text{Posons } u(x)=\frac{9}{x}+7 \text{ et } v(x)=\sqrt{\frac{9}{x}+7} \]
+				
+				
        	\item \textcolor{green}{\underline{Théorème du changement de variable}}
        	\[ \lim_{x \to x_{0}}f(x)=f(x_{0}+t) \]
       	\[ \lim_{x \to +\infty}f(x)=\lim_{X \to 0^{+}}f \left( \frac{1}{X} \right)  \]
        	\[ \lim_{x \to -\infty}f(x)=\lim_{X \to 0^{-}}f \left( \frac{1}{X} \right)  \]
        	\textbf{Preuve[Exercice]}    	
-			       		
-      	\textbf{\underline{\exerciceapp}}
-
-				 \[ \lim_{x \to +\infty}x\sin \frac{1}{x} \] 
-				 \[ \lim_{x \to +\infty}x\tan \frac{3}{x} \] 
-				 \[ \lim_{x \to +\infty}x^{2}\left( 1 - \cos \frac{2}{x} \right) \] 	
-
-				\textbf{\underline{\correction}}       	
-
+			       	
+\end{enumerate}
 \item \textcolor{green}{\underline{Limites des fonctions trigonométriques}}      
        	\begin{itemize}
        	\item \[ \lim_{x \to 0} \frac{\sin x}{x}=1 \]
@@ -223,7 +226,14 @@ On commence par la fonction la plus à l'intérieur :
        	\item \[ \lim_{x \to 0} \frac{1-\cos x}{x^{2}}=\frac{1}{2} \]
        	\item \[ \lim_{x \to 0} \frac{\cos x -1 }{x}=0 \]
        	\end{itemize}
-\end{enumerate}
+
+      	\textbf{\underline{\exerciceapp}}
+
+				 \[ \lim_{x \to +\infty}x\sin \frac{1}{x} \] 
+				 \[ \lim_{x \to +\infty}x\tan \frac{3}{x} \] 
+				 \[ \lim_{x \to +\infty}x^{2}\left( 1 - \cos \frac{2}{x} \right) \] 	
+
+				\textbf{\underline{\correction}} 
 
 \item \textbf{\textcolor{blue}{\underline{Interprétations géométriques des limites}}}
 

@@ -1,11 +1,38 @@
-\documentclass[a4paper,12pt]{article}
-\usepackage{graphicx}
+\documentclass[12pt]{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx} % Pour l'insertion d'images
+\usepackage{float}    % Pour contrôler précisément le placement
 \usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel}
 \usepackage[T1]{fontenc}
-\usepackage{geometry}
-\usepackage{multicol}
-\usepackage{amsmath,tkz-tab}
-\geometry{top=2cm, bottom=2cm, left=2cm, right=2cm}
+\usepackage{hyperref}
+\usepackage{verbatim}
+
+\usepackage{color, soul}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+\author{Destiné aux élèves de Terminale S\\Lycée de Dindéfelo\\Présenté par M. BA}
+\title{\textbf{Rappels et compléments sur les fonctions numériques}}
+\date{\today}
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, fit}
+
+% Commande pour la couleur d'accentuation
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\usepackage[margin=2cm]{geometry}
+\usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
+
+\usepackage{enumitem}
 
 \begin{document}
 
@@ -195,4 +222,49 @@ Soit $f$ la fonction donnée par : $f(x) = \frac{2 \sin(2x)}{1 + \cos(x)}$
     \item Montrer que $f'(x) = \frac{4( \cos^2(2x) + \cos(x) - 1)}{1 + \cos(x)}$, en déduire le signe de $f'(x)$ en utilisant (3), puis dresser le tableau de variation de $f$ sur $]0, \pi[$.
     \item Tracer la courbe de $f$ sur $]-2\pi, 2\pi[$. Unité : 1 cm.
 \end{enumerate}
+
+\section*{Problème n°1}
+
+Soit la fonction numérique  f : $\mathbb{R} \to \mathbb{R}$  définie par :
+\[
+f(x) =
+\begin{cases}
+-x + 2 - \frac{2x}{x^2 + 1} & \text{si } x \leq 1, \\
+x - 1 - 3\sqrt{x^2 - 1} & \text{si } x > 1.
+\end{cases}
+\]
+
+\subsection*{Partie A}
+
+\begin{enumerate}
+    \item Justifier que $D_f = \mathbb{R}$.
+    \item Étudier la continuité et la dérivabilité de $f$ en $x_0 = 1$.
+    \item Déterminer les limites de $f$ aux bornes de $D_f$.
+    \item (a) Montrer que la courbe $(C_f)$ admet deux asymptotes $(D_1)$ et $(D_2)$ à préciser.
+\end{enumerate}
+\begin{enumerate}
+    \item[(b)] Préciser la position de \( (C_f) \) par rapport à \( (D_1) \) et \( (D_2) \).
+\end{enumerate}
+
+\begin{enumerate}
+    \item[5.] (a) Calculer \( f'(x) \) dans les intervalles où \( f \) est dérivable (justifier l’existence de ces dérivées).
+    \item[(b)] Établir le tableau de variations de \( f \).
+    \item[(c)] Tracer \( (C_f) \) et les asymptotes dans un repère orthonormé \( (O; \vec{i}, \vec{j}) \).
+\end{enumerate}
+\textbf{Partie B}
+
+Soit \( g \) la restriction de \( f \) à l’intervalle \( ] -\infty, 1] \).
+
+\begin{enumerate}
+    \item Montrer que \( g \) est bijective de \( ] -\infty, 1] \) sur un intervalle \( J \) à préciser.
+    \item Montrer que l’équation \( g(x) = x \) admet une unique solution \( \beta \) et que \( \frac{1}{3} < \beta < \frac{3}{4} \).
+    \item 
+    \begin{enumerate}
+        \item Étudier la dérivabilité de \( g^{-1} \).
+        \item Calculer \( g^{-1}(2) \).
+        \item Construire \( (C_{g^{-1}}) \) dans le repère précédent.
+        \item Montrer que \( g \) admet une primitive sur \( ] -\infty, 1] \) et déterminer cette primitive qui s’annule en 0.
+    \end{enumerate}
+\end{enumerate}
+
 \end{document}

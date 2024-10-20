@@ -644,10 +644,57 @@ Soit \( f \) une fonction définie sur un intervalle \( K \) contenant \( x_{0} 
 On a alors :\[\lim_{x \to x_{0}}\frac{f(x)-f(x_{0})}{x-x_{0}}=f'(x_{0})\]
 
 			\textbf{\underline{\exemple:}}
-
+			
 Soit \( f(x)=\frac{x}{2x+1} \)	Etudier la dérivabilité de \( f \) en \( -1 \).		
 			
 			\textbf{\underline{\solution:}}
+
+\subsection*{\underline{\textbf{\textcolor{red}{2.Dérivabilté à gauche-Dérivabilté à droite}}}}
+
+Soit f une fonction définie sur un intervalle I contenant $x_{0}$ et $\ell$ un réel.\\
+$f$ est dérivable à gauche de $x_{0}$ si\[\lim_{x \to x_{0}^{-}}\frac{f(x)-f(x_{0})}{x-x_{0}}=\ell\]
+$f$ est dérivable à droite de $x_{0}$ si\[\lim_{x \to x_{0}^{+}}\frac{f(x)-f(x_{0})}{x-x_{0}}=\ell\]
+$f$ est dérivable en $x_{0}$ si\[\lim_{x \to x_{0}^{-}}\frac{f(x)-f(x_{0})}{x-x_{0}}=\lim_{x \to x_{0}^{+}}\frac{f(x)-f(x_{0})}{x-x_{0}}=\ell\]
+
+NB: On note \( f'_{g}(x) \) la dérivé à gauche et \( f'_{d}(x) \) la dérivé à droite
+
+			\textbf{\underline{\exemple:}}
+
+\( f(x) = x|x-1| \) \( f \) est-elle dérivable en \( f \) ?
+
+			\textbf{\underline{\solution:}}
+
+\subsection*{\underline{\textbf{\textcolor{red}{3.Interprétation géométrique du nombre dérivé}}}}
+\begin{itemize}
+		\item[•] Si \( f \) est dérivable en \( x_{0} \) alors \( f'(x_{0}) \) existe et \( C_{f} \) admet une tangente au point d’abscisse \( x_{0} \) d'équation : \( y=f'(x_{0})(x-x_{0}) + f(x_{0}) \)
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{4.Dérivabilité sur un intervalle }}}}
+f est dérivable sur ]a ; b[si et seulement si f est dérivable en tout point
+de ]a ; b[ .
+
+\textbf{Propriété}:
+\begin{itemize}
+\item Toute fonction polynôme est dérivable sur \( \mathbb{R} \) .
+\item Toute fonction rationnelle est dérivable sur son ensemble de définition .
+\item \(|f|\) est dérivable sur \( I \) si et selement si \( f \) est dérivable sur \( I \) et \( f(x)  \neq 0 \forall x \in  I \)
+\item \(\sqrt{f}\) est dérivable sur \( I \) si et selement si \( f \) est dérivable sur \( I \) et \( f(x) >0 \forall x \in I \)
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{5.Dérivée d’une fonction composée}}}}
+
+Soit \( f \) une fonction définie sur un intervalle \( I \) et \( g \) une fonction définie sur un intervalle \( K \) contenant \( f(I) \).
+
+\begin{itemize}
+\item Si \( f \) est dérivable en un élément \( x_{0} \) de \( I \) et g dérivable en \( f \) alors 
+
+\( g\circ f \) est dérivable en et on a : \( (g\circ f)'(x_{0}) = g' \circ f(x_{0}) \times  f'(x_{0}) \) 
+
+\item Si \( f \) est dérivable sur \( I \) et \( g \) dérivable sur \( K \) alors \( g\circ f \) est
+
+dérivable sur \( I \) et on a : \( (g\circ f)' = g' \circ f \times  f' \)
+
+\end{itemize}
+
+\subsection*{\underline{\textbf{\textcolor{red}{6. }}}}
 
 \section*{\underline{\textbf{\textcolor{red}{C.Primitives}}}}
 

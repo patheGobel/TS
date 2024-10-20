@@ -1,43 +1,36 @@
 \documentclass[12pt]{article}
+\usepackage{lmodern} % Pour une police plus nette
 \usepackage{stmaryrd}
 \usepackage{graphicx} % Pour l'insertion d'images
 \usepackage{float}    % Pour contrôler précisément le placement
 \usepackage[utf8]{inputenc}
-
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{hyperref}
 \usepackage{verbatim}
-
 \usepackage{color, soul}
-
 \usepackage{pgfplots}
-\pgfplotsset{compat=1.15}
+\pgfplotsset{compat=1.18} % Version plus récente de pgfplots
 \usepackage{mathrsfs}
-
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{tkz-tab}
-\author{Destiné aux élèves de Terminale S\\Lycée de Dindéfelo\\Présenté par M. BA}
-\title{\textbf{Rappels et compléments sur les fonctions numériques}}
-\date{\today}
+%\author{Destiné aux élèves de Terminale S\\Lycée de Dindéfelo\\Présenté par M. BA}
+%\title{\textbf{Rappels et compléments sur les fonctions numériques}}
+%\date{\today}
 \usepackage{tikz}
 \usetikzlibrary{arrows, shapes.geometric, fit}
-
 % Commande pour la couleur d'accentuation
 \newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
 \newcommand\tab[1][1cm]{\hspace*{#1}}
+\usepackage[margin=2.5cm]{geometry} % Ajustement des marges
+\usepackage{eso-pic} % Pour ajouter des éléments en arrière-plan
 
-\usepackage[margin=2cm]{geometry}
-\usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
-
-\usepackage{enumitem}
-
-% Commande pour ajouter du texte en arrière-plan
+% Commande pour ajouter du texte en arrière-plan, centré au milieu de chaque page
 \AddToShipoutPicture{
-    \AtTextCenter{%
-        \makebox[0pt]{\rotatebox{45}{\textcolor[gray]{0.9}{\fontsize{5cm}{5cm}\selectfont Pathé Gobel BA}}}
+    \AtPageCenter{%
+        \makebox(0,0)[c]{\rotatebox{60}{\textcolor[gray]{0.9}{\fontsize{2cm}{2cm}\selectfont Pathé Gobel BA}}}
     }
 }
 
@@ -79,7 +72,7 @@ Professeur : M. BA
 \lim_{x \to \frac{\pi}{2}} \frac{1 - \tan x}{1 + \tan x}\quad ; \quad \lim_{x \to 3} \frac{\sqrt{x+1} - 2}{\sqrt{x^2 - x - 6}}\quad ; \quad\lim_{x \to 1} \frac{\sqrt{x+3} - \sqrt{5-x}}{\sqrt{2x+7} - \sqrt{10-x}}
 \]
 \[
-\lim_{x \to 0} \frac{\sqrt{1+\sin x -1}}{\sin 2x}\quad ; \quad\lim_{x \to \frac{\pi}{2}} \frac{\cos x}{1-\sin x}
+\lim_{x \to 0} \frac{\sqrt{1+\sin x} -1}{\sin 2x}\quad ; \quad\lim_{x \to \frac{\pi}{2}} \frac{\cos x}{1-\sin x}
 \]
 
 3. Déterminer, si elles existent, les limites suivantes :
@@ -99,6 +92,9 @@ Professeur : M. BA
 \lim_{x \to \pm \infty} \frac{x - \sqrt{|x|}}{3x + 2}
 \]
 
+\[
+\lim_{x \to +\infty} \sqrt{5x-2}-\sqrt{x+1}
+\]
 4. Déterminer, si elles existent, les limites suivantes :
 \[
 \lim_{x \to \pm \infty} \frac{x^2 + \sin x}{x} \quad ; \quad \lim_{x \to \pm\infty} \frac{x + \sin x}{2 - \sin x} \quad ; \quad \lim_{x \to \pm \infty} \frac{x^3}{3 + 2 \sin x}

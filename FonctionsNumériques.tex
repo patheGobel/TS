@@ -90,7 +90,7 @@
 
 \begin{document}
 \maketitle
-\section*{\underline{\textbf{\textcolor{red}{A. LIMITES-CONTINUITÉ-DÉRIVABILITÉ}}}}
+\section*{\underline{\textbf{\textcolor{red}{A. LIMITES-CONTINUITÉ}}}}
 \subsection*{\underline{\textbf{\textcolor{red}{I.Limites}}}}
 
 \renewcommand{\labelenumi}{\theenumi)}
@@ -694,8 +694,26 @@ dérivable sur \( I \) et on a : \( (g\circ f)' = g' \circ f \times  f' \)
 
 \end{itemize}
 
-\subsection*{\underline{\textbf{\textcolor{red}{6. }}}}
+\subsection*{\underline{\textbf{\textcolor{red}{6.Dérivée de la fonction réciproque }}}}
 
+Soit \( f \) une fonction dérivable et bijective de \( I \to J \)  et \( f^{-1} \) la bijection réciproque donc\\ \( f^{-1'}(y)=\frac{1}{f'(x)} \text{avec } f'(x)\neq 0\)
+
+En effet: 
+\[
+\begin{array}{c c c c}
+f : I \to J & & f^{-1} : J \to I \\
+f : x \mapsto y = f(x) & & y \mapsto x = f^{-1}(y)
+\end{array}
+\]
+
+On a 
+\( f^{-1}\circ f(x)=x \implies (f^{-1}\circ f(x))'=x' \implies f^{-1'}(f(x))\times f'(x)=1 \implies f^{-1'}(y)\times f'(x)=1\)
+\( \implies f^{-1'}(y) = \frac{1}{f'(x)}\)
+
+\textbf{Propriété}:
+
+\( f^{-1'}(y_{0})=\frac{1}{f'(x_{0})}=\frac{1}{f'(f^{-1}(y_{0}))} \text{avec } f'(x)\neq 0\)
+Inégalité des accroissements finis (IAF)
 \section*{\underline{\textbf{\textcolor{red}{C.Primitives}}}}
 
 \section*{\underline{\textbf{\textcolor{red}{D.ÉTUDES DE FONCTIONS}}}}

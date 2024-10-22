@@ -449,6 +449,36 @@ Si \( f \) est continue en \(x_{0}\) et \( g \) est continue en \( f(x_{0}) \) a
 		\end{enumerate}	
 
 		\textbf{\underline{\correction}}
+		
+\textbf{a) Continuité de \( f(x) = \sqrt{|2x^5|} \) sur \( \mathbb{R} \)}
+
+\textbf{Domaine de définition} : \\
+La fonction \( f(x) = \sqrt{|2x^5|} \) est définie pour tous les \( x \in \mathbb{R} \), car l’expression \( |2x^5| \) est toujours positive ou nulle, et la racine carrée d’un nombre positif ou nul est bien définie. Donc, \( f(x) \) est définie sur \( \mathbb{R} \).
+
+\textbf{Étude de la continuité} : \\
+La fonction \( f(x) \) est composée des fonctions suivantes :
+- \( g(x) = 2x^5 \), une fonction polynomiale, qui est continue partout sur \( \mathbb{R} \).
+- \( h(x) = |x| \), la fonction valeur absolue, qui est continue partout.
+- \( k(x) = \sqrt{x} \), la racine carrée, qui est continue pour \( x \geq 0 \).
+
+Ainsi, \( f(x) \) est continue sur \( \mathbb{R} \), car c’est la composition de fonctions continues sur leur domaine respectif.
+
+\textbf{Conclusion} : La fonction \( f(x) = \sqrt{|2x^5|} \) est continue sur \( \mathbb{R} \).
+
+\textbf{b) Continuité de \( f(x) = x\sqrt{1 - x} \)}
+
+\textbf{Domaine de définition} : \\
+La fonction \( f(x) = x\sqrt{1 - x} \) impose que \( 1 - x \geq 0 \), c'est-à-dire \( x \leq 1 \). Ainsi, la fonction est définie pour \( x < 1 \), sans autres contraintes. Le domaine de définition de \( f(x) \) est donc \( ]-\infty, 1[ \).
+
+\textbf{Étude de la continuité} : \\
+- La fonction \( g(x) = x \) est continue partout sur \( \mathbb{R} \). \\
+- La fonction \( h(x) = \sqrt{1 - x} \) est continue pour \( x < 1 \), car la racine carrée est définie pour les valeurs positives ou nulles. \\
+Ainsi, \( f(x) = x\sqrt{1 - x} \) est continue sur \( ]-\infty, 1[ \).
+
+\textbf{Point de discontinuité possible en \( x = 1 \)} : \\
+Lorsque \( x \) tend vers 1, la fonction \( \sqrt{1 - x} \) tend vers 0. À \( x = 1 \), la racine carrée devient \( \sqrt{1 - 1} = 0 \), donc \( f(1) = 1 \times 0 = 0 \). Cependant, la fonction n'est pas définie en \( x = 1 \), ce qui entraîne une discontinuité en \( x = 1 \).
+
+\textbf{Conclusion} : La fonction \( f(x) = x\sqrt{1 - x} \) est continue sur \( ]-\infty, 1[ \) et présente une discontinuité en \( x = 1 \).
 
 \item \textbf{\textcolor{blue}{\underline{Image d’un intervalle par une fonction continue et stritement monotone}}}
 \begin{itemize}

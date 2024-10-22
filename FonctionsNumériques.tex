@@ -896,6 +896,129 @@ U' \times \sqrt{U} \text{ a pour primitives } \frac{2}{3} U \sqrt{U} + k
 \frac{U'}{U^n} \text{ peut être ramenée à la forme } U' \times U^{-n}
 \]
 
+\section*{\underline{\textbf{\textcolor{red}{D.ÉTUDES DE FONCTIONS}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{1) Courbe de la fonction réciproque}}}}
 
+Soit $f$ une bijection de $I$ vers $J$ et $f^{-1}$ sa bijection réciproque.  
+La courbe de $f \ (C_f)$ et la courbe de $f^{-1} \ (C_{f^{-1}})$ sont symétriques par rapport à la première bissectrice  
+\[
+(\Delta) \text{ d'équation } y = x.
+\]
+\subsection*{\underline{\textbf{\textcolor{red}{2) Fonction paire}}}}
+
+Soit $f$ une fonction et $D_f$ son ensemble de définition. $f$ est dite paire lorsque pour tout $x$ élément de $D_f$  
+\[
+\text{On a } -x \in D_f \text{ et } f(-x) = f(x).
+\]
+
+\subsection*{\underline{\textbf{\textcolor{red}{2) Fonction impaire}}}}
+Soit $f$ une fonction et $D_f$ son ensemble de définition. $f$ est dite impaire lorsque pour tout $x$ élément de $D_f$  
+\[
+\text{On a } -x \in D_f \text{ et } f(-x) = -f(x).
+\]
+
+\subsection*{\underline{\textbf{\textcolor{red}{4) Centre de symétrie}}}}
+Le plan est muni d'un repère $(O, I, J)$. $(C_f)$ est la représentation graphique d'une fonction $f$.  
+
+Pour démontrer que le point $A(a ; b)$ est un centre de symétrie de $(C_f)$ on peut procéder comme suit :
+
+\subsubsection*{1ère méthode}
+\begin{itemize}
+    \item On détermine la fonction $g$ dont la représentation graphique est l'image de $(C_f)$ par la translation de vecteur $\vec{AO}$, cette fonction $g$ est définie par : $g(x) = f(x + a) - b$.
+    \item On démontre que $g$ est impaire.
+\end{itemize}
+
+\subsubsection*{2ème méthode}
+Le point $A(a ; b)$ est un centre de symétrie de $(C_f)$ si et seulement si pour tout $x$ élément de $D_f$  
+\[
+\text{On a } 2a - x \in D_f \text{ et } f(2a - x) + f(x) = 2b.
+\]
+
+\textbf{\underline{\exerciceapp}}
+\textbf{\underline{\correction}}
+\subsection*{\underline{\textbf{\textcolor{red}{5) Axe de symétrie}}}}
+
+Le plan est muni d’un repère orthogonal $(O, I, J)$. $(C_f)$ est la représentation graphique d’une fonction $f$.
+
+Pour démontrer que la droite $(\Delta)$ d' équation $x = a$ est un axe de symétrie de $(C_f)$ on peut procéder comme suit :
+
+\subsection*{1\textsuperscript{ère} méthode}
+
+\begin{itemize}
+    \item On détermine la fonction $g$ dont la représentation graphique est l’image de $(C_f)$ par la translation de vecteur $\overrightarrow{A0}$, $A$ étant le point de coordonnées $A(a; 0)$, cette fonction $g$ est définie par :
+    \[
+    g(x) = f(x + a)
+    \]
+    \item On démontre que $g$ est paire.
+\end{itemize}
+
+\subsection*{2\textsuperscript{ème} méthode}
+
+La droite $(\Delta)$ d' équation $x = a$ est un axe de symétrie de $(C_f)$ si et seulement pour tout $x$ élément de $D_f$ :
+\[
+f(2a - x) = f(x).
+\]
+
+
+\subsection*{\underline{\textbf{\textcolor{red}{8) Périodicité}}}}
+
+Soit $f$ une fonction et $D_f$ son ensemble de définition. Soit $T$ un nombre réel strictement positif. On dit que 
+
+$T$ est une période de $f$ lorsque pour tout $x$ élément de $D_f$, on a :
+
+\begin{itemize}
+    \item $x + T \in D_f$ \hfill (1)
+    \item $f(x + T) = f(x)$ \hfill (2)
+\end{itemize}
+
+Le plus petit réel $T$ strictement positif qui vérifie (1) et (2) est appelé la période de $f$.
+\subsection*{\underline{\textbf{\textcolor{red}{9) Position relative d’une courbe et de son asymptote \( (\Delta): y = ax + b \)}}}}
+
+Soient $f$ une fonction et $(C_f)$ sa courbe représentative. $(\Delta) : y = ax + b$.
+
+Posons $g(x) = f(x) - (ax + b)$.
+
+\begin{itemize}
+    \item Si $g(x) > 0 \ \forall x \in K$, alors $(C_f)$ est au-dessus de $(\Delta)$ sur $K$.
+    \item Si $g(x) < 0 \ \forall x \in K$, alors $(C_f)$ est au-dessous (ou en dessous) de $(\Delta)$ sur $K$.
+    \item Si $g(x) = 0 \ \forall x \in K$, alors $(C_f)$ et $(\Delta)$ se coupent sur $K$.
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{10) Position relative d’une courbe et de sa tangente au point \( M_{0} \)  d'abscisse \( x_{0} \)}}}}
+
+Soit $f$ une fonction deux fois dérivable sur un intervalle $K$ et $x_0$ un élément de $K$. 
+
+On désigne par $(C_f)$ sa courbe représentative et par $(T)$ la tangente à $(C_f)$ au point $M_0$ d’abscisse $x_0$.
+
+$(T)$ a pour équation : $y = f(x_0) + f'(x_0)(x - x_0)$.
+
+\begin{itemize}
+    \item Si $f'' > 0 \ \forall x \in K$, alors $(C_f)$ est au-dessus de $(T)$ sur $K$. On dit que $f$ est convexe sur $K$.
+    \item Si $f'' < 0 \ \forall x \in K$, alors $(C_f)$ est au-dessous (ou en dessous) de $(T)$ sur $K$. On dit que $f$ est concave sur $K$.
+    \item Si $f''$ s'annule et change de signe en $x_0$, alors la droite $(T)$ traverse la courbe $(C_f)$ en $M_0$. On dit que $M_0$ est un point d’inflexion de $(C_f)$.
+\end{itemize}
+\section*{PROBLÈME}
+
+Soit $f$ la fonction définie par :
+\[
+f(x) =
+\begin{cases} 
+2x\sqrt{1 - x^2} & \text{si } x > 0 \\ 
+-x + \sqrt{x^2 - 2x} & \text{si } x \leq 0 
+\end{cases}
+\]
+
+\begin{enumerate}
+    \item Déterminer $D_f$, les limites aux bornes et préciser les asymptotes et branches infinies éventuelles.
+    \item Étudier la dérivabilité de $f$ en 0 et 1; interpréter géométriquement les résultats obtenus.
+    \item Calculer $f'(x)$ là où $f$ est définie, puis dresser le tableau de variation de $f$.
+    \item Tracer la courbe de $f$.
+    \item Soit $h$ la restriction de $f$ à l’intervalle $]-\infty ; 0]$.
+    \begin{enumerate}
+        \item Montrer que $h$ admet une bijection réciproque $h^{-1}$ dont on précisera l’ensemble de définition, l’ensemble de dérivabilité et le tableau de variation.
+        \item Sans utiliser l’expression de $h^{-1}(x)$, calculer $(h^{-1})'(2)$.
+        \item Déterminer explicitement $h^{-1}$.
+        \item Tracer la courbe de $h^{-1}$ dans le même repère que celle de $f$.
+    \end{enumerate}
+\end{enumerate}
 
 \end{document}

@@ -793,7 +793,109 @@ On a bien :
 %\subsubsection*{\textbf{\textcolor{red}{7.5 Remarques et Limitations}}}
 %Il est important de noter que l'IAF nécessite que la fonction soit continue sur \([a, b]\) et dérivable sur \( ]a, b[ \). Si ces conditions ne sont pas respectées, l'inégalité peut ne pas s'appliquer. De plus, le choix de l'intervalle peut influencer le résultat obtenu, notamment en ce qui concerne la borne maximale sur la dérivée.
 
-\section*{\underline{\textbf{\textcolor{red}{C.Primitives}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{C.Primitives}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{Définition}}}}
+Soit F une fonction dérivable sur un intervalle I et soit f une fonction définie et continue sur I.
+ 
+On dit que F est une primitive de f sur I si pour tout x élément de I
 
-\section*{\underline{\textbf{\textcolor{red}{D.ÉTUDES DE FONCTIONS}}}}
+On a : F'(x)=f(x)
+
+F est une primitive de f sur I si f est la dérivée de F sur I.
+
+\textbf{Théorème (admis)}
+
+Toute fonction continue sur un intervalle I admet une primitive sur I.
+
+\textbf{Remarque : }
+
+Si f admet une primitive sur I alors elle en admet une infinité.
+
+\textbf{Théorème }
+
+Deux primitives d'une même fonction sur un même intervalle diffèrent d'une constante.
+ 
+Donc si F et G sont des primitives de f sur I alors il existe une constante réelle k telle que pour tout x élément de I F(x)=G(x)+k
+ 
+Pour la preuve voir la variation des fonctions avec l'utilisation des dérivées.
+ 
+On en déduit que : 
+ 
+Chacune des primitives de f sur I est déterminée par sa valeur en un point de I.
+
+\textbf{Remarque :  }
+
+Toute primitive de f sur I est dérivable sur I.
+ 
+Il serait utile de connaitre les résultats figurant sur le tableau suivant : 
+
+\begin{table}[h!]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{\( I = \) intervalle de} & \textbf{Remarques ou} & \textbf{Fonction \( f \)} & \textbf{Primitive \( F \) où \( k \) est une} \\
+        \textbf{définition de \( f \)} & \textbf{restrictions} & & \textbf{constante réelle} \\
+        \hline
+        \( I \subset \mathbb{R} \) & & \( x \mapsto 0 \) & \( x \mapsto k \) \\
+        \hline
+        \( I \subset \mathbb{R} \) & \( a \in \mathbb{R} \) & \( x \mapsto a \) & \( x \mapsto ax + k \) \\
+        \hline
+        \( I \subset \mathbb{R} \) & \( n \) entier naturel & \( x \mapsto x^n \) & \( x \mapsto \frac{x^{n+1}}{n+1} + k \) \\
+        \hline
+        \( I \subset \mathbb{R}^* \) & \( n \) entier relatif, \( n \neq -1 \) & \( x \mapsto x^n \) & \( x \mapsto \frac{x^{n+1}}{n+1} + k \) \\
+        \hline
+        \( I \subset \mathbb{R}^+ \) & \( n \) réel \( n \neq -1 \) & \( x \mapsto x^n \) & \( x \mapsto \frac{x^{n+1}}{n+1} + k \) \\
+        \hline
+        \( I \subset \mathbb{R}^* \) & & \( x \mapsto \frac{1}{x^2} \) & \( x \mapsto -\frac{1}{x} + k \) \\
+        \hline
+        \( I \subset \mathbb{R}^+ \) & & \( x \mapsto \frac{1}{\sqrt{x}} \) & \( x \mapsto 2\sqrt{x} + k \) \\
+        \hline
+        \( I \subset \mathbb{R} \) & & \( x \mapsto \sin x \) & \( x \mapsto -\cos x + k \) \\
+        \hline
+        \( I \subset \mathbb{R} \) & & \( x \mapsto \cos x \) & \( x \mapsto \sin x + k \) \\
+        \hline
+        \( I \subset \mathbb{R} \) & & \( x \mapsto \sin(ax+b) \) & \( x \mapsto -\frac{1}{a} \cos(ax+b) + k \) \\
+        \hline
+        \( I \subset \mathbb{R} \) & & \( x \mapsto \cos(ax+b) \) & \( x \mapsto \frac{1}{a} \sin(ax+b) + k \) \\
+        \hline
+        \( I \subset \mathbb{R} \setminus \left\{ \frac{\pi}{2} + k\pi \right\} \) & & \( x \mapsto \frac{1}{\cos^2 x} \) & \( x \mapsto \tan x + k \) \\
+        \hline
+        \( I \subset \mathbb{R} \) & & \( x \mapsto 1 + \tan^2 x \) & \( x \mapsto \tan x + k \) \\
+        \hline
+        \( I \subset \mathbb{R}^+ \) & \( x \) positif & \( x \mapsto \sqrt{x} \) & \( x \mapsto \frac{2}{3} x^{3/2} + k \) \\
+        \hline
+        \( I \subset \mathbb{R} \) & & \( x \mapsto (ax+b)^n \) & \( x \mapsto \frac{1}{a} \frac{(ax+b)^{n+1}}{n+1} + k \) \\
+        \hline
+        \( I \subset \mathbb{R} \) & Avec les mêmes & & \\
+        & contraintes sur \( n \) et sur \( (ax+b) \) & & \\
+        \hline
+    \end{tabular}
+    \caption{Tableau des primitives}
+\end{table}
+
+Lorsque $U$ désigne une fonction dérivable sur $I$, positive et non nulle dans certains cas, on a :
+
+\[
+\frac{U'}{U^2} \text{ a pour primitives } -\frac{1}{U} + k
+\]
+
+\[
+U' \times U^n \text{ a pour primitives } \frac{U^{n+1}}{n+1} + k
+\]
+
+\[
+U' \times \sqrt{U} \text{ a pour primitives } \frac{2}{3} U \sqrt{U} + k
+\]
+
+\[
+\frac{U'}{\sqrt{U}} \text{ a pour primitives } 2 \sqrt{U} + k
+\]
+
+\[
+\frac{U'}{U^n} \text{ peut être ramenée à la forme } U' \times U^{-n}
+\]
+
+
+
 \end{document}

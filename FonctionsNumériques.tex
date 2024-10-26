@@ -219,7 +219,7 @@ On commence par la fonction la plus à l'intérieur :
        	\textbf{Preuve[Exercice]}    	
 			       	
 \end{enumerate}
-\item \textcolor{green}{\underline{Limites de fonctions trigonométriques}}      
+\item \textcolor{blue}{\underline{Limites de fonctions trigonométriques}}      
        	\begin{itemize}
        	\item \[ \lim_{x \to 0} \frac{\sin x}{x}=1 \]
        	\item \[ \lim_{x \to 0} \frac{\tan x}{x}=1 \]
@@ -617,7 +617,7 @@ Si la fonction \( f \) réalise une bijection(continue et strictement monotone) 
 Si \( f \) est continue et strictement monotone sur un intervalle \( I \), alors \( f \) est une bijection de \( I \) vers \( J = f(I) \). Dans ce cas, \( f \) admet une fonction réciproque \( f^{-1} \) qui est également continue et strictement monotone sur l'intervalle \( J \), avec les propriétés suivantes :
 \begin{itemize}
     \item La fonction réciproque \( f^{-1} \) est telle que \( f(f^{-1}(y)) = y \) pour tout \( y \in J \) et \( f^{-1}(f(x)) = x \) pour tout \( x \in I \).
-    \item La monotonie de \( f^{-1} \) est de même sens que celle de \( f \) si \( f \) est strictement croissante et de sens contraire si \( f \) est strictement décroissante.
+    \item La monotonie de \( f^{-1} \) est de même sens que celle de \( f \) .
 \end{itemize}
 
 			\textbf{\underline{\exemple:}}
@@ -648,6 +648,9 @@ f(x) = 2x + 3
     \item Oui, la fonction réciproque \( f^{-1}(y) = \frac{y - 3}{2} \) est également continue et strictement croissante sur \(\mathbb{R}\) car elle est une fonction affine avec une pente positive.
     \item Calculer \( f^{-1}(5) \)
 \end{enumerate}
+
+NB: Il n'est pas toujours possible de déterminer l'expression explicite de \( f^{-1} \)
+
 \item \textbf{\textcolor{blue}{\underline{Calcul de \( f^{-1}(y_{0}) \) sans connaître l'expression de \( f^{-1} \) }}}
 
 Pour calculer \( f^{-1}(y_{0}) \), on résout \( f(x)=y_{0} \).
@@ -696,11 +699,11 @@ Soit la fonction \(f(x)=x^{3}-7x \)
 \end{enumerate}
 \section*{\underline{\textbf{\textcolor{red}{B.Dérivabilité}}}}
 \subsection*{\underline{\textbf{\textcolor{red}{I.Dérivation}}}}
-\subsection*{\underline{\textbf{\textcolor{red}{1.Notion de nombre dérivé}}}}
+\subsection*{\underline{\textbf{\textcolor{blue}{1.Notion de nombre dérivé}}}}
 
-Soit \( f \) une fonction définie sur un intervalle \( K \) contenant \( x_{0} \)
+Soit \( f \) une fonction définie sur un intervalle \( I \) contenant \( x_{0} \)
 
-\( f \) est dérivable en ou \( f \) admet un nombre dérivé en \( x_{0} \) si et seulment si \[\lim_{x \to x_{0}}\frac{f(x)-f(x_{0})}{x-x_{0}}=\ell \text{ avec } (\ell \in\mathbb{R})\]. \( \ell \) est appelé le nombre dérivé de \( f \) en \( x_{0} \) et noté \( f'(x_{0}) \).
+\( f \) est dérivable en \( x_{0} \) ou \( f \) admet un nombre dérivé en \( x_{0} \) si et seulment si \[\lim_{x \to x_{0}}\frac{f(x)-f(x_{0})}{x-x_{0}}=\ell \text{ avec } (\ell \in\mathbb{R})\] \( \ell \) est appelé le nombre dérivé de \( f \) en \( x_{0} \) et est noté \( f'(x_{0}) \).
 
 On a alors :\[\lim_{x \to x_{0}}\frac{f(x)-f(x_{0})}{x-x_{0}}=f'(x_{0})\]
 
@@ -710,7 +713,7 @@ Soit \( f(x)=\frac{x}{2x+1} \)	Etudier la dérivabilité de \( f \) en \( -1 \).
 			
 			\textbf{\underline{\solution:}}
 
-\subsection*{\underline{\textbf{\textcolor{red}{2.Dérivabilté à gauche-Dérivabilté à droite}}}}
+\subsection*{\underline{\textbf{\textcolor{blue}{2.Dérivabilté à gauche-Dérivabilté à droite}}}}
 
 Soit f une fonction définie sur un intervalle I contenant $x_{0}$ et $\ell$ un réel.\\
 $f$ est dérivable à gauche de $x_{0}$ si\[\lim_{x \to x_{0}^{-}}\frac{f(x)-f(x_{0})}{x-x_{0}}=\ell\]
@@ -721,15 +724,15 @@ NB: On note \( f'_{g}(x) \) la dérivé à gauche et \( f'_{d}(x) \) la dérivé
 
 			\textbf{\underline{\exemple:}}
 
-\( f(x) = x|x-1| \) \( f \) est-elle dérivable en \( f \) ?
+\( f(x) = x|x-1| \) \( f \) est-elle dérivable en \( 1 \) ?
 
 			\textbf{\underline{\solution:}}
 
-\subsection*{\underline{\textbf{\textcolor{red}{3.Interprétation géométrique du nombre dérivé}}}}
+\subsection*{\underline{\textbf{\textcolor{blue}{3.Interprétation géométrique du nombre dérivé}}}}
 \begin{itemize}
 		\item[•] Si \( f \) est dérivable en \( x_{0} \) alors \( f'(x_{0}) \) existe et \( C_{f} \) admet une tangente au point d’abscisse \( x_{0} \) d'équation : \( y=f'(x_{0})(x-x_{0}) + f(x_{0}) \)
 \end{itemize}
-\subsection*{\underline{\textbf{\textcolor{red}{4.Dérivabilité sur un intervalle }}}}
+\subsection*{\underline{\textbf{\textcolor{blue}{4.Dérivabilité sur un intervalle }}}}
 \( f \) est dérivable sur \( ]a ; b[ \) si et seulement si \( f \) est dérivable en tout point
 de \( ]a ; b[ \) .
 
@@ -740,7 +743,7 @@ de \( ]a ; b[ \) .
 \item \(|f|\) est dérivable sur \( I \) si et selement si \( f \) est dérivable sur \( I \) et \( f(x)  \neq 0 \forall x \in  I \)
 \item \(\sqrt{f}\) est dérivable sur \( I \) si et selement si \( f \) est dérivable sur \( I \) et \( f(x) >0 \forall x \in I \)
 \end{itemize}
-\subsection*{\underline{\textbf{\textcolor{red}{5.Dérivée d’une fonction composée}}}}
+\subsection*{\underline{\textbf{\textcolor{blue}{5.Dérivée d’une fonction composée}}}}
 
 Soit \( f \) une fonction définie sur un intervalle \( I \) et \( g \) une fonction définie sur un intervalle \( K \) contenant \( f(I) \).
 
@@ -776,7 +779,7 @@ On a
 \( f^{-1'}(y_{0})=\frac{1}{f'(x_{0})}=\frac{1}{f'(f^{-1}(y_{0}))} \text{avec } f'(x)\neq 0\)
 Inégalité des accroissements finis (IAF)
 
-\subsection*{\underline{\textbf{\textcolor{red}{7.Inégalité des accroissements finis (IAF) }}}}
+\subsection*{\underline{\textbf{\textcolor{blue}{7.Inégalité des accroissements finis (IAF) }}}}
 
 %L'inégalité des accroissements finis (IAF) est un résultat clé en analyse mathématique qui permet d'établir une borne sur la variation d'une fonction entre deux points. Elle s'énonce et se démontre comme suit :
 

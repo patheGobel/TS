@@ -611,7 +611,37 @@ Si la fonction \( f \) réalise une bijection(continue et strictement monotone) 
 			Montrer que l’équation \( f(x) = 0 \) admet une unique solution sur \( [-0,8 ; -0,6] \).			
 			
 			\textbf{\underline{\solution:}}
+\item \textbf{\textcolor{blue}{\underline{Encadrement de la racine \( \alpha \) à \( \epsilon \) près}}}
 
+      \textbf{\textcolor{blue}{\underline{Méthode de dichotomie(Approche par exemple)}}}
+      
+      Si \( f \) fonction \textcolor{red}{strictement contenu} sur un intervalle \( [a;b] \), telle que \( f(a)\geq 0 \) et \( f(b) \leq 0\); alors il existe au moins un réel \( \alpha \) dans  l'intervalle \( [a;b] \) tel que \( f(\alpha) = 0 \).
+
+L'idée est alors de trouver le signe de \( f \) au \textcolor{red}{ milieu } de \( [a;b] \), et de distinguer les deux cas
+\begin{itemize}
+\item Si \( f\left( \frac{a+b}{2}\right) \leq 0  \), alors \( \alpha \) est dans l'intervalle 
+\( \left[\frac{a+b}{2} ; b \right] \)
+\item Sinon \( f\left( \frac{a+b}{2}\right) > 0  \), alors \( \alpha \) est dans l'intervalle 
+\( \left[a ; \frac{a+b}{2} \right] \)
+\end{itemize}
+Dans les deux cas, on a trouvé un intervalle de longueur moité dans lequel est située une racine \( \alpha \) de l'équation \( f(x)=0 \).
+
+On recommence alors avec cet intervalle, et ainsi de suite,jusqu'à ce qu'on trouve une approximation qui nous convienne.
+
+\textbf{\underline{\exerciceapp}}
+Soit la fonction \(f(x)=x^{3}-7x \)
+\begin{enumerate}[label=\alph*)]
+\item Montrer que l'équation \( f(x)=0 \) admet une unique solution \( \alpha \) sur l'intervalle \( [2;4] \).
+\item Donner un encadrement de \( \alpha \) à 0.1 près
+\end{enumerate}
+
+\textbf{\underline{\correction}}
+
+			\textbf{\textcolor{blue}{\underline{Méthode de balayage(Approche par exemple)[Exercice]}}}			
+
+			%\textbf{\underline{Exercice d'application}}
+			
+			%\textbf{\underline{Solution}}
 \item \textbf{\textcolor{blue}{\underline{Théorème d’existence d’une bijection et de sa réciproque}}}
 
 Si \( f \) est continue et strictement monotone sur un intervalle \( I \), alors \( f \) est une bijection de \( I \) vers \( J = f(I) \). Dans ce cas, \( f \) admet une fonction réciproque \( f^{-1} \) qui est également continue et strictement monotone sur l'intervalle \( J \), avec les propriétés suivantes :
@@ -661,39 +691,7 @@ Pour calculer \( f^{-1}(y_{0}) \), on résout \( f(x)=y_{0} \).
 
 Calculer \( f^{-1}(2) \) 			
 			
-			\textbf{\underline{\solution:}}
-
-\item \textbf{\textcolor{blue}{\underline{Encadrement de la racine \( \alpha \) à \( \epsilon \) près}}}
-
-      \textbf{\textcolor{blue}{\underline{Méthode de dichotomie(Approche par exemple)}}}
-      
-      Si \( f \) fonction \textcolor{red}{strictement contenu} sur un intervalle \( [a;b] \), telle que \( f(a)\geq 0 \) et \( f(b) \leq 0\); alors il existe au moins un réel \( \alpha \) dans  l'intervalle \( [a;b] \) tel que \( f(\alpha) = 0 \).
-
-L'idée est alors de trouver le signe de \( f \) au \textcolor{red}{ milieu } de \( [a;b] \), et de distinguer les deux cas
-\begin{itemize}
-\item Si \( f\left( \frac{a+b}{2}\right) \leq 0  \), alors \( \alpha \) est dans l'intervalle 
-\( \left[\frac{a+b}{2} ; b \right] \)
-\item Sinon \( f\left( \frac{a+b}{2}\right) > 0  \), alors \( \alpha \) est dans l'intervalle 
-\( \left[a ; \frac{a+b}{2} \right] \)
-\end{itemize}
-Dans les deux cas, on a trouvé un intervalle de longueur moité dans lequel est située une racine \( \alpha \) de l'équation \( f(x)=0 \).
-
-On recommence alors avec cet intervalle, et ainsi de suite,jusqu'à ce qu'on trouve une approximation qui nous convienne.
-
-\textbf{\underline{\exerciceapp}}
-Soit la fonction \(f(x)=x^{3}-7x \)
-\begin{enumerate}[label=\alph*)]
-\item Montrer que l'équation \( f(x)=0 \) admet une unique solution \( \alpha \) sur l'intervalle \( [2;4] \).
-\item Donner un encadrement de \( \alpha \) à 0.1 près
-\end{enumerate}
-
-\textbf{\underline{\correction}}
-
-			\textbf{\textcolor{blue}{\underline{Méthode de balayage(Approche par exemple)[Exercice]}}}			
-
-			%\textbf{\underline{Exercice d'application}}
-			
-			%\textbf{\underline{Solution}}	
+			\textbf{\underline{\solution:}}	
 
 
 \end{enumerate}

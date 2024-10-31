@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass{article}
 \usepackage{stmaryrd}
 \usepackage{graphicx} % Pour l'insertion d'images
 \usepackage{float}    % Pour contrôler précisément le placement
@@ -15,6 +15,11 @@
 \pgfplotsset{compat=1.15}
 \usepackage{mathrsfs}
 
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{multirow}
+\geometry{a4paper, margin=1in}
+
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -29,7 +34,7 @@
 \newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
 \newcommand\tab[1][1cm]{\hspace*{#1}}
 
-\usepackage[margin=2cm]{geometry}
+%\usepackage[margin=2cm]{geometry}
 \usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
 
 \usepackage{enumitem}
@@ -600,6 +605,7 @@ Si la fonction \( f \) est \textcolor{red}{ continue } et \textcolor{red}{ stric
 
 Si la fonction \( f \) réalise une bijection(continue et strictement monotone) de \( [a ; b] \) de plus si \( f(a) \times f(b) < 0 \) alors l'équation \( f(x) =0 \) admet une unique solution \( \alpha \) sur l'intervalle 
 \( [a ; b] \).
+
 \textbf{\textcolor{blue}{\underline{Ilustration graphique}}}
 
 [Image]
@@ -730,6 +736,35 @@ NB: On note \( f'_{g}(x) \) la dérivé à gauche et \( f'_{d}(x) \) la dérivé
 \begin{itemize}
 		\item[•] Si \( f \) est dérivable en \( x_{0} \) alors \( f'(x_{0}) \) existe et \( C_{f} \) admet une tangente au point d’abscisse \( x_{0} \) d'équation : \( y=f'(x_{0})(x-x_{0}) + f(x_{0}) \)
 \end{itemize}
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|>{\centering\arraybackslash}m{5cm}|>{\centering\arraybackslash}m{3cm}|>{\centering\arraybackslash}m{6cm}|}
+\hline
+\textbf{La limite} & \textbf{Dérivabilité en \( x_0 \)} & \textbf{Interprétation géométrique : \( (C_f) \) admet} \\
+\hline
+\[\lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0} = a \ (a \neq 0)\] & \multirow{2}{*}{\(f\) est dérivable en \(x_0\)} & Une tangente au point \( A \left(x_0; f(x_0)\right) \) de coefficient directeur \(a\) \\
+\cline{1-1} \cline{3-3}
+\[\lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0} = 0 \] &  & Une tangente horizontale au point \( A \left(x_0; f(x_0)\right) \) \\
+\hline
+\[\lim_{x \to x_0^+} \frac{f(x) - f(x_0)}{x - x_0} = a \ (a \neq 0) \] & \(f\) est dérivable à droite en \(x_0\) & Une demi-tangente à droite au point \( A \left(x_0; f(x_0)\right) \) de coefficient directeur \(a\) \\
+\cline{1-1} \cline{3-3} 
+\[\lim_{x \to x_0^+} \frac{f(x) - f(x_0)}{x - x_0} = 0 \] &  & Une demi-tangente horizontale à droite au point \( A \left(x_0; f(x_0)\right) \) \\
+\hline
+\[\lim_{x \to x_0^+} \frac{f(x) - f(x_0)}{x - x_0} = -\infty \] & \(f\) n'est pas dérivable à droite en \(x_0\) & Une demi-tangente verticale à droite au point \( A \left(x_0; f(x_0)\right) \) dirigée vers le bas \\
+\cline{1-1} \cline{3-3}
+\[\lim_{x \to x_0^+} \frac{f(x) - f(x_0)}{x - x_0} = +\infty \] &  & Une demi-tangente verticale à droite au point \( A \left(x_0; f(x_0)\right) \) dirigée vers le haut \\
+\hline
+\[\lim_{x \to x_0^-} \frac{f(x) - f(x_0)}{x - x_0} = a \ (a \neq 0) \] & \(f\) est dérivable à gauche en \(x_0\) & Une demi-tangente à gauche au point \( A \left(x_0; f(x_0)\right) \) de coefficient directeur \(a\) \\
+\cline{1-1} \cline{3-3}
+\[\lim_{x \to x_0^-} \frac{f(x) - f(x_0)}{x - x_0} = 0 \] &  & Une demi-tangente horizontale à gauche au point \( A \left(x_0; f(x_0)\right) \) \\
+\hline
+\[\lim_{x \to x_0^-} \frac{f(x) - f(x_0)}{x - x_0} = -\infty \] & \(f\) n'est pas dérivable à gauche en \(x_0\) & Une demi-tangente verticale à gauche au point \( A \left(x_0; f(x_0)\right) \) dirigée vers le bas \\
+\cline{1-1} \cline{3-3}
+\[\lim_{x \to x_0^-} \frac{f(x) - f(x_0)}{x - x_0} = +\infty \] &  & Une demi-tangente verticale à gauche au point \( A \left(x_0; f(x_0)\right) \) dirigée vers le haut \\
+\hline
+\end{tabular}
+\end{table}
 \subsection*{\underline{\textbf{\textcolor{blue}{4.Dérivabilité sur un intervalle }}}}
 \( f \) est dérivable sur \( ]a ; b[ \) si et seulement si \( f \) est dérivable en tout point
 de \( ]a ; b[ \) .

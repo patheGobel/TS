@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{multirow}
+\usepackage{graphicx} % Package pour redimensionner le tableau
+\geometry{a4paper, margin=1in}
+
+\begin{document}
+
+\begin{table}[h!]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{\ensuremath{I =} intervalle de} & \textbf{Remarques ou} & \textbf{Fonction \ensuremath{f}} & \textbf{Primitive \ensuremath{F} où \ensuremath{k} est une} \\
+        \textbf{définition de \ensuremath{f}} & \textbf{restrictions} & & \textbf{constante réelle} \\
+        \hline
+        \ensuremath{I \subset \mathbb{R}} & & \ensuremath{x \mapsto 0} & \ensuremath{x \mapsto k} \\
+        \hline
+        \ensuremath{I \subset \mathbb{R}} & \ensuremath{a \in \mathbb{R}} & \ensuremath{x \mapsto a} & \ensuremath{x \mapsto ax + k} \\
+        \hline
+        \ensuremath{I \subset \mathbb{R}} & \ensuremath{n} entier naturel & \ensuremath{x \mapsto x^n} & \ensuremath{x \mapsto \frac{x^{n+1}}{n+1} + k} \\
+        \hline
+        \ensuremath{I \subset \mathbb{R}^*} & \ensuremath{n} entier relatif, \ensuremath{n \neq -1} & \ensuremath{x \mapsto x^n} & \ensuremath{x \mapsto \frac{x^{n+1}}{n+1} + k} \\
+        \hline
+        \ensuremath{I \subset \mathbb{R}^+} & \ensuremath{n} réel \ensuremath{n \neq -1} & \ensuremath{x \mapsto x^n} & \ensuremath{x \mapsto \frac{x^{n+1}}{n+1} + k} \\
+        \hline
+        \ensuremath{I \subset \mathbb{R}^*} & & \ensuremath{x \mapsto \frac{1}{x^2}} & \ensuremath{x \mapsto -\frac{1}{x} + k} \\
+        \hline
+        \ensuremath{I \subset \mathbb{R}^+} & & \ensuremath{x \mapsto \frac{1}{\sqrt{x}}} & \ensuremath{x \mapsto 2\sqrt{x} + k} \\
+        \hline
+        \ensuremath{I \subset \mathbb{R}} & & \ensuremath{x \mapsto \sin x} & \ensuremath{x \mapsto -\cos x + k} \\
+        \hline
+        \ensuremath{I \subset \mathbb{R}} & & \ensuremath{x \mapsto \cos x} & \ensuremath{x \mapsto \sin x + k} \\
+        \hline
+        \ensuremath{I \subset \mathbb{R}} & & \ensuremath{x \mapsto \sin(ax+b)} & \ensuremath{x \mapsto -\frac{1}{a} \cos(ax+b) + k} \\
+        \hline
+        \ensuremath{I \subset \mathbb{R}} & & \ensuremath{x \mapsto \cos(ax+b)} & \ensuremath{x \mapsto \frac{1}{a} \sin(ax+b) + k} \\
+        \hline
+        \ensuremath{I \subset \mathbb{R} \setminus \left\{ \frac{\pi}{2} + k\pi \right\}} & & \ensuremath{x \mapsto \frac{1}{\cos^2 x}} & \ensuremath{x \mapsto \tan x + k} \\
+        \hline
+        \ensuremath{I \subset \mathbb{R}} & & \ensuremath{x \mapsto 1 + \tan^2 x} & \ensuremath{x \mapsto \tan x + k} \\
+        \hline
+        \ensuremath{I \subset \mathbb{R}^+} & \ensuremath{x} positif & \ensuremath{x \mapsto \sqrt{x}} & \ensuremath{x \mapsto \frac{2}{3} x^{3/2} + k} \\
+        \hline
+        \ensuremath{I \subset \mathbb{R}} & & \ensuremath{x \mapsto (ax+b)^n} & \ensuremath{x \mapsto \frac{1}{a} \frac{(ax+b)^{n+1}}{n+1} + k} \\
+        \hline
+    \end{tabular}
+    \caption{Tableau des primitives}
+\end{table}
+
+\end{document}

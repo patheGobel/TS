@@ -984,48 +984,35 @@ Soit $f$ une fonction et $D_f$ son ensemble de définition. $f$ est dite impaire
 \text{On a } -x \in D_f \text{ et } f(-x) = -f(x).
 \]
 
-\subsection*{\underline{\textbf{\textcolor{blue}{4. Centre de symétrie}}}}
-Le plan est muni d'un repère $(O, I, J)$. $(C_f)$ est la représentation graphique d'une fonction $f$.  
+\subsection*{\underline{\textbf{\textcolor{blue}{4. Axe de symétrie}}}}
+La droite d'équation cartésienne \( x=a \) est un axe de symétrie de la courbe \( C_{f} \) si les deux conditions suivantes sont réalisées :
 
-Pour démontrer que le point $A(a ; b)$ est un centre de symétrie de $(C_f)$ on peut procéder comme suit :
-
-\subsubsection*{1ère méthode}
 \begin{itemize}
-    \item On détermine la fonction $g$ dont la représentation graphique est l'image de $(C_f)$ par la translation de vecteur $\vec{AO}$, cette fonction $g$ est définie par : $g(x) = f(x + a) - b$.
-    \item On démontre que $g$ est impaire.
+\item[•] \( (\forall x \in D_{f}) ; ( 2a-x ) \in D_{f} \)
+\item[•] \( (\forall x \in D_{f}) ; f( 2a-x )=f(x) \)
 \end{itemize}
 
-\subsubsection*{2ème méthode}
-Le point $A(a ; b)$ est un centre de symétrie de $(C_f)$ si et seulement si pour tout $x$ élément de $D_f$  
-\[
-\text{On a } 2a - x \in D_f \text{ et } f(2a - x) + f(x) = 2b.
-\]
+\textbf{\textcolor{blue}{Cas particulier}} Si \( a=0 \) ; \( f \) est une fonction paire
 
 \textbf{\underline{\exerciceapp}}
+
+\( f(x)=2x^{2}-2x+1 \) Montrer que \( x=\frac{1}{2} \) est axe de symétrie pour la courbe \( C_{f} \).
+
 \textbf{\underline{\correction}}
-\subsection*{\underline{\textbf{\textcolor{blue}{5. Axe de symétrie}}}}
 
-Le plan est muni d’un repère orthogonal $(O, I, J)$. $(C_f)$ est la représentation graphique d’une fonction $f$.
-
-Pour démontrer que la droite $(\Delta)$ d' équation $x = a$ est un axe de symétrie de $(C_f)$ on peut procéder comme suit :
-
-\subsection*{1\textsuperscript{ère} méthode}
-
+\subsection*{\underline{\textbf{\textcolor{blue}{5. Centre de symétrie}}}}
+Le point \( I(a ; b) \) est un centre de symétrie de la courbe \( C_{f} \) si les deux conditions suivantes sont réalisées  :
 \begin{itemize}
-    \item On détermine la fonction $g$ dont la représentation graphique est l’image de $(C_f)$ par la translation de vecteur $\overrightarrow{A0}$, $A$ étant le point de coordonnées $A(a; 0)$, cette fonction $g$ est définie par :
-    \[
-    g(x) = f(x + a)
-    \]
-    \item On démontre que $g$ est paire.
+\item[•] \( (\forall x \in D_{f}) ; ( 2a-x ) \in D_{f} \)
+\item[•] \( (\forall x \in D_{f}) ; f( 2a-x )+f(x) = 2b \)
 \end{itemize}
+\textbf{\textcolor{blue}{Cas particulier}} Si \( a=b=0 \) ; \( f \) est une fonction impaire
 
-\subsection*{2\textsuperscript{ème} méthode}
+\textbf{\underline{\exerciceapp}}
 
-La droite $(\Delta)$ d' équation $x = a$ est un axe de symétrie de $(C_f)$ si et seulement pour tout $x$ élément de $D_f$ :
-\[
-f(2a - x) = f(x).
-\]
+\( f(x)=\frac{3x+1}{2x-6} \) Montrer que \( I(3 ; \frac{3}{2}) \) est centre de symétrie pour la courbe \( C_{f} \).
 
+\textbf{\underline{\correction}}
 
 \subsection*{\underline{\textbf{\textcolor{blue}{6. Périodicité}}}}
 
@@ -1050,6 +1037,21 @@ Posons $g(x) = f(x) - (ax + b)$.
     \item Si $g(x) < 0 \ \forall x \in K$, alors $(C_f)$ est au-dessous (ou en dessous) de $(\Delta)$ sur $K$.
     \item Si $g(x) = 0 \ \forall x \in K$, alors $(C_f)$ et $(\Delta)$ se coupent sur $K$.
 \end{itemize}
+
+\subsubsection*{Exemple :}
+
+Considérons la fonction \( f(x) = 2x + \frac{1}{x} \) et son asymptote oblique \( (\Delta) : y = 2x \).
+
+Calculons \( g(x) = f(x) - (2x) = 2x + \frac{1}{x} - 2x = \frac{1}{x} \).
+
+\begin{itemize}
+    \item Pour \( x > 0 \), \( g(x) = \frac{1}{x} > 0 \), donc \( (C_f) \) est au-dessus de \( (\Delta) \) pour \( x > 0 \).
+    \item Pour \( x < 0 \), \( g(x) = \frac{1}{x} < 0 \), donc \( (C_f) \) est en dessous de \( (\Delta) \) pour \( x < 0 \).
+    \item \( g(x) \) ne s'annule jamais (sauf à l'infini), donc \( (C_f) \) et \( (\Delta) \) ne se coupent pas.
+\end{itemize}
+
+Ainsi, la courbe de \( f(x) = 2x + \frac{1}{x} \) est au-dessus de l'asymptote \( y = 2x \) pour \( x > 0 \) et en dessous pour \( x < 0 \), sans intersection entre \( (C_f) \) et \( (\Delta) \).
+
 \subsection*{\underline{\textbf{\textcolor{blue}{8. Position relative d’une courbe et de sa tangente au point \( M_{0} \)  d'abscisse \( x_{0} \)}}}}
 
 Soit $f$ une fonction deux fois dérivable sur un intervalle $K$ et $x_0$ un élément de $K$. 
@@ -1063,6 +1065,48 @@ $(T)$ a pour équation : $y = f(x_0) + f'(x_0)(x - x_0)$.
     \item Si $f'' < 0 \ \forall x \in K$, alors $(C_f)$ est au-dessous (ou en dessous) de $(T)$ sur $K$. On dit que $f$ est concave sur $K$.
     \item Si $f''$ s'annule et change de signe en $x_0$, alors la droite $(T)$ traverse la courbe $(C_f)$ en $M_0$. On dit que $M_0$ est un point d’inflexion de $(C_f)$.
 \end{itemize}
+\subsubsection*{Exemple :}
+
+Considérons la fonction \( f(x) = x^3 - 3x^2 + 2x \) et étudions sa tangente au point \( M_0 \) d'abscisse \( x_0 = 1 \).
+
+1. \textbf{Calculons \( f(x_0) \), \( f'(x_0) \) et \( f''(x_0) \) :}
+   \[
+   f(x) = x^3 - 3x^2 + 2x
+   \]
+   \[
+   f'(x) = 3x^2 - 6x + 2
+   \]
+   \[
+   f''(x) = 6x - 6
+   \]
+
+   En prenant \( x_0 = 1 \) :
+   \[
+   f(1) = 1^3 - 3 \times 1^2 + 2 \times 1 = 0
+   \]
+   \[
+   f'(1) = 3 \times 1^2 - 6 \times 1 + 2 = -1
+   \]
+   \[
+   f''(1) = 6 \times 1 - 6 = 0
+   \]
+
+2. \textbf{Équation de la tangente \( (T) \) en \( M_0 \) :}
+
+   L'équation de la tangente au point \( M_0(1, 0) \) est donnée par :
+   \[
+   y = f(x_0) + f'(x_0)(x - x_0) = 0 + (-1)(x - 1) = -x + 1
+   \]
+
+3. \textbf{Analyse de la concavité :}
+
+   Pour \( f(x) = x^3 - 3x^2 + 2x \), on a \( f''(x) = 6x - 6 \), qui s'annule en \( x = 1 \). En étudiant le signe de \( f''(x) \) de part et d'autre de \( x = 1 \) :
+   
+   - Pour \( x < 1 \), \( f''(x) < 0 \), donc \( f \) est concave.
+   
+   - Pour \( x > 1 \), \( f''(x) > 0 \), donc \( f \) est convexe.
+
+   Ainsi, \( f''(x) \) change de signe en \( x_0 = 1 \), ce qui signifie que \( M_0 \) est un point d'inflexion de la courbe \( (C_f) \). La tangente \( (T) \) traverse la courbe en ce point.
 \section*{PROBLÈME}
 
 Soit $f$ la fonction définie par :

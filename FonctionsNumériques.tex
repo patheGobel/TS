@@ -1018,7 +1018,7 @@ Le point \( I(a ; b) \) est un centre de symétrie de la courbe \( C_{f} \) si l
 
 Soit $f$ une fonction et $D_f$ son ensemble de définition. Soit $T$ un nombre réel strictement positif. On dit que 
 
-$T$ est une période de $f$ lorsque pour tout $x$ élément de $D_f$, on a :
+$T$ est une période de $f$ lorsque, pour tout $x$ appartenant à $D_f$, on a :
 
 \begin{itemize}
     \item $x + T \in D_f$ \hfill (1)
@@ -1026,6 +1026,20 @@ $T$ est une période de $f$ lorsque pour tout $x$ élément de $D_f$, on a :
 \end{itemize}
 
 Le plus petit réel $T$ strictement positif qui vérifie (1) et (2) est appelé la période de $f$.
+
+\textbf{\exemple}
+
+Considérons la fonction $f : \mathbb{R} \rightarrow \mathbb{R}$ définie par $f(x) = \sin(x)$ pour tout $x \in \mathbb{R}$.
+
+La fonction sinus est périodique de période $T = 2\pi$. En effet, pour tout $x \in \mathbb{R}$, on a :
+
+\begin{itemize}
+    \item $x + 2\pi \in \mathbb{R}$ (ce qui vérifie la condition (1)),
+    \item $f(x + 2\pi) = \sin(x + 2\pi) = \sin(x) = f(x)$ (ce qui vérifie la condition (2)).
+\end{itemize}
+
+Ainsi, $2\pi$ est la période de $f(x) = \sin(x)$.
+
 \subsection*{\underline{\textbf{\textcolor{blue}{7. Position relative d’une courbe et de son asymptote \( (\Delta): y = ax + b \)}}}}
 
 Soient $f$ une fonction et $(C_f)$ sa courbe représentative. $(\Delta) : y = ax + b$.
@@ -1038,7 +1052,7 @@ Posons $g(x) = f(x) - (ax + b)$.
     \item Si $g(x) = 0 \ \forall x \in K$, alors $(C_f)$ et $(\Delta)$ se coupent sur $K$.
 \end{itemize}
 
-\subsubsection*{Exemple :}
+\textbf{\exemple}
 
 Considérons la fonction \( f(x) = 2x + \frac{1}{x} \) et son asymptote oblique \( (\Delta) : y = 2x \).
 
@@ -1065,7 +1079,8 @@ $(T)$ a pour équation : $y = f(x_0) + f'(x_0)(x - x_0)$.
     \item Si $f'' < 0 \ \forall x \in K$, alors $(C_f)$ est au-dessous (ou en dessous) de $(T)$ sur $K$. On dit que $f$ est concave sur $K$.
     \item Si $f''$ s'annule et change de signe en $x_0$, alors la droite $(T)$ traverse la courbe $(C_f)$ en $M_0$. On dit que $M_0$ est un point d’inflexion de $(C_f)$.
 \end{itemize}
-\subsubsection*{Exemple :}
+
+\textbf{\exemple}
 
 Considérons la fonction \( f(x) = x^3 - 3x^2 + 2x \) et étudions sa tangente au point \( M_0 \) d'abscisse \( x_0 = 1 \).
 

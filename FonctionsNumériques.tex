@@ -952,14 +952,14 @@ U' \times \sqrt{U} \text{ a pour primitives } \frac{2}{3} U \sqrt{U} + k
 1.Déterminer toutes les primitives des fonctions suivantes, sur un intervalle bien choisi : 
 $$\begin{array}{lll}
 \displaystyle f_1(x)=5x^3-3x+7&\displaystyle f_2(x)=2\cos(x)-3\sin(x)&\displaystyle f_3(x)=\\
-\displaystyle f_4(x)=\frac{5}{\sqrt x}+\frac 4x+\frac{2}{x^2}+\frac{2}{x^3}&\displaystyle f_5(x)=\frac{x+5}{x^2}&\displaystyle f_6(x)=\frac{x^2}{5}+\frac 1{6}\\
+\displaystyle f_4(x)=\frac{5}{\sqrt x}+\frac{4}{x^4}+\frac{2}{x^2}+\frac{2}{x^3}&\displaystyle f_5(x)=\frac{x+5}{x^2}&\displaystyle f_6(x)=\frac{x^2}{5}+\frac 1{6}\\
 \displaystyle f_3(x)=\sin(2x) & \displaystyle f_4(x)=\cos\left(3x+\frac\pi 3\right) & \displaystyle f_5(x)=(2x+1)^2\\
 \displaystyle f_6(x)=\frac{3}{\sqrt{5x+1}} & \displaystyle f(x)=\frac{x}{1+x^2} &\displaystyle m(x)=3x\sqrt{1+x^2}\\
 \end{array}$$
 2.Reconnaissance de formes
 $$\begin{array}{lll}
 \mathbf 1.\ f(x)=(3x-1)(3x^2-2x+3)^3,\ I=\mathbb R&\quad&\mathbf 2.\ f(x)=\frac{1-x^2}{(x^3-3x+2)^3},\ I=]-\infty,-2[\\
-\mathbf 3.\ f(x)=\frac{(x-1)}{\sqrt{x(x-2)}},\ I=]-\infty,0[&&\mathbf 4.\ f(x)=\frac{1}{x\ln(x^2)},\ I=]1,+\infty[.
+\mathbf 3.\ f(x)=\frac{(x-1)}{\sqrt{x(x-2)}},\ I=]-\infty,0[&&\mathbf 4.\ f(x)=\frac{-2x}{(1+x^{2})^{2}},\ I=]1,+\infty[.
 \end{array}$$
 
 			\textbf{\underline{\correction}}
@@ -973,16 +973,73 @@ La courbe de $f \ (C_f)$ et la courbe de $f^{-1} \ (C_{f^{-1}})$ sont symétriqu
 \]
 \subsection*{\underline{\textbf{\textcolor{blue}{2. Fonction paire}}}}
 
-Soit $f$ une fonction et $D_f$ son ensemble de définition. $f$ est dite paire lorsque pour tout $x$ élément de $D_f$  
+Soit $f$ une fonction et $D_f$ son ensemble de définition. La fonction $f$ est dite paire lorsque, pour tout $x$ appartenant à $D_f$, on a :
 \[
-\text{On a } -x \in D_f \text{ et } f(-x) = f(x).
+-x \in D_f \text{ et } f(-x) = f(x).
 \]
 
+\textbf{NB} La courbe d'une fonction paire est symétrique par rapport à l'axe des ordonnées.
+
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = center,
+            xlabel = $x$,
+            ylabel = {$f(x)$},
+            domain=-3:3,
+            samples=100,
+            width=10cm,
+            height=8cm,
+            grid=both,
+            grid style={dashed, gray!30},
+            xtick={-3,-2,-1,1,2,3},
+            ytick={-2,0,2,4,6},
+            ymin=-3,
+            ymax=6,
+            xmin=-3,
+            xmax=3,
+        ]
+            % Function plot
+            \addplot[color=blue, thick] {x^2 - 2};
+            \addlegendentry{$f(x) = x^2 - 2$}
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
 \subsection*{\underline{\textbf{\textcolor{blue}{3. Fonction impaire}}}}
-Soit $f$ une fonction et $D_f$ son ensemble de définition. $f$ est dite impaire lorsque pour tout $x$ élément de $D_f$  
+
+Soit $f$ une fonction et $D_f$ son ensemble de définition. $f$ est dite impaire lorsque, pour tout $x$ appartenant à $D_f$, on a :
 \[
-\text{On a } -x \in D_f \text{ et } f(-x) = -f(x).
+-x \in D_f \text{ et } f(-x) = -f(x).
 \]
+
+\textbf{NB}: La courbe d'une fonction impaire est symétrique par rapport à l’origine.
+
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = center,
+            xlabel = $x$,
+            ylabel = {$f(x)$},
+            domain=-3:3,
+            samples=100,
+            width=10cm,
+            height=8cm,
+            grid=both,
+            grid style={dashed, gray!30},
+            xtick={-3,-2,-1,1,2,3},
+            ytick={-8,-4,4,8},
+            ymin=-10,
+            ymax=10,
+            xmin=-3,
+            xmax=3,
+        ]
+            % Function plot
+            \addplot[color=blue, thick] {x^3};
+            \addlegendentry{$f(x) = x^3$}
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
 
 \subsection*{\underline{\textbf{\textcolor{blue}{4. Axe de symétrie}}}}
 La droite d'équation cartésienne \( x=a \) est un axe de symétrie de la courbe \( C_{f} \) si les deux conditions suivantes sont réalisées :

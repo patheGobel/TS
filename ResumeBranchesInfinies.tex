@@ -1,0 +1,56 @@
+\documentclass[border=5pt,tikz]{standalone}
+\usepackage[french]{babel}
+\usepackage[edges]{forest}
+\usetikzlibrary{shadows.blur}
+\usepackage{amsmath,amssymb,
+            %amsfonts, % is loaded automatically by 'amssymb'
+            tikz}
+\newcommand{\equal}{=}
+\everymath{\displaystyle}
+
+\begin{document}
+
+\begin{forest}
+    for tree={
+        grow'=0,
+        align=center,draw,
+        fill=white, 
+        blur shadow,
+        forked edges,
+        anchor=center % per suggestion of @M.AlJumaily
+    },
+    [Les branches \\ infinies
+    [$\lim_{x\to a} f(x) \equal \pm\infty$
+    [$(\mathcal{C}_{f})$ admet une asymptote verticale 
+     d'équation $x \equal a$]
+    ]
+    %
+    [$\lim_{x\to \pm\infty} f(x) \equal a$
+    [$(\mathcal{C}_{f})$ admet une asymptote horizontale 
+     d'équation $y \equal a$ au voisinage de $\pm\infty$]
+    ]
+    [$\lim_{x\to \pm\infty} f(x) \equal \pm\infty$
+    [$\lim_{x\to \pm\infty} \frac{f(x)}{x} \equal 0$
+    [$(\mathcal{C}_{f})$ admet une branche parabolique de direction \\ 
+     l'axe $(\mathcal{O}x)$ au voisinage de $\pm\infty$]
+    ]
+    [$\lim_{x\to \pm\infty} \frac{f(x)}{x} \equal \pm\infty$
+    [$(\mathcal{C}_{f})$ admet une branche parabolique de direction \\  
+      l'axe $(\mathcal{O}y)$ au voisinage de $\pm\infty$]
+    ]
+    [$\lim_{x\to \pm\infty} \frac{f(x)}{x} \equal a $\\ avec $a \in \mathbb{R}^*$
+    [$\lim_{x\to \pm\infty} f(x) -ax \equal \pm\infty$
+    [$(\mathcal{C}_{f})$ admet une branche parabolique de direction \\ la droite d'équation $y \equal ax$ au voisinage de $\pm\infty$]
+    ]
+    [$\lim_{x\to \pm\infty} f(x) -ax \equal b$
+    [$(\mathcal{C}_{f})$ admet une asymptote oblique \\ d'équation $y \equal ax+b$ au voisinage de $\pm\infty$]
+    ]
+    ]
+    ]
+    [$\lim_{x\to \pm\infty} f(x) -(ax+b) \equal 0$
+    [$(\mathcal{C}_{f})$ admet une asymptote oblique d'équation $y \equal ax+b$ au voisinage de $\pm\infty$]
+    ]
+    ]
+\end{forest}
+
+\end{document}

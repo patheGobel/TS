@@ -1,0 +1,486 @@
+\documentclass{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx} % Pour l'insertion d'images
+\usepackage{float}    % Pour contrôler précisément le placement
+\usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+
+\usepackage{color, soul}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{multirow}
+\geometry{a4paper, margin=1in}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+\usepackage{mdframed}
+\author{Destiné aux élèves de Terminale S\\Lycée de Dindéfelo\\Présenté par M. BA}
+\title{\textbf{Suites numériques}}
+\date{\today}
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, fit}
+
+% Commande pour la couleur d'accentuation
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+%\usepackage[margin=2cm]{geometry}
+\usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
+
+\usepackage{enumitem}
+%---------------------------------------
+% Définir un compteur pour les exemples
+\newcounter{exemple}
+
+% Définir la commande \exemple pour afficher un exemple numéroté
+\newcommand{\exemple}{%
+  \refstepcounter{exemple}% Incrémenter le compteur
+  \textbf{\textcolor{orange}{Exemple \theexemple : }} \ignorespaces
+}
+%---------------------------------------
+\newcounter{solution}
+
+% Définir la commande \solutione pour afficher un solution numéroté
+\newcommand{\solution}{%
+  \refstepcounter{solution}% Incrémenter le compteur
+  \textbf{\textcolor{orange}{Solution \thesolution : }} \ignorespaces
+}
+%---------------------------------------
+\definecolor{myorange}{rgb}{1.0, 0.8, 0.0}
+
+% Définir un compteur pour les exercices d'application
+\newcounter{exerciceapp}
+
+% Définir la commande pour afficher un exercice d'application numéroté
+\newcommand{\exerciceapp}{%
+  \refstepcounter{exerciceapp}%
+  \textbf{\textcolor{myorange}{Exercice d'application \theexerciceapp :}} \ignorespaces
+}
+%--------------------------------------
+% Définir un compteur pour les exercices d'application
+\newcounter{correction}
+
+% Définir la commande pour afficher un correction exercice d'application numéroté
+\newcommand{\correction}{%
+  \refstepcounter{correction}%
+  \textbf{\textcolor{myorange}{Correction \thecorrection :}} \ignorespaces
+}
+%--------------------------------------
+% Définir un compteur pour les remarque d'application
+\newcounter{remarque}
+
+%----------------------------------------
+\definecolor{myorange1}{rgb}{1.0, 1.5, 0}
+% Définir la commande pour afficher un remarque numéroté
+\newcommand{\remarque}{%
+  \refstepcounter{remarque}%
+  \textbf{\textcolor{myorange1}{Remarque \theremarque :}} \ignorespaces
+}
+% Commande pour ajouter du texte en arrière-plan
+\AddToShipoutPicture{
+    \AtTextCenter{%
+        \makebox[0pt]{\rotatebox{45}{\textcolor[gray]{0.9}{\fontsize{5cm}{5cm}\selectfont Pathé Gobel BA}}}
+    }
+}
+
+\begin{document}
+\maketitle
+
+\section*{\underline{\textbf{\textcolor{red}{I. Généralités}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{1. Définition}}}}
+On appelle \textit{suite numérique} toute fonction définie de $\mathbb{N}$ ou d'une partie $E$ de $\mathbb{N}$ vers $\mathbb{R}$.
+
+On note : $U : \mathbb{N} \rightarrow \mathbb{R}$ \\
+\hspace*{3.3cm}$n \mapsto U_{n}$
+
+Le réel $U_n$ est appelé  \textcolor{red}{\textit{terme général}} ou  \textcolor{red}{\textit{terme d'indice $n$}}.
+L'ensemble des termes de la suite est noté $(U_n)$ et $n \in \mathbb{N}$ ou $(U_{n})n\in\mathbb{N}$.
+\subsection*{\underline{\textbf{\textcolor{red}{2. Modes de définition d'une suite }}}}
+\subsection*{\underline{\textbf{\textcolor{red}{2.1. Suite explicite}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{2.2.Définition}}}}
+Lorsqu'une suite $(U_{n})$ est exprimée en fonction de $n$, alors on dit que la suite $(U_{n})$ est définie par une \textcolor{red}{\textit{formule explicite}} et on note $U_{n} = f(n)$.
+
+\textbf{\underline{\exemple}}
+
+Soit $(u_{n})$ et $(v_{n})$ des suites définies par : $u_{n}=2n^{2}+1$ $v_{n}=\dfrac{n^{2}-4}{2n} n\in\mathbb{N}^{*}$
+
+Calculer 
+
+$u_{0}$ ; $u_{10}$ ; $u_{50}$
+
+$v_{1}$ ; $v_{10}$ ; $v_{50}$
+
+\subsection*{\underline{\textbf{\textcolor{red}{Solution :}}}}
+
+\subsection*{\underline{\textbf{\textcolor{red}{3.Suite définie par récurrence}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{3.1.Définition}}}}	
+Lorsque la suite $(U_n)$ est définie par une relation entre $U_n$ et $U_{n+1}$, alors on dit que $(U_n)$ est définie par une \textcolor{red}{\textit{relation de récurrence}}.
+
+	$$\left\lbrace\begin{array}{rcl} u_{0}& =& \alpha \\ u_{n+1}& =& 2u_{n}-3\end{array}\right.\;,\quad\left\lbrace\begin{array}{rcl} v_{1}& =& \alpha \\ v_{n+1}& =& f(v_{n})\end{array}\right.$$
+
+\textbf{NB:} Par exemple, pour calculer $u_{p}$, il faudrait faire $p$ calculs successifs.	
+	
+\textbf{\underline{\exemple}}
+
+\begin{equation*} 
+    \begin{cases}
+        u_{0}=2 \\
+        U_{n + 1}=\frac{2U_n + 3}{U_n + 1}
+    \end{cases}
+\end{equation*}
+Calculer les cinq premier termes de $u_{n}$.
+\subsection*{\underline{\textbf{\textcolor{red}{Solution :}}}}
+	
+\subsection*{\underline{\textbf{\textcolor{red}{Exercie d'application :}}}}
+Dans chacun des cas suivants, calculer les $6$ premiers termes de la suite $U_{n}$.
+\begin{itemize}
+\item[1.]$U_{n} = 7n^{2} - 5n + 2$, $n \in \mathbb{N}$.
+
+\item[2.]$u_{n+1}=2u_{n}+3\text{ et }u_{0}=-1.$
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{4. Sens de variation d'une suite}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{Définition :}}}}
+	
+Une suite $\left(u_{n}\right)$ est dite :
+	
+$-\ $Croissante si : $\forall\;n\;,\ :\ u_{n+1}\geq u_{n} .$ c'est-à-dire, $\ u_{n+1}- u_{n}>0$
+	
+$-\ $Décroissante si : $\forall\;n;,\ :\ u_{n+1}\leq u_{n}$. c'est-à-dire, $\ u_{n+1}- u_{n}<0$
+
+$-\ $Monotone si elle est croissante ou décroissante.
+
+$-\ $Constante si : $\forall\;n\;,\ :\ u_{n+1}=u_{n}.$
+
+Étudier le sens de variation d'une suite $\left(u_{n}\right)$
+
+C'est dire si elle est croissante ou décroissante ou constante.
+
+\subsection*{\underline{\textbf{\textcolor{red}{Règle :}}}}
+
+Pour étudier le sens de variation d'une suite $\left(u_{n}\right)$,on compare deux termes consécutifs, pour cela, on peut étudier le signe de leur différence, ou, s'il s'agit de nombres strictement positifs, comparer leur quotient à $1.$
+
+\textbf{\underline{\exemple}}
+
+Soit la suite $\left(u_{n}\right)$ définie par : $u_{n}=\dfrac{n+2}{2n+1}$
+
+Alors :
+
+$u_{n+1}=\dfrac{(n+1)+2}{2(n+1)+1}=\dfrac{n+3}{2n+3}$
+	
+$u_{n+1}-u_{n}=\dfrac{n+3}{2n+3}-\dfrac{n+2}{2n+1}=\dfrac{-3}{(2n+1)(2n+3})$
+	
+Pour tout entier naturel $n$, on a donc : $u_{n+1}-u_{n} < 0.$
+	
+La suite étudiée est par conséquent décroissante.
+
+\section*{\underline{\textbf{\textcolor{red}{II. Démonstration par récurrence}}}}
+
+Pour démontrer par récurrence qu'une propriété pn est vraie $\forall n \geq 0$
+
+on doit :
+ 
+* montrer que la propriété est vraie au premier rang ($p_{n_{0}}$ vraie)
+ 
+* supposer que la propriété est vraie jusqu'au rang $n$ ($p_{n}$ vraie) et démontrer qu'elle est vraie au rang $n+1$
+ 
+* et enfin conclure
+
+\textbf{\underline{\exemple}}
+
+Soit \( (u_n)_{n \in \mathbb{N}} \) la suite définie par :
+\[
+\begin{cases} 
+u_{n+1} = \frac{1}{3} u_n + \frac{5}{3}, & \forall n \in \mathbb{N}, \\ 
+u_0 = 1. & 
+\end{cases}
+\]
+
+Montrer que : \( \forall n \in \mathbb{N}, \; u_n < \frac{5}{2} \).
+
+\textbf{\underline{\exemple}}
+
+Soit \( (u_n)_{n \in \mathbb{N}} \) la suite définie par :
+\[
+\begin{cases} 
+u_{n+1} = \sqrt{12 + u_n}, & \forall n \in \mathbb{N}, \\ 
+u_0 = 0. & 
+\end{cases}
+\]
+
+\begin{enumerate}
+    \item Montrer que : \( \forall n \in \mathbb{N}^*, \; 3 \leq u_n \leq 4 \).
+\end{enumerate}
+
+\section*{\underline{\textbf{\textcolor{red}{III. Représentation graphique des termes d'une suite}}}}
+
+$-\ $ Si $u_{n}$ est définie de façon explicite ; $u_{n}=f(n)$ alors représenter graphiquement la suite $(u_{n})$ consiste à représenter dans un repère l'ensemble des points isolés $(n\;,\ u_{n}).$
+
+$-\ $ On peut aussi représenter directement les valeurs des termes de la suite sur l'un des axes du repère.
+
+\textbf{\underline{\exemple}}
+
+Représenter les 6 premiers termes de la suite $(u_{n})$ définie par 
+
+a) $u_{n}=\dfrac{n^{2}+1}{2n+3}$
+
+b) $u_{n}=2n-7$
+
+\textbf{\underline{\solution}}\\
+a)\\
+\begin{tikzpicture}
+    \begin{axis}[
+        axis lines = middle,
+        xlabel = \( n \),
+        ylabel = \( u_n \),
+        ymin = 0,
+        ymax = 3,
+        xmin = -0.5,
+        xmax = 6.5,
+        xtick = {0, 1, 2, 3, 4, 5},
+        ytick = {0, 0.5, 1, 1.5, 2, 2.5, 3},
+        grid = both,
+        width=10cm,
+        height=8cm
+    ]
+        % Points de la suite
+        \addplot[only marks, mark=square*, blue] coordinates {
+            (0, 1/3)
+            (1, 2/5)
+            (2, 5/7)
+            (3, 10/9)
+            (4, 17/11)
+            (5, 2)
+        };
+    \end{axis}
+\end{tikzpicture}
+
+b)\\
+La suite \( u_n = 2n - 7 \) est représentée par les points \( (n, u_n) \) pour \( n = 0, 1, 2, 3, 4, 5 \).
+
+\begin{tikzpicture}
+    \begin{axis}[
+        axis lines = middle,
+        xlabel = \( n \),
+        ylabel = \( u_n \),
+        ymin = -8,
+        ymax = 4,
+        xmin = -0.5,
+        xmax = 5.5,
+        xtick = {0, 1, 2, 3, 4, 5},
+        ytick = {-8, -6, -4, -2, 0, 2, 4},
+        grid = both,
+        width=10cm,
+        height=8cm
+    ]
+        % Points de la suite
+        \addplot[only marks, mark=*, red] coordinates {
+            (0, -7)
+            (1, -5)
+            (2, -3)
+            (3, -1)
+            (4, 1)
+            (5, 3)
+        };
+    \end{axis}
+\end{tikzpicture}
+
+\section*{\underline{\textbf{\textcolor{red}{IV. Suite arithmétiques}}}}
+Une suite $\left(u_{n}\right)$ est \textcolor{red}{arithmétique} si chaque terme s'obtient en ajoutant au précédent un même nombre \textcolor{red}{$r$} appelé raison : 
+\textcolor{red}{$u_{n+1}=u_{n}+r.$} 
+\subsection*{\underline{\textbf{\textcolor{red}{1.Expression du terme général}}}}		
+$\bullet\ \text{Si }\left(u_{n}\right)$ est une suite arithmétique de premier terme $u_{0}$ et de raison $r$, alors :
+	
+$$u_{n}=u_{0}+nr$$
+	
+$\bullet\ $Si le premier terme est $u_{1}$, alors :
+$$u_{n}=u_{1}+(n-1)r$$
+
+$\bullet\ $ Si $(U_n)$ une suite arithmétique de raison $r$ et de premier terme $U_{p}$ alors on a : 
+\begin{mdframed}[linecolor=red] % Définit la couleur du cadre
+    \[
+    \color{red} u_{n} = u_{p} + (n-p)r
+    \]
+\end{mdframed}
+Avec $u_{p}$ le premier terme, p l'indice du premier terme et r la raison
+\subsection*{\underline{\textbf{\textcolor{red}{Exercie d'application 1 :}}}}
+Dans chacun des cas suivants, donner le terme général de la suite.
+\begin{itemize}
+\item[1.]$(u_n)$ est une suite arithmétique de raison $r = 3$ et de premier terme $u_{0}= 7$.
+\item[2.]$(u_n)$ est une suite arithmétique de raison $r=-\frac{3}{4}$ et de premier terme 
+$u_{1}=\frac{-7}{4}$.
+\item[3.] $(U_n)$ est une suite arithmétique de raison $r$ et de premier terme $U_{0}$ tels que $U_{50} = 406$ et $U_{100} = 806$.
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{green}{Correction :}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{Exercie d'application 2 :}}}}
+Le prix du transport augmente de $100^{F}$ chaque année dans une ville. En $2019$, le prix du transport était de $600FCFA$.
+\begin{itemize}
+\item[1.]Calculer le prix du transport en $2020$, $2021$ et en $2022.$
+\item[2.]On note par $U_{0}$ le prix en $2019$ et $U_{n}$ le prix en $2019 + n.$
+\begin{itemize}
+	\item[a.]Que représente $U_{1}$, $U_{2}$ et $U_{3}$ ?
+	\item[b.]Exprimer $U_{n+1}$ en fonction de $U_{n}.$
+	\item[c.]Quelle est la nature de la suite $U_{n}.$
+	\item[d.]Exprimer $U_{n}$ en fonction de $n$.
+\end{itemize}
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{Correction :}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{A retenir 1 }}}}
+Pour montrer qu'une suite $(U_n)$ est arithmétique de raison $r$, il suffit de montrer que :
+\[ U_{n+1} - U_n = r \]
+\textbf{\underline{\exemple}}
+On considère la suite $(U_n)$ définie par :\[ U_n = 5n + 3 \]
+Montrer que $(U_n)$ est une suite arithmétique dont on précisera la raison et le premier terme.
+\subsection*{\underline{\textbf{\textcolor{red}{A retenir 2}}}}
+Pour montrer qu’une suite $(U_n)$ n’est pas arithmétique , il suffit de montrer que : 
+$U_{1}$-$U_{0}\neq U_{2}$-$U_{1}$.
+\textbf{\underline{\exemple}}
+Soit la suite $(U_n)$ définie par : $U_{n}=\frac{n}{n+1}$
+
+Montrer que $(U_n)$ n’est pas une suite arithmétique.
+\subsection*{\underline{\textbf{\textcolor{red}{2.Somme des premiers termes}}}}	
+Soit (Un) une suite arithmétique.
+
+Pour tous entiers naturels n et p tels que $p \leq n$, on a :
+
+$\bullet\ $Si la suite a pour premier terme $u_{0}$, alors la somme $S_{n}=u_{0}+u_{1}+\ldots+u_{n}$ vaut :
+	
+$$S_{n}=\dfrac{(n+1)\left(u_{0}+u_{n}\right)}{2}$$
+
+$\bullet\ $Si la suite a pour premier terme $u_{1}$, alors la somme $S_{n}=u_{1}+u_{1}+\ldots+u_{n}$ vaut :
+
+$$S_{n}=\dfrac{n(u_{1}+u_{n})}{2}$$
+
+$\bullet\ $De façon général si la suite a pour premier terme $u_{p}$, alors la somme $S_{n}=u_{p}+u_{p+1}+\ldots+u_{n}$ vaut :
+
+\begin{mdframed}[linecolor=red] % Définit la couleur du cadre
+    \[
+    \color{red} S_{n}=\dfrac{(n-p+1)(u_{p}+u_{n})}{2}
+    \]
+\end{mdframed}
+\subsection*{\underline{\textbf{\textcolor{red}{Exercie d'application :}}}}
+Soit $\left(u_{n}\right)$ la suite définie par : $u_{n}=2n+7$
+\begin{itemize}
+\item[1.]Calculer $U_{1}$, $U_{2}$ et $U_{2024}.$
+\item[2.] Montrer que (Un) est une suite arithmétique.
+\item[3.] Calculer la somme : $S_{n} = U_{0} + U_{1} + \cdots+ U_{n}.$
+\item[4.] En déduire le somme $S = U_{1} + U_{2} +\cdots+ U_{2024}.$
+\end{itemize}
+\section*{\underline{\textbf{\textcolor{red}{III. Suites géométriques}}}}
+Une suite $\left(u_{n}\right)$ est dite géométrie si chaque terme s'obtient en multipliant le précédent par un même nombre $q$ appelé raison : $u_{n+1}=u_{n}\times q.$
+\subsection*{\underline{\textbf{\textcolor{red}{1. Expression du terme général}}}}
+$\bullet\ $Si la suite géométrique $\left(u_{n}\right)$ a pour premier terme $u_{0}$ et pour raison $q$, alors : $$u_{n}=u_{0}\times q^{n}$$
+
+$\bullet\ $Si le premier terme est $u_{1}$, alors :$$u_{n}=u_{1}\times q^{n-1}$$
+
+$\bullet\ $ Si le premier terme est $u_{p}$, alors:
+\begin{mdframed}[linecolor=red] % Définit la couleur du cadre
+    \[
+    \color{red} u_{n}=u_{p}\times q^{n-p}
+    \]
+\end{mdframed}
+\textbf{\underline{\exemple}}
+Dans chacun des cas suivants, montrer que $(v_{n})$ est une suite géométrique dont on précisera
+la raison et le premier terme puis exprimer $(v_{n})$ en fonction de $n$.
+\begin{itemize}
+\item[1.]$v_{n} = 3 \times 5^{n}$
+\item[2.] \begin{equation*} 
+    \begin{cases}
+        U_{0}=5 \\
+        U_{n + 1}=2U_{n}+3
+    \end{cases}
+    et\quad V_{n} = U_{n} + 3
+\end{equation*}
+\item[3.] \begin{equation*} 
+    \begin{cases}
+        U_{1}=0 \\
+        U_{n + 1}=-\frac{2}{3}U_{n}+1
+    \end{cases}
+    et\quad V_{n} = U_{n} - \frac{3}{5}
+\end{equation*}
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{A retenir }}}}
+Pour montrer qu’une suite $u_{n}$ est géométrique de raison q, il suffit de montrer que :
+\begin{mdframed}[linecolor=red] % Définit la couleur du cadre
+    \[
+    \color{red} \dfrac{U_{n+1}}{U_{n}}=q
+    \]
+\end{mdframed}
+\subsection*{\underline{\textbf{\textcolor{red}{2. Somme des premiers termes }}}}
+
+Pour toute suite géométrique, de raison $q\neq 1$, on a:
+
+$$S_{n}=u_{0}+u_{1}+\ldots+u_{n}=u_{0}\times\dfrac{1-q^{n+1}}{1-q}$$
+
+$$S_{n}u_{1}+u_{2}+\ldots+u_{n}=u_{1}\times\dfrac{1-q^{n}}{1-q}$$
+
+$$S_{n}=u_{p}+u_{p+1}+\ldots+u_{n}=u_{p}\times\dfrac{1-q^{n-p+1}}{1-q}$$
+
+\begin{mdframed}[linecolor=red] % Définit la couleur du cadre
+    \[
+    \color{red} S_{n}=u_{p}\times\dfrac{1-q^{n-p+1}}{1-q}
+    \]
+\end{mdframed}
+\section*{\underline{\textbf{\textcolor{red}{3. Sens de variation}}}}
+    \begin{itemize}
+        \item Si $0 < q < 1$, la suite $\left(u_{n}\right)$ est décroissante.
+        \item Si $q > 1$, la suite $\left(u_{n}\right)$ est croissante.
+        \item Si $q=1$, la suite $\left(u_{n}\right)$ est constante.
+    \end{itemize}
+\textbf{\underline{\exemple}}
+$1+\dfrac{1}{2}+\dfrac{1}{2^{2}}+\ldots\ldots+\dfrac{1}{2^{n}}=S_{n}$ est la somme des premiers termes d'une suite géométrique de raison $\dfrac{1}{2}.$ 
+
+Donc : $1+\dfrac{1}{2}+\dfrac{1}{2^{2}}+\ldots\ldots+\dfrac{1}{2^{n}}=\dfrac{1-\left(\dfrac{1}{2}\right)^{n+1}}{1-\dfrac{1}{2}}=2-\dfrac{1}{2^{n}}$
+\section*{\underline{\textbf{\textcolor{red}{IV. limites d'une suite}}}}
+La notion de limite en $+\infty$, déjà rencontrée à propos des fonction, s'étend au cas des suites.
+	
+On a les résultats suivantes :
+\subsection*{\underline{\textbf{\textcolor{red}{Théorème 1 :}}}}
+a. $\lim\limits_{n\;\longrightarrow\;+\infty}\sqrt{n}=+\infty\ ;\ \lim\limits_{n\;\longrightarrow\;+\infty}n^{2}=+\infty\ ;\ \lim\limits_{n\;\longrightarrow\;+\infty}n^{3}=+\infty.$
+
+b. $\lim\limits_{n\;\longrightarrow\;+\infty}\dfrac{1}{\sqrt{n}}=0\ ;\ \lim\limits_{n\;\longrightarrow\;+\infty}\dfrac{1}{n}=0\ ;\ \lim\limits_{n\;\longrightarrow\;+\infty}\dfrac{1}{n^{2}}=0\ ;\ \lim\limits_{n\;\longrightarrow\;+\infty}\dfrac{1}{n^{3}}=0.$
+\subsection*{\underline{\textbf{\textcolor{red}{Théorème 2 :}}}}
+Soit $q$ un nombre réel.
+Soit \( q \) un nombre réel.
+
+\begin{itemize}
+    \item Si \( q > 1 \), alors
+    \[
+    \lim_{n \rightarrow +\infty} q^n = +\infty.
+    \]
+    
+    \item Si \( -1 < q < 1 \), alors
+    \[
+    \lim_{n \rightarrow +\infty} q^n = 0.
+    \]
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{Théorème 3 :}}}}
+Les résultats concernant les opérations sur les limites de fonctions s'étendent aux limites de suites.
+\textbf{\underline{\exemple}}
+
+1) Soit la suite \( (u_{n}) \) définie par : \( u_{n} = \dfrac{3n^{3} - 5n^{2} + 1}{2n^{3} + 1} \)
+
+Alors \( \lim_{n \rightarrow +\infty} u_{n} = \lim_{n \rightarrow +\infty} \dfrac{3n^{3}}{2n^{3}} = \dfrac{3}{2} \).
+
+2) Soit la suite \( (v_{n}) \) définie par : \( v_{n} = 1 + \dfrac{1}{3} + \left(\dfrac{1}{3}\right)^{2} + \ldots + \left(\dfrac{1}{3}\right)^{n+1} \).
+
+On a d'après le paragraphe III :
+
+\[
+v_{n} = \dfrac{1 - \left(\dfrac{1}{3}\right)^{''}}{1 - \dfrac{1}{3}}
+\]
+
+car \( v_{n} \) est la somme des termes consécutifs d'une suite géométrique de raison \( \dfrac{1}{3} \), or comme \( -1 < \dfrac{1}{3} < 1 \), \( \lim_{n \rightarrow +\infty} \left(\dfrac{1}{3}\right)^{n} = 0 \).
+
+D'où : \( \lim_{n \rightarrow +\infty} \dfrac{1}{1 - \dfrac{1}{3}} = \dfrac{3}{2} \).
+\end{document}

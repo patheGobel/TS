@@ -121,7 +121,7 @@ $u_{0}$ ; $u_{10}$ ; $u_{50}$
 
 $v_{1}$ ; $v_{10}$ ; $v_{50}$
 
-\subsection*{\underline{\textbf{\textcolor{red}{Solution :}}}}
+\textbf{\underline{\solution}}
 
 \subsection*{\underline{\textbf{\textcolor{red}{3.Suite définie par récurrence}}}}
 \subsection*{\underline{\textbf{\textcolor{red}{3.1.Définition}}}}	
@@ -140,9 +140,11 @@ Lorsque la suite $(U_n)$ est définie par une relation entre $U_n$ et $U_{n+1}$,
     \end{cases}
 \end{equation*}
 Calculer les cinq premier termes de $u_{n}$.
-\subsection*{\underline{\textbf{\textcolor{red}{Solution :}}}}
+
+\textbf{\underline{\solution}}
 	
-\subsection*{\underline{\textbf{\textcolor{red}{Exercie d'application :}}}}
+\textbf{\underline{\exerciceapp}}
+
 Dans chacun des cas suivants, calculer les $6$ premiers termes de la suite $U_{n}$.
 \begin{itemize}
 \item[1.]$U_{n} = 7n^{2} - 5n + 2$, $n \in \mathbb{N}$.
@@ -184,19 +186,95 @@ Pour tout entier naturel $n$, on a donc : $u_{n+1}-u_{n} < 0.$
 	
 La suite étudiée est par conséquent décroissante.
 
+\textbf{\underline{\solution}}
+
 \section*{\underline{\textbf{\textcolor{red}{II. Démonstration par récurrence}}}}
 
-Pour démontrer par récurrence qu'une propriété pn est vraie $\forall n \geq 0$
+La démonstration par récurrence suit les étapes suivantes :  
 
-on doit :
- 
-* montrer que la propriété est vraie au premier rang ($p_{n_{0}}$ vraie)
- 
-* supposer que la propriété est vraie jusqu'au rang $n$ ($p_{n}$ vraie) et démontrer qu'elle est vraie au rang $n+1$
- 
-* et enfin conclure
+\textbf{1. Initialisation}  
+
+On montre que la propriété \( P(n) \) est vraie pour une première valeur \( n = n_0 \).  
+\[
+P(n_0) \quad \text{est vraie.}
+\]
+
+\textbf{2. Hypothèse de récurrence}  
+
+On suppose que la propriété est vraie pour un entier \( k \geq n_0 \).  
+C'est ce qu'on appelle l'hypothèse de récurrence :  
+\[
+P(k) \quad \text{est vraie.}
+\]
+
+\textbf{3. Hérédité}  
+
+On démontre que si la propriété est vraie pour \( n = k \), alors elle est aussi vraie pour \( n = k+1 \).  
+Autrement dit, on montre que :  
+\[
+P(k) \implies P(k+1).
+\]
+
+\textbf{4. Conclusion}  
+
+Si les deux étapes précédentes sont vérifiées, alors, par le principe de récurrence, la propriété est vraie pour tout \( n \geq n_0 \).  
 
 \textbf{\underline{\exemple}}
+
+Montrer que Pour tout \( n \geq 1 \)
+\[
+S(n) = 1 + 2 + \dots + n = \frac{n(n+1)}{2}.
+\]
+
+\textbf{\underline{\solution}}
+
+\textbf{Propriété à démontrer} : Pour tout \( n \geq 1 \), la somme des \( n \) premiers entiers naturels est donnée par :
+\[
+S(n) = 1 + 2 + \dots + n = \frac{n(n+1)}{2}.
+\]
+
+\textbf{Étape 1 : Initialisation}  
+
+Pour \( n = 1 \), on a :  
+\[
+S(1) = 1.
+\]  
+D'autre part :  
+\[
+\frac{1(1+1)}{2} = 1.
+\]  
+Donc, la propriété est vraie pour \( n = 1 \).  
+
+\textbf{Étape 2 : Hypothèse de récurrence}  
+
+Supposons que la propriété est vraie pour un entier \( k \geq 1 \), c'est-à-dire :  
+\[
+S(k) = \frac{k(k+1)}{2}.
+\]  
+
+\textbf{Étape 3 : Hérédité}  
+
+Montrons que la propriété est vraie pour \( k+1 \).  
+En utilisant la définition de \( S(k+1) \), on a :  
+\[
+S(k+1) = S(k) + (k+1).
+\]  
+En remplaçant \( S(k) \) par l'hypothèse de récurrence, on obtient :  
+\[
+S(k+1) = \frac{k(k+1)}{2} + (k+1).
+\]  
+Factorisons \( (k+1) \) :  
+\[
+S(k+1) = \frac{k(k+1) + 2(k+1)}{2} = \frac{(k+1)(k+2)}{2}.
+\]  
+Ainsi, la propriété est vraie pour \( k+1 \).  
+
+\textbf{Conclusion}  
+
+Par le principe de récurrence, la propriété est vraie pour tout \( n \geq 1 \).  
+
+
+\textbf{\underline{\exerciceapp}}
 
 Soit \( (u_n)_{n \in \mathbb{N}} \) la suite définie par :
 \[
@@ -208,7 +286,6 @@ u_0 = 1. &
 
 Montrer que : \( \forall n \in \mathbb{N}, \; u_n < \frac{5}{2} \).
 
-\textbf{\underline{\exemple}}
 
 Soit \( (u_n)_{n \in \mathbb{N}} \) la suite définie par :
 \[
@@ -223,7 +300,7 @@ u_0 = 0. &
 \end{enumerate}
 
 \section*{\underline{\textbf{\textcolor{red}{III. Représentation graphique des termes d'une suite}}}}
-
+\subsection*{\underline{\textbf{\textcolor{red}{1. Suite explicite}}}}
 $-\ $ Si $u_{n}$ est définie de façon explicite ; $u_{n}=f(n)$ alors représenter graphiquement la suite $(u_{n})$ consiste à représenter dans un repère l'ensemble des points isolés $(n\;,\ u_{n}).$
 
 $-\ $ On peut aussi représenter directement les valeurs des termes de la suite sur l'un des axes du repère.
@@ -233,8 +310,6 @@ $-\ $ On peut aussi représenter directement les valeurs des termes de la suite 
 Représenter les 6 premiers termes de la suite $(u_{n})$ définie par 
 
 a) $u_{n}=\dfrac{n^{2}+1}{2n+3}$
-
-b) $u_{n}=2n-7$
 
 \textbf{\underline{\solution}}\\
 a)\\
@@ -294,6 +369,64 @@ La suite \( u_n = 2n - 7 \) est représentée par les points \( (n, u_n) \) pour
         };
     \end{axis}
 \end{tikzpicture}
+
+\subsection*{\underline{\textbf{\textcolor{red}{2. Suite définie par récurrence}}}} 
+\[
+\begin{cases}
+u_0 = \alpha \\
+u_{n+1} = g(u_n)
+\end{cases}
+\]
+$g$ étant la fonction associée à la suite $(u_n)$, alors on trace la courbe de $g$ et la première bissectrice (droite d’équation $y = x$). 
+
+Par projection, on construit les termes de la suite $(u_n)$ en procédant comme suit : 
+
+\begin{enumerate}
+    \item On place le premier terme $u_0$ sur l’axe des abscisses ;
+    \item On utilise $C_g$ pour construire $u_1 = g(u_0)$ sur l’axe des ordonnées ;
+    \item On projette $u_1$ sur l’axe des abscisses à l’aide de la première bissectrice ;
+    \item On répète la même procédure en utilisant à nouveau $C_g$ pour construire $u_2 = g(u_1)$ sur l’axe des ordonnées ;
+    \item On projette ensuite $u_2$ sur l’axe des abscisses à l’aide de la première bissectrice ;
+    \item etc.
+\end{enumerate}
+
+\[
+\begin{cases}
+u_0 = \alpha, \\
+u_{n+1} = g(u_n),
+\end{cases}
+\]
+où \( g \) est la fonction associée à la suite \((u_n)\).On trace \( C_g \), ainsi que la première bissectrice \( y = x \).  
+
+Par une méthode graphique de projection, on construit les termes successifs de la suite \((u_n)\) en suivant les étapes suivantes :  
+
+\begin{enumerate}
+    \item On place le premier terme \( u_0 \) sur l’axe des abscisses.  
+    \item On lit la valeur de \( u_1 = g(u_0) \) en projetant \( u_0 \) verticalement sur \( C_g \). Cette valeur se trouve sur l’axe des ordonnées.  
+    \item On projette \( u_1 \) sur l’axe des abscisses à l’aide de la première bissectrice \( y = x \).  
+    \item On utilise à nouveau la courbe \( C_g \) pour déterminer \( u_2 = g(u_1) \), en projetant \( u_1 \) verticalement sur \( C_g \).  
+    \item On projette \( u_2 \) sur l’axe des abscisses via la première bissectrice.  
+    \item On répète ce processus pour calculer les termes suivants \( u_3, u_4, \dots \).  
+\end{enumerate}
+
+Ce procédé, appelé *construction par itération graphique*, permet de visualiser l'évolution des termes de la suite \((u_n)\) et d'étudier son comportement (convergence, divergence ou oscillation).
+
+\textbf{\underline{\exemple}}
+
+Représenter les 6 premiers termes de la suite $(u_n)$ définie par
+$u_{n+1}=2\sqrt{u_{n}}$ et $u_0=2$:
+
+\textbf{\underline{\exerciceapp}}
+
+b) $u_{n}=2n-7$
+
+Soit \( (u_n)_{n \in \mathbb{N}} \) la suite définie par :
+\[
+\begin{cases} 
+u_{n+1} = \sqrt{5u_{n}} + 1 \\ 
+u_0 = 1. & 
+\end{cases}
+\]
 
 \section*{\underline{\textbf{\textcolor{red}{IV. Suite arithmétiques}}}}
 Une suite $\left(u_{n}\right)$ est \textcolor{red}{arithmétique} si chaque terme s'obtient en ajoutant au précédent un même nombre \textcolor{red}{$r$} appelé raison : 

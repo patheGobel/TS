@@ -302,7 +302,158 @@ u_0 = 0. &
     \item Montrer que : \( \forall n \in \mathbb{N}^*, \; 3 \leq u_n \leq 4 \).
 \end{enumerate}
 \textbf{\underline{\correction}}
-\section*{\underline{\textbf{\textcolor{red}{III. Représentation graphique des termes d'une suite}}}}
+
+\section*{\underline{\textbf{\textcolor{red}{III. Suites Minorée-Majorée-Bornée-Convergente-Divergente-adjacents}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{1. Suites Minorées}}}}
+
+Une suite $(u_n)$ est dite \textbf{minorée} s'il existe un réel $m \in \mathbb{R}$ tel que :
+\[
+\forall n \in \mathbb{N}, \quad u_n \geq m.
+\]
+Dans ce cas, le nombre $m$ est appelé une \textbf{borne inférieure} de la suite $(u_n)$.
+
+\vspace{0.5cm}
+\textbf{\underline{\exemple}}\\
+Considérons la suite définie par :
+\[
+u_n = \frac{1}{n}, \quad \text{pour } n \in \mathbb{N}^*.
+\]
+Étudions si cette suite est minorée.
+
+\vspace{0.5cm}
+\textbf{\underline{\solution}}\\
+Pour tout $n \in \mathbb{N}^*$, nous avons $u_n = \frac{1}{n} > 0$. Cela signifie que $u_n$ est strictement positive pour tout entier naturel $n$. Ainsi, la suite $(u_n)$ est minorée par 0, car :
+\[
+\forall n \in \mathbb{N}^*, \quad u_n \geq 0.
+\]
+
+\subsection*{\underline{\textbf{\textcolor{red}{2. Suites Majorées}}}}
+
+Une suite $(u_n)$ est dite \textbf{majorée} s'il existe un réel $M \in \mathbb{R}$ tel que :
+\[
+\forall n \in \mathbb{N}, \quad u_n \leq M.
+\]
+Dans ce cas, le nombre $M$ est appelé une \textbf{borne supérieure} de la suite $(u_n)$.
+
+\vspace{0.5cm}
+\textbf{\underline{\exemple}}\\
+Considérons la suite définie par :
+\[
+u_n = 1 - \frac{1}{n}, \quad \text{pour } n \in \mathbb{N}^*.
+\]
+Étudions si cette suite est majorée.
+
+\vspace{0.5cm}
+\textbf{\underline{\solution}}\\
+Pour tout $n \in \mathbb{N}^*$, nous avons $u_n = 1 - \frac{1}{n}$. Observons les propriétés suivantes :
+\begin{itemize}
+    \item Lorsque $n$ augmente, $\frac{1}{n}$ diminue, ce qui implique que $u_n$ croît et se rapproche de 1 sans jamais dépasser cette valeur.
+    \item Ainsi, nous avons $u_n \leq 1$ pour tout $n \in \mathbb{N}^*$. La suite $(u_n)$ est donc majorée par $M = 1$.
+\end{itemize}
+
+\subsection*{\underline{\textbf{\textcolor{red}{3. Suites Bornées}}}}
+
+Une suite $(u_n)$ est dite \textbf{bornée} s'il existe deux réels $m, M \in \mathbb{R}$ tels que :
+\[
+\forall n \in \mathbb{N}, \quad m \leq u_n \leq M.
+\]
+Dans ce cas, $m$ est une borne inférieure et $M$ une borne supérieure de la suite $(u_n)$. En d'autres termes, une suite bornée est à la fois majorée et minorée.
+
+\vspace{0.5cm}
+\textbf{\underline{\exemple}}\\
+Considérons la suite définie par :
+\[
+u_n = (-1)^n \cdot \frac{1}{n}, \quad \text{pour } n \in \mathbb{N}^*.
+\]
+Étudions si cette suite est bornée.
+
+\vspace{0.5cm}
+\textbf{\underline{\solution}}\\
+Pour tout $n \in \mathbb{N}^*$, la suite $(u_n)$ alterne les signes (car $(-1)^n$ change de signe à chaque terme) et sa valeur absolue est donnée par $\lvert u_n \rvert = \frac{1}{n}$, qui décroît vers $0$ lorsque $n \to \infty$.\\
+
+Ainsi, nous avons :
+\[
+-\frac{1}{n} \leq u_n \leq \frac{1}{n}.
+\]
+Cela signifie que la suite $(u_n)$ est minorée par $-\frac{1}{1} = -1$ et majorée par $\frac{1}{1} = 1$ pour tout $n \geq 1$. Par conséquent, $(u_n)$ est une suite bornée.
+
+\subsection*{\underline{\textbf{\textcolor{red}{4. Suites Convergente}}}}
+\begin{itemize}
+    \item Si $(u_n)_n$ est croissante et majorée, c-à-d $(u_n \leq M)$, alors $(u_n)_n$ est convergente vers un $l \in \mathbb{R}$.
+    \item Si $(u_n)_n$ est décroissante et minorée, c-à-d $(u_n \geq m)$, alors $(u_n)_n$ est convergente vers un $l \in \mathbb{R}$.
+\end{itemize}
+
+\textbf{Remarque} La suite u est dite convergente si et seulement si $\lim_{n \to \infty} u_n = \ell \in \mathbb{R}$. On dit que u converge vers $\ell$
+
+\textbf{\underline{\exemple}}
+
+D'après l'exemple 7 \[
+u_n = \frac{1}{n}, \quad \text{pour } n \in \mathbb{N}^*.
+\] est minorée.
+De plus, cette suite est décroissante, car pour $n < m$, nous avons $u_n > u_m$. Donc, la suite $(u_n)$ est minorée et décroissante, ce qui implique qu'elle converge vers sa borne inférieure, à savoir :
+\[
+\lim_{n \to \infty} u_n = 0.
+\]
+
+D'après l'exemple 8 \[
+u_n = 1 - \frac{1}{n}, \quad \text{pour } n \in \mathbb{N}^*.
+\] est donc majorée par $M = 1$.
+Par conséquent, la suite $(u_n)$ est majorée et croissante. Elle converge vers sa borne supérieure, à savoir :
+\[
+\lim_{n \to \infty} u_n = 1.
+\]
+
+D'après l'exemple 9
+
+De plus, lorsque $n \to \infty$, $\lvert u_n \rvert \to 0$, donc la suite converge vers $0$. Nous avons donc :
+\[
+\lim_{n \to \infty} u_n = 0.
+\]
+
+\textbf{\underline{\solution}}
+\subsection*{\underline{\textbf{\textcolor{red}{5. Suites Divergente}}}}
+\begin{itemize}
+    \item Si $(u_n)_n$ est croissante et non majorée, alors $\lim_{n \to \infty} u_n = +\infty$. donc elle diverge
+    \item Si $(u_n)_n$ est décroissante et non minorée, alors $\lim_{n \to \infty} u_n = -\infty$.donc elle diverge
+\end{itemize}
+\textbf{\underline{\exemple}}
+
+La suite suivante est-elle $(u_n)_n=n-3+\frac{1}{n+1}$ est convergente ?
+
+\textbf{\underline{\solution}}
+
+$$\lim_{n\to \infty}u_n=\lim_{n\to \infty}(n-3+\frac{1}{n+1})$$
+
+\subsection*{\underline{\textbf{\textcolor{red}{6. Théorème de la convergence}}}}
+\begin{itemize}
+\item Toute suite croissante et majorée est convergente .
+\item Toute suite décroissante et minorée est convergente .
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{Propriété}}}}
+\begin{itemize}
+\item Toute suite croissante et non majorée a pour limite $+\infty$.
+\item Toute suite décroissante et non minorée a pour limite $-\infty$.
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{6. Suites adjacents}}}}
+Deux suites $u$ et $v$ sont adjacentes si et seulement si , l’une est croissante, l’autre est décroissante et la
+limite de leur différence est égale à 0 . C'est-à-dire
+$$
+\begin{cases}
+u \textbf{ est croissante}\\
+v \textbf{ est décroissante}\\
+\lim_{n\to \infty}(u_{n}-v_{n})=0
+\end{cases} \textbf{Ou}
+\begin{cases}
+v \textbf{ est croissante}\\
+u \textbf{ est décroissante}\\
+\lim_{n\to \infty}(u_{n}-v_{n})=0
+\end{cases}
+$$
+\textbf{\underline{\exemple}}
+
+\textbf{\underline{\solution}}
+
+\section*{\underline{\textbf{\textcolor{red}{IV. Représentation graphique des termes d'une suite}}}}
 \subsection*{\underline{\textbf{\textcolor{red}{1. Suite explicite}}}}
 $-\ $ Si $u_{n}$ est définie de façon explicite ; $u_{n}=f(n)$ alors représenter graphiquement la suite $(u_{n})$ consiste à représenter dans un repère l'ensemble des points isolés $(n\;,\ u_{n}).$
 
@@ -416,123 +567,7 @@ u_0 = 1. &
 \]
 
 \textbf{\underline{\correction}}
-\section*{\underline{\textbf{\textcolor{red}{IV. Suites Minorée-Majorée-Bornée-Convergente-Divergente-adjacents}}}}
-\subsection*{\underline{\textbf{\textcolor{red}{1. Suites Minorées}}}}
 
-\textbf{\underline{Définition}}\\
-Une suite $(u_n)$ est dite \textbf{minorée} s'il existe un réel $m \in \mathbb{R}$ tel que :
-\[
-\forall n \in \mathbb{N}, \quad u_n \geq m.
-\]
-Dans ce cas, le nombre $m$ est appelé une \textbf{borne inférieure} de la suite $(u_n)$.
-
-\vspace{0.5cm}
-\textbf{\underline{\exemple}}\\
-Considérons la suite définie par :
-\[
-u_n = \frac{1}{n}, \quad \text{pour } n \in \mathbb{N}^*.
-\]
-Étudions si cette suite est minorée.
-
-\vspace{0.5cm}
-\textbf{\underline{\solution}}\\
-Pour tout $n \in \mathbb{N}^*$, nous avons $u_n = \frac{1}{n} > 0$. Cela signifie que $u_n$ est strictement positive pour tout entier naturel $n$. Ainsi, la suite $(u_n)$ est minorée par 0, car :
-\[
-\forall n \in \mathbb{N}^*, \quad u_n \geq 0.
-\]
-
-\subsection*{\underline{\textbf{\textcolor{red}{2. Suites Majorées}}}}
-
-\textbf{\underline{Définition}}\\
-Une suite $(u_n)$ est dite \textbf{majorée} s'il existe un réel $M \in \mathbb{R}$ tel que :
-\[
-\forall n \in \mathbb{N}, \quad u_n \leq M.
-\]
-Dans ce cas, le nombre $M$ est appelé une \textbf{borne supérieure} de la suite $(u_n)$.
-
-\vspace{0.5cm}
-\textbf{\underline{\exemple}}\\
-Considérons la suite définie par :
-\[
-u_n = 1 - \frac{1}{n}, \quad \text{pour } n \in \mathbb{N}^*.
-\]
-Étudions si cette suite est majorée.
-
-\vspace{0.5cm}
-\textbf{\underline{\solution}}\\
-Pour tout $n \in \mathbb{N}^*$, nous avons $u_n = 1 - \frac{1}{n}$. Observons les propriétés suivantes :
-\begin{itemize}
-    \item Lorsque $n$ augmente, $\frac{1}{n}$ diminue, ce qui implique que $u_n$ croît et se rapproche de 1 sans jamais dépasser cette valeur.
-    \item Ainsi, nous avons $u_n \leq 1$ pour tout $n \in \mathbb{N}^*$. La suite $(u_n)$ est donc majorée par $M = 1$.
-\end{itemize}
-
-\subsection*{\underline{\textbf{\textcolor{red}{3. Suites Bornées}}}}
-
-\textbf{\underline{Définition}}\\
-Une suite $(u_n)$ est dite \textbf{bornée} s'il existe deux réels $m, M \in \mathbb{R}$ tels que :
-\[
-\forall n \in \mathbb{N}, \quad m \leq u_n \leq M.
-\]
-Dans ce cas, $m$ est une borne inférieure et $M$ une borne supérieure de la suite $(u_n)$. En d'autres termes, une suite bornée est à la fois majorée et minorée.
-
-\vspace{0.5cm}
-\textbf{\underline{\exemple}}\\
-Considérons la suite définie par :
-\[
-u_n = (-1)^n \cdot \frac{1}{n}, \quad \text{pour } n \in \mathbb{N}^*.
-\]
-Étudions si cette suite est bornée.
-
-\vspace{0.5cm}
-\textbf{\underline{\solution}}\\
-Pour tout $n \in \mathbb{N}^*$, la suite $(u_n)$ alterne les signes (car $(-1)^n$ change de signe à chaque terme) et sa valeur absolue est donnée par $\lvert u_n \rvert = \frac{1}{n}$, qui décroît vers $0$ lorsque $n \to \infty$.\\
-
-Ainsi, nous avons :
-\[
--\frac{1}{n} \leq u_n \leq \frac{1}{n}.
-\]
-Cela signifie que la suite $(u_n)$ est minorée par $-\frac{1}{1} = -1$ et majorée par $\frac{1}{1} = 1$ pour tout $n \geq 1$. Par conséquent, $(u_n)$ est une suite bornée.
-
-De plus, lorsque $n \to \infty$, $\lvert u_n \rvert \to 0$, donc la suite converge vers $0$. Nous avons donc :
-\[
-\lim_{n \to \infty} u_n = 0.
-\]
-
-\subsection*{\underline{\textbf{\textcolor{red}{4. Suites Convergente}}}}
-\begin{itemize}
-    \item Si $(u_n)_n$ est croissante et majorée, c-à-d $(u_n \leq M)$, alors $(u_n)_n$ est convergente vers un $l \in \mathbb{R}$.
-    \item Si $(u_n)_n$ est décroissante et minorée, c-à-d $(u_n \geq m)$, alors $(u_n)_n$ est convergente vers un $l \in \mathbb{R}$.
-    \item Si $(u_n)_n$ est croissante et non majorée, alors $\lim_{n \to \infty} u_n = +\infty$.
-    \item Si $(u_n)_n$ est décroissante et non minorée, alors $\lim_{n \to \infty} u_n = -\infty$.
-\end{itemize}
-\textbf{\underline{\exemple}}
-
-D'après l'exemple 7 \[
-u_n = \frac{1}{n}, \quad \text{pour } n \in \mathbb{N}^*.
-\] est minorée.
-De plus, cette suite est décroissante, car pour $n < m$, nous avons $u_n > u_m$. Donc, la suite $(u_n)$ est minorée et décroissante, ce qui implique qu'elle converge vers sa borne inférieure, à savoir :
-\[
-\lim_{n \to \infty} u_n = 0.
-\]
-
-D'après l'exemple 8 \[
-u_n = 1 - \frac{1}{n}, \quad \text{pour } n \in \mathbb{N}^*.
-\] est donc majorée par $M = 1$.
-Par conséquent, la suite $(u_n)$ est majorée et croissante. Elle converge vers sa borne supérieure, à savoir :
-\[
-\lim_{n \to \infty} u_n = 1.
-\]
-\textbf{\underline{\solution}}
-\subsection*{\underline{\textbf{\textcolor{red}{5. Suites Divergente}}}}
-\begin{itemize}
-    \item Si $(u_n)_n$ est croissante et non majorée, alors $\lim_{n \to \infty} u_n = +\infty$. donc elle diverge
-    \item Si $(u_n)_n$ est décroissante et non minorée, alors $\lim_{n \to \infty} u_n = -\infty$.donc elle diverge
-\end{itemize}
-\textbf{\underline{\exemple}}
-\textbf{\underline{\solution}}
-\subsection*{\underline{\textbf{\textcolor{red}{6. Suites adjacents}}}}
-\textbf{\underline{\exemple}}
-\textbf{\underline{\solution}}
 \subsection*{\underline{\textbf{\textcolor{red}{V. Suite arithmétiques}}}}
 Une suite $\left(u_{n}\right)$ est \textcolor{red}{arithmétique} si chaque terme s'obtient en ajoutant au précédent un même nombre \textcolor{red}{$r$} appelé raison : 
 \textcolor{red}{$u_{n+1}=u_{n}+r.$} 

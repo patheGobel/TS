@@ -151,6 +151,9 @@ Dans chacun des cas suivants, calculer les $6$ premiers termes de la suite $U_{n
 
 \item[2.]$u_{n+1}=2u_{n}+3\text{ et }u_{0}=-1.$
 \end{itemize}
+
+\textbf{\underline{\correction}}
+
 \subsection*{\underline{\textbf{\textcolor{red}{4. Sens de variation d'une suite}}}}
 \subsection*{\underline{\textbf{\textcolor{red}{Définition :}}}}
 	
@@ -298,7 +301,7 @@ u_0 = 0. &
 \begin{enumerate}
     \item Montrer que : \( \forall n \in \mathbb{N}^*, \; 3 \leq u_n \leq 4 \).
 \end{enumerate}
-
+\textbf{\underline{\correction}}
 \section*{\underline{\textbf{\textcolor{red}{III. Représentation graphique des termes d'une suite}}}}
 \subsection*{\underline{\textbf{\textcolor{red}{1. Suite explicite}}}}
 $-\ $ Si $u_{n}$ est définie de façon explicite ; $u_{n}=f(n)$ alors représenter graphiquement la suite $(u_{n})$ consiste à représenter dans un repère l'ensemble des points isolés $(n\;,\ u_{n}).$
@@ -371,24 +374,6 @@ La suite \( u_n = 2n - 7 \) est représentée par les points \( (n, u_n) \) pour
 \end{tikzpicture}
 
 \subsection*{\underline{\textbf{\textcolor{red}{2. Suite définie par récurrence}}}} 
-\[
-\begin{cases}
-u_0 = \alpha \\
-u_{n+1} = g(u_n)
-\end{cases}
-\]
-$g$ étant la fonction associée à la suite $(u_n)$, alors on trace la courbe de $g$ et la première bissectrice (droite d’équation $y = x$). 
-
-Par projection, on construit les termes de la suite $(u_n)$ en procédant comme suit : 
-
-\begin{enumerate}
-    \item On place le premier terme $u_0$ sur l’axe des abscisses ;
-    \item On utilise $C_g$ pour construire $u_1 = g(u_0)$ sur l’axe des ordonnées ;
-    \item On projette $u_1$ sur l’axe des abscisses à l’aide de la première bissectrice ;
-    \item On répète la même procédure en utilisant à nouveau $C_g$ pour construire $u_2 = g(u_1)$ sur l’axe des ordonnées ;
-    \item On projette ensuite $u_2$ sur l’axe des abscisses à l’aide de la première bissectrice ;
-    \item etc.
-\end{enumerate}
 
 \[
 \begin{cases}
@@ -416,6 +401,8 @@ Ce procédé, appelé *construction par itération graphique*, permet de visuali
 Représenter les 6 premiers termes de la suite $(u_n)$ définie par
 $u_{n+1}=2\sqrt{u_{n}}$ et $u_0=2$:
 
+\textbf{\underline{\solution}}
+
 \textbf{\underline{\exerciceapp}}
 
 b) $u_{n}=2n-7$
@@ -428,7 +415,125 @@ u_0 = 1. &
 \end{cases}
 \]
 
-\section*{\underline{\textbf{\textcolor{red}{IV. Suite arithmétiques}}}}
+\textbf{\underline{\correction}}
+\section*{\underline{\textbf{\textcolor{red}{IV. Suites Minorée-Majorée-Bornée-Convergente-Divergente-adjacents}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{1. Suites Minorées}}}}
+
+\textbf{\underline{Définition}}\\
+Une suite $(u_n)$ est dite \textbf{minorée} s'il existe un réel $m \in \mathbb{R}$ tel que :
+\[
+\forall n \in \mathbb{N}, \quad u_n \geq m.
+\]
+Dans ce cas, le nombre $m$ est appelé une \textbf{borne inférieure} de la suite $(u_n)$.
+
+\vspace{0.5cm}
+\textbf{\underline{\exemple}}\\
+Considérons la suite définie par :
+\[
+u_n = \frac{1}{n}, \quad \text{pour } n \in \mathbb{N}^*.
+\]
+Étudions si cette suite est minorée.
+
+\vspace{0.5cm}
+\textbf{\underline{\solution}}\\
+Pour tout $n \in \mathbb{N}^*$, nous avons $u_n = \frac{1}{n} > 0$. Cela signifie que $u_n$ est strictement positive pour tout entier naturel $n$. Ainsi, la suite $(u_n)$ est minorée par 0, car :
+\[
+\forall n \in \mathbb{N}^*, \quad u_n \geq 0.
+\]
+
+\subsection*{\underline{\textbf{\textcolor{red}{2. Suites Majorées}}}}
+
+\textbf{\underline{Définition}}\\
+Une suite $(u_n)$ est dite \textbf{majorée} s'il existe un réel $M \in \mathbb{R}$ tel que :
+\[
+\forall n \in \mathbb{N}, \quad u_n \leq M.
+\]
+Dans ce cas, le nombre $M$ est appelé une \textbf{borne supérieure} de la suite $(u_n)$.
+
+\vspace{0.5cm}
+\textbf{\underline{\exemple}}\\
+Considérons la suite définie par :
+\[
+u_n = 1 - \frac{1}{n}, \quad \text{pour } n \in \mathbb{N}^*.
+\]
+Étudions si cette suite est majorée.
+
+\vspace{0.5cm}
+\textbf{\underline{\solution}}\\
+Pour tout $n \in \mathbb{N}^*$, nous avons $u_n = 1 - \frac{1}{n}$. Observons les propriétés suivantes :
+\begin{itemize}
+    \item Lorsque $n$ augmente, $\frac{1}{n}$ diminue, ce qui implique que $u_n$ croît et se rapproche de 1 sans jamais dépasser cette valeur.
+    \item Ainsi, nous avons $u_n \leq 1$ pour tout $n \in \mathbb{N}^*$. La suite $(u_n)$ est donc majorée par $M = 1$.
+\end{itemize}
+
+\subsection*{\underline{\textbf{\textcolor{red}{3. Suites Bornées}}}}
+
+\textbf{\underline{Définition}}\\
+Une suite $(u_n)$ est dite \textbf{bornée} s'il existe deux réels $m, M \in \mathbb{R}$ tels que :
+\[
+\forall n \in \mathbb{N}, \quad m \leq u_n \leq M.
+\]
+Dans ce cas, $m$ est une borne inférieure et $M$ une borne supérieure de la suite $(u_n)$. En d'autres termes, une suite bornée est à la fois majorée et minorée.
+
+\vspace{0.5cm}
+\textbf{\underline{\exemple}}\\
+Considérons la suite définie par :
+\[
+u_n = (-1)^n \cdot \frac{1}{n}, \quad \text{pour } n \in \mathbb{N}^*.
+\]
+Étudions si cette suite est bornée.
+
+\vspace{0.5cm}
+\textbf{\underline{\solution}}\\
+Pour tout $n \in \mathbb{N}^*$, la suite $(u_n)$ alterne les signes (car $(-1)^n$ change de signe à chaque terme) et sa valeur absolue est donnée par $\lvert u_n \rvert = \frac{1}{n}$, qui décroît vers $0$ lorsque $n \to \infty$.\\
+
+Ainsi, nous avons :
+\[
+-\frac{1}{n} \leq u_n \leq \frac{1}{n}.
+\]
+Cela signifie que la suite $(u_n)$ est minorée par $-\frac{1}{1} = -1$ et majorée par $\frac{1}{1} = 1$ pour tout $n \geq 1$. Par conséquent, $(u_n)$ est une suite bornée.
+
+De plus, lorsque $n \to \infty$, $\lvert u_n \rvert \to 0$, donc la suite converge vers $0$. Nous avons donc :
+\[
+\lim_{n \to \infty} u_n = 0.
+\]
+
+\subsection*{\underline{\textbf{\textcolor{red}{4. Suites Convergente}}}}
+\begin{itemize}
+    \item Si $(u_n)_n$ est croissante et majorée, c-à-d $(u_n \leq M)$, alors $(u_n)_n$ est convergente vers un $l \in \mathbb{R}$.
+    \item Si $(u_n)_n$ est décroissante et minorée, c-à-d $(u_n \geq m)$, alors $(u_n)_n$ est convergente vers un $l \in \mathbb{R}$.
+    \item Si $(u_n)_n$ est croissante et non majorée, alors $\lim_{n \to \infty} u_n = +\infty$.
+    \item Si $(u_n)_n$ est décroissante et non minorée, alors $\lim_{n \to \infty} u_n = -\infty$.
+\end{itemize}
+\textbf{\underline{\exemple}}
+
+D'après l'exemple 7 \[
+u_n = \frac{1}{n}, \quad \text{pour } n \in \mathbb{N}^*.
+\] est minorée.
+De plus, cette suite est décroissante, car pour $n < m$, nous avons $u_n > u_m$. Donc, la suite $(u_n)$ est minorée et décroissante, ce qui implique qu'elle converge vers sa borne inférieure, à savoir :
+\[
+\lim_{n \to \infty} u_n = 0.
+\]
+
+D'après l'exemple 8 \[
+u_n = 1 - \frac{1}{n}, \quad \text{pour } n \in \mathbb{N}^*.
+\] est donc majorée par $M = 1$.
+Par conséquent, la suite $(u_n)$ est majorée et croissante. Elle converge vers sa borne supérieure, à savoir :
+\[
+\lim_{n \to \infty} u_n = 1.
+\]
+\textbf{\underline{\solution}}
+\subsection*{\underline{\textbf{\textcolor{red}{5. Suites Divergente}}}}
+\begin{itemize}
+    \item Si $(u_n)_n$ est croissante et non majorée, alors $\lim_{n \to \infty} u_n = +\infty$. donc elle diverge
+    \item Si $(u_n)_n$ est décroissante et non minorée, alors $\lim_{n \to \infty} u_n = -\infty$.donc elle diverge
+\end{itemize}
+\textbf{\underline{\exemple}}
+\textbf{\underline{\solution}}
+\subsection*{\underline{\textbf{\textcolor{red}{6. Suites adjacents}}}}
+\textbf{\underline{\exemple}}
+\textbf{\underline{\solution}}
+\subsection*{\underline{\textbf{\textcolor{red}{V. Suite arithmétiques}}}}
 Une suite $\left(u_{n}\right)$ est \textcolor{red}{arithmétique} si chaque terme s'obtient en ajoutant au précédent un même nombre \textcolor{red}{$r$} appelé raison : 
 \textcolor{red}{$u_{n+1}=u_{n}+r.$} 
 \subsection*{\underline{\textbf{\textcolor{red}{1.Expression du terme général}}}}		
@@ -446,7 +551,9 @@ $\bullet\ $ Si $(U_n)$ une suite arithmétique de raison $r$ et de premier terme
     \]
 \end{mdframed}
 Avec $u_{p}$ le premier terme, p l'indice du premier terme et r la raison
-\subsection*{\underline{\textbf{\textcolor{red}{Exercie d'application 1 :}}}}
+
+\textbf{\underline{\exemple}}
+
 Dans chacun des cas suivants, donner le terme général de la suite.
 \begin{itemize}
 \item[1.]$(u_n)$ est une suite arithmétique de raison $r = 3$ et de premier terme $u_{0}= 7$.
@@ -454,33 +561,31 @@ Dans chacun des cas suivants, donner le terme général de la suite.
 $u_{1}=\frac{-7}{4}$.
 \item[3.] $(U_n)$ est une suite arithmétique de raison $r$ et de premier terme $U_{0}$ tels que $U_{50} = 406$ et $U_{100} = 806$.
 \end{itemize}
-\subsection*{\underline{\textbf{\textcolor{green}{Correction :}}}}
-\subsection*{\underline{\textbf{\textcolor{red}{Exercie d'application 2 :}}}}
-Le prix du transport augmente de $100^{F}$ chaque année dans une ville. En $2019$, le prix du transport était de $600FCFA$.
-\begin{itemize}
-\item[1.]Calculer le prix du transport en $2020$, $2021$ et en $2022.$
-\item[2.]On note par $U_{0}$ le prix en $2019$ et $U_{n}$ le prix en $2019 + n.$
-\begin{itemize}
-	\item[a.]Que représente $U_{1}$, $U_{2}$ et $U_{3}$ ?
-	\item[b.]Exprimer $U_{n+1}$ en fonction de $U_{n}.$
-	\item[c.]Quelle est la nature de la suite $U_{n}.$
-	\item[d.]Exprimer $U_{n}$ en fonction de $n$.
-\end{itemize}
-\end{itemize}
-\subsection*{\underline{\textbf{\textcolor{red}{Correction :}}}}
+\textbf{\underline{\solution}}
+
 \subsection*{\underline{\textbf{\textcolor{red}{A retenir 1 }}}}
 Pour montrer qu'une suite $(U_n)$ est arithmétique de raison $r$, il suffit de montrer que :
 \[ U_{n+1} - U_n = r \]
+
 \textbf{\underline{\exemple}}
+
 On considère la suite $(U_n)$ définie par :\[ U_n = 5n + 3 \]
 Montrer que $(U_n)$ est une suite arithmétique dont on précisera la raison et le premier terme.
+
+\textbf{\underline{\solution}}
+
 \subsection*{\underline{\textbf{\textcolor{red}{A retenir 2}}}}
 Pour montrer qu’une suite $(U_n)$ n’est pas arithmétique , il suffit de montrer que : 
 $U_{1}$-$U_{0}\neq U_{2}$-$U_{1}$.
+
 \textbf{\underline{\exemple}}
+
 Soit la suite $(U_n)$ définie par : $U_{n}=\frac{n}{n+1}$
 
 Montrer que $(U_n)$ n’est pas une suite arithmétique.
+
+\textbf{\underline{\solution}}
+
 \subsection*{\underline{\textbf{\textcolor{red}{2.Somme des premiers termes}}}}	
 Soit (Un) une suite arithmétique.
 
@@ -501,7 +606,16 @@ $\bullet\ $De façon général si la suite a pour premier terme $u_{p}$, alors l
     \color{red} S_{n}=\dfrac{(n-p+1)(u_{p}+u_{n})}{2}
     \]
 \end{mdframed}
-\subsection*{\underline{\textbf{\textcolor{red}{Exercie d'application :}}}}
+
+\textbf{NB} la Somme $S_{n}=u_{0}+u_{1}+\ldots+u_{n}$ peut etre notée par $S_{n}=\sum_{k=0}^{n}u_{k}$.
+
+$$\sum_{k=0}^{4}2k+7 = \cdots$$
+
+$$\sum_{k=0}^{10}5 = \cdots$$
+
+
+\textbf{\underline{\exemple}}
+
 Soit $\left(u_{n}\right)$ la suite définie par : $u_{n}=2n+7$
 \begin{itemize}
 \item[1.]Calculer $U_{1}$, $U_{2}$ et $U_{2024}.$
@@ -509,6 +623,25 @@ Soit $\left(u_{n}\right)$ la suite définie par : $u_{n}=2n+7$
 \item[3.] Calculer la somme : $S_{n} = U_{0} + U_{1} + \cdots+ U_{n}.$
 \item[4.] En déduire le somme $S = U_{1} + U_{2} +\cdots+ U_{2024}.$
 \end{itemize}
+
+\textbf{\underline{\solution}}
+
+\textbf{\underline{\exerciceapp}}
+
+Le prix du transport augmente de $100^{F}$ chaque année dans une ville. En $2019$, le prix du transport était de $600FCFA$.
+\begin{itemize}
+\item[1.]Calculer le prix du transport en $2020$, $2021$ et en $2022.$
+\item[2.]On note par $U_{0}$ le prix en $2019$ et $U_{n}$ le prix en $2019 + n.$
+\begin{itemize}
+	\item[a.]Que représente $U_{1}$, $U_{2}$ et $U_{3}$ ?
+	\item[b.]Exprimer $U_{n+1}$ en fonction de $U_{n}.$
+	\item[c.]Quelle est la nature de la suite $U_{n}.$
+	\item[d.]Exprimer $U_{n}$ en fonction de $n$.
+\end{itemize}
+\end{itemize}
+
+\textbf{\underline{\correction}}
+
 \section*{\underline{\textbf{\textcolor{red}{III. Suites géométriques}}}}
 Une suite $\left(u_{n}\right)$ est dite géométrie si chaque terme s'obtient en multipliant le précédent par un même nombre $q$ appelé raison : $u_{n+1}=u_{n}\times q.$
 \subsection*{\underline{\textbf{\textcolor{red}{1. Expression du terme général}}}}
@@ -571,6 +704,7 @@ $$S_{n}=u_{p}+u_{p+1}+\ldots+u_{n}=u_{p}\times\dfrac{1-q^{n-p+1}}{1-q}$$
         \item Si $q=1$, la suite $\left(u_{n}\right)$ est constante.
     \end{itemize}
 \textbf{\underline{\exemple}}
+
 $1+\dfrac{1}{2}+\dfrac{1}{2^{2}}+\ldots\ldots+\dfrac{1}{2^{n}}=S_{n}$ est la somme des premiers termes d'une suite géométrique de raison $\dfrac{1}{2}.$ 
 
 Donc : $1+\dfrac{1}{2}+\dfrac{1}{2^{2}}+\ldots\ldots+\dfrac{1}{2^{n}}=\dfrac{1-\left(\dfrac{1}{2}\right)^{n+1}}{1-\dfrac{1}{2}}=2-\dfrac{1}{2^{n}}$

@@ -449,9 +449,182 @@ u \textbf{ est décroissante}\\
 \lim_{n\to \infty}(u_{n}-v_{n})=0
 \end{cases}
 $$
+
 \textbf{\underline{\exemple}}
 
+\subsection*{\underline{\textbf{\textcolor{red}{Exemple de deux suites adjacentes}}}}
+
+\textbf{\underline{Définition des suites}}\\
+Considérons les deux suites suivantes définies par récurrence pour tout $n \in \mathbb{N}$ :
+\[
+\begin{cases}
+u_0 = 1, & v_0 = 2, \\
+u_{n+1} = \frac{u_n + v_n}{2}, & v_{n+1} = \sqrt{u_n \cdot v_n}.
+\end{cases}
+\]
+
+\textbf{\underline{Étude des propriétés :}}\\
+1. \textbf{Monotonie} :\\
+- La suite $(u_n)$ est \textbf{croissante}. En effet, pour tout $n \geq 0$ :
+\[
+u_{n+1} = \frac{u_n + v_n}{2} \quad \text{et} \quad u_n \leq v_n \implies u_{n+1} \geq u_n.
+\]
+- La suite $(v_n)$ est \textbf{décroissante}. En effet, pour tout $n \geq 0$ :
+\[
+v_{n+1} = \sqrt{u_n \cdot v_n} \quad \text{et} \quad u_n \leq v_n \implies v_{n+1} \leq v_n.
+\]
+
+2. \textbf{Encadrement} :\\
+Pour tout $n \geq 0$, nous avons $u_n \leq v_n$. Cette propriété est conservée par les relations de récurrence.
+
+3. \textbf{Convergence des suites adjacentes} :\\
+- Les suites $(u_n)$ et $(v_n)$ sont \textbf{bornées}.
+- $(u_n)$ est croissante et bornée, donc convergente.
+- $(v_n)$ est décroissante et bornée, donc convergente.
+
+Soit $L$ la limite commune des deux suites, alors :
+\[
+\lim_{n \to \infty} u_n = \lim_{n \to \infty} v_n = L.
+\]
+En prenant la limite dans les relations de récurrence :
+\[
+\begin{aligned}
+\lim_{n \to \infty} u_{n+1} = \lim_{n \to \infty} \frac{u_n + v_n}{2} \implies L = \frac{L + L}{2} \implies L = L,\\
+\lim_{n \to \infty} v_{n+1} = \lim_{n \to \infty} \sqrt{u_n \cdot v_n} \implies L = \sqrt{L \cdot L} \implies L = L.
+\end{aligned}
+\]
+Ainsi, $L$ est la limite commune de $(u_n)$ et $(v_n)$.
+
+\textbf{\underline{Conclusion}} :\\
+Les deux suites $(u_n)$ et $(v_n)$ sont adjacentes car :
+\begin{itemize}
+    \item $(u_n)$ est croissante et $(v_n)$ est décroissante,
+    \item $(u_n)$ et $(v_n)$ convergent vers la même limite $L$.
+\end{itemize}
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+\subsection*{\underline{\textbf{\textcolor{red}{Exemple de deux suites adjacentes non définies par récurrence}}}}
+
+\textbf{\underline{Définition des suites}}\\
+Considérons les deux suites suivantes définies de manière explicite pour tout $n \in \mathbb{N}^*$ :
+\[
+u_n = \frac{1}{n}, \quad v_n = \frac{1}{n} + \frac{1}{n^2}.
+\]
+
+\textbf{\underline{Étude des propriétés :}}\\
+1. \textbf{Monotonie} :\\
+- La suite $(u_n)$ est \textbf{décroissante}. En effet, pour tout $n \geq 1$, nous avons :
+\[
+u_{n+1} = \frac{1}{n+1} < \frac{1}{n} = u_n.
+\]
+- La suite $(v_n)$ est également \textbf{décroissante}. En effet, pour tout $n \geq 1$ :
+\[
+v_{n+1} = \frac{1}{n+1} + \frac{1}{(n+1)^2} < \frac{1}{n} + \frac{1}{n^2} = v_n.
+\]
+
+2. \textbf{Encadrement} :\\
+Pour tout $n \in \mathbb{N}^*$, on a :
+\[
+u_n = \frac{1}{n} < v_n = \frac{1}{n} + \frac{1}{n^2}.
+\]
+Cela montre que $(u_n)$ et $(v_n)$ sont encadrées.
+
+3. \textbf{Convergence des suites adjacentes} :\\
+- La suite $(u_n)$ est décroissante et bornée inférieurement par $0$, donc elle converge.
+- La suite $(v_n)$ est également décroissante et bornée inférieurement par $0$, donc elle converge.
+
+Lorsque $n \to \infty$, les deux suites $(u_n)$ et $(v_n)$ ont pour limite commune $0$, car :
+\[
+\lim_{n \to \infty} u_n = \lim_{n \to \infty} \frac{1}{n} = 0,
+\]
+\[
+\lim_{n \to \infty} v_n = \lim_{n \to \infty} \left(\frac{1}{n} + \frac{1}{n^2}\right) = 0.
+\]
+
+\textbf{\underline{Conclusion}} :\\
+Les suites $(u_n)$ et $(v_n)$ sont adjacentes car :
+\begin{itemize}
+    \item $(u_n)$ est décroissante et $(v_n)$ est également décroissante,
+    \item $(u_n)$ et $(v_n)$ convergent vers la même limite $0$,
+    \item À chaque étape, $(u_n)$ est strictement inférieure à $(v_n)$.
+\end{itemize}
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 \textbf{\underline{\solution}}
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+\subsection*{\underline{\textbf{\textcolor{red}{3. Déterminer le sens de variation d'une suite définie par } $u_{n+1} = f(u_n)$}}}
+
+\textbf{\underline{Méthode :}}\\
+Pour déterminer le sens de variation de la suite $(u_n)$ définie par $u_{n+1} = f(u_n)$ avec \( f \) continue :
+\begin{enumerate}
+    \item Vérifiez si \( f \) est une fonction \textbf{croissante} ou \textbf{décroissante} sur l'intervalle où \( u_n \) prend ses valeurs. Cela donne des indications sur le comportement global de la suite.
+    \item Calculez \( u_{n+1} - u_n = f(u_n) - u_n \) :
+    \begin{itemize}
+        \item Si \( f(u_n) - u_n \geq 0 \), alors la suite est croissante.
+        \item Si \( f(u_n) - u_n \leq 0 \), alors la suite est décroissante.
+    \end{itemize}
+    \item Vérifiez les conditions initiales pour confirmer le comportement de la suite dès ses premiers termes.
+\end{enumerate}
+
+---
+
+\subsection*{\underline{\textbf{\textcolor{red}{4. Déterminer la convergence d'une suite définie par } $u_{n+1} = f(u_n)$}}}
+
+\textbf{\underline{Méthode :}}\\
+Pour étudier la convergence d'une suite $(u_n)$ définie par $u_{n+1} = f(u_n)$ avec \( f \) continue :
+\begin{enumerate}
+    \item Montrez que la suite est \textbf{monotone} (croissante ou décroissante) en déterminant son sens de variation (voir point précédent).
+    \item Vérifiez si la suite est \textbf{bornée} :
+    \begin{itemize}
+        \item Si la suite est à la fois monotone et bornée, alors elle est convergente (théorème de la convergence des suites monotones).
+    \end{itemize}
+\end{enumerate}
+
+---
+
+\subsection*{\underline{\textbf{\textcolor{red}{5. Déterminer la limite d'une suite définie par } $u_{n+1} = f(u_n)$}}}
+
+\textbf{\underline{Méthode :}}\\
+Pour déterminer la limite \( L \) d'une suite convergente $(u_n)$ définie par $u_{n+1} = f(u_n)$ avec \( f \) continue :
+\begin{enumerate}
+    \item Si la suite converge vers une limite \( L \), alors :
+    \[
+    \lim_{n \to \infty} u_n = L \quad \text{implique} \quad L = f(L).
+    \]
+    Trouvez les solutions de l'équation \( L = f(L) \) (les points fixes de la fonction \( f \)).
+    \item Vérifiez si la suite converge vers l'une des solutions trouvées en étudiant la stabilité des points fixes :
+    \begin{itemize}
+        \item Si \( f'(L) \) (la dérivée de \( f \) au point \( L \)) satisfait \( |f'(L)| < 1 \), alors \( L \) est un point fixe attractif et la suite converge vers \( L \).
+        \item Si \( |f'(L)| > 1 \), alors \( L \) est un point fixe répulsif, et la suite ne peut pas converger vers \( L \).
+    \end{itemize}
+\end{enumerate}
+
+---
+
+\textbf{\underline{Exemple :}}\\
+Considérons la suite définie par \( u_{n+1} = \frac{1}{2} u_n + 1 \) avec \( u_0 = 2 \) :
+\begin{itemize}
+    \item Étudions son sens de variation :
+    \[
+    f(u) = \frac{1}{2}u + 1, \quad f(u) - u = -\frac{1}{2}u + 1.
+    \]
+    Si \( u > 2 \), alors \( f(u) - u < 0 \) (la suite est décroissante).
+    Si \( u < 2 \), alors \( f(u) - u > 0 \) (la suite est croissante).
+    \item Montrons que la suite est bornée et converge :
+    \( f(u) = \frac{1}{2}u + 1 \) admet un point fixe \( L \) tel que :
+    \[
+    L = \frac{1}{2}L + 1 \implies L = 2.
+    \]
+    La suite converge donc vers \( L = 2 \).
+\end{itemize}
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 \section*{\underline{\textbf{\textcolor{red}{IV. Représentation graphique des termes d'une suite}}}}
 \subsection*{\underline{\textbf{\textcolor{red}{1. Suite explicite}}}}

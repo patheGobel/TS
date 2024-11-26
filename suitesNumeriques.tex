@@ -452,179 +452,189 @@ $$
 
 \textbf{\underline{\exemple}}
 
-\subsection*{\underline{\textbf{\textcolor{red}{Exemple de deux suites adjacentes}}}}
+Soient deux suites définies par :
 
-\textbf{\underline{Définition des suites}}\\
-Considérons les deux suites suivantes définies par récurrence pour tout $n \in \mathbb{N}$ :
+\[
+u_n = 1-\frac{1}{n}, \quad v_n = 1+\frac{1}{n}.
+\]
+
+Montrer que les deux suite sont adjacents.
+
+\textbf{\underline{\solution}}
+
+\textbf{\underline{\exemple}}
+Soient les deux suites suivantes définies par récurrence pour tout $n \in \mathbb{N}$ :
 \[
 \begin{cases}
 u_0 = 1, & v_0 = 2, \\
 u_{n+1} = \frac{u_n + v_n}{2}, & v_{n+1} = \sqrt{u_n \cdot v_n}.
 \end{cases}
 \]
-
-\textbf{\underline{Étude des propriétés :}}\\
-1. \textbf{Monotonie} :\\
-- La suite $(u_n)$ est \textbf{croissante}. En effet, pour tout $n \geq 0$ :
-\[
-u_{n+1} = \frac{u_n + v_n}{2} \quad \text{et} \quad u_n \leq v_n \implies u_{n+1} \geq u_n.
-\]
-- La suite $(v_n)$ est \textbf{décroissante}. En effet, pour tout $n \geq 0$ :
-\[
-v_{n+1} = \sqrt{u_n \cdot v_n} \quad \text{et} \quad u_n \leq v_n \implies v_{n+1} \leq v_n.
-\]
-
-2. \textbf{Encadrement} :\\
-Pour tout $n \geq 0$, nous avons $u_n \leq v_n$. Cette propriété est conservée par les relations de récurrence.
-
-3. \textbf{Convergence des suites adjacentes} :\\
-- Les suites $(u_n)$ et $(v_n)$ sont \textbf{bornées}.
-- $(u_n)$ est croissante et bornée, donc convergente.
-- $(v_n)$ est décroissante et bornée, donc convergente.
-
-Soit $L$ la limite commune des deux suites, alors :
-\[
-\lim_{n \to \infty} u_n = \lim_{n \to \infty} v_n = L.
-\]
-En prenant la limite dans les relations de récurrence :
-\[
-\begin{aligned}
-\lim_{n \to \infty} u_{n+1} = \lim_{n \to \infty} \frac{u_n + v_n}{2} \implies L = \frac{L + L}{2} \implies L = L,\\
-\lim_{n \to \infty} v_{n+1} = \lim_{n \to \infty} \sqrt{u_n \cdot v_n} \implies L = \sqrt{L \cdot L} \implies L = L.
-\end{aligned}
-\]
-Ainsi, $L$ est la limite commune de $(u_n)$ et $(v_n)$.
-
-\textbf{\underline{Conclusion}} :\\
-Les deux suites $(u_n)$ et $(v_n)$ sont adjacentes car :
-\begin{itemize}
-    \item $(u_n)$ est croissante et $(v_n)$ est décroissante,
-    \item $(u_n)$ et $(v_n)$ convergent vers la même limite $L$.
-\end{itemize}
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-\subsection*{\underline{\textbf{\textcolor{red}{Exemple de deux suites adjacentes non définies par récurrence}}}}
-
-\textbf{\underline{Définition des suites}}\\
-Considérons les deux suites suivantes définies de manière explicite pour tout $n \in \mathbb{N}^*$ :
-\[
-u_n = \frac{1}{n}, \quad v_n = \frac{1}{n} + \frac{1}{n^2}.
-\]
-
-\textbf{\underline{Étude des propriétés :}}\\
-1. \textbf{Monotonie} :\\
-- La suite $(u_n)$ est \textbf{décroissante}. En effet, pour tout $n \geq 1$, nous avons :
-\[
-u_{n+1} = \frac{1}{n+1} < \frac{1}{n} = u_n.
-\]
-- La suite $(v_n)$ est également \textbf{décroissante}. En effet, pour tout $n \geq 1$ :
-\[
-v_{n+1} = \frac{1}{n+1} + \frac{1}{(n+1)^2} < \frac{1}{n} + \frac{1}{n^2} = v_n.
-\]
-
-2. \textbf{Encadrement} :\\
-Pour tout $n \in \mathbb{N}^*$, on a :
-\[
-u_n = \frac{1}{n} < v_n = \frac{1}{n} + \frac{1}{n^2}.
-\]
-Cela montre que $(u_n)$ et $(v_n)$ sont encadrées.
-
-3. \textbf{Convergence des suites adjacentes} :\\
-- La suite $(u_n)$ est décroissante et bornée inférieurement par $0$, donc elle converge.
-- La suite $(v_n)$ est également décroissante et bornée inférieurement par $0$, donc elle converge.
-
-Lorsque $n \to \infty$, les deux suites $(u_n)$ et $(v_n)$ ont pour limite commune $0$, car :
-\[
-\lim_{n \to \infty} u_n = \lim_{n \to \infty} \frac{1}{n} = 0,
-\]
-\[
-\lim_{n \to \infty} v_n = \lim_{n \to \infty} \left(\frac{1}{n} + \frac{1}{n^2}\right) = 0.
-\]
-
-\textbf{\underline{Conclusion}} :\\
-Les suites $(u_n)$ et $(v_n)$ sont adjacentes car :
-\begin{itemize}
-    \item $(u_n)$ est décroissante et $(v_n)$ est également décroissante,
-    \item $(u_n)$ et $(v_n)$ convergent vers la même limite $0$,
-    \item À chaque étape, $(u_n)$ est strictement inférieure à $(v_n)$.
-\end{itemize}
-
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 \textbf{\underline{\solution}}
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%\textbf{\underline{Étude des propriétés :}}\\
+%1. \textbf{Monotonie} :\\
+%- La suite $(u_n)$ est \textbf{croissante}. En effet, pour tout $n \geq 0$ :
+%\[
+%u_{n+1} = \frac{u_n + v_n}{2} \quad \text{et} \quad u_n \leq v_n \implies u_{n+1} \geq u_n.
+%\]
+%
+%- La suite $(v_n)$ est \textbf{décroissante}. En effet, pour tout $n \geq 0$ :
+%\[
+%v_{n+1} = \sqrt{u_n \cdot v_n} \quad \text{et} \quad u_n \leq v_n \implies v_{n+1} \leq v_n.
+%\]
+%
+%2. \textbf{Encadrement} :\\
+%Pour tout $n \geq 0$, nous avons $u_n \leq v_n$. Cette propriété est conservée par les relations de récurrence.
+%
+%3. \textbf{Convergence des suites adjacentes} :\\
+%- Les suites $(u_n)$ et $(v_n)$ sont \textbf{bornées}.
+%
+%- $(u_n)$ est croissante et bornée, donc convergente.
+%
+%- $(v_n)$ est décroissante et bornée, donc convergente.
+%
+%Soit $L$ la limite commune des deux suites, alors :
+%\[
+%\lim_{n \to \infty} u_n = \lim_{n \to \infty} v_n = L.
+%\]
+%En prenant la limite dans les relations de récurrence :
+%\[
+%\begin{aligned}
+%\lim_{n \to \infty} u_{n+1} = \lim_{n \to \infty} \frac{u_n + v_n}{2} \implies L = \frac{L + L}{2} \implies L = L,\\
+%\lim_{n \to \infty} v_{n+1} = \lim_{n \to \infty} \sqrt{u_n \cdot v_n} \implies L = \sqrt{L \cdot L} \implies L = L.
+%\end{aligned}
+%\]
+%Ainsi, $L$ est la limite commune de $(u_n)$ et $(v_n)$.
+%
+%\textbf{\underline{Conclusion}} :\\
+%Les deux suites $(u_n)$ et $(v_n)$ sont adjacentes car :
+%\begin{itemize}
+%    \item $(u_n)$ est croissante et $(v_n)$ est décroissante,
+%    \item $(u_n)$ et $(v_n)$ convergent vers la même limite $L$.
+%\end{itemize}
+%
+%\subsection*{\underline{\textbf{\textcolor{red}{Exemple de deux suites adjacentes non définies par récurrence}}}}
+%
+%\textbf{\underline{Définition des suites}}\\
+%Considérons les deux suites suivantes définies de manière explicite pour tout $n \in \mathbb{N}^*$ :
+%\[
+%u_n = \frac{1}{n}, \quad v_n = \frac{1}{n} + \frac{1}{n^2}.
+%\]
+%
+%\textbf{\underline{Étude des propriétés :}}\\
+%1. \textbf{Monotonie} :\\
+%- La suite $(u_n)$ est \textbf{décroissante}. En effet, pour tout $n \geq 1$, nous avons :
+%\[
+%u_{n+1} = \frac{1}{n+1} < \frac{1}{n} = u_n.
+%\]
+%- La suite $(v_n)$ est également \textbf{décroissante}. En effet, pour tout $n \geq 1$ :
+%\[
+%v_{n+1} = \frac{1}{n+1} + \frac{1}{(n+1)^2} < \frac{1}{n} + \frac{1}{n^2} = v_n.
+%\]
+%
+%2. \textbf{Encadrement} :\\
+%Pour tout $n \in \mathbb{N}^*$, on a :
+%\[
+%u_n = \frac{1}{n} < v_n = \frac{1}{n} + \frac{1}{n^2}.
+%\]
+%Cela montre que $(u_n)$ et $(v_n)$ sont encadrées.
+%
+%3. \textbf{Convergence des suites adjacentes} :\\
+%- La suite $(u_n)$ est décroissante et bornée inférieurement par $0$, donc elle converge.
+%- La suite $(v_n)$ est également décroissante et bornée inférieurement par $0$, donc elle converge.
+%
+%Lorsque $n \to \infty$, les deux suites $(u_n)$ et $(v_n)$ ont pour limite commune $0$, car :
+%\[
+%\lim_{n \to \infty} u_n = \lim_{n \to \infty} \frac{1}{n} = 0,
+%\]
+%\[
+%\lim_{n \to \infty} v_n = \lim_{n \to \infty} \left(\frac{1}{n} + \frac{1}{n^2}\right) = 0.
+%\]
+%
+%\textbf{\underline{Conclusion}} :\\
+%Les suites $(u_n)$ et $(v_n)$ sont adjacentes car :
+%\begin{itemize}
+%    \item $(u_n)$ est décroissante et $(v_n)$ est également décroissante,
+%    \item $(u_n)$ et $(v_n)$ convergent vers la même limite $0$,
+%    \item À chaque étape, $(u_n)$ est strictement inférieure à $(v_n)$.
+%\end{itemize}
+%
+%
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%
+%\textbf{\underline{\solution}}
+%
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-\subsection*{\underline{\textbf{\textcolor{red}{3. Déterminer le sens de variation d'une suite définie par } $u_{n+1} = f(u_n)$}}}
-
-\textbf{\underline{Méthode :}}\\
-Pour déterminer le sens de variation de la suite $(u_n)$ définie par $u_{n+1} = f(u_n)$ avec \( f \) continue :
-\begin{enumerate}
-    \item Vérifiez si \( f \) est une fonction \textbf{croissante} ou \textbf{décroissante} sur l'intervalle où \( u_n \) prend ses valeurs. Cela donne des indications sur le comportement global de la suite.
-    \item Calculez \( u_{n+1} - u_n = f(u_n) - u_n \) :
-    \begin{itemize}
-        \item Si \( f(u_n) - u_n \geq 0 \), alors la suite est croissante.
-        \item Si \( f(u_n) - u_n \leq 0 \), alors la suite est décroissante.
-    \end{itemize}
-    \item Vérifiez les conditions initiales pour confirmer le comportement de la suite dès ses premiers termes.
-\end{enumerate}
-
----
-
-\subsection*{\underline{\textbf{\textcolor{red}{4. Déterminer la convergence d'une suite définie par } $u_{n+1} = f(u_n)$}}}
-
-\textbf{\underline{Méthode :}}\\
-Pour étudier la convergence d'une suite $(u_n)$ définie par $u_{n+1} = f(u_n)$ avec \( f \) continue :
-\begin{enumerate}
-    \item Montrez que la suite est \textbf{monotone} (croissante ou décroissante) en déterminant son sens de variation (voir point précédent).
-    \item Vérifiez si la suite est \textbf{bornée} :
-    \begin{itemize}
-        \item Si la suite est à la fois monotone et bornée, alors elle est convergente (théorème de la convergence des suites monotones).
-    \end{itemize}
-\end{enumerate}
-
----
-
-\subsection*{\underline{\textbf{\textcolor{red}{5. Déterminer la limite d'une suite définie par } $u_{n+1} = f(u_n)$}}}
-
-\textbf{\underline{Méthode :}}\\
-Pour déterminer la limite \( L \) d'une suite convergente $(u_n)$ définie par $u_{n+1} = f(u_n)$ avec \( f \) continue :
-\begin{enumerate}
-    \item Si la suite converge vers une limite \( L \), alors :
-    \[
-    \lim_{n \to \infty} u_n = L \quad \text{implique} \quad L = f(L).
-    \]
-    Trouvez les solutions de l'équation \( L = f(L) \) (les points fixes de la fonction \( f \)).
-    \item Vérifiez si la suite converge vers l'une des solutions trouvées en étudiant la stabilité des points fixes :
-    \begin{itemize}
-        \item Si \( f'(L) \) (la dérivée de \( f \) au point \( L \)) satisfait \( |f'(L)| < 1 \), alors \( L \) est un point fixe attractif et la suite converge vers \( L \).
-        \item Si \( |f'(L)| > 1 \), alors \( L \) est un point fixe répulsif, et la suite ne peut pas converger vers \( L \).
-    \end{itemize}
-\end{enumerate}
-
----
-
-\textbf{\underline{Exemple :}}\\
-Considérons la suite définie par \( u_{n+1} = \frac{1}{2} u_n + 1 \) avec \( u_0 = 2 \) :
-\begin{itemize}
-    \item Étudions son sens de variation :
-    \[
-    f(u) = \frac{1}{2}u + 1, \quad f(u) - u = -\frac{1}{2}u + 1.
-    \]
-    Si \( u > 2 \), alors \( f(u) - u < 0 \) (la suite est décroissante).
-    Si \( u < 2 \), alors \( f(u) - u > 0 \) (la suite est croissante).
-    \item Montrons que la suite est bornée et converge :
-    \( f(u) = \frac{1}{2}u + 1 \) admet un point fixe \( L \) tel que :
-    \[
-    L = \frac{1}{2}L + 1 \implies L = 2.
-    \]
-    La suite converge donc vers \( L = 2 \).
-\end{itemize}
-
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%\subsection*{\underline{\textbf{\textcolor{red}{3. Déterminer le sens de variation d'une suite définie par } $u_{n+1} = f(u_n)$}}}
+%
+%\textbf{\underline{Méthode :}}\\
+%Pour déterminer le sens de variation de la suite $(u_n)$ définie par $u_{n+1} = f(u_n)$ avec \( f \) continue :
+%\begin{enumerate}
+%    \item Vérifiez si \( f \) est une fonction \textbf{croissante} ou \textbf{décroissante} sur l'intervalle où \( u_n \) prend ses valeurs. Cela donne des indications sur le comportement global de la suite.
+%    \item Calculez \( u_{n+1} - u_n = f(u_n) - u_n \) :
+%    \begin{itemize}
+%        \item Si \( f(u_n) - u_n \geq 0 \), alors la suite est croissante.
+%        \item Si \( f(u_n) - u_n \leq 0 \), alors la suite est décroissante.
+%    \end{itemize}
+%    \item Vérifiez les conditions initiales pour confirmer le comportement de la suite dès ses premiers termes.
+%\end{enumerate}
+%
+%---
+%
+%\subsection*{\underline{\textbf{\textcolor{red}{4. Déterminer la convergence d'une suite définie par } $u_{n+1} = f(u_n)$}}}
+%
+%\textbf{\underline{Méthode :}}\\
+%Pour étudier la convergence d'une suite $(u_n)$ définie par $u_{n+1} = f(u_n)$ avec \( f \) continue :
+%\begin{enumerate}
+%    \item Montrez que la suite est \textbf{monotone} (croissante ou décroissante) en déterminant son sens de variation (voir point précédent).
+%    \item Vérifiez si la suite est \textbf{bornée} :
+%    \begin{itemize}
+%        \item Si la suite est à la fois monotone et bornée, alors elle est convergente (théorème de la convergence des suites monotones).
+%    \end{itemize}
+%\end{enumerate}
+%
+%---
+%
+%\subsection*{\underline{\textbf{\textcolor{red}{5. Déterminer la limite d'une suite définie par } $u_{n+1} = f(u_n)$}}}
+%
+%\textbf{\underline{Méthode :}}\\
+%Pour déterminer la limite \( L \) d'une suite convergente $(u_n)$ définie par $u_{n+1} = f(u_n)$ avec \( f \) continue :
+%\begin{enumerate}
+%    \item Si la suite converge vers une limite \( L \), alors :
+%    \[
+%    \lim_{n \to \infty} u_n = L \quad \text{implique} \quad L = f(L).
+%    \]
+%    Trouvez les solutions de l'équation \( L = f(L) \) (les points fixes de la fonction \( f \)).
+%    \item Vérifiez si la suite converge vers l'une des solutions trouvées en étudiant la stabilité des points fixes :
+%    \begin{itemize}
+%        \item Si \( f'(L) \) (la dérivée de \( f \) au point \( L \)) satisfait \( |f'(L)| < 1 \), alors \( L \) est un point fixe attractif et la suite converge vers \( L \).
+%        \item Si \( |f'(L)| > 1 \), alors \( L \) est un point fixe répulsif, et la suite ne peut pas converger vers \( L \).
+%    \end{itemize}
+%\end{enumerate}
+%
+%---
+%
+%\textbf{\underline{Exemple :}}\\
+%Considérons la suite définie par \( u_{n+1} = \frac{1}{2} u_n + 1 \) avec \( u_0 = 2 \) :
+%\begin{itemize}
+%    \item Étudions son sens de variation :
+%    \[
+%    f(u) = \frac{1}{2}u + 1, \quad f(u) - u = -\frac{1}{2}u + 1.
+%    \]
+%    Si \( u > 2 \), alors \( f(u) - u < 0 \) (la suite est décroissante).
+%    Si \( u < 2 \), alors \( f(u) - u > 0 \) (la suite est croissante).
+%    \item Montrons que la suite est bornée et converge :
+%    \( f(u) = \frac{1}{2}u + 1 \) admet un point fixe \( L \) tel que :
+%    \[
+%    L = \frac{1}{2}L + 1 \implies L = 2.
+%    \]
+%    La suite converge donc vers \( L = 2 \).
+%\end{itemize}
+%
+%
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 \section*{\underline{\textbf{\textcolor{red}{IV. Représentation graphique des termes d'une suite}}}}
 \subsection*{\underline{\textbf{\textcolor{red}{1. Suite explicite}}}}
@@ -740,11 +750,11 @@ u_0 = 1. &
 \]
 
 \textbf{\underline{\correction}}
-
-\subsection*{\underline{\textbf{\textcolor{red}{V. Suite arithmétiques}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{V. Suite arithmétiques-géométriques}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{1. Suite arithmétiques}}}}
 Une suite $\left(u_{n}\right)$ est \textcolor{red}{arithmétique} si chaque terme s'obtient en ajoutant au précédent un même nombre \textcolor{red}{$r$} appelé raison : 
 \textcolor{red}{$u_{n+1}=u_{n}+r.$} 
-\subsection*{\underline{\textbf{\textcolor{red}{1.Expression du terme général}}}}		
+\subsection*{\underline{\textbf{\textcolor{red}{a.Expression du terme général}}}}		
 $\bullet\ \text{Si }\left(u_{n}\right)$ est une suite arithmétique de premier terme $u_{0}$ et de raison $r$, alors :
 	
 $$u_{n}=u_{0}+nr$$
@@ -794,7 +804,7 @@ Montrer que $(U_n)$ n’est pas une suite arithmétique.
 
 \textbf{\underline{\solution}}
 
-\subsection*{\underline{\textbf{\textcolor{red}{2.Somme des premiers termes}}}}	
+\subsection*{\underline{\textbf{\textcolor{red}{b.Somme des premiers termes}}}}	
 Soit (Un) une suite arithmétique.
 
 Pour tous entiers naturels n et p tels que $p \leq n$, on a :
@@ -834,25 +844,9 @@ Soit $\left(u_{n}\right)$ la suite définie par : $u_{n}=2n+7$
 
 \textbf{\underline{\solution}}
 
-\textbf{\underline{\exerciceapp}}
-
-Le prix du transport augmente de $100^{F}$ chaque année dans une ville. En $2019$, le prix du transport était de $600FCFA$.
-\begin{itemize}
-\item[1.]Calculer le prix du transport en $2020$, $2021$ et en $2022.$
-\item[2.]On note par $U_{0}$ le prix en $2019$ et $U_{n}$ le prix en $2019 + n.$
-\begin{itemize}
-	\item[a.]Que représente $U_{1}$, $U_{2}$ et $U_{3}$ ?
-	\item[b.]Exprimer $U_{n+1}$ en fonction de $U_{n}.$
-	\item[c.]Quelle est la nature de la suite $U_{n}.$
-	\item[d.]Exprimer $U_{n}$ en fonction de $n$.
-\end{itemize}
-\end{itemize}
-
-\textbf{\underline{\correction}}
-
-\section*{\underline{\textbf{\textcolor{red}{III. Suites géométriques}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{2. Suites géométriques}}}}
 Une suite $\left(u_{n}\right)$ est dite géométrie si chaque terme s'obtient en multipliant le précédent par un même nombre $q$ appelé raison : $u_{n+1}=u_{n}\times q.$
-\subsection*{\underline{\textbf{\textcolor{red}{1. Expression du terme général}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{a. Expression du terme général}}}}
 $\bullet\ $Si la suite géométrique $\left(u_{n}\right)$ a pour premier terme $u_{0}$ et pour raison $q$, alors : $$u_{n}=u_{0}\times q^{n}$$
 
 $\bullet\ $Si le premier terme est $u_{1}$, alors :$$u_{n}=u_{1}\times q^{n-1}$$
@@ -863,26 +857,7 @@ $\bullet\ $ Si le premier terme est $u_{p}$, alors:
     \color{red} u_{n}=u_{p}\times q^{n-p}
     \]
 \end{mdframed}
-\textbf{\underline{\exemple}}
-Dans chacun des cas suivants, montrer que $(v_{n})$ est une suite géométrique dont on précisera
-la raison et le premier terme puis exprimer $(v_{n})$ en fonction de $n$.
-\begin{itemize}
-\item[1.]$v_{n} = 3 \times 5^{n}$
-\item[2.] \begin{equation*} 
-    \begin{cases}
-        U_{0}=5 \\
-        U_{n + 1}=2U_{n}+3
-    \end{cases}
-    et\quad V_{n} = U_{n} + 3
-\end{equation*}
-\item[3.] \begin{equation*} 
-    \begin{cases}
-        U_{1}=0 \\
-        U_{n + 1}=-\frac{2}{3}U_{n}+1
-    \end{cases}
-    et\quad V_{n} = U_{n} - \frac{3}{5}
-\end{equation*}
-\end{itemize}
+
 \subsection*{\underline{\textbf{\textcolor{red}{A retenir }}}}
 Pour montrer qu’une suite $u_{n}$ est géométrique de raison q, il suffit de montrer que :
 \begin{mdframed}[linecolor=red] % Définit la couleur du cadre
@@ -890,7 +865,43 @@ Pour montrer qu’une suite $u_{n}$ est géométrique de raison q, il suffit de 
     \color{red} \dfrac{U_{n+1}}{U_{n}}=q
     \]
 \end{mdframed}
-\subsection*{\underline{\textbf{\textcolor{red}{2. Somme des premiers termes }}}}
+
+\textbf{\underline{\exemple}}
+
+montrer que $(v_{n})$ est une suite géométrique dont on précisera
+la raison et le premier terme puis exprimer $(v_{n})$ en fonction de $n$.
+
+\begin{equation*} 
+    \begin{cases}
+        U_{0}=5 \\
+        U_{n + 1}=2U_{n}+3
+    \end{cases}
+    et\quad V_{n} = U_{n} + 3
+\end{equation*}
+
+
+\textbf{\underline{\exerciceapp}}
+
+Dans chacun des cas suivants, montrer que $(v_{n})$ est une suite géométrique dont on précisera
+la raison et le premier terme puis exprimer $(v_{n})$ en fonction de $n$.
+
+\begin{itemize}
+
+\item[1.]$v_{n} = 3 \times 5^{n}$
+
+\item[2.]\begin{equation*} 
+    \begin{cases}
+        U_{1}=0 \\
+        U_{n + 1}=-\frac{2}{3}U_{n}+1
+    \end{cases}
+    et\quad V_{n} = U_{n} - \frac{3}{5}
+\end{equation*}
+
+\end{itemize}
+
+\textbf{\underline{\correction}}
+
+\subsection*{\underline{\textbf{\textcolor{red}{b. Somme des premiers termes }}}}
 
 Pour toute suite géométrique, de raison $q\neq 1$, on a:
 
@@ -905,26 +916,15 @@ $$S_{n}=u_{p}+u_{p+1}+\ldots+u_{n}=u_{p}\times\dfrac{1-q^{n-p+1}}{1-q}$$
     \color{red} S_{n}=u_{p}\times\dfrac{1-q^{n-p+1}}{1-q}
     \]
 \end{mdframed}
-\section*{\underline{\textbf{\textcolor{red}{3. Sens de variation}}}}
+\section*{\underline{\textbf{\textcolor{red}{c. Sens de variation}}}}
     \begin{itemize}
         \item Si $0 < q < 1$, la suite $\left(u_{n}\right)$ est décroissante.
         \item Si $q > 1$, la suite $\left(u_{n}\right)$ est croissante.
         \item Si $q=1$, la suite $\left(u_{n}\right)$ est constante.
     \end{itemize}
-\textbf{\underline{\exemple}}
 
-$1+\dfrac{1}{2}+\dfrac{1}{2^{2}}+\ldots\ldots+\dfrac{1}{2^{n}}=S_{n}$ est la somme des premiers termes d'une suite géométrique de raison $\dfrac{1}{2}.$ 
 
-Donc : $1+\dfrac{1}{2}+\dfrac{1}{2^{2}}+\ldots\ldots+\dfrac{1}{2^{n}}=\dfrac{1-\left(\dfrac{1}{2}\right)^{n+1}}{1-\dfrac{1}{2}}=2-\dfrac{1}{2^{n}}$
-\section*{\underline{\textbf{\textcolor{red}{IV. limites d'une suite}}}}
-La notion de limite en $+\infty$, déjà rencontrée à propos des fonction, s'étend au cas des suites.
-	
-On a les résultats suivantes :
-\subsection*{\underline{\textbf{\textcolor{red}{Théorème 1 :}}}}
-a. $\lim\limits_{n\;\longrightarrow\;+\infty}\sqrt{n}=+\infty\ ;\ \lim\limits_{n\;\longrightarrow\;+\infty}n^{2}=+\infty\ ;\ \lim\limits_{n\;\longrightarrow\;+\infty}n^{3}=+\infty.$
-
-b. $\lim\limits_{n\;\longrightarrow\;+\infty}\dfrac{1}{\sqrt{n}}=0\ ;\ \lim\limits_{n\;\longrightarrow\;+\infty}\dfrac{1}{n}=0\ ;\ \lim\limits_{n\;\longrightarrow\;+\infty}\dfrac{1}{n^{2}}=0\ ;\ \lim\limits_{n\;\longrightarrow\;+\infty}\dfrac{1}{n^{3}}=0.$
-\subsection*{\underline{\textbf{\textcolor{red}{Théorème 2 :}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{Remarque :}}}}
 Soit $q$ un nombre réel.
 Soit \( q \) un nombre réel.
 
@@ -939,23 +939,5 @@ Soit \( q \) un nombre réel.
     \lim_{n \rightarrow +\infty} q^n = 0.
     \]
 \end{itemize}
-\subsection*{\underline{\textbf{\textcolor{red}{Théorème 3 :}}}}
-Les résultats concernant les opérations sur les limites de fonctions s'étendent aux limites de suites.
-\textbf{\underline{\exemple}}
 
-1) Soit la suite \( (u_{n}) \) définie par : \( u_{n} = \dfrac{3n^{3} - 5n^{2} + 1}{2n^{3} + 1} \)
-
-Alors \( \lim_{n \rightarrow +\infty} u_{n} = \lim_{n \rightarrow +\infty} \dfrac{3n^{3}}{2n^{3}} = \dfrac{3}{2} \).
-
-2) Soit la suite \( (v_{n}) \) définie par : \( v_{n} = 1 + \dfrac{1}{3} + \left(\dfrac{1}{3}\right)^{2} + \ldots + \left(\dfrac{1}{3}\right)^{n+1} \).
-
-On a d'après le paragraphe III :
-
-\[
-v_{n} = \dfrac{1 - \left(\dfrac{1}{3}\right)^{''}}{1 - \dfrac{1}{3}}
-\]
-
-car \( v_{n} \) est la somme des termes consécutifs d'une suite géométrique de raison \( \dfrac{1}{3} \), or comme \( -1 < \dfrac{1}{3} < 1 \), \( \lim_{n \rightarrow +\infty} \left(\dfrac{1}{3}\right)^{n} = 0 \).
-
-D'où : \( \lim_{n \rightarrow +\infty} \dfrac{1}{1 - \dfrac{1}{3}} = \dfrac{3}{2} \).
 \end{document}

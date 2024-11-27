@@ -87,6 +87,7 @@
   \refstepcounter{remarque}%
   \textbf{\textcolor{myorange1}{Remarque \theremarque :}} \ignorespaces
 }
+
 % Commande pour ajouter du texte en arrière-plan
 \AddToShipoutPicture{
     \AtTextCenter{%
@@ -434,7 +435,7 @@ $$\lim_{n\to \infty}u_n=\lim_{n\to \infty}(n-3+\frac{1}{n+1})$$
 \item Toute suite croissante et non majorée a pour limite $+\infty$.
 \item Toute suite décroissante et non minorée a pour limite $-\infty$.
 \end{itemize}
-\subsection*{\underline{\textbf{\textcolor{red}{6. Suites adjacents}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{7. Suites adjacents}}}}
 Deux suites $u$ et $v$ sont adjacentes si et seulement si , l’une est croissante, l’autre est décroissante et la
 limite de leur différence est égale à 0 . C'est-à-dire
 $$
@@ -462,7 +463,7 @@ Montrer que les deux suite sont adjacents.
 
 \textbf{\underline{\solution}}
 
-\textbf{\underline{\exemple}}
+\textbf{\underline{\exerciceapp}}
 Soient les deux suites suivantes définies par récurrence pour tout $n \in \mathbb{N}$ :
 \[
 \begin{cases}
@@ -470,7 +471,7 @@ u_0 = 1, & v_0 = 2, \\
 u_{n+1} = \frac{u_n + v_n}{2}, & v_{n+1} = \sqrt{u_n \cdot v_n}.
 \end{cases}
 \]
-\textbf{\underline{\solution}}
+\textbf{\underline{\correction}}
 
 %\textbf{\underline{Étude des propriétés :}}\\
 %1. \textbf{Monotonie} :\\
@@ -636,6 +637,26 @@ u_{n+1} = \frac{u_n + v_n}{2}, & v_{n+1} = \sqrt{u_n \cdot v_n}.
 %
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+\subsection*{\textcolor{red}{\underline{7.Théorème du point fixe } }}
+\[
+\begin{cases}
+(u_{n}) \text{ est une suite qui converge vers un réel } \ell \\
+f \text{ une fonction définie sur un intervalle } I \text{ et continue en } \ell \\
+\text{ Pour tout entier naturel } n, u_{n}\in I
+\end{cases}
+\textbf{Alors} \lim_{x \to +\infty} f(u_{n})=f(\ell)
+\]
+\textbf{\underline{\exemple}}
+
+$(u_n)$ est la suite définie par $u_0=0$ et pour tout entier naturel $n$,$u_n+1=\frac{1}{2}u_n+1$.
+
+a)Montrer que pour tout entier naturel $n$,$u_n\leq u_{n+1}\leq 2$
+
+b)En déduire que $(u_n)$ est convergente. On note $\ell$ sa limite.
+
+c) Déterminer la valeur de $\ell$
+
+\textbf{\underline{\solution}}
 \section*{\underline{\textbf{\textcolor{red}{IV. Représentation graphique des termes d'une suite}}}}
 \subsection*{\underline{\textbf{\textcolor{red}{1. Suite explicite}}}}
 $-\ $ Si $u_{n}$ est définie de façon explicite ; $u_{n}=f(n)$ alors représenter graphiquement la suite $(u_{n})$ consiste à représenter dans un repère l'ensemble des points isolés $(n\;,\ u_{n}).$
@@ -732,10 +753,16 @@ Ce procédé, appelé *construction par itération graphique*, permet de visuali
 
 \textbf{\underline{\exemple}}
 
-Représenter les 6 premiers termes de la suite $(u_n)$ définie par
-$u_{n+1}=2\sqrt{u_{n}}$ et $u_0=2$:
+Soit $(u_n)$ la suite définie par, $u_0=2$ et, pour tou $n\in\mathbb{N} \quad u_{n+1}=2\sqrt{u_{n}}$.
 
 \textbf{\underline{\solution}}
+
+Soit $f$ la fonction définie sur $[0;+\infty[$ par $f:x\mapsto 2\sqrt{x}$.
+Ainsi, pour tout $n\in\mathbb{N}, u_{n+1}=f(u_{n})$ 
+
+1.On trace $(\mathcal{C}_{f})$, la courbe représentation de la fonction $f$.
+
+2.On trace la droite la d'équation $y=x$
 
 \textbf{\underline{\exerciceapp}}
 
@@ -750,7 +777,32 @@ u_0 = 1. &
 \]
 
 \textbf{\underline{\correction}}
-\subsection*{\underline{\textbf{\textcolor{red}{V. Suite arithmétiques-géométriques}}}}
+
+\subsection*{\underline{\textbf{\textcolor{red}{V. Etude de suites définie par récurrence}}}}
+
+\subsection*{\textcolor{red}{\underline{EXERCICE 3 } (BAC 2023) }}
+\[
+\text{On considère la suite numérique } (u_n)_{n \in \mathbb{N}} \text{ définie par :}
+\begin{cases}
+U_{0}=6\\
+U_{n+1}=\frac{1}{U_{n}}+\frac{3}{4}U_{n}, n\in\mathbb{N}
+\end{cases}
+\]
+\begin{enumerate}
+\item[1)] Calculer \( u_1 \) et \( u_2 \).\hfill\textbf{(0.5pt)}
+
+\item[2)] Démontrer par récurrence que: \( \forall n\in\mathbb{N},\quad u_n \geq \sqrt{3} \).\hfill\textbf{(01pt)}
+
+\item[3)] Soit $f$ la fonction définie sur $]0, +\infty[$ par \( f(x) = \frac{1}{x} + \frac{3}{4}x \).
+\begin{enumerate}
+\item[a)] Etudier le sens de variations de $f$.\hfill\textbf{(01pt)}
+\item[b)] En déduire par récurrence que $(u_n)_{n \in \mathbb{N}}$ est strictement décroissante.\hfill\textbf{(0.5pt)}
+\end{enumerate}
+
+\item[4)] Montrer que $(u_n)_{n \in \mathbb{N}}$ est convergente et déterminer sa limite.\hfill\textbf{(01pt)}
+
+\end{enumerate}
+\subsection*{\underline{\textbf{\textcolor{red}{VI. Suite arithmétiques-géométriques}}}}
 \subsection*{\underline{\textbf{\textcolor{red}{1. Suite arithmétiques}}}}
 Une suite $\left(u_{n}\right)$ est \textcolor{red}{arithmétique} si chaque terme s'obtient en ajoutant au précédent un même nombre \textcolor{red}{$r$} appelé raison : 
 \textcolor{red}{$u_{n+1}=u_{n}+r.$} 

@@ -94,10 +94,18 @@ $\bullet$ Soient $z$ et $z'$ deux nombres complexes tels que $z=a+ib$ et $z'=a'+
 \]
 
 \underline{\exemple}\\
-Considérons les nombres complexes $z=3+4i$ et $w=-2-7i$. La partie réelle de $z$ est $\mathcal{R}e(z) = 3$, la partie imaginaire est $\mathcal{I}m(z) = 4$. De même, pour $w$, $\mathcal{R}e(w) = -2$ et $\mathcal{I}m(w) = -7$. Les deux nombres complexes sont différents car $\mathcal{R}e(z) \neq \mathcal{R}e(w)$ ou $\mathcal{I}m(z) \neq \mathcal{I}m(w)$.
+Soit le nombre complexe \(z = 3 - 4i\).
+
+\begin{itemize}
+  \item[$\bullet$] La partie réelle de \(z\) est \(\mathcal{R}e(z) = 3\).
+  \item[$\bullet$] La partie imaginaire de \(z\) est \(\mathcal{I}m(z) = -4\).
+  \item[$\bullet$] \(z\) n'est pas un réel car \(\mathcal{I}m(z) \neq 0\).
+  \item[$\bullet$] \(z\) n'est pas imaginaire pur car \(\mathcal{R}e(z) \neq 0\).
+  \item[$\bullet$] Le conjugué de \(z\) est \(\overline{z} = 3 + 4i\).
+\end{itemize}
 
 \underline{\textbf{\textcolor{red}{Remarque }}}\\
-Les identités remarquables de $\mathbb{R}$ restent aussi valables dans $\mathbb{C}$, où $a$ et $b$ sont des nombres réels. Cela signifie que pour tout nombre complexe $z=a+ib$, les équations suivantes sont vraies :
+Dans $\mathbb{C}$, où $a$ et $b$ sont des nombres réels. Les identités remarquables deviennent:
 \[
   \begin{aligned}
     (a+ib)^{2} &= a^{2}+2iab-b^{2}, \\
@@ -115,7 +123,7 @@ Considérons le nombre complexe $z=2+3i$. Appliquons les identités remarquables
   \end{aligned}
 \]
 
-De même, pour $z$, $z^* = 2-3i$, appliquons l'identité remarquable correspondante :
+De même, pour $z$, $\overline{z} = 2-3i$, appliquons l'identité remarquable correspondante :
 \[
   \begin{aligned}
     (2-3i)^{2} &= (2)^{2} - 2 \cdot 2 \cdot 3i + (3i)^{2} \\
@@ -124,24 +132,17 @@ De même, pour $z$, $z^* = 2-3i$, appliquons l'identité remarquable corresponda
   \end{aligned}
 \]
 
-Ainsi, l'exemple confirme l'application des identités remarquables dans le contexte des nombres complexes.\\
 \section*{\underline{\textbf{\textcolor{red}{II. Conjugué d'un Nombre Complexe }}}}
+
+\underline{\textbf{\textcolor{red}{1.Définition}}}
 
 Soit $z = a + ib$ un nombre complexe, où $a$ et $b$ sont des nombres réels, le conjugué de $z$, noté $\overline{z}$, est obtenu en changeant le signe de la partie imaginaire, c'est-à-dire $\overline{z} = a - ib$.
 
 \underline{\exemple}
 
-\underline{\textbf{\textcolor{red}{1 Définition}}}\
+Le conjugué de $w = 3 + 2i$ est $\overline{w}=3-2i$
 
-Le conjugué d'un nombre complexe $z = a + ib$ est défini comme $\overline{z} = a - ib$.
-
-\underline{\exemple}
-
-Considérons le nombre complexe $w = 3 + 2i$. Le conjugué de $w$, noté $\overline{w}$, est obtenu en changeant le signe de la partie imaginaire : $\overline{w}=3-2i$.
-
-\underline{\textbf{\textcolor{red}{2 Propriétés}}}\
-
-Le conjugué d'un nombre complexe possède plusieurs propriétés intéressantes :
+\underline{\textbf{\textcolor{red}{2.Propriétés}}}\
 \begin{itemize}
 \item[$\bullet$] Le conjugué du conjugué : $\overline{\overline{z}} = z$.
 \item[$\bullet$] La somme des conjugués est égale à la conjugaison d'une somme : $\overline{z_1 + z_2} = \overline{z_1} + \overline{z_2}$.
@@ -154,28 +155,38 @@ Le conjugué d'un nombre complexe possède plusieurs propriétés intéressantes
 \item[$\bullet$] $\mathcal{I}m(z)=\frac{z-\overline{z}}{2i}$
 \end{itemize}
 
-Ces propriétés sont utiles dans divers calculs impliquant des nombres complexes.\\
-
 \underline{\exemple}
 
-Considérons deux nombres complexes $z_1 = 2 + 3i$ et $z_2 = 1 - 2i$. Calculons les conjugués et vérifions les propriétés :
+Considérons deux nombres complexes $z_1 = 2 + 3i$ et $z_2 = 1 - 2i$. 
+
+Calculons les conjugués et vérifions les propriétés :
 
 \begin{itemize}
-\item[$\bullet$] Le conjugué du conjugué : $\overline{\overline{z_1}} = \overline{2 - 3i} = 2 + 3i = z_1$.
+\item[$\bullet$] Le conjugué du conjugué : $\overline{\overline{z_1}} = \overline{\overline{2 + 3i}} = 2 + 3i = z_1$.
 \item[$\bullet$] La somme des conjugués : $\overline{z_1 + z_2} = \overline{3 + i} = 3 - i = \overline{z_1} + \overline{z_2}$.
 \item[$\bullet$] Le produit des conjugués : $\overline{z_1 \cdot z_2} = \overline{8 + 5i} = 8 - 5i = \overline{z_1} \cdot \overline{z_2}$.
 \item[$\bullet$] Le conjugué du produit : $\overline{z_1 \cdot z_2} = \overline{-4 - 7i} = -4 + 7i = \overline{z_1} \cdot \overline{z_2}$.
 \item[$\bullet$] Le conjugué d'un rapport : $\overline{(\frac{z_1}{z_2})} = \frac{\overline{2 + 3i}}{\overline{1 - 2i}} = \frac{2 - 3i}{1 + 2i}$.
+\item[$\bullet$] Soit \(z = 1 + i\) et \(p = 3\). Calculons :
+\[
+z^3 = (1 + i)^3 = (1 + i)(1 + i)(1 + i) = (1 + 2i + i^2)(1 + i) = (1 + 2i - 1)(1 + i) = 2i(1 + i) = 2i + 2i^2 = -2 + 2i.
+\]
+Donc :
+\[
+\overline{z^3} = \overline{-2 + 2i} = -2 - 2i.
+\]
+D'autre part :
+\[
+\overline{z} = 1 - i, \quad \overline{z}^3 = (1 - i)^3 = (1 - i)(1 - i)(1 - i) = -2 - 2i.
+\]
+Ainsi, \(\overline{z^3} = \overline{z}^3\).
 \end{itemize}
-
-Ces exemples illustrent comment les propriétés du conjugué sont vérifiées dans différentes opérations avec des nombres complexes.\\
-
 
 \section*{\underline{\textbf{\textcolor{red}{III. Représentation graphique d'un Nombre Complexe }}}}
 
 La représentation graphique d'un nombre complexe se fait dans le plan complexe, où l'axe des abscisses correspond à la partie réelle et l'axe des ordonnées à la partie imaginaire.
 
-\subsection*{3.1 Plan Complexes}
+\underline{\textbf{\textcolor{red}{1.Plan Complexes}}}
 
 Le plan complexe est un plan muni d'un repère cartésien. Chaque nombre complexe $z = a + ib$ peut être associé à un point $(a, b)$ dans ce plan.
 
@@ -234,28 +245,29 @@ On note $M(z)$\\
 \end{tikzpicture}
 \\	
 \textbf{\textcolor{yellow}{Cette équivalence permet de considérer le plan orienté muni d'un repère orthonormé direct comme une « représentation » de l'ensemble des nombres complexes}}
-\subsection*{3.2 Représentation d'un Nombre Complexe}
+
+\underline{\textbf{\textcolor{red}{2.Représentation d'un Nombre Complexe}}}
 
 Soit $z = a + ib$ un nombre complexe. Le point associé dans le plan complexe est $(a, b)$.\\
 \textbf{\textcolor{yellow}{On peut également utiliser la forme polaire pour représenter un nombre complexe en utilisant sa distance au point d'origine et l'angle qu'il forme avec l'axe des abscisses}}.
 
 \underline{\exemple}
 
-Considérons le nombre complexe $z = 3 + 4i$. Le point associé dans le plan complexe est $(3, 4)$.\\
-Représente $z$ et $\overline{z}$\\
-Cette représentation graphique est utile pour visualiser les opérations sur les nombres complexes et interpréter géométriquement leurs propriétés.
+Considérons le nombre complexe $z = 3 + 4i$. 
+
+Le point associé dans le plan complexe est $(3, 4)$.\\
+Représenter $z$ et $\overline{z}$\\
+
+\textbf{NB} Cette représentation graphique est utile pour visualiser les opérations sur les nombres complexes et interpréter géométriquement leurs propriétés.
 
 \section*{\underline{\textbf{\textcolor{red}{IV. Module d'un Nombre Complexe}}}}
-
-Le module d'un nombre complexe est une mesure de sa distance à l'origine dans le plan complexe. Soit $z = a + ib$ un nombre complexe, où $a$ et $b$ sont des nombres réels. Le module de $z$, noté $|z|$, est défini comme la distance entre le point représentant $z$ et l'origine $(0,0)$ dans le plan complexe.
-
-\subsection*{\underline{\textbf{\textcolor{red}{4.1 Définition  }}}}
-
+\subsection*{\underline{\textbf{\textcolor{red}{1.Définition  }}}} 
+Le module de $z$, noté $|z|$, est défini comme la distance entre le point représentant $z$ et l'origine $(0,0)$ dans le plan complexe.
 
 Le module d'un nombre complexe $z = a + ib$ est défini comme :
 \[ |z| = \sqrt{a^2 + b^2} \]
 
-\subsection*{\underline{\textbf{\textcolor{red}{4.2 Propriétés}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{2.Propriétés}}}}
 
 Le module d'un nombre complexe possède plusieurs propriétés importantes :
 
@@ -265,7 +277,7 @@ Le module d'un nombre complexe possède plusieurs propriétés importantes :
 \item[$\bullet$] Le module d'une puissance : $|z^n| = |z|^n$.
 \item[$\bullet$] Le module d'un conjugué : $z\overline{z} = |z|=\sqrt{a^2 + b^2}$.
 \item[$\bullet$] Le module d'un conjugué : $z\overline{z} = |z|=\sqrt{a^2 + b^2}$.
-\item[$\bullet$] Inégalité triangulaire : $|\frac{z_1}{z_2}|= \frac{|z_1|}{|z_2|}$.
+\item[$\bullet$] Inégalité triangulaire : Pour tous \(z_1, z_2 \in \mathbb{C}\),\(|z_1 + z_2| \leq |z_1| + |z_2|\)
 \item[$\bullet$] $|z_A - z_B| =AB$.
 \end{itemize}
 
@@ -289,14 +301,14 @@ Soit A, B et C les affixes respectives $1-3i$ ; $4+5i$ ; $-3+2i$.\\
 Calculer: AB ; AC ; BC.
 \subsection*{Résolution}
 \section*{\underline{\textbf{\textcolor{red}{V. Argument et forme trigonométrique d'un nombre complexe non nul }}}}
-\subsection*{\underline{\textbf{\textcolor{red}{5.1 Définition}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{1 Définition}}}}
 Soit z un nombre complexe non nul sur le repère othonormal $(O,\vec{u},\vec{v})$. L'argument du nombre complexe $z = a + ib$ non nul est l'angle en radian que le vecteur correspondant à $z$ forme avec l'axe des abscisses dans le plan complexe.\\ On note généralement $arg(z)=mes(\widehat{\vec{u},\vec{OM}})$\\
 En notant $\theta$ on a :$\cos(\theta)=\frac{\mathcal{R}e(z)}{|z|}$ et 
 $\sin(\theta)=\frac{\mathcal{I}m(z)}{|z|}$\\
 \underline{\textbf{\textcolor{red}{Rappelle}}}\\
 Tableau trigonométrique\\
 Cercles trigonométrie\\
-\subsection*{\underline{\textbf{\textcolor{red}{5.2 Propiétés}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{2 Propiétés}}}}
 Soit z et z' deux nombrs complexes ,et $n\in \mathbb{N}$\\
 \begin{itemize}
 \item[$\bullet$] $\text{{arg}}(z_1 \cdot z_2) = \text{{arg}}(z_1) + \text{{arg}}(z_2)[2\pi]$\\
@@ -310,18 +322,6 @@ $z_C \neq z_A$ $arg(z_A-z_B)=(\vec{u},\vec{AB})$
 \item[$\bullet$] $arg(\frac{z_C-z_A}{z_B-z_A})=(\widehat{\vec{AB},\vec{AC}})$
 \end{itemize}
 
-\subsubsection*{\textbf{1er cas :} $a > 0$}
-
-Si la partie réelle $a$ est positive, l'argument $\theta$ est simplement l'arc tangente de la partie imaginaire $b$ divisée par la partie réelle $a$. Mathématiquement, cela peut être exprimé comme :
-
-\[ \theta = \arctan\left(\frac{b}{a}\right) \]
-
-\subsubsection*{\textbf{2ème cas :} $a < 0$}
-
-Si la partie réelle $a$ est négative, l'argument $\theta$ est ajusté en ajoutant ou soustrayant $\pi$ (180 degrés) selon le signe de la partie imaginaire $b$. Mathématiquement, cela peut être formulé comme :
-
-\[ \theta = \arctan\left(\frac{b}{a}\right) + \pi \quad \text{si } b \geq 0 \]
-\[ \theta = \arctan\left(\frac{b}{a}\right) - \pi \quad \text{si } b < 0 \]
 \subsection*{Exercice d'application}
 Déterminer l'argument des nombres complexes suivnats\\
 $z_{1}=-\sqrt{3}+i$ ; $z_{2}=2(-\sqrt{3}+i)$ ; $z_{3}=(-\sqrt{3}+i)(1+i)^{2}$ ; 
@@ -335,7 +335,7 @@ $z_{4}=\frac{(-\sqrt{3}+i)^{3}}{(1+i)^{2}}$ ; $z_{4}=\frac{(1+i)^{3}}{3+2i}$\\
 Si $b>0$ alors $arg(z)=\frac{\pi}{2}$\\
 Si $b<0$ alors $arg(z)=\frac{-\pi}{2}$
 \end{itemize}
-\subsection*{\underline{\textbf{\textcolor{red}{5.1. Interprétation de $|\frac{d-c}{b-a}|$}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{3. Interprétation de $|\frac{d-c}{b-a}|$}}}}
 Soit a,b,c et d des nombres complexes qui ont comme image A; B; C; D tel que $a \neq b$ et $c \neq d$\\
 $|\frac{d-c}{b-a}|=\frac{CD}{AB}$\\
 $arg(\frac{d-c}{b-a})=(\vec{AB},\vec{CD})$\\

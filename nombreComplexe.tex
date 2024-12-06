@@ -1,0 +1,420 @@
+\documentclass[12pt]{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+
+\usepackage{color,soul}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{systeme}
+\usepackage{tkz-tab}
+\author{Destiné à la TerminaleS2\\Au Lycée de Dindéferlo}
+\title{\textbf{Nombres Complexes}}
+\date{\today}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+\usepackage[a4paper,left=20mm,right=20mm,top=15mm,bottom=15mm]{geometry}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{hyperref} % Pour avoir des références colorées si nécessaire
+\usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
+\newcounter{exemple} % Compteur pour les questions
+
+% Définir la commande pour afficher une question numérotée
+\newcommand{\exemple}{%
+  \refstepcounter{exemple}%
+  \textbf{\textcolor{green}{Exemple \theexemple :}} \ignorespaces
+}
+% Commande pour ajouter du texte en arrière-plan
+% Commande pour ajouter du texte en arrière-plan
+\AddToShipoutPicture{
+    \AtTextCenter{%
+        \makebox[0pt]{\rotatebox{80}{\textcolor[gray]{0.9}{\fontsize{10cm}{10cm}\selectfont Pathé Gobel BA}}}
+    }
+}
+%This command takes a colour as an optional argument; the default colour is black.
+\usetikzlibrary{shapes.geometric,fit}
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\DecimalMathComma
+\begin{document}
+\maketitle
+\newpage
+\section*{Introduction aux Nombres Complexes}
+
+Les nombres complexes, que nous allons explorer dans ce cours, ont une origine intrigante liée à la résolution des équations polynomiales. Au cours de l'histoire des mathématiques, des énigmes telles que la résolution de l'équation cubique $x^3 + ax^2 + bx + c = 0$ ont captivé l'attention des mathématiciens.
+
+Au XVIe siècle, l'équation cubique a été résolue par le mathématicien italien Niccolò Fontana, également connu sous le nom de Tartaglia. Cependant, il est intéressant de noter que la tentative de résolution de certaines équations cubiques conduisit à l'introduction des nombres complexes.
+
+L'équation $x^2 + 1 = 0$, apparemment insoluble dans l'ensemble des nombres réels, était une pierre d'achoppement dans la résolution des équations cubiques. Pourtant, pour surmonter cette difficulté, les mathématiciens du XVIe siècle, tels que Gerolamo Cardano et Rafael Bombelli, ont introduit une unité imaginaire, notée $i$, qui était la solution de l'équation $i^2 = -1$. Cette innovation a été la première étape vers la création de l'ensemble des nombres complexes.
+
+Ainsi, les nombres complexes ne sont pas seulement une extension abstraite des nombres réels, mais ils ont émergé de la nécessité de résoudre des problèmes concrets en algèbre. Dans ce cours, nous explorerons les propriétés fascinantes et les applications puissantes des nombres complexes.
+
+Préparez-vous à plonger dans le monde fascinant des nombres complexes, où l'imagination des mathématiciens a transcendé les limites des nombres réels pour créer un outil puissant et élégant.
+
+\section*{\underline{\textbf{\textcolor{red}{I.Définition et notations }}}}
+
+On appelle ensemble des nombres complexes l'ensemble noté $\mathbb{C}$ qui :
+
+\begin{itemize}
+  \item[$\blacktriangleright$] contient l'ensemble des réels $\mathbb{R}$ : $\mathbb{R} \subset \mathbb{C}$
+  \item[$\blacktriangleright$] est muni de l'addition et de la multiplication, possédant les mêmes propriétés que $\mathbb{R}$ (commutativité, associativité, élément neutre, élément symétrique ou opposé, distributivité, etc.)
+  \item[$\blacktriangleright$] contient un élément noté $i$ vérifiant $i^{2}=-1$
+\end{itemize}
+
+$\bullet$ Tout nombre complexe $z \in \mathbb{C}$ s'écrit, de façon algébrique, sous la forme $z=a+ib$, où $a$ et $b$ sont des nombres réels. 
+
+$a$ est appelé la partie réelle de $z$ notée $\mathcal{R}e(z)=a$, et $b$ est appelé la partie imaginaire de $z$ notée $\mathcal{I}m(z)=b$.
+
+$\bullet$ Le nombre complexe $z=a+ib$ est réel si, et seulement si, $b=0$ (c'est-à-dire $\mathcal{I}m(z)=0$).
+
+$\bullet$ Le nombre complexe $z=a+ib$ est imaginaire pur si, et seulement si, $a=0$ (c'est-à-dire $\mathcal{R}e(z)=0$).
+
+$\bullet$ Le nombre complexe $z=a+ib$ est nul si, et seulement si,
+\[
+  \systeme{a=0, b=0}
+  \iff
+  \systeme{\mathcal{R}e(z)=0, \mathcal{I}m(z)=0}
+\]
+
+$\bullet$ Soient $z$ et $z'$ deux nombres complexes tels que $z=a+ib$ et $z'=a'+ib'$, alors $z=z'$ si, et seulement si,
+\[
+  \systeme{a=a', b=b'}
+  \iff
+  \systeme{\mathcal{R}e(z)=\mathcal{R}e(z'), \mathcal{I}m(z)=\mathcal{I}m(z')}
+\]
+
+\underline{\exemple}\\
+Considérons les nombres complexes $z=3+4i$ et $w=-2-7i$. La partie réelle de $z$ est $\mathcal{R}e(z) = 3$, la partie imaginaire est $\mathcal{I}m(z) = 4$. De même, pour $w$, $\mathcal{R}e(w) = -2$ et $\mathcal{I}m(w) = -7$. Les deux nombres complexes sont différents car $\mathcal{R}e(z) \neq \mathcal{R}e(w)$ ou $\mathcal{I}m(z) \neq \mathcal{I}m(w)$.
+
+\underline{\textbf{\textcolor{red}{Remarque }}}\\
+Les identités remarquables de $\mathbb{R}$ restent aussi valables dans $\mathbb{C}$, où $a$ et $b$ sont des nombres réels. Cela signifie que pour tout nombre complexe $z=a+ib$, les équations suivantes sont vraies :
+\[
+  \begin{aligned}
+    (a+ib)^{2} &= a^{2}+2iab-b^{2}, \\
+    (a-ib)^{2} &= a^{2}-2iab-b^{2}.
+  \end{aligned}
+\]
+
+\underline{\exemple}\\
+Considérons le nombre complexe $z=2+3i$. Appliquons les identités remarquables :
+\[
+  \begin{aligned}
+    (2+3i)^{2} &= (2)^{2} + 2 \cdot 2 \cdot 3i + (3i)^{2} \\
+               &= 4 + 12i - 9 \\
+               &= -5 + 12i.
+  \end{aligned}
+\]
+
+De même, pour $z$, $z^* = 2-3i$, appliquons l'identité remarquable correspondante :
+\[
+  \begin{aligned}
+    (2-3i)^{2} &= (2)^{2} - 2 \cdot 2 \cdot 3i + (3i)^{2} \\
+               &= 4 - 12i - 9 \\
+               &= -5 - 12i.
+  \end{aligned}
+\]
+
+Ainsi, l'exemple confirme l'application des identités remarquables dans le contexte des nombres complexes.\\
+\section*{\underline{\textbf{\textcolor{red}{II. Conjugué d'un Nombre Complexe }}}}
+
+Soit $z = a + ib$ un nombre complexe, où $a$ et $b$ sont des nombres réels, le conjugué de $z$, noté $\overline{z}$, est obtenu en changeant le signe de la partie imaginaire, c'est-à-dire $\overline{z} = a - ib$.
+
+\underline{\exemple}
+
+\underline{\textbf{\textcolor{red}{1 Définition}}}\
+
+Le conjugué d'un nombre complexe $z = a + ib$ est défini comme $\overline{z} = a - ib$.
+
+\underline{\exemple}
+
+Considérons le nombre complexe $w = 3 + 2i$. Le conjugué de $w$, noté $\overline{w}$, est obtenu en changeant le signe de la partie imaginaire : $\overline{w}=3-2i$.
+
+\underline{\textbf{\textcolor{red}{2 Propriétés}}}\
+
+Le conjugué d'un nombre complexe possède plusieurs propriétés intéressantes :
+\begin{itemize}
+\item[$\bullet$] Le conjugué du conjugué : $\overline{\overline{z}} = z$.
+\item[$\bullet$] La somme des conjugués est égale à la conjugaison d'une somme : $\overline{z_1 + z_2} = \overline{z_1} + \overline{z_2}$.
+\item[$\bullet$] Le conjugué du produit est égal au produit des conjugués : $\overline{z_1 \cdot z_2} = \overline{z_1} \cdot \overline{z_2}$.
+\item[$\bullet$] Le conjugué d'un quotient est égal au quotient des conjugués : $\overline{\left(\frac{z_1}{z_2}\right)} = \frac{\overline{z_1}}{\overline{z_2}}$, pour $z_2 \neq 0$.
+\item[$\bullet$] $p\in\mathbb{Z}$ $\overline{z^{p}} = \overline{z}^{p}$ 
+\item[$\bullet$] $z$ est réel si, et seulement si, $ \overline{z} = z $.
+\item[$\bullet$] $z$ est imaginaire pur si, et seulement si, $\overline{z} = -z$.
+\item[$\bullet$] $\mathcal{R}e(z)=\frac{z+\overline{z}}{2}$
+\item[$\bullet$] $\mathcal{I}m(z)=\frac{z-\overline{z}}{2i}$
+\end{itemize}
+
+Ces propriétés sont utiles dans divers calculs impliquant des nombres complexes.\\
+
+\underline{\exemple}
+
+Considérons deux nombres complexes $z_1 = 2 + 3i$ et $z_2 = 1 - 2i$. Calculons les conjugués et vérifions les propriétés :
+
+\begin{itemize}
+\item[$\bullet$] Le conjugué du conjugué : $\overline{\overline{z_1}} = \overline{2 - 3i} = 2 + 3i = z_1$.
+\item[$\bullet$] La somme des conjugués : $\overline{z_1 + z_2} = \overline{3 + i} = 3 - i = \overline{z_1} + \overline{z_2}$.
+\item[$\bullet$] Le produit des conjugués : $\overline{z_1 \cdot z_2} = \overline{8 + 5i} = 8 - 5i = \overline{z_1} \cdot \overline{z_2}$.
+\item[$\bullet$] Le conjugué du produit : $\overline{z_1 \cdot z_2} = \overline{-4 - 7i} = -4 + 7i = \overline{z_1} \cdot \overline{z_2}$.
+\item[$\bullet$] Le conjugué d'un rapport : $\overline{(\frac{z_1}{z_2})} = \frac{\overline{2 + 3i}}{\overline{1 - 2i}} = \frac{2 - 3i}{1 + 2i}$.
+\end{itemize}
+
+Ces exemples illustrent comment les propriétés du conjugué sont vérifiées dans différentes opérations avec des nombres complexes.\\
+
+
+\section*{\underline{\textbf{\textcolor{red}{III. Représentation graphique d'un Nombre Complexe }}}}
+
+La représentation graphique d'un nombre complexe se fait dans le plan complexe, où l'axe des abscisses correspond à la partie réelle et l'axe des ordonnées à la partie imaginaire.
+
+\subsection*{3.1 Plan Complexes}
+
+Le plan complexe est un plan muni d'un repère cartésien. Chaque nombre complexe $z = a + ib$ peut être associé à un point $(a, b)$ dans ce plan.
+
+Le nombre complexe z = a + i b est appelé l'affixe du point M. On peut donc noter sans ambiguïté M(z) le point M d'affixe z.\\
+z est l'affixe de M\\
+M est l'image de z\\
+On note $M(z)$\\
+\begin{tikzpicture}[scale=1.5]
+  % Axes
+  \draw[->] (-2,0) -- (2,0) node[right] {$\Re$};
+  \draw[->] (0,-2) -- (0,2) node[above] {$\Im$};
+  
+  % Points
+  \fill (1,1) circle[radius=2pt] node[above right] {$z = a + bi$};
+  
+  % Lignes auxiliaires
+  \draw[dashed] (1,0) -- (1,1) node[midway, right] {$b$};
+  \draw[dashed] (0,1) -- (1,1) node[midway, above] {$a$};
+\end{tikzpicture}
+\begin{tikzpicture}[scale=2]
+  % Axes
+  \draw[->] (-2,0) -- (2,0) node[right] {$\Re$};
+  \draw[->] (0,-2) -- (0,2) node[above] {$\Im$};
+  
+  % Repère gradué
+  \foreach \x in {-2,-1.5,...,2}
+    \draw (\x,-0.05) -- (\x,0.05) node[below=2pt] {\tiny $\x$};
+  \foreach \y in {-2,-1.5,...,2}
+    \draw (-0.05,\y) -- (0.05,\y) node[left=2pt] {\tiny $\y$};
+  
+  % Points
+  \fill (1,1) circle[radius=2pt] node[above right] {$z = a + bi$};
+  
+  % Lignes auxiliaires
+  \draw[dashed] (1,0) -- (1,1) node[midway, right] {$b$};
+  \draw[dashed] (0,1) -- (1,1) node[midway, above] {$a$};
+\end{tikzpicture}
+\\
+\begin{tikzpicture}[scale=2]
+  % Axes
+  \draw[->] (-2,0) -- (2,0) node[right] {$\Re$};
+  \draw[->] (0,-2) -- (0,2) node[above] {$\Im$};
+  
+  % Repère gradué
+  \foreach \x in {-2,-1.5,...,2}
+    \draw (\x,-0.05) -- (\x,0.05) node[below=2pt] {\tiny $\x$};
+  \foreach \y in {-2,-1.5,...,2}
+    \draw (-0.05,\y) -- (0.05,\y) node[left=2pt] {\tiny $\y i$};
+  
+  % Points
+  \fill (1,1) circle[radius=2pt] node[above right] {$z = a + bi$};
+  
+  % Lignes auxiliaires
+  \draw[dashed] (1,0) -- (1,1) node[midway, right] {$b$};
+  \draw[dashed] (0,1) -- (1,1) node[midway, above] {$a$};
+\end{tikzpicture}
+\\	
+\textbf{\textcolor{yellow}{Cette équivalence permet de considérer le plan orienté muni d'un repère orthonormé direct comme une « représentation » de l'ensemble des nombres complexes}}
+\subsection*{3.2 Représentation d'un Nombre Complexe}
+
+Soit $z = a + ib$ un nombre complexe. Le point associé dans le plan complexe est $(a, b)$.\\
+\textbf{\textcolor{yellow}{On peut également utiliser la forme polaire pour représenter un nombre complexe en utilisant sa distance au point d'origine et l'angle qu'il forme avec l'axe des abscisses}}.
+
+\underline{\exemple}
+
+Considérons le nombre complexe $z = 3 + 4i$. Le point associé dans le plan complexe est $(3, 4)$.\\
+Représente $z$ et $\overline{z}$\\
+Cette représentation graphique est utile pour visualiser les opérations sur les nombres complexes et interpréter géométriquement leurs propriétés.
+
+\section*{\underline{\textbf{\textcolor{red}{IV. Module d'un Nombre Complexe}}}}
+
+Le module d'un nombre complexe est une mesure de sa distance à l'origine dans le plan complexe. Soit $z = a + ib$ un nombre complexe, où $a$ et $b$ sont des nombres réels. Le module de $z$, noté $|z|$, est défini comme la distance entre le point représentant $z$ et l'origine $(0,0)$ dans le plan complexe.
+
+\subsection*{\underline{\textbf{\textcolor{red}{4.1 Définition  }}}}
+
+
+Le module d'un nombre complexe $z = a + ib$ est défini comme :
+\[ |z| = \sqrt{a^2 + b^2} \]
+
+\subsection*{\underline{\textbf{\textcolor{red}{4.2 Propriétés}}}}
+
+Le module d'un nombre complexe possède plusieurs propriétés importantes :
+
+\begin{itemize}
+\item[$\bullet$] Le module d'un conjugué : $|\overline{z}| = |z|$.
+\item[$\bullet$] Le module d'un produit : $|z_1 \cdot z_2| = |z_1| \cdot |z_2|$.
+\item[$\bullet$] Le module d'une puissance : $|z^n| = |z|^n$.
+\item[$\bullet$] Le module d'un conjugué : $z\overline{z} = |z|=\sqrt{a^2 + b^2}$.
+\item[$\bullet$] Le module d'un conjugué : $z\overline{z} = |z|=\sqrt{a^2 + b^2}$.
+\item[$\bullet$] Inégalité triangulaire : $|\frac{z_1}{z_2}|= \frac{|z_1|}{|z_2|}$.
+\item[$\bullet$] $|z_A - z_B| =AB$.
+\end{itemize}
+
+\underline{\exemple}
+
+Soit $z = 3 + 4i$. Calculons son module $|z|$.puis $|z^{5}|$.
+
+\subsection*{Solution}
+
+\[ |z| = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5 \]
+
+Le module de $z$ est donc $5$.\\
+\[ |z^{5}| =|z|^{5}=(\sqrt{3^2 + 4^2})^{5} = (\sqrt{9 + 16})^{5} = (\sqrt{25})^{5} = (\sqrt{5})^{4+1} = 25\sqrt{5} \]
+%Les propriétés du module sont essentielles dans de nombreux calculs et démonstrations impliquant des nombres complexes. Elles fournissent une mesure de la taille d'un nombre complexe dans le plan complexe.\\
+\subsection*{Exercice d'application}
+$z_{1}=-\sqrt{3}+i$ ; $z_{2}=2(-\sqrt{3}+i)$ ; $z_{3}=(-\sqrt{3}+i)(1+i)^{2}$ ; 
+$z_{4}=\frac{(-\sqrt{3}+i)^{3}}{(1+i)^{2}}$ ; $z_{4}=\frac{(1+i)^{3}}{3+2i}$
+1.Calcule le module de ces nombres complexe\\
+2.Le plan est muni d'un repère orthonormal $(O,\vec{u},\vec{v})$.
+Soit A, B et C les affixes respectives $1-3i$ ; $4+5i$ ; $-3+2i$.\\
+Calculer: AB ; AC ; BC.
+\subsection*{Résolution}
+\section*{\underline{\textbf{\textcolor{red}{V. Argument et forme trigonométrique d'un nombre complexe non nul }}}}
+\subsection*{\underline{\textbf{\textcolor{red}{5.1 Définition}}}}
+Soit z un nombre complexe non nul sur le repère othonormal $(O,\vec{u},\vec{v})$. L'argument du nombre complexe $z = a + ib$ non nul est l'angle en radian que le vecteur correspondant à $z$ forme avec l'axe des abscisses dans le plan complexe.\\ On note généralement $arg(z)=mes(\widehat{\vec{u},\vec{OM}})$\\
+En notant $\theta$ on a :$\cos(\theta)=\frac{\mathcal{R}e(z)}{|z|}$ et 
+$\sin(\theta)=\frac{\mathcal{I}m(z)}{|z|}$\\
+\underline{\textbf{\textcolor{red}{Rappelle}}}\\
+Tableau trigonométrique\\
+Cercles trigonométrie\\
+\subsection*{\underline{\textbf{\textcolor{red}{5.2 Propiétés}}}}
+Soit z et z' deux nombrs complexes ,et $n\in \mathbb{N}$\\
+\begin{itemize}
+\item[$\bullet$] $\text{{arg}}(z_1 \cdot z_2) = \text{{arg}}(z_1) + \text{{arg}}(z_2)[2\pi]$\\
+\item[$\bullet$] $\text{{arg}}(\frac{z_1}{z_2}) = \text{{arg}}(z_1) - \text{{arg}}(z_2)[2\pi]$\\
+\item[$\bullet$] $\text{{arg}}(\frac{1}{z_2}) = - \text{{arg}}(z_2)[2\pi]$\\
+\item[$\bullet$] $\text{{arg}}((z_2)^{n}) = n\text{{arg}}(z_2)[2\pi]$\\
+\item[$\bullet$] $\text{{arg}}(-z_2) = \text{{arg}}(z_2)+\pi[2\pi]$\\
+\item[$\bullet$] $\text{{arg}}(\overline{z}) = -\text{{arg}}(z)[2\pi]$\\
+\item[$\bullet$] soit $z_A$ ; $z_B$ ; $z_C$ les affixes respectives des points A, B et C les image de ces complexes dans le repère orthonormal $(O,\vec{u},\vec{v})$. tel que $z_A \neq z_B$ ; 
+$z_C \neq z_A$ $arg(z_A-z_B)=(\vec{u},\vec{AB})$
+\item[$\bullet$] $arg(\frac{z_C-z_A}{z_B-z_A})=(\widehat{\vec{AB},\vec{AC}})$
+\end{itemize}
+
+\subsubsection*{\textbf{1er cas :} $a > 0$}
+
+Si la partie réelle $a$ est positive, l'argument $\theta$ est simplement l'arc tangente de la partie imaginaire $b$ divisée par la partie réelle $a$. Mathématiquement, cela peut être exprimé comme :
+
+\[ \theta = \arctan\left(\frac{b}{a}\right) \]
+
+\subsubsection*{\textbf{2ème cas :} $a < 0$}
+
+Si la partie réelle $a$ est négative, l'argument $\theta$ est ajusté en ajoutant ou soustrayant $\pi$ (180 degrés) selon le signe de la partie imaginaire $b$. Mathématiquement, cela peut être formulé comme :
+
+\[ \theta = \arctan\left(\frac{b}{a}\right) + \pi \quad \text{si } b \geq 0 \]
+\[ \theta = \arctan\left(\frac{b}{a}\right) - \pi \quad \text{si } b < 0 \]
+\subsection*{Exercice d'application}
+Déterminer l'argument des nombres complexes suivnats\\
+$z_{1}=-\sqrt{3}+i$ ; $z_{2}=2(-\sqrt{3}+i)$ ; $z_{3}=(-\sqrt{3}+i)(1+i)^{2}$ ; 
+$z_{4}=\frac{(-\sqrt{3}+i)^{3}}{(1+i)^{2}}$ ; $z_{4}=\frac{(1+i)^{3}}{3+2i}$\\
+\underline{\textbf{\textcolor{red}{Résolution  }}}\\
+\underline{\textbf{\textcolor{red}{Remarque}}}\\
+\begin{itemize}
+\item[$\bullet$]Si $arg(z)=0$ alors z est un réel positif
+\item[$\bullet$]Si z est une réel négatif alors $arg(z)=\pi$
+\item[$\bullet$]Si $z=ib$ (imaginaire pur) alors :\\
+Si $b>0$ alors $arg(z)=\frac{\pi}{2}$\\
+Si $b<0$ alors $arg(z)=\frac{-\pi}{2}$
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{5.1. Interprétation de $|\frac{d-c}{b-a}|$}}}}
+Soit a,b,c et d des nombres complexes qui ont comme image A; B; C; D tel que $a \neq b$ et $c \neq d$\\
+$|\frac{d-c}{b-a}|=\frac{CD}{AB}$\\
+$arg(\frac{d-c}{b-a})=(\vec{AB},\vec{CD})$\\
+\underline{\textbf{\textcolor{red}{Réel}}}\\
+Si $\frac{d-c}{b-a} \in \mathbb{R}^{*}_{+}$ alors $\widehat{(\vec{AB},\vec{CD})}=0 [2\pi]$\\ 
+Si $\frac{d-c}{b-a} \in \mathbb{R}^{*}_{-}$ alors $\widehat{(\vec{AB},\vec{CD})}=\pi [2\pi]$\\
+\underline{\textbf{\textcolor{red}{imaginaire pur}}}\\
+Si $\frac{d-c}{b-a} \in i\mathbb{R}^{*}_{+}$ alors $\widehat{(\vec{AB},\vec{CD})}=\frac{\pi}{2} [2\pi]$\\ 
+Si $\frac{d-c}{b-a} \in i\mathbb{R}^{*}_{-}$ alors $\widehat{(\vec{AB},\vec{CD})}=-\frac{\pi}{2} [2\pi]$\\
+\underline{\exemple}\\
+Soit $Z=\frac{iz+2}{z+i}$ un nombre complexe\\
+Détermine l'ensemble des points M tel que: $|Z'|=1$ puis $|Z'|=2$\\
+\underline{\textbf{\textcolor{red}{Solution}}}\\
+$|Z'|=|\frac{i(z-2i)}{z+i}|$\\
+Soit $M(z)$ ; $A(2i)$ et $B(-i)$ alos on a:\\
+$|Z'|=|\frac{i(z_{M}-z_{B})}{z_{M}-z_{A}}|=\frac{|i|\times|(z_{M}-z_{B})|}{|z_{M}-z_{A}|}=|\frac{MA}{MB}$\\
+Si $|Z'|=1$ alors $\frac{MA}{MB}=1 \Longrightarrow MA=MB$\\
+L'ensemble des points $M$ tel que  $|Z'|=1$ est la médiatrice $[AB]$\\
+\subsection*{\underline{\textbf{\textcolor{red}{5.2 Forme trigonométrique d'un nombre Complexe}}}}
+Soit z un nombre complexe non nul d'argument $\theta$. On appelle forme trigonométrique d'un nombre complexe l'écriture suivante:\\
+$z=|z|(cos(\theta)+isin(\theta))$\\
+\underline{\exemple}\\
+Donne la forme trigonométrique des nombres complexes suivantes:\\
+$z_{1}=-\sqrt{3}+i$ ; $z_{2}=1+i$ ; $\frac{-\sqrt{2}}{1-i}$\\
+\underline{\textbf{\textcolor{red}{Solution}}}\\
+\subsection*{\underline{\textbf{\textcolor{red}{5.2 Formule de Moivre }}}}
+A partir de la forme trigonométrique d'un nombre complexe on peut déduire la formule de Moivre.\\
+$\forall x \in \mathbb{R}$ et $n \in \mathbb{Z}$,\\
+$(cos(x)+isin(x))^{n}=cos(nx)+isin(nx)$\\
+$(cos(x)-isin(x))^{n}=cos(nx)-isin(nx)$\\
+\underline{\textbf{\textcolor{red}{Exercice d'application  }}}\\
+
+\underline{\textbf{\textcolor{red}{Résolution  }}}\\
+ 
+\underline{\textbf{\textcolor{red}{Application : Expression de cosnx et sinnx en fonction de cosx ou sinx  }}}\\
+
+\underline{\textbf{\textcolor{red}{Exercice d'application  }}}\\
+
+\underline{\textbf{\textcolor{red}{ }}}\\
+\section*{\underline{\textbf{\textcolor{red}{VI. Forme exponentielle d'un nombre complexe non nul}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{6.1 Définition }}}}
+ Soit z un nombre complexe non nul d'argument $\theta$. On appelle forme exponentielle d'un nombre complexe l'écriture : $z=|z|e^{i\theta}$\\
+\subsection*{\underline{\textbf{\textcolor{red}{6.2 Propriétés }}}}
+Soit $\theta$,$\theta_{1}$ et $\theta_{2}$ deux nombres réels et $n\in\mathbb{Z}$\\%, $z\in\mathbb{C}$ et $|z|=1$\\
+$z=e^{i\theta_{1}} \times e^{i\theta_{2}} = e^{i(\theta_{1}+\theta_{2})}$\\
+$z=\frac{e^{i\theta_{1}}}{e^{i\theta_{2}}} = e^{i(\theta_{1}-\theta_{2})}$\\
+$z=\frac{1}{e^{i\theta}} = e^{-i\theta}$\\
+$z^{n}=(e^{i\theta_{1}})^{n}=e^{in\theta_{1}}$\\
+\underline{\textbf{\textcolor{red}{Exercice d'application  }}}\\
+Donne la forme exponentielle des nombres complexes suivants:\\
+$z_{1}=-\sqrt{3}+i$ ; $z_{2}=-\sqrt{6}+i\sqrt{2}$ et $z_{3}=1+i\sqrt{3}$\\
+\underline{\textbf{\textcolor{red}{Correction}}}\\
+\subsection*{\underline{\textbf{\textcolor{red}{6.3 Formule d'Euler }}}}
+A partir de la forme exponentielle d'un nombre complexe on peut déduire les formules\\ d'Euler.\\
+$cos(x)$=$\frac{e^{ix}+e^{-ix}}{2}$\\
+$sin(x)$=$\frac{e^{ix}-e^{-ix}}{2i}$\\
+\subsection*{\underline{\textbf{\textcolor{red}{6.4 Linéariser des expressions trigonométriques:}}}}
+Formules de linéarisations\\
+$cos^{n}(x)=(\frac{e^{ix}+e^{-ix}}{2})^{n}$\\
+$sin^{n}(x)=(\frac{e^{ix}-e^{-ix}}{2i})^{n}$\\
+\underline{\exemple}\\
+Linéariser $sin^{3}(x)$ et $cos^{3}(x)$\\
+\underline{\textbf{\textcolor{red}{Solution}}}\\
+$cos^{3}(x)=\frac{1}{4}cos(3x)+\frac{3}{4}cos(x)$\\
+$sin^{3}(x)=\frac{-1}{4}sin(3x)+\frac{3}{4}sin(x)$
+\subsection*{\underline{\textbf{\textcolor{red}{6.5 Déterminer les racines nièmes $(n\geq2)$ de l'unité:}}}}
+\underline{\textbf{\textcolor{red}{6.1.1 Définition}}}\\
+soit n un entier naturel non nul et $z$ un nombre complexe non nul.\\ L'écriture 
+$z^{n}=\mathcal{Z}$\\
+\underline{\textbf{\textcolor{red}{6.1.2 Racine nième d'un nombre complexe}}}\\
+Soit $U \in \mathbb{C}$ et n un entier naturel différent de zéro.\\
+L'équation $z^{n}=U$, $\theta=arg(z)$, a n solutions de la forme.\\
+$z_{k}=\sqrt[n]{|U|}e^{i(\frac{\theta+2k\pi}{n})}$ avec $ 0\leq k \leq n-1 $.\\
+\underline{\exemple}\\
+Résoudre l'equation $z^{4}=\sqrt{2}+\sqrt{2}i$\\
+$z=\sqrt{2}+\sqrt{2}i \Longrightarrow z_{k}=\sqrt[4]{|z|}e^{i(\frac{\theta+2k\pi)}{4}}$ avec 
+$\theta=\frac{\pi}{4}$\\
+\underline{\textbf{\textcolor{red}{6.1.3 Propiétés}}}\\
+Soit $z_{k}=\sqrt[n]{|z|}e^{i(\frac{\theta+2k\pi)}{n}}$\\
+Si $M_{0}$ ; $M_{1}$ ; $M_{2}$ ; $M_{3}$ ; $M_{4}$ ; $M_{5}$ ; ... ; $M_{k-1}$ sont les images de $z_{0}$ ; $z_{1}$ ; $z_{2}$ ; $z_{3}$ ; $z_{4}$ ; $z_{5}$ ; ... ; $z_{k-1}$
+\subsection*{\underline{\textbf{\textcolor{red}{6.6 Résoudre dans $\mathbb{C}$ les équations du $2^{nd}$ degré à coefficients complexes:}}}}
+\end{document}

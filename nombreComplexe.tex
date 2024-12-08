@@ -33,7 +33,27 @@
   \refstepcounter{exemple}%
   \textbf{\textcolor{green}{Exemple \theexemple :}} \ignorespaces
 }
-% Commande pour ajouter du texte en arrière-plan
+%---------------------------------------
+\definecolor{myorange}{rgb}{1.0, 0.8, 0.0}
+
+% Définir un compteur pour les exercices d'application
+\newcounter{exerciceapp}
+
+% Définir la commande pour afficher un exercice d'application numéroté
+\newcommand{\exerciceapp}{%
+  \refstepcounter{exerciceapp}%
+  \textbf{\textcolor{myorange}{Exercice d'application \theexerciceapp :}} \ignorespaces
+}
+%--------------------------------------
+% Définir un compteur pour les exercices d'application
+\newcounter{correction}
+
+% Définir la commande pour afficher un correction exercice d'application numéroté
+\newcommand{\correction}{%
+  \refstepcounter{correction}%
+  \textbf{\textcolor{myorange}{Correction \thecorrection :}} \ignorespaces
+}
+%--------------------------------------
 % Commande pour ajouter du texte en arrière-plan
 \AddToShipoutPicture{
     \AtTextCenter{%
@@ -258,8 +278,6 @@ Considérons le nombre complexe $z = 3 + 4i$.
 Le point associé dans le plan complexe est $(3, 4)$.\\
 Représenter $z$ et $\overline{z}$\\
 
-\textbf{NB} Cette représentation graphique est utile pour visualiser les opérations sur les nombres complexes et interpréter géométriquement leurs propriétés.
-
 \section*{\underline{\textbf{\textcolor{red}{IV. Module d'un Nombre Complexe}}}}
 \subsection*{\underline{\textbf{\textcolor{red}{1.Définition  }}}} 
 Le module de $z$, noté $|z|$, est défini comme la distance entre le point représentant $z$ et l'origine $(0,0)$ dans le plan complexe.
@@ -276,39 +294,42 @@ Le module d'un nombre complexe possède plusieurs propriétés importantes :
 \item[$\bullet$] Le module d'un produit : $|z_1 \cdot z_2| = |z_1| \cdot |z_2|$.
 \item[$\bullet$] Le module d'une puissance : $|z^n| = |z|^n$.
 \item[$\bullet$] Le module d'un conjugué : $z\overline{z} = |z|=\sqrt{a^2 + b^2}$.
-\item[$\bullet$] Le module d'un conjugué : $z\overline{z} = |z|=\sqrt{a^2 + b^2}$.
 \item[$\bullet$] Inégalité triangulaire : Pour tous \(z_1, z_2 \in \mathbb{C}\),\(|z_1 + z_2| \leq |z_1| + |z_2|\)
-\item[$\bullet$] $|z_A - z_B| =AB$.
+\item[$\bullet$] Pour deux points \(A\) et \(B\) d’affixes respectives \(z_A\) et \(z_B\), la distance \(AB\) entre ces points est donnée par : $|z_A - z_B| =AB$.
 \end{itemize}
 
 \underline{\exemple}
 
 Soit $z = 3 + 4i$. Calculons son module $|z|$.puis $|z^{5}|$.
 
-\subsection*{Solution}
-
 \[ |z| = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5 \]
 
 Le module de $z$ est donc $5$.\\
 \[ |z^{5}| =|z|^{5}=(\sqrt{3^2 + 4^2})^{5} = (\sqrt{9 + 16})^{5} = (\sqrt{25})^{5} = (\sqrt{5})^{4+1} = 25\sqrt{5} \]
 %Les propriétés du module sont essentielles dans de nombreux calculs et démonstrations impliquant des nombres complexes. Elles fournissent une mesure de la taille d'un nombre complexe dans le plan complexe.\\
-\subsection*{Exercice d'application}
+
+\textbf{\exerciceapp}
+
 $z_{1}=-\sqrt{3}+i$ ; $z_{2}=2(-\sqrt{3}+i)$ ; $z_{3}=(-\sqrt{3}+i)(1+i)^{2}$ ; 
 $z_{4}=\frac{(-\sqrt{3}+i)^{3}}{(1+i)^{2}}$ ; $z_{4}=\frac{(1+i)^{3}}{3+2i}$
-1.Calcule le module de ces nombres complexe\\
+
+1.Calcule le module de ces nombres complexe
+
 2.Le plan est muni d'un repère orthonormal $(O,\vec{u},\vec{v})$.
-Soit A, B et C les affixes respectives $1-3i$ ; $4+5i$ ; $-3+2i$.\\
+
+Soit A, B et C les affixes respectives $1-3i$ ; $4+5i$ ; $-3+2i$.
+
 Calculer: AB ; AC ; BC.
-\subsection*{Résolution}
-\section*{\underline{\textbf{\textcolor{red}{V. Argument et forme trigonométrique d'un nombre complexe non nul }}}}
-\subsection*{\underline{\textbf{\textcolor{red}{1 Définition}}}}
+
+\section*{\underline{\textbf{\textcolor{red}{V. Argument d'un nombre complexe non nul }}}}
+\subsection*{\underline{\textbf{\textcolor{red}{1.Définition}}}}
 Soit z un nombre complexe non nul sur le repère othonormal $(O,\vec{u},\vec{v})$. L'argument du nombre complexe $z = a + ib$ non nul est l'angle en radian que le vecteur correspondant à $z$ forme avec l'axe des abscisses dans le plan complexe.\\ On note généralement $arg(z)=mes(\widehat{\vec{u},\vec{OM}})$\\
-En notant $\theta$ on a :$\cos(\theta)=\frac{\mathcal{R}e(z)}{|z|}$ et 
+En notant $\theta$ on a : $\cos(\theta)=\frac{\mathcal{R}e(z)}{|z|}$ et 
 $\sin(\theta)=\frac{\mathcal{I}m(z)}{|z|}$\\
 \underline{\textbf{\textcolor{red}{Rappelle}}}\\
 Tableau trigonométrique\\
 Cercles trigonométrie\\
-\subsection*{\underline{\textbf{\textcolor{red}{2 Propiétés}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{2.Propiétés}}}}
 Soit z et z' deux nombrs complexes ,et $n\in \mathbb{N}$\\
 \begin{itemize}
 \item[$\bullet$] $\text{{arg}}(z_1 \cdot z_2) = \text{{arg}}(z_1) + \text{{arg}}(z_2)[2\pi]$\\
@@ -322,11 +343,12 @@ $z_C \neq z_A$ $arg(z_A-z_B)=(\vec{u},\vec{AB})$
 \item[$\bullet$] $arg(\frac{z_C-z_A}{z_B-z_A})=(\widehat{\vec{AB},\vec{AC}})$
 \end{itemize}
 
-\subsection*{Exercice d'application}
+\textbf{\exerciceapp}
+
 Déterminer l'argument des nombres complexes suivnats\\
 $z_{1}=-\sqrt{3}+i$ ; $z_{2}=2(-\sqrt{3}+i)$ ; $z_{3}=(-\sqrt{3}+i)(1+i)^{2}$ ; 
 $z_{4}=\frac{(-\sqrt{3}+i)^{3}}{(1+i)^{2}}$ ; $z_{4}=\frac{(1+i)^{3}}{3+2i}$\\
-\underline{\textbf{\textcolor{red}{Résolution  }}}\\
+\textbf{\correction}\\
 \underline{\textbf{\textcolor{red}{Remarque}}}\\
 \begin{itemize}
 \item[$\bullet$]Si $arg(z)=0$ alors z est un réel positif
@@ -335,7 +357,95 @@ $z_{4}=\frac{(-\sqrt{3}+i)^{3}}{(1+i)^{2}}$ ; $z_{4}=\frac{(1+i)^{3}}{3+2i}$\\
 Si $b>0$ alors $arg(z)=\frac{\pi}{2}$\\
 Si $b<0$ alors $arg(z)=\frac{-\pi}{2}$
 \end{itemize}
-\subsection*{\underline{\textbf{\textcolor{red}{3. Interprétation de $|\frac{d-c}{b-a}|$}}}}
+
+\section*{\underline{\textbf{\textcolor{red}{VI. Forme d'un nombre complexe }}}}
+\subsection*{\underline{\textbf{\textcolor{red}{1. Forme algébrique d'un nombre Complexe}}}}
+Soit $a$ et $b$ des réels, l'écriture $z=a+ib$ est appélé forme algébrique du nombre complexe.
+
+\underline{\exemple}\\
+Donner la forme algébrique dans chaque cas
+\subsection*{\underline{\textbf{\textcolor{red}{2. Forme trigonométrique d'un nombre Complexe}}}}
+Soit z un nombre complexe non nul d'argument $\theta$. On appelle forme trigonométrique d'un nombre complexe l'écriture suivante:\\
+$z=|z|(cos(\theta)+isin(\theta))$\\
+\underline{\exemple}\\
+Donner la forme trigonométrique des nombres complexes suivantes:\\
+$z_{1}=-\sqrt{3}+i$ ; $z_{2}=1+i$ ; $\frac{-\sqrt{2}}{1-i}$\\
+\underline{\textbf{\textcolor{red}{Solution}}}\\
+\subsection*{\underline{\textbf{\textcolor{red}{3. Forme exponentielle d'un nombre complexe non nul}}}}
+\subsection*{\underline{\textbf{\textcolor{blue}{a. Définition }}}}
+ Soit z un nombre complexe non nul d'argument $\theta$.
+ 
+On appelle forme exponentielle d'un nombre complexe l'écriture : $z=|z|e^{i\theta}$\\
+\subsection*{\underline{\textbf{\textcolor{blue}{b. Propriétés }}}}
+Soit $\theta$,$\theta_{1}$ et $\theta_{2}$ deux nombres réels et $n\in\mathbb{Z}$\\%, $z\in\mathbb{C}$ et $|z|=1$\\
+$z=e^{i\theta_{1}} \times e^{i\theta_{2}} = e^{i(\theta_{1}+\theta_{2})}$\\
+$z=\frac{e^{i\theta_{1}}}{e^{i\theta_{2}}} = e^{i(\theta_{1}-\theta_{2})}$\\
+$z=\frac{1}{e^{i\theta}} = e^{-i\theta}$\\
+$z^{n}=(e^{i\theta_{1}})^{n}=e^{in\theta_{1}}$\\
+\textbf{\exerciceapp}\\
+Donne la forme exponentielle des nombres complexes suivants:\\
+$z_{1}=-\sqrt{3}+i$ ; $z_{2}=-\sqrt{6}+i\sqrt{2}$ et $z_{3}=1+i\sqrt{3}$\\
+\textbf{\correction}\\
+\section*{\underline{\textbf{\textcolor{red}{VII.Formule de Moivre-Formule d'Euler }}}}
+\subsection*{\underline{\textbf{\textcolor{red}{1.Formule de Moivre }}}}
+A partir de la forme trigonométrique d'un nombre complexe on peut déduire la formule de Moivre.\\
+$\forall x \in \mathbb{R}$ et $n \in \mathbb{Z}$,\\
+$(cos(x)+isin(x))^{n}=cos(nx)+isin(nx)$\\
+$(cos(x)-isin(x))^{n}=cos(nx)-isin(nx)$\\
+\underline{\exemple}
+
+\subsection*{\underline{\textbf{\textcolor{red}{2.Formule d'Euler}}}}
+A partir de la forme exponentielle d'un nombre complexe on peut déduire les formules\\ d'Euler.\\
+$cos(x)$=$\frac{e^{ix}+e^{-ix}}{2}$\\
+$sin(x)$=$\frac{e^{ix}-e^{-ix}}{2i}$\\
+\subsection*{\underline{\textbf{\textcolor{red}{3.Linéariser des expressions trigonométriques:}}}}
+Formules de linéarisations\\
+$cos^{n}(x)=(\frac{e^{ix}+e^{-ix}}{2})^{n}$\\
+$sin^{n}(x)=(\frac{e^{ix}-e^{-ix}}{2i})^{n}$\\
+\underline{\exemple}\\
+Linéariser $sin^{3}(x)$ et $cos^{3}(x)$\\
+\underline{\textbf{\textcolor{red}{Solution}}}\\
+$cos^{3}(x)=\frac{1}{4}cos(3x)+\frac{3}{4}cos(x)$\\
+$sin^{3}(x)=\frac{-1}{4}sin(3x)+\frac{3}{4}sin(x)$
+\subsection*{\underline{\textbf{\textcolor{red}{4.Expression de cosnx et sinnx en fonction de cosx ou sinx }}}}
+\section*{\underline{\textbf{\textcolor{red}{VIII.Résolution d'équations dans $\mathbb{C}$}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{1.Déterminer les racines nièmes $(n\geq2)$ d'un complexe:}}}}
+\underline{\textbf{\textcolor{blue}{a. Racine n-ième de l’unité}}}
+Les \textbf{racines n-ièmes de l’unité} sont les solutions complexes de l’équation suivante :
+\[
+z^n = 1,
+\]
+où \(n \in \mathbb{N}^*\) est un entier naturel non nul.
+
+Elles sont appelées ainsi car leur module est toujours égal à \(1\), ce qui signifie qu’elles appartiennent au cercle unité dans le plan complexe.
+
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+\paragraph{\underline{\textbf{\textcolor{blue}{Formule générale :}}}}
+Les \(n\) racines n-ièmes de l’unité sont données par :
+\[
+z_k = e^{i\frac{2k\pi}{n}} = \cos\left(\frac{2k\pi}{n}\right) + i\sin\left(\frac{2k\pi}{n}\right),
+\]
+où \(k \in \{0, 1, 2, \ldots, n-1\}\).
+
+\textbf{Interprétation :} Chaque \(z_k\) est une rotation par un angle \(\frac{2k\pi}{n}\) autour de l’origine, dans le sens trigonométrique (sens anti-horaire). 
+
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+\underline{\textbf{\textcolor{blue}{b.Racine nième d'un nombre complexe}}}\\
+Soit $U \in \mathbb{C}$ et n un entier naturel différent de zéro.\\
+L'équation $z^{n}=U$, $\theta=arg(z)$, a n solutions de la forme.\\
+$z_{k}=\sqrt[n]{|U|}e^{i(\frac{\theta+2k\pi}{n})}$ avec $ 0\leq k \leq n-1 $.\\
+\underline{\exemple}\\
+Résoudre l'equation $z^{4}=\sqrt{2}+\sqrt{2}i$\\
+$z=\sqrt{2}+\sqrt{2}i \Longrightarrow z_{k}=\sqrt[4]{|z|}e^{i(\frac{\theta+2k\pi)}{4}}$ avec 
+$\theta=\frac{\pi}{4}$\\
+\underline{\textbf{\textcolor{red}{6.1.3 Propiétés}}}\\
+Soit $z_{k}=\sqrt[n]{|z|}e^{i(\frac{\theta+2k\pi)}{n}}$\\
+Si $M_{0}$ ; $M_{1}$ ; $M_{2}$ ; $M_{3}$ ; $M_{4}$ ; $M_{5}$ ; ... ; $M_{k-1}$ sont les images de $z_{0}$ ; $z_{1}$ ; $z_{2}$ ; $z_{3}$ ; $z_{4}$ ; $z_{5}$ ; ... ; $z_{k-1}$
+\subsection*{\underline{\textbf{\textcolor{red}{6.6 Résoudre dans $\mathbb{C}$ les équations du $2^{nd}$ degré à coefficients complexes:}}}}
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\subsection*{\underline{\textbf{\textcolor{red}{Interprétation de $|\frac{d-c}{b-a}|$}}}}
 Soit a,b,c et d des nombres complexes qui ont comme image A; B; C; D tel que $a \neq b$ et $c \neq d$\\
 $|\frac{d-c}{b-a}|=\frac{CD}{AB}$\\
 $arg(\frac{d-c}{b-a})=(\vec{AB},\vec{CD})$\\
@@ -354,67 +464,4 @@ Soit $M(z)$ ; $A(2i)$ et $B(-i)$ alos on a:\\
 $|Z'|=|\frac{i(z_{M}-z_{B})}{z_{M}-z_{A}}|=\frac{|i|\times|(z_{M}-z_{B})|}{|z_{M}-z_{A}|}=|\frac{MA}{MB}$\\
 Si $|Z'|=1$ alors $\frac{MA}{MB}=1 \Longrightarrow MA=MB$\\
 L'ensemble des points $M$ tel que  $|Z'|=1$ est la médiatrice $[AB]$\\
-\subsection*{\underline{\textbf{\textcolor{red}{5.2 Forme trigonométrique d'un nombre Complexe}}}}
-Soit z un nombre complexe non nul d'argument $\theta$. On appelle forme trigonométrique d'un nombre complexe l'écriture suivante:\\
-$z=|z|(cos(\theta)+isin(\theta))$\\
-\underline{\exemple}\\
-Donne la forme trigonométrique des nombres complexes suivantes:\\
-$z_{1}=-\sqrt{3}+i$ ; $z_{2}=1+i$ ; $\frac{-\sqrt{2}}{1-i}$\\
-\underline{\textbf{\textcolor{red}{Solution}}}\\
-\subsection*{\underline{\textbf{\textcolor{red}{5.2 Formule de Moivre }}}}
-A partir de la forme trigonométrique d'un nombre complexe on peut déduire la formule de Moivre.\\
-$\forall x \in \mathbb{R}$ et $n \in \mathbb{Z}$,\\
-$(cos(x)+isin(x))^{n}=cos(nx)+isin(nx)$\\
-$(cos(x)-isin(x))^{n}=cos(nx)-isin(nx)$\\
-\underline{\textbf{\textcolor{red}{Exercice d'application  }}}\\
-
-\underline{\textbf{\textcolor{red}{Résolution  }}}\\
- 
-\underline{\textbf{\textcolor{red}{Application : Expression de cosnx et sinnx en fonction de cosx ou sinx  }}}\\
-
-\underline{\textbf{\textcolor{red}{Exercice d'application  }}}\\
-
-\underline{\textbf{\textcolor{red}{ }}}\\
-\section*{\underline{\textbf{\textcolor{red}{VI. Forme exponentielle d'un nombre complexe non nul}}}}
-\subsection*{\underline{\textbf{\textcolor{red}{6.1 Définition }}}}
- Soit z un nombre complexe non nul d'argument $\theta$. On appelle forme exponentielle d'un nombre complexe l'écriture : $z=|z|e^{i\theta}$\\
-\subsection*{\underline{\textbf{\textcolor{red}{6.2 Propriétés }}}}
-Soit $\theta$,$\theta_{1}$ et $\theta_{2}$ deux nombres réels et $n\in\mathbb{Z}$\\%, $z\in\mathbb{C}$ et $|z|=1$\\
-$z=e^{i\theta_{1}} \times e^{i\theta_{2}} = e^{i(\theta_{1}+\theta_{2})}$\\
-$z=\frac{e^{i\theta_{1}}}{e^{i\theta_{2}}} = e^{i(\theta_{1}-\theta_{2})}$\\
-$z=\frac{1}{e^{i\theta}} = e^{-i\theta}$\\
-$z^{n}=(e^{i\theta_{1}})^{n}=e^{in\theta_{1}}$\\
-\underline{\textbf{\textcolor{red}{Exercice d'application  }}}\\
-Donne la forme exponentielle des nombres complexes suivants:\\
-$z_{1}=-\sqrt{3}+i$ ; $z_{2}=-\sqrt{6}+i\sqrt{2}$ et $z_{3}=1+i\sqrt{3}$\\
-\underline{\textbf{\textcolor{red}{Correction}}}\\
-\subsection*{\underline{\textbf{\textcolor{red}{6.3 Formule d'Euler }}}}
-A partir de la forme exponentielle d'un nombre complexe on peut déduire les formules\\ d'Euler.\\
-$cos(x)$=$\frac{e^{ix}+e^{-ix}}{2}$\\
-$sin(x)$=$\frac{e^{ix}-e^{-ix}}{2i}$\\
-\subsection*{\underline{\textbf{\textcolor{red}{6.4 Linéariser des expressions trigonométriques:}}}}
-Formules de linéarisations\\
-$cos^{n}(x)=(\frac{e^{ix}+e^{-ix}}{2})^{n}$\\
-$sin^{n}(x)=(\frac{e^{ix}-e^{-ix}}{2i})^{n}$\\
-\underline{\exemple}\\
-Linéariser $sin^{3}(x)$ et $cos^{3}(x)$\\
-\underline{\textbf{\textcolor{red}{Solution}}}\\
-$cos^{3}(x)=\frac{1}{4}cos(3x)+\frac{3}{4}cos(x)$\\
-$sin^{3}(x)=\frac{-1}{4}sin(3x)+\frac{3}{4}sin(x)$
-\subsection*{\underline{\textbf{\textcolor{red}{6.5 Déterminer les racines nièmes $(n\geq2)$ de l'unité:}}}}
-\underline{\textbf{\textcolor{red}{6.1.1 Définition}}}\\
-soit n un entier naturel non nul et $z$ un nombre complexe non nul.\\ L'écriture 
-$z^{n}=\mathcal{Z}$\\
-\underline{\textbf{\textcolor{red}{6.1.2 Racine nième d'un nombre complexe}}}\\
-Soit $U \in \mathbb{C}$ et n un entier naturel différent de zéro.\\
-L'équation $z^{n}=U$, $\theta=arg(z)$, a n solutions de la forme.\\
-$z_{k}=\sqrt[n]{|U|}e^{i(\frac{\theta+2k\pi}{n})}$ avec $ 0\leq k \leq n-1 $.\\
-\underline{\exemple}\\
-Résoudre l'equation $z^{4}=\sqrt{2}+\sqrt{2}i$\\
-$z=\sqrt{2}+\sqrt{2}i \Longrightarrow z_{k}=\sqrt[4]{|z|}e^{i(\frac{\theta+2k\pi)}{4}}$ avec 
-$\theta=\frac{\pi}{4}$\\
-\underline{\textbf{\textcolor{red}{6.1.3 Propiétés}}}\\
-Soit $z_{k}=\sqrt[n]{|z|}e^{i(\frac{\theta+2k\pi)}{n}}$\\
-Si $M_{0}$ ; $M_{1}$ ; $M_{2}$ ; $M_{3}$ ; $M_{4}$ ; $M_{5}$ ; ... ; $M_{k-1}$ sont les images de $z_{0}$ ; $z_{1}$ ; $z_{2}$ ; $z_{3}$ ; $z_{4}$ ; $z_{5}$ ; ... ; $z_{k-1}$
-\subsection*{\underline{\textbf{\textcolor{red}{6.6 Résoudre dans $\mathbb{C}$ les équations du $2^{nd}$ degré à coefficients complexes:}}}}
 \end{document}

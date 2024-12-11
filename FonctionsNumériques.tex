@@ -1218,5 +1218,171 @@ f(x) =
         \item Tracer la courbe de $h^{-1}$ dans le même repère que celle de $f$.
     \end{enumerate}
 \end{enumerate}
+\section*{CORRECTION}
+Soit \( f \) la fonction définie par :
+\[
+f(x) =
+\begin{cases} 
+2x\sqrt{1 - x^2} & \text{si } x > 0, \\ 
+-x + \sqrt{x^2 - 2x} & \text{si } x \leq 0.
+\end{cases}
+\]
+
+\begin{enumerate}
+    \item \textbf{Détermination de l'ensemble de définition \( D_f \)} \\
+    \textbf{Première partie :} \( f(x) = 2x\sqrt{1 - x^2} \) pour \( x > 0 \). \\
+    - L'expression \( \sqrt{1 - x^2} \) est définie si \( 1 - x^2 \geq 0 \), soit \( -1 \leq x \leq 1 \). \\
+    - Comme \( x > 0 \), on obtient \( 0 < x \leq 1 \). \\
+
+    \textbf{Deuxième partie :} \( f(x) = -x + \sqrt{x^2 - 2x} \) pour \( x \leq 0 \). \\
+    - L'expression \( \sqrt{x^2 - 2x} \) est définie si \( x^2 - 2x \geq 0 \), soit \( x(x - 2) \geq 0 \). \\
+    - Résolvons cette inéquation :
+    \[
+    x(x - 2) \geq 0 \iff
+    \begin{cases} 
+    x \leq 0 \quad \text{ou} \quad x \geq 2.
+    \end{cases}
+    \]
+    - Comme cette partie est définie pour \( x \leq 0 \), on conserve uniquement \( x \leq 0 \). \\
+
+    \textbf{Ensemble de définition :} \\
+    - La première partie est définie sur \( 0 < x \leq 1 \). \\
+    - La deuxième partie est définie sur \( x \leq 0 \). \\
+    - En réunissant ces deux domaines, on obtient :
+    \[
+    D_f = ]-\infty, 1].
+    \]
+    
+   \textbf{Limites aux bornes de \( D_f \)} \\
+
+    \textbf{Quand \( x \to -\infty \) :} \\
+    Pour \( x \to -\infty \), \( f(x) = -x + \sqrt{x^2 - 2x} \). \\
+    Simplifions :
+    \[
+    \sqrt{x^2 - 2x} = |x| \sqrt{1 - \frac{2}{x}} \quad \text{(avec \( |x| = -x \) pour \( x < 0 \))}.
+    \]
+    Ainsi, \( f(x) = -x + (-x)\sqrt{1 - \frac{2}{x}} \). \\
+    Quand \( x \to -\infty \), \( \sqrt{1 - \frac{2}{x}} \to 1 \), donc :
+    \[
+    f(x) \sim -x - x = -2x \to +\infty.
+    \]
+
+    \textbf{Quand \( x \to 0^- \) :} \\
+    Pour \( x \leq 0 \), \( f(x) = -x + \sqrt{x^2 - 2x} \). \\
+    Quand \( x \to 0^- \), \( x^2 - 2x \to 0 \), donc \( \sqrt{x^2 - 2x} \to 0 \). \\
+    Par conséquent :
+    \[
+    f(x) \to -x \to 0.
+    \]
+
+    \textbf{Quand \( x \to 0^+ \) :} \\
+    Pour \( x > 0 \), \( f(x) = 2x\sqrt{1 - x^2} \). \\
+    Quand \( x \to 0^+ \), \( \sqrt{1 - x^2} \to \sqrt{1} = 1 \), donc :
+    \[
+    f(x) \to 2x \to 0.
+    \]
+
+    \textbf{Quand \( x \to 1^- \) :} \\
+    Pour \( x > 0 \), \( f(x) = 2x\sqrt{1 - x^2} \). \\
+    Quand \( x \to 1^- \), \( 1 - x^2 \to 0^+ \), donc \( \sqrt{1 - x^2} \to 0^+ \). \\
+    Par conséquent :
+    \[
+    f(x) = 2x\sqrt{1 - x^2} \to 0.
+    \]
+   
+    \textbf{Asymptotes et branches infinies éventuelles} \\
+
+    \textbf{Pour \( x \to -\infty \) :} \\
+    On a montré que \( f(x) \sim -2x \). \\
+    Ainsi, \( f(x) \) admet une \textbf{branche infinie oblique} d'équation asymptotique :
+    \[
+    y = -2x \quad \text{pour } x \to -\infty.
+    \]
+    
+    \item \textbf{Étude de la dérivabilité de \( f \) en \( 0 \) et \( 1 \) :} \\
+
+    \textbf{En \( x = 0 \) :}
+    \begin{itemize}
+        \item \textbf{Continuité :} \\
+        - À gauche (\( x \to 0^- \)), \( f(x) = -x + \sqrt{x^2 - 2x} \to 0 \). \\
+        - À droite (\( x \to 0^+ \)), \( f(x) = 2x\sqrt{1 - x^2} \to 0 \). \\
+        - Comme \( f(0) = 0 \), \( f \) est continue en \( x = 0 \).
+
+        \item \textbf{Dérivabilité :} \\
+        - À gauche, la dérivée \( f'(x) = -1 + \frac{2x - 2}{2\sqrt{x^2 - 2x}} \) diverge vers \(-\infty\). \\
+        - À droite, \( f'(x) = 2\sqrt{1 - x^2} - \frac{2x^2}{\sqrt{1 - x^2}} \to 2 \). \\
+        - Les dérivées à gauche et à droite ne sont pas égales, donc \( f \) n'est pas dérivable en \( x = 0 \).
+    \end{itemize}
+
+    \textbf{En \( x = 1 \) :}
+    \begin{itemize}
+        \item \textbf{Continuité :} \\
+        - Pour \( x \to 1^- \), \( f(x) = 2x\sqrt{1 - x^2} \to 0 \). \\
+        - \( f(1) \) n'est pas défini, donc \( f \) n'est pas continue en \( x = 1 \). \\
+        - Par conséquent, \( f \) n'est pas dérivable en \( x = 1 \).
+    \end{itemize}
+
+    \textbf{Interprétation géométrique :}
+    \begin{itemize}
+        \item En \( x = 0 \), \( f \) est continue mais présente une cassure (coussin), donc pas de tangente unique.
+        \item En \( x = 1 \), \( f \) n'est pas définie, donc il n'y a pas de continuité ni de tangente.
+    \end{itemize}
+
+    \item \textbf{Calcul de \( f'(x) \) et tableau de variation :} \\
+
+    \textbf{Calcul de \( f'(x) \) pour \( x > 0 \) :}
+    \[
+    f'(x) = \frac{2(1 - 2x^2)}{\sqrt{1 - x^2}}.
+    \]
+
+    \textbf{Calcul de \( f'(x) \) pour \( x \leq 0 \) :}
+    \[
+    f'(x) = -1 + \frac{x - 1}{\sqrt{x^2 - 2x}}.
+    \]
+
+    \textbf{Tableau de variation :}
+    \[
+    \begin{array}{|c|c|c|c|}
+    \hline
+    x & -\infty & 0 & 1 \\
+    \hline
+    f'(x) & +\infty & 0 & - \\
+    \hline
+    f(x) & \text{Croissante} & \text{Dérivabilité et continuité} & \text{Décroissante} \\
+    \hline
+    \end{array}
+    \]
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = middle,
+    xlabel = \( x \),
+    ylabel = \( f(x) \),
+    domain = -2:1,
+    samples = 500,
+    width = 10cm,
+    height = 6cm,
+    enlarge x limits = 0.1,
+    enlarge y limits = 0.1,
+    grid = major,
+    legend style = {at = {(0.5,-0.1)}, anchor = north}
+]
+
+% Tracer la courbe pour x <= 0
+\addplot[blue, thick] {-x + sqrt(x^2 - 2*x)};
+\addlegendentry{Pour \( x \leq 0 \)};
+
+% Tracer la courbe pour x > 0
+\addplot[red, thick] {2*x*sqrt(1 - x^2)};
+\addlegendentry{Pour \( x > 0 \)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Courbe de \( f(x) \)}
+\end{figure}
+
+\end{enumerate}
 
 \end{document}

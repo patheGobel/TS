@@ -753,7 +753,9 @@ Ce procédé, appelé *construction par itération graphique*, permet de visuali
 
 \textbf{\underline{\exemple}}
 
-Soit $(u_n)$ la suite définie par, $u_0=2$ et, pour tou $n\in\mathbb{N} \quad u_{n+1}=2\sqrt{u_{n}}$.
+Soit $(u_n)$ la suite définie par, $u_0=2$ et, pour tout $n\in\mathbb{N} \quad u_{n+1}=2\sqrt{u_{n}}$.
+
+Construis les 6 premiers termes de $(u_n)$.
 
 \textbf{\underline{\solution}}
 
@@ -778,43 +780,19 @@ u_0 = 1. &
 
 \textbf{\underline{\correction}}
 
-\subsection*{\underline{\textbf{\textcolor{red}{V. Etude de suites définie par récurrence}}}}
-
-\subsection*{\textcolor{red}{\underline{EXERCICE 3 } (BAC 2023) }}
-\[
-\text{On considère la suite numérique } (u_n)_{n \in \mathbb{N}} \text{ définie par :}
-\begin{cases}
-U_{0}=6\\
-U_{n+1}=\frac{1}{U_{n}}+\frac{3}{4}U_{n}, n\in\mathbb{N}
-\end{cases}
-\]
-\begin{enumerate}
-\item[1)] Calculer \( u_1 \) et \( u_2 \).\hfill\textbf{(0.5pt)}
-
-\item[2)] Démontrer par récurrence que: \( \forall n\in\mathbb{N},\quad u_n \geq \sqrt{3} \).\hfill\textbf{(01pt)}
-
-\item[3)] Soit $f$ la fonction définie sur $]0, +\infty[$ par \( f(x) = \frac{1}{x} + \frac{3}{4}x \).
-\begin{enumerate}
-\item[a)] Etudier le sens de variations de $f$.\hfill\textbf{(01pt)}
-\item[b)] En déduire par récurrence que $(u_n)_{n \in \mathbb{N}}$ est strictement décroissante.\hfill\textbf{(0.5pt)}
-\end{enumerate}
-
-\item[4)] Montrer que $(u_n)_{n \in \mathbb{N}}$ est convergente et déterminer sa limite.\hfill\textbf{(01pt)}
-
-\end{enumerate}
-\subsection*{\underline{\textbf{\textcolor{red}{VI. Suite arithmétiques-géométriques}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{IV. Suite arithmétiques et suites géométriques}}}}
 \subsection*{\underline{\textbf{\textcolor{red}{1. Suite arithmétiques}}}}
-Une suite $\left(u_{n}\right)$ est \textcolor{red}{arithmétique} si chaque terme s'obtient en ajoutant au précédent un même nombre \textcolor{red}{$r$} appelé raison : 
+Une suite $\left(u_{n}\right)$ est \textcolor{red}{arithmétique} si chaque terme s'obtient en ajoutant au précédent\\ un même nombre \textcolor{red}{$r$} appelé raison : 
 \textcolor{red}{$u_{n+1}=u_{n}+r.$} 
 \subsection*{\underline{\textbf{\textcolor{red}{a.Expression du terme général}}}}		
-$\bullet\ \text{Si }\left(u_{n}\right)$ est une suite arithmétique de premier terme $u_{0}$ et de raison $r$, alors :
-	
-$$u_{n}=u_{0}+nr$$
-	
-$\bullet\ $Si le premier terme est $u_{1}$, alors :
-$$u_{n}=u_{1}+(n-1)r$$
+%$\bullet\ \text{Si }\left(u_{n}\right)$ est une suite arithmétique de premier terme $u_{0}$ et de raison $r$, alors :
+%	
+%$$u_{n}=u_{0}+nr$$
+%	
+%$\bullet\ $Si le premier terme est $u_{1}$, alors :
+%$$u_{n}=u_{1}+(n-1)r$$
 
-$\bullet\ $ Si $(U_n)$ une suite arithmétique de raison $r$ et de premier terme $U_{p}$ alors on a : 
+ Si $(u_n)$ une suite arithmétique de raison $r$ et de premier terme $U_{p}$ alors on a : 
 \begin{mdframed}[linecolor=red] % Définit la couleur du cadre
     \[
     \color{red} u_{n} = u_{p} + (n-p)r
@@ -822,18 +800,18 @@ $\bullet\ $ Si $(U_n)$ une suite arithmétique de raison $r$ et de premier terme
 \end{mdframed}
 Avec $u_{p}$ le premier terme, p l'indice du premier terme et r la raison
 
-\textbf{\underline{\exemple}}
+%\textbf{\underline{\exemple}}
+%
+%Dans chacun des cas suivants, donner le terme général de la suite.
+%\begin{itemize}
+%\item[1.]$(u_n)$ est une suite arithmétique de raison $r = 3$ et de premier terme $u_{0}= 7$.
+%\item[2.]$(u_n)$ est une suite arithmétique de raison $r=-\frac{3}{4}$ et de premier terme 
+%$u_{1}=\frac{-7}{4}$.
+%\item[3.] $(U_n)$ est une suite arithmétique de raison $r$ et de premier terme $U_{0}$ tels que $U_{50} = 406$ et $U_{100} = 806$.
+%\end{itemize}
+%\textbf{\underline{\solution}}
 
-Dans chacun des cas suivants, donner le terme général de la suite.
-\begin{itemize}
-\item[1.]$(u_n)$ est une suite arithmétique de raison $r = 3$ et de premier terme $u_{0}= 7$.
-\item[2.]$(u_n)$ est une suite arithmétique de raison $r=-\frac{3}{4}$ et de premier terme 
-$u_{1}=\frac{-7}{4}$.
-\item[3.] $(U_n)$ est une suite arithmétique de raison $r$ et de premier terme $U_{0}$ tels que $U_{50} = 406$ et $U_{100} = 806$.
-\end{itemize}
-\textbf{\underline{\solution}}
-
-\subsection*{\underline{\textbf{\textcolor{red}{A retenir 1 }}}}
+\subsection*{\underline{\textbf{\textcolor{red}{A retenir}}}}
 Pour montrer qu'une suite $(U_n)$ est arithmétique de raison $r$, il suffit de montrer que :
 \[ U_{n+1} - U_n = r \]
 
@@ -844,32 +822,32 @@ Montrer que $(U_n)$ est une suite arithmétique dont on précisera la raison et 
 
 \textbf{\underline{\solution}}
 
-\subsection*{\underline{\textbf{\textcolor{red}{A retenir 2}}}}
-Pour montrer qu’une suite $(U_n)$ n’est pas arithmétique , il suffit de montrer que : 
-$U_{1}$-$U_{0}\neq U_{2}$-$U_{1}$.
-
-\textbf{\underline{\exemple}}
-
-Soit la suite $(U_n)$ définie par : $U_{n}=\frac{n}{n+1}$
-
-Montrer que $(U_n)$ n’est pas une suite arithmétique.
-
-\textbf{\underline{\solution}}
+%\subsection*{\underline{\textbf{\textcolor{red}{A retenir 2}}}}
+%Pour montrer qu’une suite $(U_n)$ n’est pas arithmétique , il suffit de montrer que : 
+%$U_{1}$-$U_{0}\neq U_{2}$-$U_{1}$.
+%
+%\textbf{\underline{\exemple}}
+%
+%Soit la suite $(U_n)$ définie par : $U_{n}=\frac{n}{n+1}$
+%
+%Montrer que $(U_n)$ n’est pas une suite arithmétique.
+%
+%\textbf{\underline{\solution}}
 
 \subsection*{\underline{\textbf{\textcolor{red}{b.Somme des premiers termes}}}}	
 Soit (Un) une suite arithmétique.
 
 Pour tous entiers naturels n et p tels que $p \leq n$, on a :
 
-$\bullet\ $Si la suite a pour premier terme $u_{0}$, alors la somme $S_{n}=u_{0}+u_{1}+\ldots+u_{n}$ vaut :
-	
-$$S_{n}=\dfrac{(n+1)\left(u_{0}+u_{n}\right)}{2}$$
+%$\bullet\ $Si la suite a pour premier terme $u_{0}$, alors la somme $S_{n}=u_{0}+u_{1}+\ldots+u_{n}$ vaut :
+%	
+%$$S_{n}=\dfrac{(n+1)\left(u_{0}+u_{n}\right)}{2}$$
+%
+%$\bullet\ $Si la suite a pour premier terme $u_{1}$, alors la somme $S_{n}=u_{1}+u_{1}+\ldots+u_{n}$ vaut :
+%
+%$$S_{n}=\dfrac{n(u_{1}+u_{n})}{2}$$
 
-$\bullet\ $Si la suite a pour premier terme $u_{1}$, alors la somme $S_{n}=u_{1}+u_{1}+\ldots+u_{n}$ vaut :
-
-$$S_{n}=\dfrac{n(u_{1}+u_{n})}{2}$$
-
-$\bullet\ $De façon général si la suite a pour premier terme $u_{p}$, alors la somme $S_{n}=u_{p}+u_{p+1}+\ldots+u_{n}$ vaut :
+De façon général si la suite a pour premier terme $u_{p}$, alors la somme $S_{n}=u_{p}+u_{p+1}+\ldots+u_{n}$ vaut :
 
 \begin{mdframed}[linecolor=red] % Définit la couleur du cadre
     \[
@@ -879,31 +857,33 @@ $\bullet\ $De façon général si la suite a pour premier terme $u_{p}$, alors l
 
 \textbf{NB} la Somme $S_{n}=u_{0}+u_{1}+\ldots+u_{n}$ peut etre notée par $S_{n}=\sum_{k=0}^{n}u_{k}$.
 
+\textbf{Exemple de sommation:}\\
+
 $$\sum_{k=0}^{4}2k+7 = \cdots$$
 
 $$\sum_{k=0}^{10}5 = \cdots$$
 
 
-\textbf{\underline{\exemple}}
-
-Soit $\left(u_{n}\right)$ la suite définie par : $u_{n}=2n+7$
-\begin{itemize}
-\item[1.]Calculer $U_{1}$, $U_{2}$ et $U_{2024}.$
-\item[2.] Montrer que (Un) est une suite arithmétique.
-\item[3.] Calculer la somme : $S_{n} = U_{0} + U_{1} + \cdots+ U_{n}.$
-\item[4.] En déduire le somme $S = U_{1} + U_{2} +\cdots+ U_{2024}.$
-\end{itemize}
-
-\textbf{\underline{\solution}}
+%\textbf{\underline{\exemple}}
+%
+%Soit $\left(u_{n}\right)$ la suite définie par : $u_{n}=2n+7$
+%\begin{itemize}
+%\item[1.]Calculer $U_{1}$, $U_{2}$ et $U_{2024}.$
+%\item[2.] Montrer que (Un) est une suite arithmétique.
+%\item[3.] Calculer la somme : $S_{n} = U_{0} + U_{1} + \cdots+ U_{n}.$
+%\item[4.] En déduire le somme $S = U_{1} + U_{2} +\cdots+ U_{2024}.$
+%\end{itemize}
+%
+%\textbf{\underline{\solution}}
 
 \subsection*{\underline{\textbf{\textcolor{red}{2. Suites géométriques}}}}
 Une suite $\left(u_{n}\right)$ est dite géométrie si chaque terme s'obtient en multipliant le précédent par un même nombre $q$ appelé raison : $u_{n+1}=u_{n}\times q.$
 \subsection*{\underline{\textbf{\textcolor{red}{a. Expression du terme général}}}}
-$\bullet\ $Si la suite géométrique $\left(u_{n}\right)$ a pour premier terme $u_{0}$ et pour raison $q$, alors : $$u_{n}=u_{0}\times q^{n}$$
+%$\bullet\ $Si la suite géométrique $\left(u_{n}\right)$ a pour premier terme $u_{0}$ et pour raison $q$, alors : $$u_{n}=u_{0}\times q^{n}$$
+%
+%$\bullet\ $Si le premier terme est $u_{1}$, alors :$$u_{n}=u_{1}\times q^{n-1}$$
 
-$\bullet\ $Si le premier terme est $u_{1}$, alors :$$u_{n}=u_{1}\times q^{n-1}$$
-
-$\bullet\ $ Si le premier terme est $u_{p}$, alors:
+Si le premier terme est $u_{p}$, alors:
 \begin{mdframed}[linecolor=red] % Définit la couleur du cadre
     \[
     \color{red} u_{n}=u_{p}\times q^{n-p}
@@ -920,7 +900,7 @@ Pour montrer qu’une suite $u_{n}$ est géométrique de raison q, il suffit de 
 
 \textbf{\underline{\exemple}}
 
-montrer que $(v_{n})$ est une suite géométrique dont on précisera
+Montrer que $(v_{n})$ est une suite géométrique dont on précisera
 la raison et le premier terme puis exprimer $(v_{n})$ en fonction de $n$.
 
 \begin{equation*} 
@@ -932,34 +912,34 @@ la raison et le premier terme puis exprimer $(v_{n})$ en fonction de $n$.
 \end{equation*}
 
 
-\textbf{\underline{\exerciceapp}}
-
-Dans chacun des cas suivants, montrer que $(v_{n})$ est une suite géométrique dont on précisera
-la raison et le premier terme puis exprimer $(v_{n})$ en fonction de $n$.
-
-\begin{itemize}
-
-\item[1.]$v_{n} = 3 \times 5^{n}$
-
-\item[2.]\begin{equation*} 
-    \begin{cases}
-        U_{1}=0 \\
-        U_{n + 1}=-\frac{2}{3}U_{n}+1
-    \end{cases}
-    et\quad V_{n} = U_{n} - \frac{3}{5}
-\end{equation*}
-
-\end{itemize}
-
-\textbf{\underline{\correction}}
+%\textbf{\underline{\exerciceapp}}
+%
+%Dans chacun des cas suivants, montrer que $(v_{n})$ est une suite géométrique dont on précisera
+%la raison et le premier terme puis exprimer $(v_{n})$ en fonction de $n$.
+%
+%\begin{itemize}
+%
+%\item[1.]$v_{n} = 3 \times 5^{n}$
+%
+%\item[2.]\begin{equation*} 
+%    \begin{cases}
+%        U_{1}=0 \\
+%        U_{n + 1}=-\frac{2}{3}U_{n}+1
+%    \end{cases}
+%    et\quad V_{n} = U_{n} - \frac{3}{5}
+%\end{equation*}
+%
+%\end{itemize}
+%
+%\textbf{\underline{\correction}}
 
 \subsection*{\underline{\textbf{\textcolor{red}{b. Somme des premiers termes }}}}
 
 Pour toute suite géométrique, de raison $q\neq 1$, on a:
 
-$$S_{n}=u_{0}+u_{1}+\ldots+u_{n}=u_{0}\times\dfrac{1-q^{n+1}}{1-q}$$
-
-$$S_{n}u_{1}+u_{2}+\ldots+u_{n}=u_{1}\times\dfrac{1-q^{n}}{1-q}$$
+%$$S_{n}=u_{0}+u_{1}+\ldots+u_{n}=u_{0}\times\dfrac{1-q^{n+1}}{1-q}$$
+%
+%$$S_{n}u_{1}+u_{2}+\ldots+u_{n}=u_{1}\times\dfrac{1-q^{n}}{1-q}$$
 
 $$S_{n}=u_{p}+u_{p+1}+\ldots+u_{n}=u_{p}\times\dfrac{1-q^{n-p+1}}{1-q}$$
 
@@ -991,5 +971,28 @@ Soit \( q \) un nombre réel.
     \lim_{n \rightarrow +\infty} q^n = 0.
     \]
 \end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{V. Etude de suites définie par récurrence}}}}
 
+\subsection*{\textcolor{red}{\underline{EXERCICE 3 } (BAC 2023) }}
+\[
+\text{On considère la suite numérique } (u_n)_{n \in \mathbb{N}} \text{ définie par :}
+\begin{cases}
+U_{0}=6\\
+U_{n+1}=\frac{1}{U_{n}}+\frac{3}{4}U_{n}, n\in\mathbb{N}
+\end{cases}
+\]
+\begin{enumerate}
+\item[1)] Calculer \( u_1 \) et \( u_2 \).\hfill\textbf{(0.5pt)}
+
+\item[2)] Démontrer par récurrence que: \( \forall n\in\mathbb{N},\quad u_n \geq \sqrt{3} \).\hfill\textbf{(01pt)}
+
+\item[3)] Soit $f$ la fonction définie sur $]0, +\infty[$ par \( f(x) = \frac{1}{x} + \frac{3}{4}x \).
+\begin{enumerate}
+\item[a)] Etudier le sens de variations de $f$.\hfill\textbf{(01pt)}
+\item[b)] En déduire par récurrence que $(u_n)_{n \in \mathbb{N}}$ est strictement décroissante.\hfill\textbf{(0.5pt)}
+\end{enumerate}
+
+\item[4)] Montrer que $(u_n)_{n \in \mathbb{N}}$ est convergente et déterminer sa limite.\hfill\textbf{(01pt)}
+
+\end{enumerate}
 \end{document}

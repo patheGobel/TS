@@ -1,169 +1,440 @@
-\documentclass[12pt]{article}
-\usepackage{lmodern} % Pour une police plus nette
-\usepackage{stmaryrd}
-\usepackage{graphicx} % Pour l'insertion d'images
-\usepackage{float}    % Pour contrôler précisément le placement
-\usepackage[utf8]{inputenc}
-\usepackage[french]{babel}
-\usepackage[T1]{fontenc}
-\usepackage{hyperref}
-\usepackage{verbatim}
-\usepackage{color, soul}
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.18} % Version plus récente de pgfplots
-\usepackage{mathrsfs}
+\documentclass[a4paper,11pt]{article}
 \usepackage{amsmath}
-\usepackage{amsfonts}
 \usepackage{amssymb}
-\usepackage{tkz-tab}
-%\author{Destiné aux élèves de Terminale S\\Lycée de Dindéfelo\\Présenté par M. BA}
-%\title{\textbf{Rappels et compléments sur les fonctions numériques}}
-%\date{\today}
-\usepackage{tikz}
-\usetikzlibrary{arrows, shapes.geometric, fit}
-% Commande pour la couleur d'accentuation
-\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
-\newcommand\tab[1][1cm]{\hspace*{#1}}
-\usepackage[margin=2.5cm]{geometry} % Ajustement des marges
-\usepackage{eso-pic} % Pour ajouter des éléments en arrière-plan
-
-% Commande pour ajouter du texte en arrière-plan, centré au milieu de chaque page
-\AddToShipoutPicture{
-    \AtPageCenter{%
-        \makebox(0,0)[c]{\rotatebox{60}{\textcolor[gray]{0.9}{\fontsize{2cm}{2cm}\selectfont Pathé Gobel BA}}}
-    }
-}
 
 \begin{document}
+\section*{Exercice 1}
 
-\noindent
-\begin{minipage}[t]{0.48\textwidth}
-\raggedright
-\textbf{Ministère de l'Éducation Nationale}\\
-Inspection Académique de Kédougou\\
-Lycée Dindéfelo\\
-Cellule de Mathématiques
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.48\textwidth}
-\raggedleft
-\textbf{Année scolaire 2024-2025}\\
-Date : 02/12/2024\\
-Classe : Terminale S2\\
-Professeur : M. BA
-\end{minipage}
-\begin{center}
-\underline{\textbf{Suites numériques}}
-\end{center}
-\section*{Exercice 1 \quad Échauffement}
-
-Déterminer toutes les primitives des fonctions suivantes sur \( I \) :
+Soit \((u_n)\) une suite définie par :
+\[
+u_0 = 1 \quad \text{et} \quad u_{n+1} = \frac{u_n - 1}{3u_n + 1}.
+\]
 
 \begin{enumerate}
-    \item[\textbf{a)}] \( f(x) = \cos x \sin^5 x, \quad I = \mathbb{R}; \)
-    \item[\textbf{b)}] \( f(x) = \frac{7}{(x+2)^{5}}, \quad I = ]-\infty; -2[; \)
-    \item[\textbf{c)}] \( f(x) = \frac{2x^{2}+3x-1}{x}, \quad I = ]0; +\infty[; \)
-    \item[\textbf{d)}] \( f(x) = \frac{x^{2}}{1+x^{3}}, \quad I = ]0; +\infty[; \)
-    \item[\textbf{e)}] \( f(x) = \frac{x}{\sqrt{3x^2 + 2}}, \quad I = \mathbb{R}; \)
-    \item[\textbf{f)}] \( f(x) = \left( \frac{1}{2}x-1 \right)^6, \quad I = \mathbb{R}. \)
+    \item Calculer les 4 premiers termes de la suite \((u_n)\).
+    \item Représenter graphiquement la suite \((u_n)\).
+    \item Montrer que \((u_n)\) est périodique de période 3.
 \end{enumerate}
-\section*{Exercice 2 \quad Recherche de primitives}
 
-Déterminer une primitive, sur un intervalle à préciser (le plus grand possible), des fonctions suivantes :
+\section*{Exercice 2}
+
+On considère la suite \((u_n)_{n \in \mathbb{N}}\) définie par :
+\[
+\begin{cases}
+u_0 = 13, \\
+u_{n+1} = \frac{1}{2} u_n + 7.
+\end{cases}
+\]
 
 \begin{enumerate}
-    \item $f(x) = 2x^2 -7x + 3;$
-    \item $f(x) = x^5 - 3x^2 + 5x;$
-    \item $f(x) = 6x^3 - \frac{4}{3}x^2 + \frac{1}{2}x-1;$
-    \item $f(x) = x^5 -3x^{3}+ 5x;$
-    \item $f(x) = 3x^{3}-\frac{1}{2x^2} + \frac{3}{x^3};$
-    \item $f(x) = \frac{3}{x^2};$
-    \item $f(x) = -\frac{2}{x^6};$
-    \item $f(x) = \frac{1}{x^2} + \frac{2}{\sqrt{x}};$
-    \item $f(x) = -\frac{3}{x^2} + \frac{1}{2\sqrt{x}} + 2\sqrt{x};$
-    \item $f(x) = 3x + \frac{2}{x^2} - \frac{5}{x^3};$
-    \item $f(x) = \frac{7x^3 - 4x^2 + 3x - 1}{5};$
-    \item $f(x) = -\frac{5x^4 + 2x^3 - 3x + 6}{x^3};$
-    \item $f(x)=\frac{4(x-1)^{3}-1}{(x-1)^{2}}.$
+    \item Montrer que : \((\forall n \in \mathbb{N}), u_n < 14\).
+    \item Soit \((v_n)_{n \in \mathbb{N}}\) la suite définie par : \(v_n = 14 - u_n\) pour tout \(n \in \mathbb{N}\).
+    \begin{enumerate}
+        \item Montrer que la suite \((v_n)_{n \in \mathbb{N}}\) est géométrique de raison \(\frac{1}{2}\), puis écrire \(v_n\) en fonction de \(n\).
+        \item En déduire que : \((\forall n \in \mathbb{N}), u_n = 14 - \left( \frac{1}{2} \right)^n\).
+    \end{enumerate}
 \end{enumerate}
 
-\section*{Exercice 3 : Recherche de primitives}
+\section*{Exercice 3}
 
-\textit{Déterminer une primitive de la fonction $f$ sur l’intervalle $I$.}
+Soit \((u_n)_{n \in \mathbb{N}}\) la suite numérique définie par :
+\[
+\begin{cases}
+u_0 = 2, \\
+(\forall n \in \mathbb{N}), \ u_{n+1} = \frac{7u_n - 25}{u_n - 3}.
+\end{cases}
+\]
+
+\begin{enumerate}
+    \item Montrer que : \((\forall n \in \mathbb{N}), u_n \neq 5\).
+
+    \item On considère la suite \((v_n)_{n \in \mathbb{N}}\) définie par : \(v_n = \frac{1}{u_n - 5}\) pour tout \(n \in \mathbb{N}\).
+    \begin{enumerate}
+        \item Montrer que \((v_n)_{n \in \mathbb{N}}\) est une suite arithmétique.
+        \item Déterminer \(v_n\), puis \(u_n\) en fonction de \(n\).
+    \end{enumerate}
+
+    \item 
+    \begin{enumerate}
+        \item Calculer : \(S_n = v_0 + v_1 + \cdots + v_n\) en fonction de \(n\).
+        \item On pose : \(P_n = 2^{v_0} \times 2^{v_1} \times \cdots \times 2^{v_n}\). Déterminer \(P_n\) en fonction de \(n\).
+    \end{enumerate}
+\end{enumerate}
+
+\section*{Exercice 4}
+
+Soit \((u_n)_{n \in \mathbb{N}^*}\) la suite numérique définie par :
+\[
+\begin{cases}
+u_1 = \frac{1}{3}, \\
+(\forall n \in \mathbb{N}^*), \ u_{n+1} = \frac{2u_n}{1 + (n+2)u_n}.
+\end{cases}
+\]
+
+Soit \((v_n)_{n \in \mathbb{N}^*}\) la suite numérique définie par : \(v_n = \frac{1}{u_n} - n\).
+
+\begin{enumerate}
+    \item Montrer que la suite \((v_n)_{n \in \mathbb{N}^*}\) est géométrique.
+
+    \item 
+    \begin{enumerate}
+        \item Déterminer \(v_n\) et \(u_n\) en fonction de \(n\).
+        \item Calculer en fonction de \(n\) la somme : \(S_n = v_1 + v_2 + \cdots + v_n\).
+    \end{enumerate}
+\end{enumerate}
+
+\section*{Exercice 5}
+
+Soit \((u_n)_{n \in \mathbb{N}}\) la suite numérique définie par :
+\[
+\begin{cases}
+u_0 = 1, \\
+(\forall n \in \mathbb{N}), \ u_{n+1} = \frac{2u_n^3}{3u_n^2 + 1}.
+\end{cases}
+\]
 
 \begin{enumerate}
     \item 
     \begin{enumerate}
-        \item $f(x) = \dfrac{2x + 5}{(x^2 + 5x)^4}; \quad I = \left]0; +\infty\right[$
-        \item $f(x) = \dfrac{3x^2 + 2}{(x^2 + 2x)^2}; \quad I = \left]0; +\infty\right[$
-        \item $f(x) = \dfrac{x}{(x^2 + 1)^3}; \quad I = \mathbb{R}$
+        \item Montrer que : \((\forall n \in \mathbb{N}), u_n > 0\).
+        \item Étudier la monotonie de la suite \((u_n)_{n \in \mathbb{N}}\).
     \end{enumerate}
 
     \item 
     \begin{enumerate}
-        \item $f(x) = \dfrac{7}{(x - 1)^4}; \quad I = \left]-\infty; 1\right[$
-        \item $f(x) = \dfrac{9}{(4x + 1)^3}; \quad I = \mathbb{R}_+$
+        \item Montrer que : \((\forall n \in \mathbb{N}), u_{n+1} \leq \frac{1}{2} u_n\).
+        \item En déduire que : \((\forall n \in \mathbb{N}), u_n \leq \left(\frac{1}{2}\right)^n\).
     \end{enumerate}
-    \item
-    \begin{enumerate}
-        \item $f(x) = \dfrac{1 - x^2}{x^3 - 3x + 1}; \quad I = [2; +\infty[$
-        \item $f(x) = \dfrac{3x^2 + 2}{x^3 + 2x}; \quad I = ]-\infty; 0[$
-        \item $f(x) = \dfrac{-\dfrac{1}{6}x + \dfrac{1}{3}}{x^2 - 4x + 9}; \quad I = \mathbb{R}$
-    \end{enumerate}
-
-    \item 
-    \begin{enumerate}
-        \item $f(x) = \dfrac{\sin x}{\cos^3 x}; \quad I = \left]-\dfrac{\pi}{2}; \dfrac{\pi}{2}\right[$
-        \item $f(x) = \dfrac{1}{1 + \tan^2 x}; \quad I = \left]0; \dfrac{\pi}{2}\right[$
-        \item $f(x) = \dfrac{\tan x}{\cos x}; \quad I = \left]0; \dfrac{\pi}{2}\right[$
-        \item $f(x) = \dfrac{\cos x}{\sin^3 x (1 - \cos^2 x)^6}; \quad I = \left]0; \frac{\pi}{2}\right[$
-    \end{enumerate}
-    \item 
-    \begin{enumerate}
-        \item $f(x) = \dfrac{x - 1}{(3x^2 - 6x + 11)^7}; \quad I = \mathbb{R}$
-        \item \( f(x) = \frac{6 - 4x}{(x^2 - 3x - 4)^5}; \quad I = ]-\infty; -1[ \)
-        \item \( f(x) = \frac{1}{\cos^2 x} \tan^3 x; \quad I = \left] - \frac{\pi}{2}; \frac{\pi}{2} \right[ \)
-    \end{enumerate}
-    \item
-    \begin{enumerate}
-    		\item \( f(x) = (3x^2 - 2) (x^3 - 2x + 3)^3; \quad I = \mathbb{R} \)
-				\item \( f(x) = (2x + 1) (x^2 + x + 1)^5; \quad I = \mathbb{R} \)
-    		\item \( f(x) = \frac{\sin^4 x}{\cos^6 x}; \quad I = \left[ - \frac{\pi}{2}; \frac{\pi}{2} \right[ \)
-				\item \( f(x) = (x - 1)^2 (x + 2); \quad I = \mathbb{R} \)
-    \end{enumerate}
-    \item
-    \begin{enumerate}
-				\item \( f(x) = \frac{1 - x^2}{(x^3 - 3x + 1)^3}; \quad I = ]1; +\infty[ \)
- 				\item \( f(x) = \frac{-15x^2 - 10}{(x^3 + 2x)^4}; \quad I = \mathbb{R}^* \).
-		\end{enumerate}
-		\item
-		\begin{enumerate}
-			\item \( f(x) = \sin x \cos^4 x; \quad I = \mathbb{R} \)
-			\item \( f(x) = \sin(3x) \cos^3(3x); \quad I = \mathbb{R} \)
-			\item \( f(x) = \frac{\sin^2 x}{\cos^4 x}; \quad I = \left[ 0; \frac{\pi}{4} \right] \).
-		\end{enumerate}
-		\item
-		\begin{enumerate}
-			\item Montrer que, pour tout \( x \) réel :
-			\[\sin^3 x = \sin x - \sin x \cos^2 x.\]
-			\item En déduire une primitive de la fonction définie par :
-			\item \[f(x) = \sin^3 x, \quad x \in \mathbb{R}.\]
-		\end{enumerate}
-		\item
-	\begin{enumerate}
-		\item \( f(x) = 1 + \tan^2 x, \quad I = \left] - \frac{\pi}{2}; \frac{\pi}{2} \right[ \)
-  	\item \( f(x) = \tan^2 x, \quad I = \left] - \frac{\pi}{2}; \frac{\pi}{2} \right[ \)
-		\item \( f(x) = \tan^4 x + \tan^6 x, \quad I = \left] - \frac{\pi}{2}; \frac{\pi}{2} \right[ \).
-	\end{enumerate}
-	\item
-	\begin{enumerate}
-	\item \( f(x) = \frac{1}{\sqrt{3x + 1}}, \quad I = \left] -\frac{1}{3}; +\infty \right[ \).
-	\item \( f(x) = \frac{1}{\sqrt{4 - 5x}}, \quad I = \left] -\infty; \frac{4}{5} \right[ \).
-	\end{enumerate}
-	\item
-	\begin{enumerate}
-	\item \( f(x) = \frac{2x^2 + \sin x}{\sqrt{2x^3 - 3 \cos x + 3}}, \quad I = [1; +\infty[ \);\\
-	\item \( f(x) = \frac{\sin(2x)}{\sqrt{1 + \sin^2 x}}, \quad I = \mathbb{R} \).
-	\end{enumerate}
 \end{enumerate}
+
+\section*{Exercice 6}
+
+Soit \((u_n)_{n \in \mathbb{N}}\) la suite numérique définie par :
+\[
+\begin{cases}
+u_0 = 0, \\
+u_{n+1} = \sqrt{3u_n + 4}, \quad \forall n \in \mathbb{N}.
+\end{cases}
+\]
+
+\begin{enumerate}
+    \item Montrer que : \(\forall n \in \mathbb{N}, \ 0 \leq u_n \leq 4\).
+
+    \item Montrer que la suite \((u_n)_{n \in \mathbb{N}}\) est croissante.
+
+    \item 
+    \begin{enumerate}
+        \item Montrer que : \(\forall n \in \mathbb{N}, \ 4 - u_{n+1} \leq \frac{1}{2}(4 - u_n)\).
+        \item En déduire que : \(\forall n \in \mathbb{N}, \ 4 - u_n \leq 4 \left(\frac{1}{2}\right)^n\).
+        \item Calculer \(\lim_{n \to +\infty} u_n\).
+    \end{enumerate}
+\end{enumerate}
+
+\section*{Exercice 7}
+
+\begin{enumerate}
+
+\item Soit \((u_n)_{n \in \mathbb{N}}\) la suite numérique définie par :
+\[
+\begin{cases}
+u_0 = \frac{10}{3}, \\
+(\forall n \in \mathbb{N}), \ u_{n+1} = \frac{u_n^2 - 3u_n + 9}{u_n}.
+\end{cases}
+\]
+
+\begin{enumerate}
+    \item Montrer que : \((\forall n \in \mathbb{N}), u_n \geq 3\).
+    \item En déduire que la suite \((u_n)_{n \in \mathbb{N}}\) est décroissante et que : \((\forall n \in \mathbb{N}), 3 \leq u_n \leq \frac{10}{3}\).
+\end{enumerate}
+
+\item On considère la suite \((v_n)_{n \in \mathbb{N}}\) définie par :
+\[
+\begin{cases}
+v_0 = \frac{1}{2}, \\
+(\forall n \in \mathbb{N}), \ v_{n+1} = \frac{2v_n^2}{1 + v_n^2}.
+\end{cases}
+\]
+
+\begin{enumerate}
+    \item Montrer que : \((\forall n \in \mathbb{N}), v_n > 0 \text{ et } v_n \leq \frac{1}{2}\).
+    \item Montrer que : \((\forall n \in \mathbb{N}), \frac{v_{n+1}}{v_n}  \leq 1\). En déduire que \((v_n)_{n \in \mathbb{N}}\) est décroissante.
+\end{enumerate}
+
+\item Soit \((t_n)_{n \in \mathbb{N}}\) la suite définie par :
+\[
+\begin{cases}
+t_0 = 1, \\
+(\forall n \in \mathbb{N}), \ t_{n+1} = \sqrt{\frac{1}{2} t_n + \frac{3}{2}}.
+\end{cases}
+\]
+
+Montrer que la suite \((t_n)_{n \in \mathbb{N}}\) est strictement croissante.
+
+\item Soit \((w_n)_{n \in \mathbb{N}}\) la suite définie par :
+\[
+\begin{cases}
+w_0 = 1, \\
+(\forall n \in \mathbb{N}), \ w_{n+1} = f(w_n).
+\end{cases}
+\]
+où \(f(x) = x^2 - 2x\).
+
+\item Montrer que : \((\forall n \in \mathbb{N}), w_n \geq 3\).
+\item Montrer que la suite \((w_n)_{n \in \mathbb{N}}\) est croissante.
+\end{enumerate}
+
+\section*{Exercice 8}
+
+On considère la fonction \(f\) définie sur \(\mathbb{R}\) par :
+\[
+f(x) = \frac{x}{1 + x + x^2}.
+\]
+
+\begin{enumerate}
+    \item 
+    \begin{enumerate}
+        \item Étudier les variations de \(f\).
+        \item Déterminer \(f([0,1])\).
+    \end{enumerate}
+    \item On considère la suite \((u_n)_{n \in \mathbb{N}}\) définie par :
+    \[
+    \begin{cases}
+    u_0 = 1, \\
+    u_{n+1} = f(u_n), \quad \forall n \in \mathbb{N}.
+    \end{cases}
+    \]
+    \begin{enumerate}
+        \item Montrer que : \(\forall n \in \mathbb{N}, \ 0 \leq u_n \leq 1\), puis \(\forall n \in \mathbb{N}, \ u_{n+1} < u_n\).
+        \item Montrer que : \(\forall n \in \mathbb{N}^*, \ f\left(\frac{1}{n}\right) \leq \frac{1}{n+1}\), en déduire que : \(\forall n \in \mathbb{N}^*, \ 0 \leq u_n \leq \frac{1}{n}\).
+        \item Montrer que la suite \((u_n)_{n \in \mathbb{N}}\) est convergente, puis calculer \(\lim_{n \to +\infty} u_n\).
+    \end{enumerate}
+\end{enumerate}
+
+\section*{Exercice 9}
+
+Démontrer par récurrence les propriétés suivantes :
+
+\begin{enumerate}
+    \item \(3^{2n+1} + 2^{n+2}\) est divisible par 7.
+    \item \(\forall n \in \mathbb{N}, \ (a+b)^n = \sum_{p=0}^n C_n^p a^p b^{n-p}.\)
+    \item \(\forall n \in \mathbb{N}, \ 0 \leq u_n \leq 2\) où
+    \[
+    \begin{cases}
+    u_0 = 1, \\
+    u_{n+1} = \frac{2u_n + 1}{u_n + 1}.
+    \end{cases}
+    \]
+
+    \item Soit \((u_n)\) la suite définie par :
+    \[
+    u_0 = 2 \quad \text{et} \quad u_{n+1} = 3u_n - 5, \quad \text{pour tout } n \in \mathbb{N}.
+    \]
+    Démontrer sur \(\mathbb{N}\) que :
+    \[
+    u_n = \frac{1}{2}(3^n - 5).
+    \]
+
+    \item Soit la suite définie par \(u_1 = 5\) et, pour tout \(n \in \mathbb{N}^*\),
+    \[
+    u_{n+1} = \sqrt{2 + u_n}.
+    \]
+    Démontrer sur \(\mathbb{N}^*\) que \(u_n \geq 2\).
+
+    \item Démontrer que \(\forall n \geq 4, \ 2^n \geq n^2.\)
+\end{enumerate}
+
+\section*{Exercice 10}
+
+Soit \((u_n)_{n \in \mathbb{N}}\) la suite numérique définie par :
+\[
+\begin{cases}
+u_0 = 0, \\
+u_{n+1} = \sqrt{3u_n + 4}, \quad \forall n \in \mathbb{N}.
+\end{cases}
+\]
+
+\begin{enumerate}
+    \item Montrer que : \((\forall n \in \mathbb{N}), \ 0 \leq u_n \leq 4\).
+    \item Montrer que la suite \((u_n)_{n \in \mathbb{N}}\) est croissante.
+    \item 
+    \begin{enumerate}
+        \item Montrer que : \((\forall n \in \mathbb{N}), \ 4 - u_{n+1} \leq \frac{1}{2}(4 - u_n)\).
+        \item En déduire que : \((\forall n \in \mathbb{N}), \ 4 - u_n \leq 4 \left(\frac{1}{2}\right)^n\).
+    \end{enumerate}
+\end{enumerate}
+
+\section*{Exercice 11}
+
+Soit \((u_n)_{n \in \mathbb{N}}\) la suite numérique définie par :
+\[
+\begin{cases}
+u_0 = 1, \\
+u_{n+1} = \frac{2u_n + 3}{u_n + 2}, \quad \forall n \in \mathbb{N}.
+\end{cases}
+\]
+
+\begin{enumerate}
+    \item 
+    \begin{enumerate}
+        \item Montrer par récurrence que la suite \((u_n)_{n \in \mathbb{N}}\) est strictement croissante.
+        \item Montrer que la suite \((u_n)_{n \in \mathbb{N}}\) est majorée par 2.
+    \end{enumerate}
+
+    \item On pose : \(\forall n \in \mathbb{N}, \ v_n = \frac{u_n - \sqrt{3}}{u_n + \sqrt{3}}\).
+    \begin{enumerate}
+        \item Montrer que \((v_n)_{n \in \mathbb{N}}\) est une suite géométrique en déterminant sa raison et son premier terme.
+        \item Déterminer \(u_n\) en fonction de \(n\).
+    \end{enumerate}
+\end{enumerate}
+
+\section*{Exercice 12}
+
+Soit \((U_n)_{n \geq 1}\) la suite définie par :
+\[
+U_1 = 1, \quad (U_{n+1})^2 = 4U_n, \quad \forall n \geq 1.
+\]
+
+\begin{enumerate}
+    \item Calculer \(U_2\), \(U_3\), \(U_4\) et \(U_5\) sous la forme \(2^\alpha\).
+    \item Soit \((V_n)\) la suite définie par : \(V_n = \ln(U_n) - \ln 4, \ \forall n \geq 1\).
+    \begin{enumerate}
+        \item Montrer que \((V_n)\) est une suite géométrique ; préciser la raison et le premier terme.
+        \item En déduire l'expression de \(V_n\), puis celle de \(U_n\) en fonction de \(n\).
+    \end{enumerate}
+    \item Pour quelles valeurs de \(n\) a-t-on \(U_n > 3,96\) ?
+\end{enumerate}
+
+\section*{Exercice 13}
+
+On considère les suites \((U_n)\) et \((V_n)\) définies par :
+\[
+U_1 = 2, \quad U_{n+1} = \frac{U_n + 2V_n}{3}, \quad
+V_1 = 8, \quad V_{n+1} = \frac{U_n + 5V_n}{6}, \quad \text{avec } n \in \mathbb{N}^*.
+\]
+
+\begin{enumerate}
+    \item Soit \(a_n = V_n - U_n\) pour tout entier naturel \(n\) non nul.
+    \begin{enumerate}
+        \item Démontrer que \((a_n)\) est une suite géométrique.
+        \item Exprimer \(a_n\) en fonction de \(n\).
+    \end{enumerate}
+
+    \item 
+    \begin{enumerate}
+        \item Démontrer que \((U_n)\) est croissante et \((V_n)\) décroissante.
+        \item Démontrer que \((U_n)\) est majorée et \((V_n)\) minorée.
+        \item En déduire que \((U_n)\) et \((V_n)\) ont une limite commune.
+    \end{enumerate}
+
+    \item Soit \(w_n = \frac{1}{4}U_n + V_n\) pour tout entier naturel \(n\) non nul.
+    \begin{enumerate}
+        \item Montrer que \((w_n)\) est une suite constante.
+        \item En déduire les limites de \((U_n)\) et \((V_n)\).
+    \end{enumerate}
+\end{enumerate}
+
+\section*{Exercice 14}
+
+Soit la suite \((u_n)\) définie par :
+\[
+u_0 = 0, \quad u_{n+1} = \sqrt{2 + u_n}.
+\]
+
+\begin{enumerate}
+    \item Montrer que pour tout entier naturel \(n\), \(0 \leq u_n \leq 2\).
+    \item Montrer que \((u_n)\) est croissante.
+    \item En déduire que \((u_n)\) converge vers un réel \(l\) à déterminer.
+    \item Démontrer que \(\forall n \in \mathbb{N}, \ |u_{n+1} - 2| \leq \frac{1}{2} |u_n - 2|\), puis \(|u_n - 2| \leq \left(\frac{1}{2}\right)^n |u_0 - 2|\).
+    \item Retrouver les résultats de la troisième question.
+\end{enumerate}
+
+\section*{Exercice 15}
+
+On considère les suites \((U_n)\) et \((V_n)\) définies par :
+\[
+\begin{cases}
+U_1 = 12, \\
+U_{n+1} = \frac{U_n + 2V_n}{3},
+\end{cases}
+\quad \text{et} \quad
+\begin{cases}
+V_1 = 1, \\
+V_{n+1} = \frac{U_n + 3V_n}{4},
+\end{cases}
+\quad \text{avec } n \in \mathbb{N}^*.
+\]
+
+\begin{enumerate}
+    \item \(W_n = U_n - V_n\) pour tout \(n\) non nul. Montrer que \((W_n)\) est une suite géométrique convergente.
+
+    \item Exprimer \(W_n\) en fonction de \(n\).
+
+    \item Démontrer que \((U_n)\) est décroissante et \((V_n)\) est croissante.
+
+    \item Démontrer que pour tout entier non nul \(n\), \(U_n \geq V_n\), et en déduire que \(V_1 \leq V_n \leq U_n \leq U_1\). Conclure.
+
+    \item \(T_n = 3U_n + 8V_n\) avec \(n\) entier naturel non nul. Montrer que \((T_n)\) est une suite constante, puis déterminer les limites de \((U_n)\) et \((V_n)\).
+\end{enumerate}
+
+\section*{Exercice 16}
+
+On considère la fonction \(f\) définie par \(f(x) = x - \ln|x|\). Soit \((C_f)\) sa courbe représentative dans le plan muni d’un repère orthonormal \((O, \vec{i}, \vec{j})\).
+
+\begin{enumerate}
+    \item Déterminer son ensemble de définition \(D_f\), puis calculer les limites aux bornes de \(D_f\).
+    \item Calculer sa dérivée, étudier son signe puis dresser son tableau de variation.
+    \item Montrer que \((C_f)\) coupe l’axe des abscisses en un seul point \(A\) d’abscisse \(\alpha\).
+    \item Établir les inégalités suivantes :
+    \begin{enumerate}
+        \item \(\forall x \geq 1, \ x - \ln x \geq 1\) (on pourra utiliser l’étude de la fonction \(f\) de la partie I).
+        \item \(0 \leq x \leq 1, \ x^2 \leq x\).
+        \item \(0 \leq x \leq 1, \ \ln(1 + x) - x - \frac{x^2}{2} \geq 0\) (on pourra étudier les variations de \(g(x) = \ln(1 + x) - x + \frac{x^2}{2}\)).
+    \end{enumerate}
+
+    \item On considère la suite \((U_n)\) définie par :
+    \[
+    U_0 = 2, \quad U_{n+1} = U_n - \ln U_n, \quad \forall n \in \mathbb{N}.
+    \]
+    \begin{enumerate}
+        \item Donner une valeur approchée de \(U_1\) à \(10^{-2}\) près et montrer que \(\forall n \in \mathbb{N}, U_n \geq 1\).
+        \item Montrer que la suite \((U_n)\) est décroissante.
+    \end{enumerate}
+
+    \item On pose \(\forall n \in \mathbb{N}, V_n = U_n - 1\).
+    \begin{enumerate}
+        \item Calculer \(V_0\), puis exprimer \(V_{n+1}\) en fonction de \(V_n\).
+        \item Préciser le sens de variation de la suite \((V_n)\).
+        \item Montrer que \(\forall n \in \mathbb{N}, 0 \leq V_n \leq 1\). En déduire que \((V_n)\) converge.
+        \item Montrer que \(\forall n \in \mathbb{N}, V_{n+1} \leq \frac{1}{2} V_n\) et \(0 \leq V_n \leq \left(\frac{1}{2}\right)^n\). En déduire la limite de \((V_n)\).
+    \end{enumerate}
+\end{enumerate}
+
+\section*{Exercice 17}
+
+\textit{Les parties A et B sont indépendantes.}
+
+\subsection*{Partie A}
+
+Un individu décide d’investir dans un plan d’épargne où le capital initial est de 5000 F CFA. Chaque année, le montant investi croît de 5\% par rapport à l’année précédente, grâce aux intérêts composés.
+
+\begin{enumerate}
+    \item Déterminer la nature de la suite représentant le capital total après \(n\) années.
+    \item Calculer le premier terme de cette suite.
+    \item Exprimer le terme général \(u_n\) de la suite en fonction de \(n\).
+    \item Calculer la somme \(S_n = u_1 + u_2 + \cdots + u_n\), représentant le capital total accumulé après \(n\) années.
+    \item Calculer la limite de \(S_n\) lorsque \(n \to +\infty\), si elle existe.
+\end{enumerate}
+
+\subsection*{Partie B}
+
+Un individu décide de rembourser une dette de 10 000 € par versements annuels. Chaque année, il augmente son remboursement de 200 € par rapport à l’année précédente.
+
+\begin{enumerate}
+    \item Déterminer la nature de la suite représentant le montant remboursé chaque année.
+    \item Calculer le premier terme de cette suite.
+    \item Exprimer le terme général \(u_n\) de la suite en fonction de \(n\).
+    \item Calculer la somme \(S_n = u_1 + u_2 + \cdots + u_n\), représentant le total remboursé après \(n\) années.
+    \item Calculer la limite de \(S_n\) lorsque \(n \to +\infty\), si elle existe.
+\end{enumerate}
+
 \end{document}

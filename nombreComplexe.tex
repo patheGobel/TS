@@ -210,9 +210,11 @@ La représentation graphique d'un nombre complexe se fait dans le plan complexe,
 
 Le plan complexe est un plan muni d'un repère cartésien. Chaque nombre complexe $z = a + ib$ peut être associé à un point $(a, b)$ dans ce plan.
 
-Le nombre complexe z = a + i b est appelé l'affixe du point M. On peut donc noter sans ambiguïté M(z) le point M d'affixe z.\\
-z est l'affixe de M\\
-M est l'image de z\\
+Le nombre complexe $z = a + i b$ est appelé l'affixe du point $M$. 
+
+On peut donc noter sans ambiguïté $M(z)$ le point $M$ d'affixe $z$.\\
+$z$ est l'affixe de $M$\\
+$M$ est l'image de $z$\\
 On note $M(z)$\\
 \begin{tikzpicture}[scale=1.5]
   % Axes
@@ -278,6 +280,24 @@ Considérons le nombre complexe $z = 3 + 4i$.
 Le point associé dans le plan complexe est $(3, 4)$.\\
 Représenter $z$ et $\overline{z}$\\
 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+\begin{tikzpicture}[>=stealth]
+    % Axes
+    \draw[->] (-1, 0) -- (4, 0) node[below] {\quad Re};
+    \draw[->] (0, -1) -- (0, 4) node[left] {Im};
+    % Point z
+    \draw[->, thick, blue] (0, 0) -- (3, 2) node[midway, above left] {$z$};
+    \fill (3, 2) circle (2pt) node[above right] {$(3, 2)$};
+    % Grille
+    \draw[dashed, gray] (3, 0) -- (3, 2) -- (0, 2);
+    \node[below] at (3, 0) {3};
+    \node[left] at (0, 2) {2};
+\end{tikzpicture}
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 \section*{\underline{\textbf{\textcolor{red}{IV. Module d'un Nombre Complexe}}}}
 \subsection*{\underline{\textbf{\textcolor{red}{1.Définition  }}}} 
 Le module de $z$, noté $|z|$, est défini comme la distance entre le point représentant $z$ et l'origine $(0,0)$ dans le plan complexe.
@@ -307,6 +327,10 @@ Soit $z = 3 + 4i$. Calculons son module $|z|$.puis $|z^{5}|$.
 Le module de $z$ est donc $5$.\\
 \[ |z^{5}| =|z|^{5}=(\sqrt{3^2 + 4^2})^{5} = (\sqrt{9 + 16})^{5} = (\sqrt{25})^{5} = (\sqrt{5})^{4+1} = 25\sqrt{5} \]
 %Les propriétés du module sont essentielles dans de nombreux calculs et démonstrations impliquant des nombres complexes. Elles fournissent une mesure de la taille d'un nombre complexe dans le plan complexe.\\
+
+\underline{\textbf{\textcolor{green}{Exerice 1.a 1.b 1.c 1.d CIAM SE PAGE 2010}}}
+
+\underline{\textbf{\textcolor{green}{Exerice 1.e 1.f 1.g CIAM SE PAGE 2012}}}
 
 \textbf{\exerciceapp}
 

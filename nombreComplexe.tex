@@ -177,7 +177,8 @@ Le conjugué de $w = 3 + 2i$ est $\overline{w}=3-2i$
 
 \underline{\exemple}
 
-Considérons deux nombres complexes $z_1 = 2 + 3i$ et $z_2 = 1 - 2i$. 
+\begin{enumerate}
+\item Considérons deux nombres complexes $z_1 = 2 + 3i$ et $z_2 = 1 - 2i$. 
 
 Calculons les conjugués et vérifions les propriétés :
 
@@ -187,35 +188,51 @@ Calculons les conjugués et vérifions les propriétés :
 \item[$\bullet$] Le produit des conjugués : $\overline{z_1 \cdot z_2} = \overline{8 + 5i} = 8 - 5i = \overline{z_1} \cdot \overline{z_2}$.
 \item[$\bullet$] Le conjugué du produit : $\overline{z_1 \cdot z_2} = \overline{-4 - 7i} = -4 + 7i = \overline{z_1} \cdot \overline{z_2}$.
 \item[$\bullet$] Le conjugué d'un rapport : $\overline{(\frac{z_1}{z_2})} = \frac{\overline{2 + 3i}}{\overline{1 - 2i}} = \frac{2 - 3i}{1 + 2i}$.
-\item[$\bullet$] Soit \(z = 1 + i\) et \(p = 3\). Calculons :
-\[
-z^3 = (1 + i)^3 = (1 + i)(1 + i)(1 + i) = (1 + 2i + i^2)(1 + i) = (1 + 2i - 1)(1 + i) = 2i(1 + i) = 2i + 2i^2 = -2 + 2i.
-\]
-Donc :
-\[
-\overline{z^3} = \overline{-2 + 2i} = -2 - 2i.
-\]
-D'autre part :
-\[
-\overline{z} = 1 - i, \quad \overline{z}^3 = (1 - i)^3 = (1 - i)(1 - i)(1 - i) = -2 - 2i.
-\]
-Ainsi, \(\overline{z^3} = \overline{z}^3\).
+
 \end{itemize}
+\item Soit \(z = 1 + i\) et \(p = 3\). 
+
+Vérifions que  \(\overline{z^3} = \overline{z}^3 \)
+
+On a :
+\(
+z^3 = (1 + i)^3 = -2 + 2i.
+\)
+
+Donc :
+\(
+\overline{z^3} = \overline{-2 + 2i} = -2 - 2i.
+\)
+
+D'autre part :
+\(
+\overline{z} = 1 - i, \quad \overline{z}^3 = (1 - i)^3 = (1 - i)(1 - i)(1 - i) = -2 - 2i.
+\)
+
+Ainsi, \(\overline{z^3} = \overline{z}^3\).
+\end{enumerate}
 
 \section*{\underline{\textbf{\textcolor{red}{III. Représentation graphique d'un Nombre Complexe }}}}
 
-La représentation graphique d'un nombre complexe se fait dans le plan complexe, où l'axe des abscisses correspond à la partie réelle et l'axe des ordonnées à la partie imaginaire.
+Les nombres complexes peuvent être vus comme des points du plan appelé.
+
+Chaque nombre complexe est représenté par un point unique dans ce plan, où l'axe horizontal correspond à la partie réelle et l'axe vertical à la partie imaginaire.
 
 \underline{\textbf{\textcolor{red}{1.Plan Complexes}}}
 
-Le plan complexe est un plan muni d'un repère cartésien. Chaque nombre complexe $z = a + ib$ peut être associé à un point $(a, b)$ dans ce plan.
+Le plan complexe est un plan muni d'un repère cartésien. 
+
+Chaque nombre complexe $z = a + ib$ peut être associé à un point $(a, b)$ dans ce plan.
 
 Le nombre complexe $z = a + i b$ est appelé l'affixe du point $M$. 
 
-On peut donc noter sans ambiguïté $M(z)$ le point $M$ d'affixe $z$.\\
-$z$ est l'affixe de $M$\\
-$M$ est l'image de $z$\\
-On note $M(z)$\\
+On peut donc noter sans ambiguïté $M(z)$ le point $M$ d'affixe $z$.
+
+$z$ est l'affixe de $M$
+
+$M$ est l'image de $z$
+
+On note $M(z)$
 \begin{tikzpicture}[scale=1.5]
   % Axes
   \draw[->] (-2,0) -- (2,0) node[right] {$\Re$};

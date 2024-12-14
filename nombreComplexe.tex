@@ -143,6 +143,7 @@ Considérons le nombre complexe $z=2+3i$. Appliquons les identités remarquables
   \end{aligned}
 \]
 
+
 De même, pour $z$, $\overline{z} = 2-3i$, appliquons l'identité remarquable correspondante :
 \[
   \begin{aligned}
@@ -452,6 +453,7 @@ $sin^{3}(x)=\frac{-1}{4}sin(3x)+\frac{3}{4}sin(x)$
 \section*{\underline{\textbf{\textcolor{red}{VIII.Résolution d'équations dans $\mathbb{C}$}}}}
 \subsection*{\underline{\textbf{\textcolor{red}{1.Déterminer les racines nièmes $(n\geq2)$ d'un complexe:}}}}
 \underline{\textbf{\textcolor{blue}{a. Racine n-ième de l’unité}}}
+
 Les \textbf{racines n-ièmes de l’unité} sont les solutions complexes de l’équation suivante :
 \[
 z^n = 1,
@@ -460,18 +462,76 @@ où \(n \in \mathbb{N}^*\) est un entier naturel non nul.
 
 Elles sont appelées ainsi car leur module est toujours égal à \(1\), ce qui signifie qu’elles appartiennent au cercle unité dans le plan complexe.
 
-+++++++++++++++++++++++++++++++++++++++++++++++++
-
 \paragraph{\underline{\textbf{\textcolor{blue}{Formule générale :}}}}
+
 Les \(n\) racines n-ièmes de l’unité sont données par :
 \[
-z_k = e^{i\frac{2k\pi}{n}} = \cos\left(\frac{2k\pi}{n}\right) + i\sin\left(\frac{2k\pi}{n}\right),
+z_k = e^{i\frac{2k\pi}{n}} = \cos\left(\frac{2k\pi}{n}\right) + i\sin\left(\frac{2k\pi}{n}\right), \text{ où } k \in \{0, 1, 2, \ldots, n-1\}
 \]
-où \(k \in \{0, 1, 2, \ldots, n-1\}\).
 
 \textbf{Interprétation :} Chaque \(z_k\) est une rotation par un angle \(\frac{2k\pi}{n}\) autour de l’origine, dans le sens trigonométrique (sens anti-horaire). 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+\paragraph{\underline{\textbf{\textcolor{green}{Exemple : }}}}
+
+Resoudre \( z^4 = 1, \) dans $\mathbb{C}$
+
+Les \(4\) racines quatrièmes de l’unité sont données par la formule générale :
+\[
+z_k = e^{i\frac{2k\pi}{4}} = \cos\left(\frac{2k\pi}{4}\right) + i\sin\left(\frac{2k\pi}{4}\right), \quad k \in \{0, 1, 2, 3\}.
+\]
+
+\textbf{Calcul des racines :}
+\begin{itemize}
+    \item Pour \(k = 0\) : 
+    \[
+    z_0 = e^{i\frac{2\cdot 0\pi}{4}} = e^{i0} = 1.
+    \]
+    \item Pour \(k = 1\) : 
+    \[
+    z_1 = e^{i\frac{2\cdot 1\pi}{4}} = e^{i\frac{\pi}{2}} = \cos\left(\frac{\pi}{2}\right) + i\sin\left(\frac{\pi}{2}\right) = i.
+    \]
+    \item Pour \(k = 2\) : 
+    \[
+    z_2 = e^{i\frac{2\cdot 2\pi}{4}} = e^{i\pi} = \cos(\pi) + i\sin(\pi) = -1.
+    \]
+    \item Pour \(k = 3\) : 
+    \[
+    z_3 = e^{i\frac{2\cdot 3\pi}{4}} = e^{i\frac{3\pi}{2}} = \cos\left(\frac{3\pi}{2}\right) + i\sin\left(\frac{3\pi}{2}\right) = -i.
+    \]
+\end{itemize}
+
+\textbf{Résultat :} Les \(4\) racines quatrièmes de l’unité sont :
+\[
+z_0 = 1, \quad z_1 = i, \quad z_2 = -1, \quad z_3 = -i.
+\]
+
+\textbf{Représentation graphique dans le plan complexe :}
+
+\begin{center}
+\begin{tikzpicture}[scale=2]
+    % Cercle unité
+    \draw[thick, gray!50] (0,0) circle(1);
+    
+    % Axes
+    \draw[->] (-1.5,0) -- (1.5,0) node[below] {\( \text{Re} \)};
+    \draw[->] (0,-1.5) -- (0,1.5) node[left] {\( \text{Im} \)};
+    
+    % Points sur le cercle
+    \filldraw[blue] (1,0) circle(1pt) node[below right] {\( z_0 = 1 \)};
+    \filldraw[blue] (0,1) circle(1pt) node[above right] {\( z_1 = i \)};
+    \filldraw[blue] (-1,0) circle(1pt) node[below left] {\( z_2 = -1 \)};
+    \filldraw[blue] (0,-1) circle(1pt) node[below right] {\( z_3 = -i \)};
+    
+    % Lignes de connexion
+    \draw[thick, dashed, blue] (1,0) -- (0,1) -- (-1,0) -- (0,-1) -- cycle;
+\end{tikzpicture}
+\end{center}
+
+Les racines quatrièmes de l'unité forment les sommets d'un carré inscrit dans le cercle unité dans le plan complexe.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 \underline{\textbf{\textcolor{blue}{b.Racine nième d'un nombre complexe}}}\\
 Soit $U \in \mathbb{C}$ et n un entier naturel différent de zéro.\\

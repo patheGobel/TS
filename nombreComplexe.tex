@@ -409,17 +409,19 @@ Donner la forme algébrique dans chaque cas
 \subsection*{\underline{\textbf{\textcolor{red}{2. Forme trigonométrique d'un nombre Complexe}}}}
 Soit z un nombre complexe non nul d'argument $\theta$. On appelle forme trigonométrique d'un nombre complexe l'écriture suivante:\\
 $z=|z|(cos(\theta)+isin(\theta))$\\
+Avec $cos(\theta)=\frac{\Re(z)}{|z|}$ et $sin(\theta)=\frac{\Im(z)}{|z|}$\\
 \underline{\exemple}\\
 Donner la forme trigonométrique des nombres complexes suivantes:\\
-$z_{1}=-\sqrt{3}+i$ ; $z_{2}=1+i$ ; $\frac{-\sqrt{2}}{1-i}$\\
+$z_{1}=1+i\sqrt{3}$ ; $z_{2}=-\sqrt{3}+3i$ ; $z_{3}=\frac{-\sqrt{2}}{1-i}$\\
 \underline{\textbf{\textcolor{red}{Solution}}}\\
 \subsection*{\underline{\textbf{\textcolor{red}{3. Forme exponentielle d'un nombre complexe non nul}}}}
 \subsection*{\underline{\textbf{\textcolor{blue}{a. Définition }}}}
- Soit z un nombre complexe non nul d'argument $\theta$.
+On pose $cos(\theta)+isin(\theta)=e^{i\theta}$\\
+Soit z un nombre complexe non nul d'argument $\theta$ i.e $\arg(z)=\theta$.
  
-On appelle forme exponentielle d'un nombre complexe l'écriture : $z=|z|e^{i\theta}$\\
+On appelle forme exponentielle d'un nombre complexe l'écriture : $z=|z|e^{i\theta}$
 \subsection*{\underline{\textbf{\textcolor{blue}{b. Propriétés }}}}
-Soit $\theta$,$\theta_{1}$ et $\theta_{2}$ deux nombres réels et $n\in\mathbb{Z}$\\%, $z\in\mathbb{C}$ et $|z|=1$\\
+Soit $z_{1}=e^{i\theta_{1}}$ et $z_{2}=e^{i\theta_{1}}$ on a:\\
 $z=e^{i\theta_{1}} \times e^{i\theta_{2}} = e^{i(\theta_{1}+\theta_{2})}$\\
 $z=\frac{e^{i\theta_{1}}}{e^{i\theta_{2}}} = e^{i(\theta_{1}-\theta_{2})}$\\
 $z=\frac{1}{e^{i\theta}} = e^{-i\theta}$\\
@@ -431,25 +433,21 @@ $z_{1}=-\sqrt{3}+i$ ; $z_{2}=-\sqrt{6}+i\sqrt{2}$ et $z_{3}=1+i\sqrt{3}$\\
 \section*{\underline{\textbf{\textcolor{red}{VII.Formule de Moivre-Formule d'Euler }}}}
 \subsection*{\underline{\textbf{\textcolor{red}{1.Formule de Moivre }}}}
 A partir de la forme trigonométrique d'un nombre complexe on peut déduire la formule de Moivre.\\
-$\forall x \in \mathbb{R}$ et $n \in \mathbb{Z}$,\\
-$(cos(x)+isin(x))^{n}=cos(nx)+isin(nx)$\\
-$(cos(x)-isin(x))^{n}=cos(nx)-isin(nx)$\\
-\underline{\exemple}
+$\forall \theta \in \mathbb{R}$ et $n \in \mathbb{Z}$,\\
+$(cos(\theta)+isin(\theta))^{n}=cos(n\theta)+isin(n\theta)$\\
+$(cos(\theta)-isin(\theta))^{n}=cos(n\theta)-isin(n\theta)$\\
 
 \subsection*{\underline{\textbf{\textcolor{red}{2.Formule d'Euler}}}}
 A partir de la forme exponentielle d'un nombre complexe on peut déduire les formules\\ d'Euler.\\
-$cos(x)$=$\frac{e^{ix}+e^{-ix}}{2}$\\
-$sin(x)$=$\frac{e^{ix}-e^{-ix}}{2i}$\\
+$cos(\theta)\frac{e^{i\theta}+e^{-i\theta}}{2}$ $sin(\theta)\frac{e^{i\theta}-e^{-i\theta}}{2i}$\\
+$cos(n\theta)=\frac{e^{ni\theta}+e^{-ni\theta}}{2} $ $sin(n\theta)=\frac{e^{ni\theta}-e^{-ni\theta}}{2i}$\\
 \subsection*{\underline{\textbf{\textcolor{red}{3.Linéariser des expressions trigonométriques:}}}}
-Formules de linéarisations\\
-$cos^{n}(x)=(\frac{e^{ix}+e^{-ix}}{2})^{n}$\\
-$sin^{n}(x)=(\frac{e^{ix}-e^{-ix}}{2i})^{n}$\\
+
 \underline{\exemple}\\
 Linéariser $sin^{3}(x)$ et $cos^{3}(x)$\\
 \underline{\textbf{\textcolor{red}{Solution}}}\\
 $cos^{3}(x)=\frac{1}{4}cos(3x)+\frac{3}{4}cos(x)$\\
 $sin^{3}(x)=\frac{-1}{4}sin(3x)+\frac{3}{4}sin(x)$
-\subsection*{\underline{\textbf{\textcolor{red}{4.Expression de cosnx et sinnx en fonction de cosx ou sinx }}}}
 \section*{\underline{\textbf{\textcolor{red}{VIII.Résolution d'équations dans $\mathbb{C}$}}}}
 \subsection*{\underline{\textbf{\textcolor{red}{1.Déterminer les racines nièmes $(n\geq2)$ d'un complexe:}}}}
 \underline{\textbf{\textcolor{blue}{a. Racine n-ième de l’unité}}}
@@ -470,8 +468,6 @@ z_k = e^{i\frac{2k\pi}{n}} = \cos\left(\frac{2k\pi}{n}\right) + i\sin\left(\frac
 \]
 
 \textbf{Interprétation :} Chaque \(z_k\) est une rotation par un angle \(\frac{2k\pi}{n}\) autour de l’origine, dans le sens trigonométrique (sens anti-horaire). 
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 \paragraph{\underline{\textbf{\textcolor{green}{Exemple : }}}}
 
@@ -531,8 +527,6 @@ z_0 = 1, \quad z_1 = i, \quad z_2 = -1, \quad z_3 = -i.
 
 Les racines quatrièmes de l'unité forment les sommets d'un carré inscrit dans le cercle unité dans le plan complexe.
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 \underline{\textbf{\textcolor{blue}{b.Racine nième d'un nombre complexe}}}\\
 Soit $U \in \mathbb{C}$ et n un entier naturel différent de zéro.\\
 L'équation $z^{n}=U$, $\theta=arg(z)$, a n solutions de la forme.\\
@@ -545,7 +539,7 @@ $\theta=\frac{\pi}{4}$\\
 Soit $z_{k}=\sqrt[n]{|z|}e^{i(\frac{\theta+2k\pi)}{n}}$\\
 Si $M_{0}$ ; $M_{1}$ ; $M_{2}$ ; $M_{3}$ ; $M_{4}$ ; $M_{5}$ ; ... ; $M_{k-1}$ sont les images de $z_{0}$ ; $z_{1}$ ; $z_{2}$ ; $z_{3}$ ; $z_{4}$ ; $z_{5}$ ; ... ; $z_{k-1}$
 \subsection*{\underline{\textbf{\textcolor{red}{6.6 Résoudre dans $\mathbb{C}$ les équations du $2^{nd}$ degré à coefficients complexes:}}}}
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 \subsection*{\underline{\textbf{\textcolor{red}{Interprétation de $|\frac{d-c}{b-a}|$}}}}
 Soit a,b,c et d des nombres complexes qui ont comme image A; B; C; D tel que $a \neq b$ et $c \neq d$\\
 $|\frac{d-c}{b-a}|=\frac{CD}{AB}$\\

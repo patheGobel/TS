@@ -535,21 +535,21 @@ z_k = e^{i\frac{2k\pi}{4}} = \cos\left(\frac{2k\pi}{4}\right) + i\sin\left(\frac
 \textbf{Calcul des racines :}
 \begin{itemize}
     \item Pour \(k = 0\) : 
-    \[
+    \(
     z_0 = e^{i\frac{2\cdot 0\pi}{4}} = e^{i0} = 1.
-    \]
+    \)
     \item Pour \(k = 1\) : 
-    \[
+    \(
     z_1 = e^{i\frac{2\cdot 1\pi}{4}} = e^{i\frac{\pi}{2}} = \cos\left(\frac{\pi}{2}\right) + i\sin\left(\frac{\pi}{2}\right) = i.
-    \]
+    \)
     \item Pour \(k = 2\) : 
-    \[
+    \(
     z_2 = e^{i\frac{2\cdot 2\pi}{4}} = e^{i\pi} = \cos(\pi) + i\sin(\pi) = -1.
-    \]
+    \)
     \item Pour \(k = 3\) : 
-    \[
+    \(
     z_3 = e^{i\frac{2\cdot 3\pi}{4}} = e^{i\frac{3\pi}{2}} = \cos\left(\frac{3\pi}{2}\right) + i\sin\left(\frac{3\pi}{2}\right) = -i.
-    \]
+    \)
 \end{itemize}
 
 \textbf{Résultat :} Les \(4\) racines quatrièmes de l’unité sont :
@@ -655,9 +655,23 @@ Ainsi, le système devient :
 x^2 - y^2 = 3, \\
 2xy = 4, \\
 x^2 + y^2 = 5.
+\end{cases}\implies
+\begin{cases}
+x^2 - y^2 = 3, \\
+x^2 + y^2 = 5,\\
+2xy = 4.
+\end{cases}\implies
+\begin{cases}
+x^2 = 4, \\
+y^2 = 1,\\
+2xy = 4.
+\end{cases}\implies
+\begin{cases}
+x = 2 \textbf{ ou } x = -2, \\
+y = 1 \textbf{ ou } y = -1,\\
+2xy = 4.
 \end{cases}
 \]
-
 \textbf{Étape 2 : Résoudre le système}  
 De \( x^2 + y^2 = 5 \) et \( x^2 - y^2 = 3 \), additionnons les deux équations :
 \[
@@ -691,42 +705,59 @@ w_1 = 2 + i \quad \text{et} \quad w_2 = -2 - i.
 \underline{\textbf{\textcolor{blue}{e. Résoudre dans $\mathbb{C}$ les équations du $2^{nd}$ degré à coefficients complexes :}}}\\
 \textbf{Résoudre dans \( \mathbb{C} \) l’équation \( z^2 - (1 + i)z + i = 0 \).}
 
-1. \textbf{Identifier les coefficients :}  
-   Ici, \( a = 1 \), \( b = -(1 + i) \), \( c = i \).
+3. \textbf{Trouver \( \sqrt{\Delta} \) en utilisant la méthode \( z = w^2 \) :}  
+On cherche \( \sqrt{\Delta} \), où \( \Delta = -2i \), en résolvant \( w^2 = -2i \).  
+Posons \( w = x + yi \), avec \( x, y \in \mathbb{R} \). Alors :
+\[
+(x + yi)^2 = x^2 - y^2 + 2xyi = -2i.
+\]
 
-2. \textbf{Calculer le discriminant :}  
-   \[
-   \Delta = b^2 - 4ac = [-(1 + i)]^2 - 4(1)(i).
-   \]
+Cela donne le système suivant :
+\[
+\begin{cases}
+x^2 - y^2 = 0, \\
+2xy = -2.
+\end{cases}
+\]
 
-   \[
-   \Delta =-2i.
-   \]
+\textbf{Résolution :}
+- De \( x^2 - y^2 = 0 \), on a \( x^2 = y^2 \), donc \( y = \pm x \).
+- Substituons \( y = x \) dans \( 2xy = -2 \) :
+  \[
+  2x(x) = -2 \implies 2x^2 = -2 \implies x^2 = 1 \implies x = \pm 1.
+  \]
+  Si \( x = 1 \), alors \( y = 1 \).  
+  Si \( x = -1 \), alors \( y = -1 \).
 
-3. \textbf{Trouver \( \sqrt{\Delta} \) :}  
-   \( \Delta = -2i \). Pour trouver \( \sqrt{-2i} \), exprimons \( -2i \) sous la forme \( r e^{i\theta} \), où \( r = |-2i| = 2 \) et \( \theta = -\frac{\pi}{2} \) :  
-   \[
-   \sqrt{-2i} = \sqrt{2} e^{i(-\frac{\pi}{4})} = \sqrt{2} \left( \cos(-\frac{\pi}{4}) + i\sin(-\frac{\pi}{4}) \right).
-   \]
-   Ainsi :
-   \[
-   \sqrt{-2i} = \sqrt{2} \left( \frac{\sqrt{2}}{2} - i\frac{\sqrt{2}}{2} \right) = 1 - i.
-   \]
+\textbf{Les solutions pour \( w \) sont :}
+\[
+w_1 = 1 - i \quad \text{et} \quad w_2 = -1 + i.
+\]
+
+Ainsi, \( \sqrt{\Delta} = 1 - i \) ou \( \sqrt{\Delta} = -1 + i \).
 
 4. \textbf{Appliquer la formule des solutions :}  
-   Les solutions sont :
-   \[
-   z_1 = \frac{-(-1 - i) + (1 - i)}{2(1)} = \frac{1 + i + 1 - i}{2} = \frac{2}{2} = 1,
-   \]
-   \[
-   z_2 = \frac{-(-1 - i) - (1 - i)}{2(1)} = \frac{1 + i - 1 + i}{2} = \frac{2i}{2} = i.
-   \]
+Les solutions de l’équation quadratique sont données par :
+\[
+z = \frac{-b \pm \sqrt{\Delta}}{2a}.
+\]
+
+- Pour \( \sqrt{\Delta} = 1 - i \) :
+  \[
+  z_1 = \frac{-(-1 - i) + (1 - i)}{2} = \frac{1 + i + 1 - i}{2} = \frac{2}{2} = 1.
+  \]
+
+- Pour \( \sqrt{\Delta} = -1 + i \) :
+  \[
+  z_2 = \frac{-(-1 - i) - (-1 + i)}{2} = \frac{1 + i - (-1 + i)}{2} = \frac{1 + i + 1 - i}{2} = \frac{2i}{2} = i.
+  \]
 
 \textbf{Résultat final :}  
 Les solutions de \( z^2 - (1 + i)z + i = 0 \) sont :
 \[
 z_1 = 1 \quad \text{et} \quad z_2 = i.
 \]
+
 
 \underline{\textbf{\textcolor{blue}{f.Résoudre dans $\mathbb{C}$ les équations du $3^{nd}$ degré à coefficients complexes:}}}\\
 \subsection*{\underline{\textbf{\textcolor{red}{Interprétation de $|\frac{d-c}{b-a}|$}}}}

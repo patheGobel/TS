@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{lmodern} % Pour une police plus nette
+\usepackage{stmaryrd}
+\usepackage{graphicx} % Pour l'insertion d'images
+\usepackage{float}    % Pour contrôler précisément le placement
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+\usepackage{color, soul}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18} % Version plus récente de pgfplots
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+%\author{Destiné aux élèves de Terminale S\\Lycée de Dindéfelo\\Présenté par M. BA}
+%\title{\textbf{Rappels et compléments sur les fonctions numériques}}
+%\date{\today}
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, fit}
+% Commande pour la couleur d'accentuation
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\usepackage[margin=2.5cm]{geometry} % Ajustement des marges
+\usepackage{eso-pic} % Pour ajouter des éléments en arrière-plan
+
+% Commande pour ajouter du texte en arrière-plan, centré au milieu de chaque page
+\AddToShipoutPicture{
+    \AtPageCenter{%
+        \makebox(0,0)[c]{\rotatebox{60}{\textcolor[gray]{0.9}{\fontsize{2cm}{2cm}\selectfont PGB}}}
+    }
+}
+
+\begin{document}
+
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\raggedright
+\textbf{Ministère de l'Éducation Nationale}\\
+Inspection Académique de Kédougou\\
+Lycée Dindéfelo\\
+Cellule de Mathématiques
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\raggedleft
+\textbf{Année scolaire 2024-2025}\\
+Date : 03/01/2025\\
+Classe : Terminale S2\\
+Professeur : M. BA
+\end{minipage}
+\vspace{1cm}
+\begin{center}
+\textbf{\textcolor{red}{Formes trigonométrique et exponentielle des Nombres Complexes}}
+\end{center}
+\vspace{1cm}
+\section*{\textcolor{black}{Exercice 1 :}}
+\begin{enumerate}
+    \item Déterminer le module et un argument des nombres complexes suivants :
+    \begin{enumerate}
+        \item $2i$ ;
+        \item $\sqrt{3} + 3i$ ;
+        \item $\sqrt{6} + i\sqrt{2}$ ;
+        \item $5$ ;
+        \item $\left(\frac{1}{2}-i\frac{\sqrt{3}}{2}\right)^3$ ;
+        \item $\left(\frac{1}{2}+i\frac{\sqrt{3}}{2}\right)\left(-\frac{1}{2}+i\frac{\sqrt{3}}{2}\right)$ ;
+        \item $\frac{-1+i\sqrt{3}}{\sqrt{3} + i}$.
+    \end{enumerate}
+    \item Écrire sous forme trigonométrique les nombres complexes suivants :
+    \begin{enumerate}
+        \item $(2+2i)(1-i)$ ;
+        \item $\frac{-1+i\sqrt{3}}{1+i}$ ;
+        \item $\frac{\sqrt{2}}{1+i}$ ;
+        \item $\frac{-2i}{1+i\sqrt{3}}$ ;
+        \item $(-1-i)^4$ ;
+        \item $\left(\frac{1+i\sqrt{3}}{1-i}\right)^2$.
+    \end{enumerate}
+    \item Soit $z_1 = 1+i$ et $z_2 = 1+i\sqrt{3}$.
+    \begin{enumerate}
+        \item Déterminer le module et un argument de $z_1$ et $z_2$.
+        \item Écrire sous forme algébrique et sous forme trigonométrique le produit $z_1z_2$.
+        \item En déduire les valeurs de $\cos\frac{7\pi}{12}$ et $\sin\frac{7\pi}{12}$.
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}

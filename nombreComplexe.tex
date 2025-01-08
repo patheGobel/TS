@@ -695,7 +695,6 @@ Les racines carrées de \( z = 3 + 4i \) sont :
 w_1 = 2 + i \quad \text{et} \quad w_2 = -2 - i.
 \]
 
-\underline{\textbf{\textcolor{blue}{e. Résoudre dans $\mathbb{C}$ les équations du $2^{nd}$ degré à coefficients complexes :}}}\\
 \textbf{Résoudre dans \( \mathbb{C} \) l’équation \( z^2 - (1 + i)z + i = 0 \).}
 
 3. \textbf{Trouver \( \sqrt{\Delta} \) en utilisant la méthode \( z = w^2 \) :}  
@@ -751,15 +750,77 @@ Les solutions de \( z^2 - (1 + i)z + i = 0 \) sont :
 z_1 = 1 \quad \text{et} \quad z_2 = i.
 \]
 
+\underline{\textbf{\textcolor{green}{Exemple 11: }}}
+Soit $(E)$ l’équation définie par $(E)$ : 
+\[
+z^3 - 3z^2 + (3 - i)z - 2(1 - i) = 0.
+\]
 
-\underline{\textbf{\textcolor{blue}{f.Résoudre dans $\mathbb{C}$ les équations du $3^{nd}$ degré à coefficients complexes:}}}\\
-Soit l'équation suivante $(E):z^{3} + z^{2} + z + 1 = 0$ 
 \begin{enumerate}
-\item Vérifier que $(-1)$ est une solution de $(E)$ .
-\item Trouver les réels $a$, $b$ et $c$ tels que : $z^{3} + z^{2} + z + 1 = ( z +1)(az^{2}+ bz + c)$
-\item Résoudre alors l'équation $(E)$
+    \item Montrer que $(E)$ admet une solution réelle à déterminer.
+
+    \item Résoudre $(E)$.
 \end{enumerate}
 \underline{\textbf{\textcolor{red}{Solution}}}\\
+
+\begin{enumerate}
+    \item Soit $z = a$ la solution réelle de $(E)$.
+
+    Donc,
+    \[
+    a^3 - 3a^2 + (3 - i)a - 2(1 - i) = 0
+    \]
+    \[
+    \implies a^3 - 3a^2 + 3a - ai - 2 + 2i = 0
+    \]
+    \[
+    \implies a^3 - 3a^2 + 3a - 2 + i(2 - a) = 0.
+    \]
+
+    Cela implique :
+    \[
+    \begin{cases}
+    a^3 - 3a^2 + 3a - 2 = 0 \\
+    2 - a = 0
+    \end{cases}
+    \]
+
+    \[
+    \implies
+    \begin{cases}
+    a^3 - 3a^2 + 3a - 2 = 0 \quad (1) \\
+    a = 2 \quad (2)
+    \end{cases}
+    \]
+
+    $a = 2$ vérifie aussi l’équation $(1)$, donc $2$ est la solution réelle cherchée.
+\end{enumerate}
+\begin{enumerate}
+    \setcounter{enumi}{1}
+    \item L’équation $(E)$ devient $(z - 2)(az^2 + bz + c) = 0$.  
+    En procédant par exemple par la méthode de Hörner, on détermine les coefficients $a$, $b$ et $c$.
+
+    On a : 
+    \[
+    (z - 2)(z^2 - z + 1 - i) = 0 \iff z = 2 \quad \text{ou} \quad z^2 - z + 1 - i = 0.
+    \]
+
+    Soit l’équation $z^2 - z + 1 - i = 0$, alors :
+    \[
+    \Delta = (1)^2 - 4(1)(1 - i) = 1 - 4 + 4i = -3 + 4i = (1 + 2i)^2.
+    \]
+
+    Donc :
+    \[
+    z_1 = \frac{1 - 1 - 2i}{2} = -i \quad \text{et} \quad z_2 = \frac{1 + 1 + 2i}{2} = 1 + i.
+    \]
+
+    D’où :
+    \[
+    S_C = \{2; -i; 1 + i\}.
+    \]
+\end{enumerate}
+
 \[
 \begin{array}{|c|c|c|c|c|}
 \hline
@@ -771,7 +832,8 @@ Soit l'équation suivante $(E):z^{3} + z^{2} + z + 1 = 0$
 \hline
 \end{array}
 \]
-$z^{3} + z^{2} + z + 1 = ( z +1)(z^{2}+1)$
+
+\section*{\underline{\textbf{\textcolor{red}{IX.Interprétation géométrique des nombres complexes}}}}
 \subsection*{\underline{\textbf{\textcolor{red}{Interprétation de $|\frac{d-c}{b-a}|$}}}}
 Soit a,b,c et d des nombres complexes qui ont comme image A; B; C; D tel que $a \neq b$ et $c \neq d$\\
 $|\frac{d-c}{b-a}|=\frac{CD}{AB}$\\
@@ -791,4 +853,63 @@ Soit $M(z)$ ; $A(2i)$ et $B(-i)$ alos on a:\\
 $|Z'|=|\frac{i(z_{M}-z_{B})}{z_{M}-z_{A}}|=\frac{|i|\times|(z_{M}-z_{B})|}{|z_{M}-z_{A}|}=\left| \frac{MB}{MA}\right| $\\
 Si $|Z'|=1$ alors $\frac{MA}{MB}=1 \Longrightarrow MA=MB$\\
 L'ensemble des points $M$ tel que  $|Z'|=1$ est la médiatrice $[AB]$\\
+++++++++++++++++++++++++++++++++++++++++++++++++
+\section*{Configurations géométriques}
+
+\begin{itemize}
+    \item \textbf{Condition d'alignement} :  
+    $A(a)$, $B(b)$ et $C(c)$ sont alignés si et seulement si $(b - a)(\overline{c} - \overline{a})$ est réel.
+
+    \item \textbf{Condition d'orthogonalité} :  
+    Les droites $(AB)$ et $(AC)$ sont orthogonales si et seulement si $(b - a)(\overline{c} - \overline{a})$ est imaginaire pur.
+
+    \item \textbf{Condition de cocyclicité} :  
+    $A(a)$, $B(b)$, $C(c)$ et $D(d)$ sont alignés ou cocycliques si et seulement si :
+    \[
+    \frac{(d - a)(\overline{c} - \overline{b})}{(c - a)(\overline{d} - \overline{b})} \text{ est réel.}
+    \]
+ou \[
+\angle (\overrightarrow{CA}, \overrightarrow{CB}) = \angle (\overrightarrow{DA}, \overrightarrow{DB}) \mod \pi.
+\]
+ou
+\[
+\frac{\frac{c - b}{c - a}}{\frac{d - b}{d - a}} \text{ est réel.}
+\]
+
+% Cercle
+\draw[thick] (0,0) circle(3);
+
+% Points A, B, C, D
+\node[below left] at (-2.5,-1.5) {$A$};
+\node[below right] at (2.5,-1.5) {$B$};
+\node[above] at (0,2.7) {$C$};
+\node[right] at (2.5,1.5) {$D$};
+
+% Sommets du cercle
+\coordinate (A) at (-2.5,-1.5);
+\coordinate (B) at (2.5,-1.5);
+\coordinate (C) at (0,2.7);
+\coordinate (D) at (2.5,1.5);
+
+% Arcs et segments
+\draw[thick] (A) -- (C) -- (B);
+\draw[thick] (C) -- (D);
+\draw[thick] (A) -- (B);
+\draw[thick] (B) -- (D);
+
+\end{tikzpicture}
+
+    \item \textbf{Triangle équilatéral} :  
+    Les points $A(a)$, $B(b)$ et $C(c)$ forment un triangle équilatéral direct si, et seulement si :  
+    \[
+    a + j b + j^2 c = 0.
+    \]
+
+    \item \textbf{Barycentre} :  
+    Si $G$ est le barycentre des points $M_k$ d’affixe $z_k$, affectés des coefficients $x_k$, alors l’affixe de $G$ est :
+    \[
+    \frac{1}{\sum_{k=1}^n x_k} \left( \sum_{k=1}^n x_k z_k \right).
+    \]
+\end{itemize}
+
 \end{document}

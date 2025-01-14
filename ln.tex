@@ -1,0 +1,183 @@
+\documentclass[12pt]{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+\usepackage{color,soul}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{systeme}
+\usepackage{tkz-tab}
+\author{Destiné à la TerminaleS2\\Au Lycée de Dindéferlo}
+\title{\textbf{Fonction Exponentielle}}
+\date{\today}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage[a4paper,left=20mm,right=20mm,top=15mm,bottom=15mm]{geometry}
+\usepackage{mathtools}
+\usepackage{systeme}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+
+\DecimalMathComma
+
+\begin{document}
+
+\maketitle
+\newpage
+\subsection*{\underline{\textbf{\textcolor{red}{1.Définition :}}}}
+La fonction \( f(x) = \ln(x) \) est continue et strictement croissante sur \( ]0; +\infty[ \) donc, c'est une bijection de \( ]0; +\infty[ \) vers \( \mathbb{R} \). Ainsi, \( f \) admet une bijection réciproque \( f^{-1} \) qui est continue et strictement croissante de \( \mathbb{R} \) vers \( ]0; +\infty[ \). \( f^{-1} \) est appelée fonction exponentielle, notée : $exp(x)=e^{x}$
+\subsection*{\underline{\textbf{\textcolor{red}{2.Conséquences de la définition}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{3.Propriétés}}}}
+\textbf{\textcolor{red}{Propriété fondamentale}}\\
+Pour tout réel a et b, on a: $e^{a+b}=e^{a} \times e^{b}$.\\
+\textbf{\textcolor{red}{Propriétés}}\\
+\begin{itemize}
+    \item \textbf{} \(e^{-a}=\frac{1}{e^{a}}\)
+    \item \textbf{} \(e^{a-b}=\frac{e^{a}}{e^{b}}\)
+    \item \textbf{} \(e^{ra}=(e^{a})^{r}\)
+    \item \textbf{} \(e^{a}=e^{b} \Leftrightarrow a=b\)
+    \item \textbf{} \(e^{a}<e^{b} \Leftrightarrow a<b\)
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{Exemples}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{Remarque}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{4.Limites Usuelles}}}}
+\underline{\textbf{\textcolor{red}{Limites aux bornes de Df }}}\\
+$\lim_{x \to -\infty}e^{x}=0$\\
+$\lim_{x \to +\infty}e^{x}=+\infty$\\
+\underline{\textbf{\textcolor{red}{Limites usuelles}}}\\
+$\lim_{x \to +\infty}\frac{e^{x}}{x}=+\infty$\\
+$\lim_{x \to -\infty}xe^{x}=0$\\
+\underline{\textbf{\textcolor{red}{Preuve de quelques limites}}}\\
+
+\underline{\textbf{\textcolor{red}{Exemple}}}\\
+Déterminer les limites suivantes:\\
+$\bullet$ La fonction $x \longmapsto e^{-x^{2}+x}$ est dérivable sur $\mathbb{R}$ et sa dérivée est la fonction\\
+$\bullet$ La fonction $x \longmapsto e^{\cos x}$ est dérivable sur $\mathbb{R}$ et sa dérivée est  la fonction\\
+$\bullet$ La fonction $x \longmapsto e^{\frac{1}{x}}$ est dérivable sur $\mathbb{R}^{*}$ et sa dérivée est  la fonction\\
+\underline{\textbf{\textcolor{red}{Exercice d'application}}}\\
+Déterminer les limites suivantes:\\
+Calculer les limites suivantes.\\
+a)\(\lim_{x \to +\infty}\frac{3e^{x}-2}{5e^{x}+3}\) ; b)\(\lim_{x \to -\infty}\frac{\ln(1+e^{x})}{e^{x}}\)
+c)\( \lim_{x \to +\infty }(x-e^{x})\) ; d)\( \lim_{x \to +\infty }\frac{\sin2x}{1-e^{x}}\)
+\subsection*{\underline{\textbf{\textcolor{red}{6.Limites des composées avec exp}}}}
+\underline{\textbf{\textcolor{red}{Propriété}}}\\
+Soit U une fonction dérivablesur un intervalle I de $\mathbb{R}$.\\
+La fonction $\exp\circ u $ est dérivable sur I  et on a: $(\exp\circ u )'=u' \times \exp\circ u$\\
+\underline{\textbf{\textcolor{red}{NB}}}\\
+La fonction $\exp\circ u $ est généralement notée $e^{u}$ ; sa dérivée est alors $u'e^{u}$.\\
+\underline{\textbf{\textcolor{red}{Exemple}}}\\
+Calcule la limite suivante\\
+
+\underline{\textbf{\textcolor{red}{Solution}}}\\
+\subsection*{\underline{\textbf{\textcolor{red}{7.Dérivée}}}}
+Soit u et v deux fonctions strictement positives \\
+
+\underline{\textbf{\textcolor{red}{Exemple}}}\\
+\subsection*{\underline{\textbf{\textcolor{red}{8.Croissance Comparée de $\ln x$ $e^{x}$ $x^{\alpha}$}}}}
+$\lim_{x \to +\infty}\frac{e^{x}}{x^{\alpha}}=+\infty$\\
+$\lim_{x \to +\infty}x^{\alpha}e^{-x}=0$\\
+\underline{\textbf{\textcolor{red}{Remarque}}}\\
+\underline{\textbf{\textcolor{red}{Exemple}}}\\
+Détermine: $\lim_{x \to +\infty}\frac{e^{x}}{\ln(x^{2}+1)}$
+\subsection*{\underline{\textbf{\textcolor{red}{9.Equation système et Inequation avec exp}}}}
+\underline{\textbf{\textcolor{red}{a°)Equation}}}\\
+\underline{\textbf{\textcolor{red}{Exemple}}}\\
+Résoudre dans $\mathbb{R}$ les équations suivantes\\
+a)$e^{x}=-1$;\\  b)$e^{x+1}=3$;\\ c)$e^{x^{2}}=e^{x+2}$;\\ d)$(e^{x}-2)(e^{-x}+1)$\\
+\underline{\textbf{\textcolor{red}{b°)Système d'inéquations avec $\exp$:}}}\\
+\[
+\begin{cases}
+4e^{x}-3e^{y} = 9 \\
+2e^{x}+e^{y} = 7
+\end{cases}
+\]
+
+\[
+\begin{cases}
+e^{x}e^{y} = 10 \\
+e^{x-y} = \frac{2}{5}
+\end{cases}
+\]
+
+\[
+\begin{cases}
+e^{2x}-7e^{y+1} = -10 \\
+x-y = 1
+\end{cases}
+\]
+\underline{\textbf{\textcolor{red}{c°)Inéquations avec $\exp$:}}}\\
+a)$e^{-x}\geq2$\\
+b)$e^{x^{2}-3}\leq e^{2x}$\\
+c)$2e^{2x}-5e^{x}+2>0$
+\section*{\underline{\textbf{\textcolor{red}{10.Etude le fonction exp}}}}
+Soit $f(x)=exp(x)$ le domaine \\
+Le Domaine $D_{f}$ \\
+$D_{f}=\mathbb{R}$\\
+$\bigotimes$ Limites aux bornes de $D_{f}$\\
+\underline{En $-\infty $}\\
+$\lim_{x \to -\infty} e^{x}=0$\\
+\underline{En $+\infty$}\\
+$\lim_{{x \to +\infty}} e^{x}=+\infty$\\
+$\bigotimes$ La dérivée de f\\
+$f'(x)=e^{x}$\\
+$\forall x \in \mathbb{R}$, $f'(x)>0$, donc f est croissante sur $]0;+\infty[$\\
+$\bigotimes$ Tableau de variation\\
+%Tableau de Variation
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\draw [color=cqcqcq,, xstep=1cm,ystep=1cm] (-7,-10) grid (-22,17);
+\clip(-22,-5) rectangle (12,10);
+\draw [line width=2pt] (-23,8)-- (-7,8); %première ligne A(-22,8)---B(-7,8)
+\draw [line width=2pt] (-22,6)-- (-7,6); %deuxième ligne
+\draw [line width=2pt] (-22,4)-- (-7,4); %troisième ligne
+\draw [line width=2pt] (-22,-2)-- (-7,-2);%dernière ligne
+\draw [line width=2pt] (-22,-2)-- (-22,8); %première colonne
+\draw [line width=2pt] (-19,8)-- (-19,-2); %deuxième colone
+\draw [line width=2pt] (-7,8)-- (-7,-2); %troisième colonne
+\draw (-21,1.5) node[anchor=north west] {$f(x)$};
+\draw (-21,5.5) node[anchor=north west] {$f'(x)$};
+\draw (-21,7) node[anchor=north west] {$x$};
+\draw (-19,7) node[anchor=north west] {$-\infty$};
+\draw (-8,7) node[anchor=north west] {$+\infty$};
+%Asymptote verticale
+%\draw [line width=2pt] (-18.7,6)-- (-18.7,-2);
+%¨\draw [line width=2pt] (-18.79,6)-- (-18.79,-2);
+%signe de la dérivé
+\draw (-13.5,5.3) node[anchor=north west] {$+$};
+%zéro de exp
+\draw [line width=2pt] (-13,6)-- (-13,1);
+\draw (-13.2,6.5) node[anchor=north west] {$0$};
+\draw (-13.2,1.2) node[anchor=north west] {$1$};
+\draw [->,line width=2pt] (-18,-1) -- (-8,3);
+\draw (-18.5,-1) node[anchor=north west] {$0$};
+\draw (-8,3.5) node[anchor=north west] {$+\infty$};
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=1.5]
+  \draw[->] (-5,0) -- (2,0) node[right] {$x$};
+  \draw[->] (0,-0.5) -- (0,2) node[above] {$y$};
+  \draw[scale=1,domain=-5:1.5,smooth,variable=\x,blue] plot ({\x},{exp(\x)});
+  %\node[right,blue] at (1.5,1.5) {$f(x) = e^x$};
+  \draw[scale=1,domain=-1.5:1.5,smooth,variable=\x,blue] plot ({\x},{\x+1});
+  
+%  \draw[scale=1,domain=-5:1.5,smooth,variable=\x,blue] plot ({\x},{\ln(\x)});
+  %\node[right,blue] at (1.5,1.5) {$f(x) = e^x$};
+%  \draw[scale=1,domain=-1.5:1.5,smooth,variable=\x,blue] plot ({\x},{\x-1});
+\end{tikzpicture}
+
+$C_{f}$ est au-dessous de sa tangente en J; donc $\forall x \in \mathbb{R}, e^{x}>x+1$
+\section*{\underline{\textbf{\textcolor{red}{11.Branche infinie de ln}}}}
+On a  $\lim_{{x \to +\infty}} e^{x}=+\infty$ et $\lim_{{x \to +\infty}} \frac{e^{x}}{x}=+\infty$\\
+Nous avons ainsi une branche parabolique de direction (Oy) au voisinage de +$\infty$.\\
+Car $\lim_{{x \to +\infty}} \frac{ln(x)}{x}=0$\\
+\section*{\underline{\textbf{\textcolor{red}{12.Application}}}}
+\end{document}

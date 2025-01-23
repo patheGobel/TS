@@ -1,0 +1,262 @@
+\documentclass[12pt]{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+\usepackage{color,soul}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{systeme}
+\usepackage{tkz-tab}
+\author{Destiné à la TerminaleS2\\Au Lycée de Dindéferlo}
+\title{\textbf{Fonction logarithme Népérien}}
+\date{\today}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage[a4paper,left=20mm,right=20mm,top=15mm,bottom=15mm]{geometry}
+\usepackage{mathtools}
+\usepackage{systeme}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+
+\DecimalMathComma
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\section*{\underline{\textbf{\textcolor{red}{Introduction :}}}}
+
+En 1614, un mathématicien écossais, John Napier (1550 ; 1617) ci-contre, plus connu sous le nom francisé de Neper publie « Mirifici logarithmorum canonis descriptio ».
+Dans cet ouvrage, qui est la finalité d’un travail de 20 ans, Neper présente un outil permettant de simplifier les calculs opératoires : le logarithme.
+Neper construit le mot à partir des mots grecs « logos » (logique) et arithmos (nombre).
+Toutefois cet outil ne trouvera son essor qu’après la mort de Neper. Les mathématiciens anglais Henri Briggs (1561 ; 1630) et William Oughtred (1574 ; 1660) reprennent et prolongent les travaux de Neper.
+Les mathématiciens de l’époque établissent alors des tables de logarithmes de plus en plus précises.
+L’intérêt d’établir ces tables logarithmiques est de permettre de substituer une multiplication par une addition (paragraphe II). Ceci peut paraître dérisoire aujourd’hui, mais il faut comprendre qu’à cette époque, les calculatrices n’existent évidemment pas, les nombres décimaux ne sont pas d’usage courant et les opérations posées telles que nous les utilisons ne sont pas encore connues. Et pourtant l'astronomie, la navigation ou le commerce demandent d’effectuer des opérations de plus en plus complexes.
+
+\section*{\underline{\textbf{\textcolor{red}{I.Définition et propriétés}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{1.Définition}}}}
+On appelle fonction logarithmique népérien la fonction notée $\ln$ qui est définie sur $]0\;;\ +\infty[$ et qui vérifie $(\ln (x))'=\dfrac{1}{x}\ $ et $\ \ln 1=0$
+
+$$\begin{array}{rcl}
+\ln\ :\ ]0\;;\ +\infty[ & \longrightarrow & \mathbb{R} \\
+x & \longmapsto & \ln x
+\end{array}$$
+\subsection*{\underline{\textbf{\textcolor{red}{2.Conséquences de la définition}}}}
+Soit $u$ une fonction définie sur un intervalle $I$ de $\mathbb{R}$ alors :
+
+- $\ln u$ existe si $u > 0$
+
+- $\ln |u|$ existe si $u \neq 0$
+
+- $\ln u^{2}$ existe si $u \neq 0$
+
+\subsection*{\underline{\textbf{\textcolor{red}{3.Propriétés}}}}
+Les propriétés fondamentales de la fonction logarithmique, $\ln$, sont :
+\begin{itemize}
+    \item 
+    \(
+    \ln(ab) = \ln a + \ln b \quad \text{pour } a > 0 \text{ et } b > 0.
+    \)
+    \item 
+    \(
+    \ln\left(\dfrac{a}{b}\right) = \ln a - \ln b \quad \text{pour } a > 0 \text{ et } b > 0.
+    \)
+    \item 
+    \(
+    \ln(a^p) = p \ln a \quad \text{pour } a > 0 \text{ et } p \in \mathbb{R}.
+    \)
+    \item 
+    \(
+    \ln\sqrt{a} = \dfrac{1}{2} \ln a \quad \text{pour } a > 0.
+    \)
+\end{itemize}
+
+\subsection*{\underline{\textbf{\textcolor{red}{4.Remarque}}}}
+La fonction $\ln$ est strictement croissante sur son domaine $]0\;;\ +\infty[$, c'est-à-dire que :
+\[
+\forall a, b \in ]0\;;\ +\infty[, \quad a < b \implies \ln a < \ln b.
+\]
+
+\section*{\underline{\textbf{\textcolor{red}{II.Limites et Dérivée}}}}
+
+\subsection*{\underline{\textbf{\textcolor{red}{1.Limites aux bornes de $D_{ln}$}}}}
+\begin{itemize}
+    \item $\lim_{x \to 0^+} \ln x = -\infty$.
+    \item $\lim_{x \to +\infty} \ln x = +\infty$.
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{2.Limites usuelles}}}}
+\begin{itemize}
+    \item $\lim_{x \to 0^+} x \ln x = 0$.
+    \item $ \lim_{x \to +\infty} \frac{\ln x}{x} = 0 $
+    \item $\lim_{{x \to 0}} \frac{\ln(x+1)}{x}=1$\\
+Soit a un nombre rationnel strictement positif.
+   \item $\lim_{{x \to 0^+}} x^{\alpha}\ln(x) = 0^{-} $
+   \item $\lim_{{x \to +\infty}} \frac{\ln(x)}{x^{\alpha}}=0^{+}$
+\end{itemize}
+\underline{\textbf{\textcolor{red}{Preuve de quelques limites}}}\\
+Montrons que $\lim_{{x \to 0^+}} x^{\alpha}\ln(x) = 0^{-}$ pour $\alpha=1$\\
+pour tout $x\in]0;+\infty[,$ en posant $X=\frac{1}{x}$, on a : $xlnx=-\frac{lnX}{X}$\\
+ainsi, $\lim_{{x \to 0^{+}}} -\frac{\ln(X)}{X}=0^{-}$
+Donc $\lim_{{x \to 0^+}} x^{\alpha}\ln(x) = 0^{-}$\\
+\underline{\textbf{\textcolor{red}{Exemple}}}\\
+
+Déterminer les limites suivantes:
+\begin{enumerate}
+\item \( \lim\limits_{x \to +\infty} x\ln(x)-x^{2}+1\)
+
+\item \( \lim\limits_{x \to 0} x\ln(x)-x^{2}+1\)
+
+\item \( \lim\limits_{x \to +\infty} \frac{x\ln(x)}{x^{2}+1}\)
+\end{enumerate}
+
+\underline{\textbf{\textcolor{red}{Exercice d'application}}}\\
+Déterminer les limites suivantes:
+
+\begin{enumerate}
+\item \( \lim\limits_{x \to +\infty} x+1-\ln(x)\)
+
+\item \( \lim\limits_{x \to +\infty} \frac{x}{2}[\ln(1+\frac{1}{x})] \)
+
+\item \( \lim\limits_{x \to +\infty} \frac{\ln(x)}{\sqrt{x}} \)
+
+\item \( \lim\limits_{x \to 1^{+}} (x-1)\ln(x-1) \)
+
+\item \( \lim\limits_{x \to 1^{+}} \frac{x}{x+1}-\ln(x+1) \)
+\end{enumerate}
+\subsection*{\underline{\textbf{\textcolor{red}{3.Dérivée}}}}
+Soit u et v deux fonctions strictement positives \\
+$[\ln(u(x)]=\frac{u'(x)}{u(x)}$\\
+$[\ln(\frac{u(x)}{v(x)})]=\frac{u'(x)}{u(x)}$\\
+\underline{\textbf{\textcolor{red}{Exemple}}}\\
+f(x)=$\frac{\ln(x^{2}+2x+9)}{x}$\\
+f(x)=$\ln[\frac{x^{2}+2x+9}{x-2}]$
+\subsection*{\underline{\textbf{\textcolor{red}{4.Limites des composées avec ln}}}}
+Soit $U(x)$ une fonction strictement positive.\\
+Cherchons $\lim_{{x \to a}} \ln[u(x)]$\\
+$\bigotimes$ Si $\lim_{{x \to a}} u(x)=l$ et que $\lim_{{x \to l}} \ln(x)=l'$\\
+Alors \\
+$\bigotimes$ Si $\lim_{{x \to a}} ln[u(x)]=l'$\\
+\underline{\textbf{\textcolor{red}{Exemple}}}\\
+Calcule la limite suivante\\
+$\lim_{{x \to \infty}} \ln(\frac{x^{2}}{2x^{2}-1})$\\
+\underline{\textbf{\textcolor{red}{Solution}}}\\
+
+\section*{\underline{\textbf{\textcolor{red}{III.Etude le fonction ln}}}}
+Soit $f(x)=\ln(x)$ le domaine \\
+Le Domaine $D_{f}$ \\
+f existe ssi $x\in \mathbb{R^{*}_{+}}$ donc $D_{f}=\mathbb{R^{*}_{+}}$\\
+
+\underline{Limites aux bornes de $D_{f}$}
+
+\underline{En $0^{+}$}
+
+$\lim_{{x \to 0^{+}}} lnx=-\infty$
+
+\underline{En $+\infty$}
+
+$\lim_{{x \to +\infty}} lnx=+\infty$
+
+\underline{La dérivée de f}
+
+$f'(x)=\frac{1}{x}$
+
+$\forall x \in ]0;+\infty[$, $f'(x)>0$, donc f est croissante sur $]0;+\infty[$\\
+
+\underline{Tableau de variation}
+
+%Tableau de Variation
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\draw [color=cqcqcq,, xstep=1cm,ystep=1cm] (-7,-10) grid (-22,17);
+\clip(-22,-5) rectangle (12,10);
+\draw [line width=2pt] (-23,8)-- (-7,8); %première ligne A(-22,8)---B(-7,8)
+\draw [line width=2pt] (-22,6)-- (-7,6); %deuxième ligne
+\draw [line width=2pt] (-22,4)-- (-7,4); %troisième ligne
+\draw [line width=2pt] (-22,-2)-- (-7,-2);%dernière ligne
+\draw [line width=2pt] (-22,-2)-- (-22,8); %première colonne
+\draw [line width=2pt] (-19,8)-- (-19,-2); %deuxième colone
+\draw [line width=2pt] (-7,8)-- (-7,-2); %troisième colonne
+\draw (-21,1.5) node[anchor=north west] {$f(x)$};
+\draw (-21,5.5) node[anchor=north west] {$f'(x)$};
+\draw (-21,7) node[anchor=north west] {$x$};
+\draw (-19,7) node[anchor=north west] {$0$};
+\draw (-8,7) node[anchor=north west] {$+\infty$};
+%Asymptote verticale
+\draw [line width=2pt] (-18.7,6)-- (-18.7,-2);
+\draw [line width=2pt] (-18.79,6)-- (-18.79,-2);
+%signe de la dérivé
+\draw (-13.5,5.3) node[anchor=north west] {$+$};
+%zéro de ln
+\draw [line width=2pt] (-13,6)-- (-13,1);
+\draw (-13.2,6.5) node[anchor=north west] {$1$};
+\draw (-13.2,1.2) node[anchor=north west] {$0$};
+\draw [->,line width=2pt] (-18,-1) -- (-8,3);
+\draw (-18.5,-1) node[anchor=north west] {$-\infty$};
+\draw (-8,3.5) node[anchor=north west] {$+\infty$};
+\end{tikzpicture}
+
+\subsection*{\underline{\textbf{\textcolor{red}{Branche infinie de ln}}}}
+$\lim_{{x \to +\infty}} \frac{ln(x)}{x}=0$ donc ln admet une branche parabolique de direction (Ox) au voisinage de +$\infty$.\\
+
+\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{axis}[
+  x=1cm, y=1cm,
+  axis lines=middle,
+  ymajorgrids=true,
+  xmajorgrids=true,
+  xmin=-7,  % Ajusté pour exclure les valeurs non permises
+  xmax=7,
+  ymin=-7,
+  ymax=7,
+  xtick={-7,-6,...,8},
+  ytick={-7,-6,...,8},
+]
+\clip(0,-5) rectangle (7,2);  % Ajusté pour exclure les valeurs non permises
+\draw[line width=2pt,color=qqwuqq,smooth,samples=100,domain=0.1:7] plot(\x,{ln(\x)});
+\begin{scriptsize}
+\draw[color=qqwuqq] (1.5,1) node {$f$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\section*{\underline{\textbf{\textcolor{red}{11.Application}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{IV.Equation et Inequation et systèmes avec ln}}}}
+\underline{\textbf{\textcolor{red}{a°)Equation}}}\\
+Pour résoudre les équations avec ln, on peut procécédé comme suit:\\
+$\bigotimes$ on détermine le domaine de validité\\
+$\bigotimes$ on utilise la propriété ln(a)=ln(b) $\Longrightarrow$ a=b \\
+$\bigotimes$ Puis résoudre l'équation a=b\\
+$\bigotimes$ vérifier si les ou la solutions appartiennent au domaine de validité\\
+\underline{\textbf{\textcolor{red}{Exemple}}}\\
+Résoudre dans $\mathbb{R}$ les équations suivantes\\
+a)$\ln(x+1)=\ln(2x-1)$\\
+b)$\ln(x+1)-\ln(2x+1)=\ln(2x-1)$\\
+\underline{\textbf{\textcolor{red}{Exemple}}}\\
+Considérons l'inéquation 
+a)$\ln(x-4)\geq \ln(2x+4).$\\
+b)$\ln(x-1)\leq \ln(5x+5)-\ln(x-1).$\\
+\underline{\textbf{\textcolor{red}{b°)Système d'inéquations avec $\ln$:}}}\\
+\[
+\begin{cases}
+\ln(x)+\ln(y) = 7 \\
+2\ln(x)-3ln(y) = 1
+\end{cases}
+\]
+
+\[
+\begin{cases}
+\ln(x)+\ln(y) = ln(2) \\
+\ln(x+y) = ln(x)
+\end{cases}
+\]
+\end{document}

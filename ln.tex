@@ -13,7 +13,7 @@
 \usepackage{systeme}
 \usepackage{tkz-tab}
 \author{Destiné à la TerminaleS2\\Au Lycée de Dindéferlo}
-\title{\textbf{Fonction Exponentielle}}
+\title{\textbf{Fonction logarithme Népérien}}
 \date{\today}
 \usepackage{tikz}
 \usetikzlibrary{arrows}
@@ -33,103 +33,182 @@
 
 \maketitle
 \newpage
-\subsection*{\underline{\textbf{\textcolor{red}{1.Définition :}}}}
-La fonction \( f(x) = \ln(x) \) est continue et strictement croissante sur \( ]0; +\infty[ \) donc, c'est une bijection de \( ]0; +\infty[ \) vers \( \mathbb{R} \). Ainsi, \( f \) admet une bijection réciproque \( f^{-1} \) qui est continue et strictement croissante de \( \mathbb{R} \) vers \( ]0; +\infty[ \). \( f^{-1} \) est appelée fonction exponentielle, notée : $exp(x)=e^{x}$
-\subsection*{\underline{\textbf{\textcolor{red}{2.Conséquences de la définition}}}}
-\subsection*{\underline{\textbf{\textcolor{red}{3.Propriétés}}}}
-\textbf{\textcolor{red}{Propriété fondamentale}}\\
-Pour tout réel a et b, on a: $e^{a+b}=e^{a} \times e^{b}$.\\
-\textbf{\textcolor{red}{Propriétés}}\\
-\begin{itemize}
-    \item \textbf{} \(e^{-a}=\frac{1}{e^{a}}\)
-    \item \textbf{} \(e^{a-b}=\frac{e^{a}}{e^{b}}\)
-    \item \textbf{} \(e^{ra}=(e^{a})^{r}\)
-    \item \textbf{} \(e^{a}=e^{b} \Leftrightarrow a=b\)
-    \item \textbf{} \(e^{a}<e^{b} \Leftrightarrow a<b\)
-\end{itemize}
-\subsection*{\underline{\textbf{\textcolor{red}{Exemples}}}}
-\subsection*{\underline{\textbf{\textcolor{red}{Remarque}}}}
-\subsection*{\underline{\textbf{\textcolor{red}{4.Limites Usuelles}}}}
-\underline{\textbf{\textcolor{red}{Limites aux bornes de Df }}}\\
-$\lim_{x \to -\infty}e^{x}=0$\\
-$\lim_{x \to +\infty}e^{x}=+\infty$\\
-\underline{\textbf{\textcolor{red}{Limites usuelles}}}\\
-$\lim_{x \to +\infty}\frac{e^{x}}{x}=+\infty$\\
-$\lim_{x \to -\infty}xe^{x}=0$\\
-\underline{\textbf{\textcolor{red}{Preuve de quelques limites}}}\\
 
+\section*{\underline{\textbf{\textcolor{red}{Introduction :}}}}
+
+En 1614, un mathématicien écossais, John Napier (1550 ; 1617) ci-contre, plus connu sous le nom francisé de Neper publie « Mirifici logarithmorum canonis descriptio ».
+Dans cet ouvrage, qui est la finalité d’un travail de 20 ans, Neper présente un outil permettant de simplifier les calculs opératoires : le logarithme.
+Neper construit le mot à partir des mots grecs « logos » (logique) et arithmos (nombre).
+Toutefois cet outil ne trouvera son essor qu’après la mort de Neper. Les mathématiciens anglais Henri Briggs (1561 ; 1630) et William Oughtred (1574 ; 1660) reprennent et prolongent les travaux de Neper.
+Les mathématiciens de l’époque établissent alors des tables de logarithmes de plus en plus précises.
+L’intérêt d’établir ces tables logarithmiques est de permettre de substituer une multiplication par une addition (paragraphe II). Ceci peut paraître dérisoire aujourd’hui, mais il faut comprendre qu’à cette époque, les calculatrices n’existent évidemment pas, les nombres décimaux ne sont pas d’usage courant et les opérations posées telles que nous les utilisons ne sont pas encore connues. Et pourtant l'astronomie, la navigation ou le commerce demandent d’effectuer des opérations de plus en plus complexes.
+
+\section*{\underline{\textbf{\textcolor{red}{I.Définition et propriétés}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{1.Définition}}}}
+On appelle fonction logarithmique népérien la fonction notée $\ln$ qui est définie sur $]0\;;\ +\infty[$ et qui vérifie $(\ln x)'=\dfrac{1}{x}\ $ et $\ \ln 1=0$
+
+$$\begin{array}{rcl}
+\ln\ :\ ]0\;;\ +\infty[ & \longrightarrow & \mathbb{R} \\
+x & \longmapsto & \ln x
+\end{array}$$
+\subsection*{\underline{\textbf{\textcolor{red}{2.Conséquences de la définition}}}}
+Soit $u$ une fonction définie sur un intervalle $I$ de $\mathbb{R}$ alors :
+
+- $\ln u$ existe si $u > 0$
+
+- $\ln |u|$ existe si $u \neq 0$
+
+- $\ln u^{2}$ existe si $u \neq 0$
+
+\subsection*{\underline{\textbf{\textcolor{red}{3.Propriétés}}}}
+Les propriétés suivantes s'appliquent à la fonction $\ln$ :
+\begin{itemize}
+    \item \textbf{Addition et multiplication} :
+    \[
+    \ln(ab) = \ln a + \ln b \quad \text{pour } a > 0 \text{ et } b > 0.
+    \]
+    \item \textbf{Division} :
+    \[
+    \ln\left(\dfrac{a}{b}\right) = \ln a - \ln b \quad \text{pour } a > 0 \text{ et } b > 0.
+    \]
+    \item \textbf{Puissance} :
+    \[
+    \ln(a^p) = p \ln a \quad \text{pour } a > 0 \text{ et } p \in \mathbb{R}.
+    \]
+    \item \textbf{Racine carrée} :
+    \[
+    \ln\sqrt{a} = \dfrac{1}{2} \ln a \quad \text{pour } a > 0.
+    \]
+\end{itemize}
+
+\subsection*{\underline{\textbf{\textcolor{red}{4.Exemples}}}}
+Voici quelques exemples pratiques pour appliquer les propriétés précédentes :
+\begin{enumerate}
+    \item Simplifier les expressions suivantes :
+    \[
+    \ln(5 \cdot 3), \quad \ln\left(\dfrac{8}{2}\right), \quad \ln(2^3).
+    \]
+    \item Calculer les valeurs approchées suivantes (en utilisant $\ln 2 \simeq 0.69$ et $\ln 3 \simeq 1.09$) :
+    \[
+    \ln 6, \quad \ln 9, \quad \ln 12.
+    \]
+\end{enumerate}
+
+\subsection*{\underline{\textbf{\textcolor{red}{5.Remarque}}}}
+La fonction $\ln$ est strictement croissante sur son domaine $]0\;;\ +\infty[$, c'est-à-dire que :
+\[
+\forall a, b \in ]0\;;\ +\infty[, \quad a < b \implies \ln a < \ln b.
+\]
+
+\subsection*{\underline{\textbf{\textcolor{red}{6.Limites usuelles}}}}
+\begin{itemize}
+    \item $\lim_{x \to 0^+} \ln x = -\infty$.
+    \item $\lim_{x \to +\infty} \ln x = +\infty$.
+    \item $\lim_{x \to 0^+} x \ln x = 0$.
+\end{itemize}
+
+\subsection*{\underline{\textbf{\textcolor{red}{7.Graphique de la fonction}}}}
+La courbe représentative de la fonction $\ln$, notée $C_{\ln}$, a les propriétés suivantes :
+\begin{itemize}
+    \item Domaine : $]0\;;\ +\infty[$.
+    \item Asymptote verticale : la droite $x = 0$.
+    \item Comportement asymptotique :
+    \[
+    \lim_{x \to +\infty} \frac{\ln x}{x} = 0.
+    \]
+\end{itemize}
+
+\begin{center}
+    \textbf{Représentation graphique de $\ln$}
+    %\includegraphics[scale=0.7]{courbe_ln.png}
+\end{center}
+
+
+++++++++++++++++++++++++++++++++++++++++++++++
+
+\underline{\textbf{\textcolor{red}{Limites aux bornes de Df }}}\\
+\[\lim_{{x \to +\infty}} \ln(x) = +\infty\]
+\[\lim_{{x \to 0^+}} \ln(x) = -\infty\]
+\underline{\textbf{\textcolor{red}{Limites usuelles}}}\\
+\[\lim_{{x \to 0}} \frac{\ln(x+1)}{x}=1\]
+Soit a un nombre rationnel strictement positif.
+\[\lim_{{x \to 0^+}} x^{a}\ln(x) = 0^{-} \]
+\[\lim_{{x \to +\infty}} \frac{\ln(x)}{x^{a}}=0^{+}\]
+\underline{\textbf{\textcolor{red}{Preuve de quelques limites}}}\\
+Montrons que $\lim_{{x \to 0^+}} x^{a}\ln(x) = 0^{-}$ pour a=1\\
+pour tout $x\in]0;+\infty[,$ en posant $X=\frac{1}{x}$, on a :$xlnx=-\frac{lnX}{X}$\\
+ainsi, $\lim_{{x \to 0^{+}}} -\frac{\ln(X)}{X}=0^{-}$
+Donc $\lim_{{x \to 0^+}} x^{a}\ln(x) = 0^{-}$\\
 \underline{\textbf{\textcolor{red}{Exemple}}}\\
 Déterminer les limites suivantes:\\
-$\bullet$ La fonction $x \longmapsto e^{-x^{2}+x}$ est dérivable sur $\mathbb{R}$ et sa dérivée est la fonction\\
-$\bullet$ La fonction $x \longmapsto e^{\cos x}$ est dérivable sur $\mathbb{R}$ et sa dérivée est  la fonction\\
-$\bullet$ La fonction $x \longmapsto e^{\frac{1}{x}}$ est dérivable sur $\mathbb{R}^{*}$ et sa dérivée est  la fonction\\
+a)\[\lim_{{x \to +\infty}} x\ln(x)-x^{2}+1\]
+b)\[\lim_{{x \to 0}} x\ln(x)-x^{2}+1\]
+c)\[\lim_{{x \to +\infty}} \frac{x\ln(x)}{x^{2}+1}\]
 \underline{\textbf{\textcolor{red}{Exercice d'application}}}\\
 Déterminer les limites suivantes:\\
-Calculer les limites suivantes.\\
-a)\(\lim_{x \to +\infty}\frac{3e^{x}-2}{5e^{x}+3}\) ; b)\(\lim_{x \to -\infty}\frac{\ln(1+e^{x})}{e^{x}}\)
-c)\( \lim_{x \to +\infty }(x-e^{x})\) ; d)\( \lim_{x \to +\infty }\frac{\sin2x}{1-e^{x}}\)
-\subsection*{\underline{\textbf{\textcolor{red}{6.Limites des composées avec exp}}}}
-\underline{\textbf{\textcolor{red}{Propriété}}}\\
-Soit U une fonction dérivablesur un intervalle I de $\mathbb{R}$.\\
-La fonction $\exp\circ u $ est dérivable sur I  et on a: $(\exp\circ u )'=u' \times \exp\circ u$\\
-\underline{\textbf{\textcolor{red}{NB}}}\\
-La fonction $\exp\circ u $ est généralement notée $e^{u}$ ; sa dérivée est alors $u'e^{u}$.\\
+a)\[\lim_{{x \to +\infty}} x+1-\ln(x)\]
+b)\[\lim_{{x \to +\infty}} \frac{x}{2}[\ln(1+\frac{1}{x})]\]
+c)\[\lim_{{x \to +\infty}} \frac{\ln(x)}{\sqrt{x}}\]
+d)\[\lim_{{x \to 1^{+}}} (x-1)\ln(x-1)\]
+e)\[\lim_{{x \to 1^{+}}} \frac{x}{x+1}-\ln(x+1)\]
+\subsection*{\underline{\textbf{\textcolor{red}{6.Limites des composées avec ln}}}}
+Soit $U(x)$ une fonction strictement positive.\\
+Cherchons $\lim_{{x \to a}} \ln[u(x)]$\\
+$\bigotimes$ Si $\lim_{{x \to a}} u(x)=l$ et que $\lim_{{x \to l}} \ln(x)=l'$\\
+Alors \\
+$\bigotimes$ Si $\lim_{{x \to a}} ln[u(x)]=l'$\\
 \underline{\textbf{\textcolor{red}{Exemple}}}\\
 Calcule la limite suivante\\
-
+$\lim_{{x \to \infty}} \ln(\frac{x^{2}}{2x^{2}-1})$\\
 \underline{\textbf{\textcolor{red}{Solution}}}\\
 \subsection*{\underline{\textbf{\textcolor{red}{7.Dérivée}}}}
 Soit u et v deux fonctions strictement positives \\
-
+$[\ln(u(x)]=\frac{u'(x)}{u(x)}$\\
+$[\ln(\frac{u(x)}{v(x)})]=\frac{u'(x)}{u(x)}$\\
 \underline{\textbf{\textcolor{red}{Exemple}}}\\
-\subsection*{\underline{\textbf{\textcolor{red}{8.Croissance Comparée de $\ln x$ $e^{x}$ $x^{\alpha}$}}}}
-$\lim_{x \to +\infty}\frac{e^{x}}{x^{\alpha}}=+\infty$\\
-$\lim_{x \to +\infty}x^{\alpha}e^{-x}=0$\\
-\underline{\textbf{\textcolor{red}{Remarque}}}\\
-\underline{\textbf{\textcolor{red}{Exemple}}}\\
-Détermine: $\lim_{x \to +\infty}\frac{e^{x}}{\ln(x^{2}+1)}$
-\subsection*{\underline{\textbf{\textcolor{red}{9.Equation système et Inequation avec exp}}}}
+f(x)=$\frac{\ln(x^{2}+2x+9)}{x}$\\
+f(x)=$\ln[\frac{x^{2}+2x+9}{x-2}]$
+\subsection*{\underline{\textbf{\textcolor{red}{8.Equation et Inequation et systèmes avec ln}}}}
 \underline{\textbf{\textcolor{red}{a°)Equation}}}\\
+Pour résoudre les équations avec ln, on peut procécédé comme suit:\\
+$\bigotimes$ on détermine le domaine de validité\\
+$\bigotimes$ on utilise la propriété ln(a)=ln(b) $\Longrightarrow$ a=b \\
+$\bigotimes$ Puis résoudre l'équation a=b\\
+$\bigotimes$ vérifier si les ou la solutions appartiennent au domaine de validité\\
 \underline{\textbf{\textcolor{red}{Exemple}}}\\
 Résoudre dans $\mathbb{R}$ les équations suivantes\\
-a)$e^{x}=-1$;\\  b)$e^{x+1}=3$;\\ c)$e^{x^{2}}=e^{x+2}$;\\ d)$(e^{x}-2)(e^{-x}+1)$\\
-\underline{\textbf{\textcolor{red}{b°)Système d'inéquations avec $\exp$:}}}\\
+a)$\ln(x+1)=\ln(2x-1)$\\
+b)$\ln(x+1)-\ln(2x+1)=\ln(2x-1)$\\
+\underline{\textbf{\textcolor{red}{Exemple}}}\\
+Considérons l'inéquation 
+a)$\ln(x-4)\geq \ln(2x+4).$\\
+b)$\ln(x-1)\leq \ln(5x+5)-\ln(x-1).$\\
+\underline{\textbf{\textcolor{red}{b°)Système d'inéquations avec $\ln$:}}}\\
 \[
 \begin{cases}
-4e^{x}-3e^{y} = 9 \\
-2e^{x}+e^{y} = 7
+\ln(x)+\ln(y) = 7 \\
+2\ln(x)-3ln(y) = 1
 \end{cases}
 \]
 
 \[
 \begin{cases}
-e^{x}e^{y} = 10 \\
-e^{x-y} = \frac{2}{5}
+\ln(x)+\ln(y) = ln(2) \\
+\ln(x+y) = ln(x)
 \end{cases}
 \]
-
-\[
-\begin{cases}
-e^{2x}-7e^{y+1} = -10 \\
-x-y = 1
-\end{cases}
-\]
-\underline{\textbf{\textcolor{red}{c°)Inéquations avec $\exp$:}}}\\
-a)$e^{-x}\geq2$\\
-b)$e^{x^{2}-3}\leq e^{2x}$\\
-c)$2e^{2x}-5e^{x}+2>0$
-\section*{\underline{\textbf{\textcolor{red}{10.Etude le fonction exp}}}}
-Soit $f(x)=exp(x)$ le domaine \\
+\section*{\underline{\textbf{\textcolor{red}{9.Etude le fonction ln}}}}
+Soit $f(x)=\ln(x)$ le domaine \\
 Le Domaine $D_{f}$ \\
-$D_{f}=\mathbb{R}$\\
+f existe ssi $x\in \mathbb{R^{*}_{+}}$ donc $D_{f}=\mathbb{R^{*}_{+}}$\\
 $\bigotimes$ Limites aux bornes de $D_{f}$\\
-\underline{En $-\infty $}\\
-$\lim_{x \to -\infty} e^{x}=0$\\
+\underline{En $0^{+}$}\\
+$\lim_{{x \to 0^{+}}} lnx=-\infty$\\
 \underline{En $+\infty$}\\
-$\lim_{{x \to +\infty}} e^{x}=+\infty$\\
+$\lim_{{x \to +\infty}} lnx=+\infty$\\
 $\bigotimes$ La dérivée de f\\
-$f'(x)=e^{x}$\\
-$\forall x \in \mathbb{R}$, $f'(x)>0$, donc f est croissante sur $]0;+\infty[$\\
+$f'(x)=\frac{1}{x}$\\
+$\forall x \in ]0;+\infty[$, $f'(x)>0$, donc f est croissante sur $]0;+\infty[$\\
 $\bigotimes$ Tableau de variation\\
 %Tableau de Variation
 \definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
@@ -146,38 +225,46 @@ $\bigotimes$ Tableau de variation\\
 \draw (-21,1.5) node[anchor=north west] {$f(x)$};
 \draw (-21,5.5) node[anchor=north west] {$f'(x)$};
 \draw (-21,7) node[anchor=north west] {$x$};
-\draw (-19,7) node[anchor=north west] {$-\infty$};
+\draw (-19,7) node[anchor=north west] {$0$};
 \draw (-8,7) node[anchor=north west] {$+\infty$};
 %Asymptote verticale
-%\draw [line width=2pt] (-18.7,6)-- (-18.7,-2);
-%¨\draw [line width=2pt] (-18.79,6)-- (-18.79,-2);
+\draw [line width=2pt] (-18.7,6)-- (-18.7,-2);
+\draw [line width=2pt] (-18.79,6)-- (-18.79,-2);
 %signe de la dérivé
 \draw (-13.5,5.3) node[anchor=north west] {$+$};
-%zéro de exp
+%zéro de ln
 \draw [line width=2pt] (-13,6)-- (-13,1);
-\draw (-13.2,6.5) node[anchor=north west] {$0$};
-\draw (-13.2,1.2) node[anchor=north west] {$1$};
+\draw (-13.2,6.5) node[anchor=north west] {$1$};
+\draw (-13.2,1.2) node[anchor=north west] {$0$};
 \draw [->,line width=2pt] (-18,-1) -- (-8,3);
-\draw (-18.5,-1) node[anchor=north west] {$0$};
+\draw (-18.5,-1) node[anchor=north west] {$-\infty$};
 \draw (-8,3.5) node[anchor=north west] {$+\infty$};
 \end{tikzpicture}
 
-\begin{tikzpicture}[scale=1.5]
-  \draw[->] (-5,0) -- (2,0) node[right] {$x$};
-  \draw[->] (0,-0.5) -- (0,2) node[above] {$y$};
-  \draw[scale=1,domain=-5:1.5,smooth,variable=\x,blue] plot ({\x},{exp(\x)});
-  %\node[right,blue] at (1.5,1.5) {$f(x) = e^x$};
-  \draw[scale=1,domain=-1.5:1.5,smooth,variable=\x,blue] plot ({\x},{\x+1});
-  
-%  \draw[scale=1,domain=-5:1.5,smooth,variable=\x,blue] plot ({\x},{\ln(\x)});
-  %\node[right,blue] at (1.5,1.5) {$f(x) = e^x$};
-%  \draw[scale=1,domain=-1.5:1.5,smooth,variable=\x,blue] plot ({\x},{\x-1});
+\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{axis}[
+  x=1cm, y=1cm,
+  axis lines=middle,
+  ymajorgrids=true,
+  xmajorgrids=true,
+  xmin=-7,  % Ajusté pour exclure les valeurs non permises
+  xmax=7,
+  ymin=-7,
+  ymax=7,
+  xtick={-7,-6,...,8},
+  ytick={-7,-6,...,8},
+]
+\clip(0,-5) rectangle (7,2);  % Ajusté pour exclure les valeurs non permises
+\draw[line width=2pt,color=qqwuqq,smooth,samples=100,domain=0.1:7] plot(\x,{ln(\x)});
+\begin{scriptsize}
+\draw[color=qqwuqq] (1.5,1) node {$f$};
+\end{scriptsize}
+\end{axis}
 \end{tikzpicture}
 
-$C_{f}$ est au-dessous de sa tangente en J; donc $\forall x \in \mathbb{R}, e^{x}>x+1$
-\section*{\underline{\textbf{\textcolor{red}{11.Branche infinie de ln}}}}
-On a  $\lim_{{x \to +\infty}} e^{x}=+\infty$ et $\lim_{{x \to +\infty}} \frac{e^{x}}{x}=+\infty$\\
-Nous avons ainsi une branche parabolique de direction (Oy) au voisinage de +$\infty$.\\
+\section*{\underline{\textbf{\textcolor{red}{10.Branche infinie de ln}}}}
+Nous avons une branche parabolique de direction (Ox) au voisinage de +$\infty$.\\
 Car $\lim_{{x \to +\infty}} \frac{ln(x)}{x}=0$\\
-\section*{\underline{\textbf{\textcolor{red}{12.Application}}}}
+\section*{\underline{\textbf{\textcolor{red}{11.Application}}}}
 \end{document}

@@ -45,7 +45,7 @@ L’intérêt d’établir ces tables logarithmiques est de permettre de substit
 
 \section*{\underline{\textbf{\textcolor{red}{I.Définition et propriétés}}}}
 \subsection*{\underline{\textbf{\textcolor{red}{1.Définition}}}}
-On appelle fonction logarithmique népérien la fonction notée $\ln$ qui est définie sur $]0\;;\ +\infty[$ et qui vérifie $(\ln x)'=\dfrac{1}{x}\ $ et $\ \ln 1=0$
+On appelle fonction logarithmique népérien la fonction notée $\ln$ qui est définie sur $]0\;;\ +\infty[$ et qui vérifie $(\ln (x))'=\dfrac{1}{x}\ $ et $\ \ln 1=0$
 
 $$\begin{array}{rcl}
 \ln\ :\ ]0\;;\ +\infty[ & \longrightarrow & \mathbb{R} \\
@@ -61,97 +61,86 @@ Soit $u$ une fonction définie sur un intervalle $I$ de $\mathbb{R}$ alors :
 - $\ln u^{2}$ existe si $u \neq 0$
 
 \subsection*{\underline{\textbf{\textcolor{red}{3.Propriétés}}}}
-Les propriétés suivantes s'appliquent à la fonction $\ln$ :
+Les propriétés fondamentales de la fonction logarithmique, $\ln$, sont :
 \begin{itemize}
-    \item \textbf{Addition et multiplication} :
-    \[
+    \item 
+    \(
     \ln(ab) = \ln a + \ln b \quad \text{pour } a > 0 \text{ et } b > 0.
-    \]
-    \item \textbf{Division} :
-    \[
+    \)
+    \item 
+    \(
     \ln\left(\dfrac{a}{b}\right) = \ln a - \ln b \quad \text{pour } a > 0 \text{ et } b > 0.
-    \]
-    \item \textbf{Puissance} :
-    \[
+    \)
+    \item 
+    \(
     \ln(a^p) = p \ln a \quad \text{pour } a > 0 \text{ et } p \in \mathbb{R}.
-    \]
-    \item \textbf{Racine carrée} :
-    \[
+    \)
+    \item 
+    \(
     \ln\sqrt{a} = \dfrac{1}{2} \ln a \quad \text{pour } a > 0.
-    \]
+    \)
 \end{itemize}
 
-\subsection*{\underline{\textbf{\textcolor{red}{4.Exemples}}}}
-Voici quelques exemples pratiques pour appliquer les propriétés précédentes :
-\begin{enumerate}
-    \item Simplifier les expressions suivantes :
-    \[
-    \ln(5 \cdot 3), \quad \ln\left(\dfrac{8}{2}\right), \quad \ln(2^3).
-    \]
-    \item Calculer les valeurs approchées suivantes (en utilisant $\ln 2 \simeq 0.69$ et $\ln 3 \simeq 1.09$) :
-    \[
-    \ln 6, \quad \ln 9, \quad \ln 12.
-    \]
-\end{enumerate}
-
-\subsection*{\underline{\textbf{\textcolor{red}{5.Remarque}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{4.Remarque}}}}
 La fonction $\ln$ est strictement croissante sur son domaine $]0\;;\ +\infty[$, c'est-à-dire que :
 \[
 \forall a, b \in ]0\;;\ +\infty[, \quad a < b \implies \ln a < \ln b.
 \]
 
-\subsection*{\underline{\textbf{\textcolor{red}{6.Limites usuelles}}}}
+\section*{\underline{\textbf{\textcolor{red}{II.Limites et Dérivée}}}}
+
+\subsection*{\underline{\textbf{\textcolor{red}{1.Limites aux bornes de $D_{ln}$}}}}
 \begin{itemize}
     \item $\lim_{x \to 0^+} \ln x = -\infty$.
     \item $\lim_{x \to +\infty} \ln x = +\infty$.
-    \item $\lim_{x \to 0^+} x \ln x = 0$.
 \end{itemize}
-
-\subsection*{\underline{\textbf{\textcolor{red}{7.Graphique de la fonction}}}}
-La courbe représentative de la fonction $\ln$, notée $C_{\ln}$, a les propriétés suivantes :
+\subsection*{\underline{\textbf{\textcolor{red}{2.Limites usuelles}}}}
 \begin{itemize}
-    \item Domaine : $]0\;;\ +\infty[$.
-    \item Asymptote verticale : la droite $x = 0$.
-    \item Comportement asymptotique :
-    \[
-    \lim_{x \to +\infty} \frac{\ln x}{x} = 0.
-    \]
-\end{itemize}
-
-\begin{center}
-    \textbf{Représentation graphique de $\ln$}
-    %\includegraphics[scale=0.7]{courbe_ln.png}
-\end{center}
-
-
-++++++++++++++++++++++++++++++++++++++++++++++
-
-\underline{\textbf{\textcolor{red}{Limites aux bornes de Df }}}\\
-\[\lim_{{x \to +\infty}} \ln(x) = +\infty\]
-\[\lim_{{x \to 0^+}} \ln(x) = -\infty\]
-\underline{\textbf{\textcolor{red}{Limites usuelles}}}\\
-\[\lim_{{x \to 0}} \frac{\ln(x+1)}{x}=1\]
+    \item $\lim_{x \to 0^+} x \ln x = 0$.
+    \item $ \lim_{x \to +\infty} \frac{\ln x}{x} = 0 $
+    \item $\lim_{{x \to 0}} \frac{\ln(x+1)}{x}=1$\\
 Soit a un nombre rationnel strictement positif.
-\[\lim_{{x \to 0^+}} x^{a}\ln(x) = 0^{-} \]
-\[\lim_{{x \to +\infty}} \frac{\ln(x)}{x^{a}}=0^{+}\]
+   \item $\lim_{{x \to 0^+}} x^{\alpha}\ln(x) = 0^{-} $
+   \item $\lim_{{x \to +\infty}} \frac{\ln(x)}{x^{\alpha}}=0^{+}$
+\end{itemize}
 \underline{\textbf{\textcolor{red}{Preuve de quelques limites}}}\\
-Montrons que $\lim_{{x \to 0^+}} x^{a}\ln(x) = 0^{-}$ pour a=1\\
-pour tout $x\in]0;+\infty[,$ en posant $X=\frac{1}{x}$, on a :$xlnx=-\frac{lnX}{X}$\\
+Montrons que $\lim_{{x \to 0^+}} x^{\alpha}\ln(x) = 0^{-}$ pour $\alpha=1$\\
+pour tout $x\in]0;+\infty[,$ en posant $X=\frac{1}{x}$, on a : $xlnx=-\frac{lnX}{X}$\\
 ainsi, $\lim_{{x \to 0^{+}}} -\frac{\ln(X)}{X}=0^{-}$
-Donc $\lim_{{x \to 0^+}} x^{a}\ln(x) = 0^{-}$\\
+Donc $\lim_{{x \to 0^+}} x^{\alpha}\ln(x) = 0^{-}$\\
 \underline{\textbf{\textcolor{red}{Exemple}}}\\
-Déterminer les limites suivantes:\\
-a)\[\lim_{{x \to +\infty}} x\ln(x)-x^{2}+1\]
-b)\[\lim_{{x \to 0}} x\ln(x)-x^{2}+1\]
-c)\[\lim_{{x \to +\infty}} \frac{x\ln(x)}{x^{2}+1}\]
+
+Déterminer les limites suivantes:
+\begin{enumerate}
+\item \( \lim\limits_{x \to +\infty} x\ln(x)-x^{2}+1\)
+
+\item \( \lim\limits_{x \to 0} x\ln(x)-x^{2}+1\)
+
+\item \( \lim\limits_{x \to +\infty} \frac{x\ln(x)}{x^{2}+1}\)
+\end{enumerate}
+
 \underline{\textbf{\textcolor{red}{Exercice d'application}}}\\
-Déterminer les limites suivantes:\\
-a)\[\lim_{{x \to +\infty}} x+1-\ln(x)\]
-b)\[\lim_{{x \to +\infty}} \frac{x}{2}[\ln(1+\frac{1}{x})]\]
-c)\[\lim_{{x \to +\infty}} \frac{\ln(x)}{\sqrt{x}}\]
-d)\[\lim_{{x \to 1^{+}}} (x-1)\ln(x-1)\]
-e)\[\lim_{{x \to 1^{+}}} \frac{x}{x+1}-\ln(x+1)\]
-\subsection*{\underline{\textbf{\textcolor{red}{6.Limites des composées avec ln}}}}
+Déterminer les limites suivantes:
+
+\begin{enumerate}
+\item \( \lim\limits_{x \to +\infty} x+1-\ln(x)\)
+
+\item \( \lim\limits_{x \to +\infty} \frac{x}{2}[\ln(1+\frac{1}{x})] \)
+
+\item \( \lim\limits_{x \to +\infty} \frac{\ln(x)}{\sqrt{x}} \)
+
+\item \( \lim\limits_{x \to 1^{+}} (x-1)\ln(x-1) \)
+
+\item \( \lim\limits_{x \to 1^{+}} \frac{x}{x+1}-\ln(x+1) \)
+\end{enumerate}
+\subsection*{\underline{\textbf{\textcolor{red}{3.Dérivée}}}}
+Soit u et v deux fonctions strictement positives \\
+$[\ln(u(x)]=\frac{u'(x)}{u(x)}$\\
+$[\ln(\frac{u(x)}{v(x)})]=\frac{u'(x)}{u(x)}$\\
+\underline{\textbf{\textcolor{red}{Exemple}}}\\
+f(x)=$\frac{\ln(x^{2}+2x+9)}{x}$\\
+f(x)=$\ln[\frac{x^{2}+2x+9}{x-2}]$
+\subsection*{\underline{\textbf{\textcolor{red}{4.Limites des composées avec ln}}}}
 Soit $U(x)$ une fonction strictement positive.\\
 Cherchons $\lim_{{x \to a}} \ln[u(x)]$\\
 $\bigotimes$ Si $\lim_{{x \to a}} u(x)=l$ et que $\lim_{{x \to l}} \ln(x)=l'$\\
@@ -161,55 +150,30 @@ $\bigotimes$ Si $\lim_{{x \to a}} ln[u(x)]=l'$\\
 Calcule la limite suivante\\
 $\lim_{{x \to \infty}} \ln(\frac{x^{2}}{2x^{2}-1})$\\
 \underline{\textbf{\textcolor{red}{Solution}}}\\
-\subsection*{\underline{\textbf{\textcolor{red}{7.Dérivée}}}}
-Soit u et v deux fonctions strictement positives \\
-$[\ln(u(x)]=\frac{u'(x)}{u(x)}$\\
-$[\ln(\frac{u(x)}{v(x)})]=\frac{u'(x)}{u(x)}$\\
-\underline{\textbf{\textcolor{red}{Exemple}}}\\
-f(x)=$\frac{\ln(x^{2}+2x+9)}{x}$\\
-f(x)=$\ln[\frac{x^{2}+2x+9}{x-2}]$
-\subsection*{\underline{\textbf{\textcolor{red}{8.Equation et Inequation et systèmes avec ln}}}}
-\underline{\textbf{\textcolor{red}{a°)Equation}}}\\
-Pour résoudre les équations avec ln, on peut procécédé comme suit:\\
-$\bigotimes$ on détermine le domaine de validité\\
-$\bigotimes$ on utilise la propriété ln(a)=ln(b) $\Longrightarrow$ a=b \\
-$\bigotimes$ Puis résoudre l'équation a=b\\
-$\bigotimes$ vérifier si les ou la solutions appartiennent au domaine de validité\\
-\underline{\textbf{\textcolor{red}{Exemple}}}\\
-Résoudre dans $\mathbb{R}$ les équations suivantes\\
-a)$\ln(x+1)=\ln(2x-1)$\\
-b)$\ln(x+1)-\ln(2x+1)=\ln(2x-1)$\\
-\underline{\textbf{\textcolor{red}{Exemple}}}\\
-Considérons l'inéquation 
-a)$\ln(x-4)\geq \ln(2x+4).$\\
-b)$\ln(x-1)\leq \ln(5x+5)-\ln(x-1).$\\
-\underline{\textbf{\textcolor{red}{b°)Système d'inéquations avec $\ln$:}}}\\
-\[
-\begin{cases}
-\ln(x)+\ln(y) = 7 \\
-2\ln(x)-3ln(y) = 1
-\end{cases}
-\]
 
-\[
-\begin{cases}
-\ln(x)+\ln(y) = ln(2) \\
-\ln(x+y) = ln(x)
-\end{cases}
-\]
-\section*{\underline{\textbf{\textcolor{red}{9.Etude le fonction ln}}}}
+\section*{\underline{\textbf{\textcolor{red}{III.Etude le fonction ln}}}}
 Soit $f(x)=\ln(x)$ le domaine \\
 Le Domaine $D_{f}$ \\
 f existe ssi $x\in \mathbb{R^{*}_{+}}$ donc $D_{f}=\mathbb{R^{*}_{+}}$\\
-$\bigotimes$ Limites aux bornes de $D_{f}$\\
-\underline{En $0^{+}$}\\
-$\lim_{{x \to 0^{+}}} lnx=-\infty$\\
-\underline{En $+\infty$}\\
-$\lim_{{x \to +\infty}} lnx=+\infty$\\
-$\bigotimes$ La dérivée de f\\
-$f'(x)=\frac{1}{x}$\\
+
+\underline{Limites aux bornes de $D_{f}$}
+
+\underline{En $0^{+}$}
+
+$\lim_{{x \to 0^{+}}} lnx=-\infty$
+
+\underline{En $+\infty$}
+
+$\lim_{{x \to +\infty}} lnx=+\infty$
+
+\underline{La dérivée de f}
+
+$f'(x)=\frac{1}{x}$
+
 $\forall x \in ]0;+\infty[$, $f'(x)>0$, donc f est croissante sur $]0;+\infty[$\\
-$\bigotimes$ Tableau de variation\\
+
+\underline{Tableau de variation}
+
 %Tableau de Variation
 \definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
@@ -241,6 +205,9 @@ $\bigotimes$ Tableau de variation\\
 \draw (-8,3.5) node[anchor=north west] {$+\infty$};
 \end{tikzpicture}
 
+\subsection*{\underline{\textbf{\textcolor{red}{Branche infinie de ln}}}}
+$\lim_{{x \to +\infty}} \frac{ln(x)}{x}=0$ donc ln admet une branche parabolique de direction (Ox) au voisinage de +$\infty$.\\
+
 \definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
 \begin{axis}[
@@ -262,9 +229,34 @@ $\bigotimes$ Tableau de variation\\
 \end{scriptsize}
 \end{axis}
 \end{tikzpicture}
-
-\section*{\underline{\textbf{\textcolor{red}{10.Branche infinie de ln}}}}
-Nous avons une branche parabolique de direction (Ox) au voisinage de +$\infty$.\\
-Car $\lim_{{x \to +\infty}} \frac{ln(x)}{x}=0$\\
 \section*{\underline{\textbf{\textcolor{red}{11.Application}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{IV.Equation et Inequation et systèmes avec ln}}}}
+\underline{\textbf{\textcolor{red}{a°)Equation}}}\\
+Pour résoudre les équations avec ln, on peut procécédé comme suit:\\
+$\bigotimes$ on détermine le domaine de validité\\
+$\bigotimes$ on utilise la propriété ln(a)=ln(b) $\Longrightarrow$ a=b \\
+$\bigotimes$ Puis résoudre l'équation a=b\\
+$\bigotimes$ vérifier si les ou la solutions appartiennent au domaine de validité\\
+\underline{\textbf{\textcolor{red}{Exemple}}}\\
+Résoudre dans $\mathbb{R}$ les équations suivantes\\
+a)$\ln(x+1)=\ln(2x-1)$\\
+b)$\ln(x+1)-\ln(2x+1)=\ln(2x-1)$\\
+\underline{\textbf{\textcolor{red}{Exemple}}}\\
+Considérons l'inéquation 
+a)$\ln(x-4)\geq \ln(2x+4).$\\
+b)$\ln(x-1)\leq \ln(5x+5)-\ln(x-1).$\\
+\underline{\textbf{\textcolor{red}{b°)Système d'inéquations avec $\ln$:}}}\\
+\[
+\begin{cases}
+\ln(x)+\ln(y) = 7 \\
+2\ln(x)-3ln(y) = 1
+\end{cases}
+\]
+
+\[
+\begin{cases}
+\ln(x)+\ln(y) = ln(2) \\
+\ln(x+y) = ln(x)
+\end{cases}
+\]
 \end{document}

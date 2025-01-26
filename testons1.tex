@@ -1,68 +1,74 @@
 \documentclass{article}
-\usepackage{lmodern} % Pour une police plus nette
-\usepackage{stmaryrd}
-\usepackage{graphicx} % Pour l'insertion d'images
-\usepackage{float}    % Pour contrôler précisément le placement
-\usepackage[utf8]{inputenc}
-\usepackage[french]{babel}
-\usepackage[T1]{fontenc}
-\usepackage{hyperref}
-\usepackage{verbatim}
-\usepackage{color, soul}
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.18} % Version plus récente de pgfplots
-\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-\usepackage{tkz-tab}
+\usepackage{systeme}
+\usepackage{color,soul}
+\geometry{top=2cm, bottom=2cm, left=2cm, right=2cm}
+
+\setlength{\headheight}{25pt} % Ajustez la hauteur de l'en-tête si nécessaire
+
+\pagestyle{fancy}
+\fancyhead[L]{\includegraphics[width=1.5cm]{flag.png}} % Remplacer 'flag.png' par le chemin de l'image du drapeau
+\fancyhead[C]{\hspace{-1.5cm} \textbf{IA Kédougou - Cellule Mixte des Sciences Physiques - Première S}} % Décalage à gauche
+\fancyhead[R]{\raisebox{-0.3cm}{\includegraphics[width=1.5cm]{logo.png}}\hspace{0.1cm}2024/2025} % Descendre le logo pour aligner avec le drapeau
 
 \begin{document}
 
-\begin{table}[h!]
-    \centering
-    \renewcommand{\arraystretch}{1.5}
-    \begin{tabular}{|c|c|c|c|}
-        \hline
-        \textbf{\( I = \) intervalle de} & \textbf{Remarques ou} & \textbf{Fonction \( f \)} & \textbf{Primitive \( F \) où \( k \) est une} \\
-        \textbf{définition de \( f \)} & \textbf{restrictions} & & \textbf{constante réelle} \\
-        \hline
-        \( I \subset \mathbb{R} \) & & \( x \mapsto 0 \) & \( x \mapsto k \) \\
-        \hline
-        \( I \subset \mathbb{R} \) & \( a \in \mathbb{R} \) & \( x \mapsto a \) & \( x \mapsto ax + k \) \\
-        \hline
-        \( I \subset \mathbb{R} \) & \( n \) entier naturel & \( x \mapsto x^n \) & \( x \mapsto \frac{x^{n+1}}{n+1} + k \) \\
-        \hline
-        \( I \subset \mathbb{R}^* \) & \( n \) entier relatif, \( n \neq -1 \) & \( x \mapsto x^n \) & \( x \mapsto \frac{x^{n+1}}{n+1} + k \) \\
-        \hline
-        \( I \subset \mathbb{R}^+ \) & \( n \) réel \( n \neq -1 \) & \( x \mapsto x^n \) & \( x \mapsto \frac{x^{n+1}}{n+1} + k \) \\
-        \hline
-        \( I \subset \mathbb{R}^* \) & & \( x \mapsto \frac{1}{x^2} \) & \( x \mapsto -\frac{1}{x} + k \) \\
-        \hline
-        \( I \subset \mathbb{R}^+ \) & & \( x \mapsto \frac{1}{\sqrt{x}} \) & \( x \mapsto 2\sqrt{x} + k \) \\
-        \hline
-        \( I \subset \mathbb{R} \) & & \( x \mapsto \sin x \) & \( x \mapsto -\cos x + k \) \\
-        \hline
-        \( I \subset \mathbb{R} \) & & \( x \mapsto \cos x \) & \( x \mapsto \sin x + k \) \\
-        \hline
-        \( I \subset \mathbb{R} \) & & \( x \mapsto \sin(ax+b) \) & \( x \mapsto -\frac{1}{a} \cos(ax+b) + k \) \\
-        \hline
-        \( I \subset \mathbb{R} \) & & \( x \mapsto \cos(ax+b) \) & \( x \mapsto \frac{1}{a} \sin(ax+b) + k \) \\
-        \hline
-        \( I \subset \mathbb{R} \setminus \left\{ \frac{\pi}{2} + k\pi \right\} \) & & \( x \mapsto \frac{1}{\cos^2 x} \) & \( x \mapsto \tan x + k \) \\
-        \hline
-        \( I \subset \mathbb{R} \) & & \( x \mapsto 1 + \tan^2 x \) & \( x \mapsto \tan x + k \) \\
-        \hline
-        \( I \subset \mathbb{R}^+ \) & \( x \) positif & \( x \mapsto \sqrt{x} \) & \( x \mapsto \frac{2}{3} x^{3/2} + k \) \\
-        \hline
-        \( I \subset \mathbb{R} \) & & \( x \mapsto (ax+b)^n \) & \( x \mapsto \frac{1}{a} \frac{(ax+b)^{n+1}}{n+1} + k \) \\
-        \hline
-        \( I \subset \mathbb{R} \) & Avec les mêmes & & \\
-        & contraintes sur \( n \) et sur \( (ax+b) \) & & \\
-        \hline
-    \end{tabular}
-    \caption{Tableau des primitives}
-\end{table}
+\vspace*{2cm} % Décalage vers le haut
+\begin{center}
+    \huge \textbf{TD : chaînes carbonées insaturées : alcènes et alcynes}
+\end{center}
 
+\noindent\rule{\textwidth}{0.4pt}
+
+\begin{flushleft}
+    \textbf{Exercice 1 :}
+\end{flushleft}
+++++++++++++++++++++++++++++++++++++++
+ \subsection*{\underline{\textbf{\textcolor{red}{2. Propriétés}}}}
+
+Le module d'un nombre complexe possède plusieurs propriétés importantes, qui sont utiles pour les manipulations algébriques et géométriques :
+
+\begin{itemize}
+  \item[$\bullet$] \textbf{Le module d'un conjugué :} Pour tout \(z \in \mathbb{C}\),
+  \[
+  |\overline{z}| = |z|.
+  \]
+
+  \item[$\bullet$] \textbf{Le module d'un produit :} Pour tous \(z_1, z_2 \in \mathbb{C}\),
+  \[
+  |z_1 \cdot z_2| = |z_1| \cdot |z_2|.
+  \]
+
+  \item[$\bullet$] \textbf{Le module d'une puissance :} Pour tout \(z \in \mathbb{C}\) et tout entier \(n \geq 0\),
+  \[
+  |z^n| = |z|^n.
+  \]
+
+  \item[$\bullet$] \textbf{Relation avec le conjugué :} Pour tout \(z = a + ib \in \mathbb{C}\),
+  \[
+  z \cdot \overline{z} = |z|^2 = a^2 + b^2.
+  \]
+
+  \item[$\bullet$] \textbf{Le module d'un quotient :} Pour tous \(z_1, z_2 \in \mathbb{C}\), avec \(z_2 \neq 0\),
+  \[
+  \left|\frac{z_1}{z_2}\right| = \frac{|z_1|}{|z_2|}.
+  \]
+
+  \item[$\bullet$] \textbf{Inégalité triangulaire :} Pour tous \(z_1, z_2 \in \mathbb{C}\),
+  \[
+  |z_1 + z_2| \leq |z_1| + |z_2|.
+  \]
+
+  \item[$\bullet$] \textbf{Distance dans le plan complexe :} Pour deux points \(A\) et \(B\) d’affixes respectives \(z_A\) et \(z_B\), la distance \(AB\) entre ces points est donnée par :
+  \[
+  |z_A - z_B| = AB.
+  \]
+\end{itemize}
+
+++++++++++++++++++++++++++++++++++++++
 \end{document}
-

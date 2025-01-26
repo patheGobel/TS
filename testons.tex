@@ -1,42 +1,9 @@
 \documentclass{article}
-\usepackage{amsmath}
-\usepackage{array}
-\usepackage{geometry}
-\usepackage{multirow}
-\usepackage{graphicx} % Package pour redimensionner le tableau
-\geometry{a4paper, margin=1in}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
 
 \begin{document}
 
-\begin{table}[h!]
-\centering
-\renewcommand{\arraystretch}{1.2} % Réduit l'espacement vertical
-\scriptsize % Réduit la taille de police du tableau
-\begin{tabular}{|>{\centering\arraybackslash}m{4cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{5cm}|}
-\hline
-\textbf{La limite} & \textbf{Dérivabilité en \( x_0 \)} & \textbf{Interprétation géométrique : \( (C_f) \) admet} \\
-\hline
-\(\lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0} = a \ (a \neq 0)\) & \multirow{2}{*}{\(f\) est dérivable en \(x_0\)} & Une tangente au point \( A \left(x_0; f(x_0)\right) \) de coefficient directeur \(a\) \\
-\cline{1-1} \cline{3-3}
-\(\lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0} = 0 \) &  & Une tangente horizontale au point \( A \left(x_0; f(x_0)\right) \) \\
-\hline
-\(\lim_{x \to x_0^+} \frac{f(x) - f(x_0)}{x - x_0} = a \ (a \neq 0) \) & \(f\) est dérivable à droite en \(x_0\) & Une demi-tangente à droite au point \( A \left(x_0; f(x_0)\right) \) de coefficient directeur \(a\) \\
-\cline{1-1} \cline{3-3} 
-\(\lim_{x \to x_0^+} \frac{f(x) - f(x_0)}{x - x_0} = 0 \) &  & Une demi-tangente horizontale à droite au point \( A \left(x_0; f(x_0)\right) \) \\
-\hline
-\(\lim_{x \to x_0^+} \frac{f(x) - f(x_0)}{x - x_0} = -\infty \) & \(f\) n'est pas dérivable à droite en \(x_0\) & Une demi-tangente verticale à droite au point \( A \left(x_0; f(x_0)\right) \) dirigée vers le bas \\
-\cline{1-1} \cline{3-3}
-\(\lim_{x \to x_0^+} \frac{f(x) - f(x_0)}{x - x_0} = +\infty \) &  & Une demi-tangente verticale à droite au point \( A \left(x_0; f(x_0)\right) \) dirigée vers le haut \\
-\hline
-\(\lim_{x \to x_0^-} \frac{f(x) - f(x_0)}{x - x_0} = a \ (a \neq 0) \) & \(f\) est dérivable à gauche en \(x_0\) & Une demi-tangente à gauche au point \( A \left(x_0; f(x_0)\right) \) de coefficient directeur \(a\) \\
-\cline{1-1} \cline{3-3}
-\(\lim_{x \to x_0^-} \frac{f(x) - f(x_0)}{x - x_0} = 0 \) &  & Une demi-tangente horizontale à gauche au point \( A \left(x_0; f(x_0)\right) \) \\
-\hline
-\(\lim_{x \to x_0^-} \frac{f(x) - f(x_0)}{x - x_0} = -\infty \) & \(f\) n'est pas dérivable à gauche en \(x_0\) & Une demi-tangente verticale à gauche au point \( A \left(x_0; f(x_0)\right) \) dirigée vers le haut \\
-\cline{1-1} \cline{3-3}
-\(\lim_{x \to x_0^-} \frac{f(x) - f(x_0)}{x - x_0} = +\infty \) &  & Une demi-tangente verticale à gauche au point \( A \left(x_0; f(x_0)\right) \) dirigée vers le bas \\
-\hline
-\end{tabular}
-\end{table}
+Voici un lien vers Geogebra : \href{https://www.geogebra.org/classic/tabyrtxt}{Geogebra Classic}.
 
 \end{document}
+

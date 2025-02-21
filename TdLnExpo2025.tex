@@ -1,0 +1,520 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amssymb,mathrsfs,tikz,times,pifont}
+\usepackage{enumitem}
+\newcommand\circitem[1]{%
+\tikz[baseline=(char.base)]{
+\node[circle,draw=gray, fill=red!55,
+minimum size=1.2em,inner sep=0] (char) {#1};}}
+\newcommand\boxitem[1]{%
+\tikz[baseline=(char.base)]{
+\node[fill=cyan,
+minimum size=1.2em,inner sep=0] (char) {#1};}}
+\setlist[enumerate,1]{label=\protect\circitem{\arabic*}}
+\setlist[enumerate,2]{label=\protect\boxitem{\alph*}}
+%%%::::::by chnini ameur :::::::%%%
+\everymath{\displaystyle}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=1.7cm]{geometry}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
+\usepackage{array,multirow}
+\usepackage[most]{tcolorbox}
+\usepackage{varwidth}
+\usepackage{float} %pour utiliser l'option [H] qui force l'image à apparaître exactement à l'endroit où elle est placée dans le code.
+\tcbuselibrary{skins,hooks}
+\usetikzlibrary{patterns}
+%%%::::::by chnini ameur :::::::%%%
+\newtcolorbox{exa}[2][]{enhanced,breakable,before skip=2mm,after skip=5mm,
+colback=yellow!20!white,colframe=black!20!blue,boxrule=0.5mm,
+attach boxed title to top left ={xshift=0.6cm,yshift*=1mm-\tcboxedtitleheight},
+fonttitle=\bfseries,
+title={#2},#1,
+% varwidth boxed title*=-3cm,
+boxed title style={frame code={
+\path[fill=tcbcolback!30!black]
+([yshift=-1mm,xshift=-1mm]frame.north west)
+arc[start angle=0,end angle=180,radius=1mm]
+([yshift=-1mm,xshift=1mm]frame.north east)
+arc[start angle=180,end angle=0,radius=1mm];
+\path[left color=tcbcolback!60!black,right color = tcbcolback!60!black,
+middle color = tcbcolback!80!black]
+([xshift=-2mm]frame.north west) -- ([xshift=2mm]frame.north east)
+[rounded corners=1mm]-- ([xshift=1mm,yshift=-1mm]frame.north east)
+-- (frame.south east) -- (frame.south west)
+-- ([xshift=-1mm,yshift=-1mm]frame.north west)
+[sharp corners]-- cycle;
+},interior engine=empty,
+},interior style={top color=yellow!5}}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{fancyhdr}
+\usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
+% Commande pour ajouter du texte en arrière-plan
+\usepackage{tkz-tab}
+\AddToShipoutPicture{
+    \AtTextCenter{%
+        \makebox[0pt]{\rotatebox{80}{\textcolor[gray]{0.7}{\fontsize{5cm}{5cm}\selectfont PGB}}}
+    }
+}
+\usepackage{lastpage}
+\fancyhf{}
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footruleskip}{10pt}
+\fancyfoot[R]{
+\color{blue}\ding{45}\ \textbf{2025}
+}
+\fancyfoot[L]{
+\color{blue}\ding{45}\ \textbf{Prof:M. BA}
+}
+\cfoot{\bf
+\thepage /
+\pageref{LastPage}}
+\begin{document}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\arrayrulewidth}{1.2pt}
+\begin{tikzpicture}[overlay,remember picture]
+    \node[draw=blue,line width=1.2pt,fill=purple,text=blue,inner sep=3mm,rounded corners,pattern=dots]at ([yshift=-2.5cm]current page.north) {\begingroup\setlength{\fboxsep}{0pt}\colorbox{white}{\begin{tabular}{|*1{>{\centering \arraybackslash}p{0.28\textwidth}} |*2{>{\centering \arraybackslash}p{0.2\textwidth}|} *1{>{\centering \arraybackslash}p{0.19\textwidth}|} }
+                \hline
+                \multicolumn{3}{|c|}{$\diamond$$\diamond$$\diamond$\ \textbf{Lycée de Dindéfélo}\ $\diamond$$\diamond$$\diamond$ } & \textbf{A.S. : 2024/2025}                                              \\ \hline
+                \textbf{Matière: Mathématiques}                                                                                    & \textbf{Niveau : T}\textbf{S2} & \textbf{Date: 21/02/2025} & \textbf{} \\ \hline
+                \multicolumn{4}{|c|}{\parbox[c]{10cm}{\begin{center}
+                                                                  \textbf{{\Large\sffamily Td Ln Expo}}
+                                                              \end{center}}}                                                                                                        \\ \hline
+            \end{tabular}}\endgroup};
+\end{tikzpicture}
+\vspace{3cm}
+
+\section*{\fbox{\textbf{Exercice 4}}}
+
+\subsection*{\underline{\textbf{Partie A}}}
+
+Soit \( g(x) = 2x \ln(-x) + x + 1 \).
+
+\begin{enumerate}
+    \item Déterminer l’ensemble de définition \( D_g \) de \( g \).
+    \item Calculer les limites aux bornes de \( D_g \).
+    \item Étudier les variations de \( g \).
+    \item Calculer \( g(-1) \) puis en déduire le signe de \( g(x) \).
+\end{enumerate}
+
+\subsection*{\underline{\textbf{Partie B}}}
+
+On considère la fonction \( f \) définie par :
+
+\[
+    f(x) =
+    \begin{cases}
+        x^2 \ln(-x) + x + 1 & \text{si } x < 0 \\
+        x \ln(x)^2 + x + 1  & \text{si } x > 0 \\
+        1                   & \text{si } x = 0
+    \end{cases}
+\]
+
+On note \( (C_f) \) sa courbe représentative dans un repère orthonormé.
+
+\begin{enumerate}
+    \item Justifier que \( f \) est définie sur \( \mathbb{R} \).
+    \item Étudier la continuité et la dérivabilité de \( f \) en 0. Interprétez graphiquement les résultats.
+    \item Donner le domaine de dérivabilité de \( f \) puis montrer que
+          \[
+              f'(x) =
+              \begin{cases}
+                  g(x)          & \text{si } x < 0 \\
+                  (1 + \ln x)^2 & \text{si } x > 0
+              \end{cases}
+          \]
+    \item Calculer les limites de \( f \) aux bornes de son domaine de définition.
+    \item Étudier les branches infinies de \( (C_f) \).
+    \item Dresser le tableau de variations de \( f \).
+    \item Montrer que dans \( ]-\infty; -1[ \), l’équation \( f(x) = 1 \)
+
+          admet une unique solution \( \alpha \) puis vérifier que \(-1,8 < \alpha < -1,7\).
+    \item Construire \( (C_f) \) (unité 2 cm) (on précisera la tangente au point d’abscisse \( e^{-1} \) et on placera le point d’abscisse 1).
+\end{enumerate}
+
+\subsection*{\underline{\textbf{Partie C}}}
+
+Soit \( h \) la restriction de \( f \) à \( I =]0; +\infty[ \).
+
+    \begin{enumerate}
+        \item Montrer que \( h \) admet une bijection réciproque \( h^{-1} \) définie sur un intervalle \( J \) à préciser.
+        \item Étudier la dérivabilité de \( h^{-1} \) sur \( J \).
+        \item
+              \begin{enumerate}
+                  \item Calculer \( h(1) \).
+                  \item Calculer \( (h^{-1})'(2) \).
+              \end{enumerate}
+        \item Construire la courbe de \( h^{-1} \).
+    \end{enumerate}
+
+    \section*{\fbox{\textbf{Exercice 5}}}
+
+    \subsection*{\underline{\textbf{Partie A}}}
+
+    Soit \( g \) la fonction définie sur \( ]0; +\infty[ \) par
+    \( g(x) = -x + 1 - 2 \ln x \)
+
+    \begin{enumerate}
+        \item Étudier les variations de \( g \) puis dresser son tableau de variations.
+        \item Calculer \( g(1) \). En déduire le signe de \( g(x) \) sur \( ]0; +\infty[ \).
+    \end{enumerate}
+
+    \subsection*{\underline{\textbf{Partie B}}}
+
+    Soit \( f \) la fonction définie par \( f(x) = \frac{x + \ln x}{x^2} \)
+    et \( (C) \) sa courbe représentative dans un repère \( (O, \vec{i}, \vec{j}) \).
+
+    \begin{enumerate}
+        \item Déterminer le domaine de définition de \( f \).
+        \item
+              \begin{enumerate}
+                  \item Calculer \( \lim\limits_{x \to 0^+} f(x) \). Interpréter graphiquement le résultat.
+                  \item Calculer \( \lim\limits_{x \to +\infty} f(x) \). Interpréter graphiquement le résultat.
+              \end{enumerate}
+        \item
+              \begin{enumerate}
+                  \item Montrer que pour tout \( x \in ]0; +\infty[ \), \( f'(x) = \frac{g(x)}{x^2} \)
+                  \item Dresser le tableau de variations de \( f \).
+                  \item Montrer que l’équation \( f(x) = 0 \) admet dans \( ]0; +\infty[ \) une unique solution \( \beta \) et que  \( \beta \in ]0,56; 0,57[. \)
+              \end{enumerate}
+        \item Construire \( (C) \).
+    \end{enumerate}
+    \subsection*{\underline{\textbf{Partie C}}}
+    Soit \( h \) la fonction définie sur \( ]0; +\infty[ \) par \( h(x) = \frac{1}{x} \) et \( (\Gamma) \) sa courbe.
+
+    \begin{enumerate}
+        \item Étudier les positions relatives de \( (C) \) et \( (\Gamma) \).
+        \item Construire dans le même repère \( (\Gamma) \).
+        \item Soit \( I_{\lambda} \) l’aire en unité d’aires de la partie du plan délimitée par les courbes \( (C) \), \( (\Gamma) \) et les droites d’équations \( x = 1 \) et \( x = \lambda \) où \( \lambda \) est un nombre réel strictement supérieur à 1.
+              \begin{enumerate}
+                  \item Montrer que \( I_{\lambda} = 1 - \frac{1}{\lambda} (1 + \ln \lambda). \)
+                  \item Déterminer \( \lim\limits_{\lambda \to +\infty} I_{\lambda}. \)
+              \end{enumerate}
+    \end{enumerate}
+
+    \section*{\fbox{\textbf{Exercice 6}}}
+    Soit \( f(x) = \frac{\ln x}{1 + x^2} \)
+
+    \subsection*{\underline{\textbf{Partie A}}}
+
+    Soit \( g(x) = 1 + x^2 - 2x^2 \ln x. \)
+
+    \begin{enumerate}
+        \item Déterminer \( D_g \) et montrer que si \( 0 < x < 1 \) alors \( g(x) \geq 1 \).
+        \item Montrer que \( g \) est strictement décroissante sur \( [1; +\infty[ \).
+        \item Calculer \( g(1) \) et \( g(2) \). Montrer qu’il existe un unique réel \( \alpha \) strictement positif tel que \( g(\alpha) = 0 \). Donner un encadrement de \( \alpha \) à \( 10^{-1} \) près.
+        \item Donner le signe de \( g(x) \) sur \( ]0; +\infty[ \).
+    \end{enumerate}
+
+    \subsection*{\underline{\textbf{Partie B}}}
+
+    \begin{enumerate}
+        \item
+              \begin{enumerate}
+                  \item Calculer \( f'(x) \) et étudier les variations de \( f \).
+                  \item Montrer que \( f(\alpha) = \frac{1}{2\alpha^2} \).
+                  \item Calculer \( \lim\limits_{x \to 0^+} f(x) \) et \( \lim\limits_{x \to +\infty} f(x) \).
+              \end{enumerate}
+        \item Donner une équation de la tangente \( (T) \) à \( (C_f) \) au point d’abscisse \( 1 \).
+        \item Donner le tableau de variations de \( f \) puis tracer \( (C_f) \).
+    \end{enumerate}
+
+    \section*{\fbox{\textbf{Exercice 7}}}
+
+    \subsection*{\underline{\textbf{Partie A}}}
+
+    On considère dans \( ]0; +\infty[ \) la fonction \( g \) donnée par :  \( g(x) = x \ln(x) - 1. \)
+
+    \begin{enumerate}
+        \item Dresser le tableau des variations de \( g \).
+        \item
+              \begin{enumerate}
+                  \item Montrer que l’équation \( g(x) = 0 \) admet une solution unique \( \alpha \) sur \( ]0; +\infty[ \).
+                  \item Montrer que \( 1,76 < \alpha < 1,77 \).
+                  \item En déduire le signe de \( g(x) \) suivant les valeurs de \( x \).
+              \end{enumerate}
+    \end{enumerate}
+
+    \subsection*{\underline{\textbf{Partie B}}}
+
+    On considère la fonction \( f \) de \( \mathbb{R} \) vers \( \mathbb{R} \) définie par :
+    \( f(x) = \frac{1 + x}{1 + \ln(x)}. \)
+
+    \begin{enumerate}
+        \item Justifie que \( D_f = ]0; +\infty[ \setminus \left\{ \frac{1}{e} \right\} \).
+        \item Calcule les limites de \( f \) aux bornes de \( D_f \).
+        \item Étudie les branches infinies à \( (C_f) \).
+        \item
+              \begin{enumerate}
+                  \item Démontre que \( \forall x \in D_f \), \(  f'(x) = \frac{g(x)}{x (1 + \ln(x))^2}. \)
+                  \item Donne le signe de \( f'(x) \) suivant les valeurs de \( x \).
+                  \item En déduire le sens de variation de \( f \) et dresser son tableau de variation.
+              \end{enumerate}
+        \item Démontre que \( f(\alpha) = \alpha \).
+        \item Trace la courbe \( (C_f) \) et son asymptote. (On prendra \( \alpha = 1,76 \))
+    \end{enumerate}
+
+    \section*{\fbox{\textbf{Exercice 8}}}
+
+    \subsection*{\underline{\textbf{Partie A}}}
+
+    Soit  \( g(x) = 2x - (x+1) \ln(x+1). \)
+
+    \begin{enumerate}
+        \item Déterminer le domaine de définition \( D_g \) de \( g \).
+        \item Calculer les limites aux bornes de \( D_g \).
+        \item Dresser le tableau de variations de \( g \).
+        \item Montrer que l’équation \( g(x) = 0 \) admet deux solutions \( 0 \) et \( \alpha \) avec
+              \(     \alpha \in ]3,9; 4[. \)
+        \item Donner le signe de \( g(x) \) suivant les valeurs de \( x \).
+    \end{enumerate}
+
+    \subsection*{\underline{\textbf{Partie B}}}
+
+    Soit \( f \) la fonction définie par :
+    \( f(x) =
+    \begin{cases}
+        x + \ln(1 + x^2)          & \text{si } x \leq 0 \\
+        \frac{\ln(x+1)}{\sqrt{x}} & \text{si } x > 0
+    \end{cases} \)
+
+    \begin{enumerate}
+        \item Déterminer le domaine de définition \( D_f \) de \( f \).
+        \item Calculer les limites aux bornes de \( D_f \).
+        \item Étudier les branches infinies de \( (C_f) \).
+        \item Étudier la continuité puis la dérivabilité de \( f \) en 0. Interpréter graphiquement les résultats.
+        \item Montrer que \(     f(\alpha) = \frac{2\sqrt{\alpha}}{\alpha + 1}, \)
+              puis encadrer \( f(\alpha) \).
+        \item Montrer que \( f \) est dérivable sur \( ]-\infty; 0[ \) et  \(     f'(x) = \frac{(x+1)^2}{x^2 + 1}. \)
+
+        \item Montrer que \( f \) est dérivable sur \( ]0; +\infty[ \) et montrer que pour tout \( x > 0 \),  \( f'(x) = \frac{g(x)}{2x(x+1)\sqrt{x}}. \)
+
+        \item Étudier les variations de \( f \).
+        \item Dresser le tableau de variations de \( f \).
+        \item Calculer \( f(-2) \).
+        \item Tracer \( (C_f) \).
+    \end{enumerate}
+
+    \subsection*{\underline{\textbf{Partie C}}}
+
+    Soit \( h \) la restriction de \( f \) sur \( ]-\infty; 0] \).
+
+\begin{enumerate}
+    \item Montrer que \( h \) réalise une bijection de \( ]-\infty; 0] \) vers un intervalle \( J \) à préciser.
+    \item Étudier la dérivabilité de \( h^{-1} \).
+    \item Déterminer \( (h^{-1})'(\ln 5 - 2) \).
+    \item Tracer \( (C_{h^{-1}}) \).
+\end{enumerate}
+\section*{\fbox{\textbf{Exercice 9}}}
+
+\subsection*{\underline{\textbf{Partie A}}}
+
+On considère la fonction :
+
+\(
+\begin{aligned}
+    u : [0; +\infty[ \quad & \longrightarrow \quad \mathbb{R}                                          \\
+    x \quad                & \longmapsto \quad \ln \left| \frac{x+1}{x-1} \right| - \frac{2x}{x^2 - 1}
+\end{aligned}
+\)
+
+\begin{enumerate}
+    \item Déterminer l’ensemble de définition de \( u \), calculer \( u(0) \) et \( \lim\limits_{x \to +\infty} u(x) \).
+    \item Étudier les variations de \( u \), dresser son tableau de variations. (il n’est pas nécessaire de calculer la limite de \( u \) en 1).
+    \item Déduire des résultats précédents que :
+          \begin{enumerate}
+              \item \( \forall x \in [0;1[ \), \( u(x) \geq 0 \).
+              \item \( \forall x \in ]1; +\infty[ \), \( u(x) < 0 \).
+          \end{enumerate}
+\end{enumerate}
+
+\subsection*{\underline{\textbf{Partie B}}}
+
+Soit \( g \) la fonction définie par :
+
+\(
+\begin{aligned}
+    g : [0; +\infty[ \quad & \longrightarrow \quad \mathbb{R}                           \\
+    x \quad                & \longmapsto \quad x \ln \left| \frac{x+1}{x-1} \right| - 1
+\end{aligned}
+\)
+
+\begin{enumerate}
+    \item Déterminer \( D_g \) le domaine de définition de \( g \), puis étudier la limite de \( g \) en 1.
+    \item
+          \begin{enumerate}
+              \item Vérifier que \( \frac{x+1}{x-1} = 1 + \frac{2}{x-1}. \)
+
+              \item Montrer que \( \lim\limits_{x \to +\infty} \frac{x-1}{2} \ln \left( 1 + \frac{2}{x-1} \right) = 1. \)
+              \item En déduire que \(         \lim\limits_{x \to +\infty} g(x) = 1. \)
+                    Interpréter graphiquement ce résultat.
+              \item Dresser le tableau de variations de \( g \).
+              \item Montrer qu’il existe un réel unique \( \alpha \in ]0;1[ \) tel que \( g(\alpha) = 0 \). Donner un encadrement de d’ordre 1 de \( \alpha \).
+          \end{enumerate}
+    \item Tracer la courbe \( (C_g) \) de \( g \) dans le plan rapporté à un repère orthonormé (unité : \( 2cm \)).
+\end{enumerate}
+
+\subsection*{\underline{\textbf{Partie C}}}
+
+Soit la fonction définie par : \( f(x) = (x^2 - 1) \ln \left( \sqrt{\frac{x+1}{1-x}} \right) \)
+
+\begin{enumerate}
+    \item Montrer que \( f \) est dérivable sur \( [0;1[ \) et que  \(     f'(x) = g(x) \quad \text{pour tout } x \in [0;1[. \)
+    \item Déterminer l’aire du domaine plan limité par la courbe \( (C_g) \) ; l’axe des abscisses ; l’axe des ordonnées et la droite d’équation \( x = \alpha \).
+\end{enumerate}
+\section*{\fbox{\textbf{Exercice 10}}}
+
+\subsection*{\underline{\textbf{Partie A}}}
+
+Soit la fonction \( g \) définie par  \( g(x) = \frac{1}{x} - 2 - \ln x. \)
+
+\begin{enumerate}
+    \item Étudier les variations de \( g \).
+    \item Montrer que l’équation \( g(x) = 0 \) admet une unique solution \( \alpha \in ]0; +\infty[ \). Vérifier que
+          \[
+              0,6 < \alpha < 0,7.
+          \]
+    \item En déduire le signe de \( g(x) \).
+\end{enumerate}
+
+\subsection*{\underline{\textbf{Partie B}}}
+
+Soit \( f \) la fonction définie par :
+\(
+f(x) =
+\begin{cases}
+    (1 - x)(1 + \ln x) & \text{si } x \geq 1 \\
+    (1 - x) \ln(1 - x) & \text{si } x < 1
+\end{cases}
+\)
+
+\begin{enumerate}
+    \item Déterminer l’ensemble de définition \( D_f \) de \( f \).
+    \item Étudier la continuité de \( f \) en 1.
+    \item Étudier la dérivabilité de \( f \) en 1.
+    \item Déterminer les limites de \( f \) aux bornes de \( D_f \).
+    \item Étudier les branches infinies de \( f \).
+    \item Dresser le tableau de variations de \( f \).
+    \item Tracer \( C_f \) dans un repère orthonormé, unité : \( 2cm \).
+    \item Soit \( h \) la restriction de \( f \) sur \( [1; +\infty[ \).
+          \begin{enumerate}
+              \item Montrer que \( h \) admet une bijection réciproque \( h^{-1} \) dont on précisera l’ensemble de définition et les variations.
+              \item Résoudre  \(  h^{-1}(x) = e \)
+
+                    puis calculer  \(  (h^{-1})'(2 - 2e). \)
+
+              \item Tracer la courbe de \( h^{-1} \) dans le même repère.
+          \end{enumerate}
+\end{enumerate}
+\section*{\fbox{\textbf{Exercice 12}}}
+
+On considère la fonction définie sur \( \mathbb{R} \) par  \( f(x) = x \left(1 + e^{2-x} \right). \)
+
+On note \( (C_f) \) sa courbe représentative dans un repère orthonormé \( (O; \vec{i}, \vec{j}) \), unité \( 2cm \).
+
+\begin{enumerate}
+    \item Soit \( h \) la fonction définie sur \( \mathbb{R} \) par  \( h(x) = 1 + (1 - x)e^{2-x} \)
+          \begin{enumerate}
+              \item Étudier les variations de \( h \) (on ne déterminera pas les limites aux bornes de \( D_h \)).
+              \item En déduire le signe de \( h(x) \) sur \( \mathbb{R} \).
+          \end{enumerate}
+    \item
+          \begin{enumerate}
+              \item Étudier les limites de \( f \) en \( +\infty \) et en \( -\infty \).
+              \item Préciser la nature de la branche infinie de \( f \) en \( -\infty \).
+              \item Calculer  \( \lim\limits_{x \to +\infty} \left[ f(x) - x \right], \) puis interpréter le résultat obtenu.
+              \item Préciser la position de \( (C_f) \) par rapport à la droite d’équation \( (\Delta) : y = x \).
+          \end{enumerate}
+    \item
+          \begin{enumerate}
+              \item Dresser le tableau de variations de \( f \).
+              \item Montrer que \( f \) admet une bijection réciproque notée \( f^{-1} \) définie sur \( \mathbb{R} \).
+              \item \( f^{-1} \) est-elle dérivable en 4 ?
+              \item Étudier la position \( (C_f) \) par rapport à sa tangente au point d’abscisse 2.
+              \item Construire \( (C_f) \) (on tracera la tangente à \( (C_f) \) au point d’abscisse 2).
+              \item Construire \( (C_{f^{-1}}) \) dans le repère précédent.
+          \end{enumerate}
+\end{enumerate}
+
+\section*{\fbox{\textbf{Exercice 13}}}
+
+Soit \( f \) la fonction définie par
+\( f(x) =
+\begin{cases}
+    (2x - 1) e^{\frac{1}{x}}, & \text{si } x < 0    \\
+    x \ln(x+1),               & \text{si } x \geq 0
+\end{cases} \)
+
+\subsection*{\underline{\textbf{Partie A}}}
+
+\begin{enumerate}
+    \item Déterminer le domaine de définition \( D_f \) de \( f \).
+    \item Calculer les limites de \( f \) aux bornes de \( D_f \).
+    \item Montrer que la droite \( (D) \) d’équation \( y = 2x + 1 \) est asymptote à \( (C_f) \) en \( -\infty \).
+    \item Étudier la branche infinie de \( (C_f) \) en \( +\infty \). La continuité et la dérivabilité de \( f \) en 0. Interpréter graphiquement ce résultat.
+\end{enumerate}
+
+\subsection*{\underline{\textbf{Partie B}}}
+
+\begin{enumerate}
+    \item Montrer que \( f \) est deux fois dérivable sur \( ]0; +\infty[ \).
+    \item Calculer \( f'(x) \) et \( f''(x) \) sur \( ]0; +\infty[ \).
+    \item Étudier les variations de \( f'(x) \) puis en déduire le signe de \( f'(x) \) sur \( ]0; +\infty[ \).
+    \item Calculer \( f'(x) \) pour tout \( x < 0 \). En déduire le signe de \( f'(x) \).
+    \item Dresser le tableau de variations de \( f \).
+\end{enumerate}
+
+\subsection*{\underline{\textbf{Partie C}}}
+
+Soit \( g \) la restriction de \( f \) sur \( I = ]-\infty; 0[ \).
+
+\begin{enumerate}
+    \item Montrer que \( g \) réalise une bijection de \( I \) vers un intervalle \( J \) à préciser.
+    \item Soit \( g^{-1} \) la bijection réciproque de \( g \). Calculer \( g(-1) \) puis \( (g^{-1})'\left(-\frac{3}{e}\right) \).
+    \item Construire \( (C_f) \) et \( (C_g) \) dans un même repère.
+\end{enumerate}
+
+
+\section*{\fbox{\textbf{Exercice 14}}}
+
+Soit \( f \) la fonction définie par :
+
+\( f(x) =
+\begin{cases}
+    e^{-x} (1 + \ln x) - e^{-1},  & \text{si } x \geq 1 \\
+    (1 - x) e^{-\frac{1}{1 - x}}, & \text{si } x < 1
+\end{cases} \)
+
+\begin{enumerate}
+    \item Vérifier que \( f \) est définie sur \( \mathbb{R} \) puis calculer les limites de \( f \) aux bornes de \( D_f \).
+    \item Étudier la continuité de \( f \) en 1.
+    \item
+          \begin{enumerate}
+              \item Montrer que pour tout \( x \in ]1;+\infty[ \),
+                    \( \frac{f(x) - f(1)}{x - 1} = e^{-x} \left( \frac{1 - e^{x-1}}{x - 1} + \frac{\ln x}{x - 1} \right). \)
+              \item Étudier la dérivabilité de \( f \) en 1. Interpréter graphiquement le résultat.
+          \end{enumerate}
+    \item Soit la fonction \( g \) définie par : \( g(x) = - \ln x + \frac{1}{x} - 1 \)
+          \begin{enumerate}
+              \item Dresser le tableau de variations de \( g \).
+              \item Calculer \( g(1) \) et préciser le signe de \( g(x) \).
+              \item Calculer la dérivée de \( f \) sur chaque intervalle où elle est dérivable.
+              \item Étudier le signe de \( f'(x) \) et donner le tableau de variations de \( f \).
+          \end{enumerate}
+    \item
+          \begin{enumerate}
+              \item Donner la nature de la branche infinie de \( f \) en \( +\infty \).
+              \item Montrer que la droite \( (D) : y = -x \) est une asymptote oblique à \( (C_f) \) en \( -\infty \).
+              \item Étudier la position de \( (C_f) \) par rapport à \( (D) \) sur \( ]-\infty;1[ \).
+          \end{enumerate}
+    \item Construire \( (C_f) \).
+    \item Soit \( h \) la restriction de \( f \) sur \( ]-\infty;1[ \).
+          \begin{enumerate}
+              \item Montrer que \( h \) réalise une bijection de \( ]-\infty;1[ \) vers un intervalle \( J \) à préciser.
+              \item Calculer \( h(0) \).
+                    \( h^{-1} \) est-elle dérivable en \( e^{-1} \) ? Si oui, calculer  \( (h^{-1})'(e^{-1}). \)
+              \item Tracer \( (C_{h^{-1}}) \) dans le même repère.
+          \end{enumerate}
+\end{enumerate}
+
+\end{document}

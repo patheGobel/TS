@@ -517,4 +517,67 @@ Soit \( f \) la fonction définie par :
           \end{enumerate}
 \end{enumerate}
 
+\section*{\fbox{\textbf{Exercice 15}} \quad \textbf{Partie A :}} 
+
+On considère la fonction \( g \) définie par  
+\[
+g(x) = (x+1)^2 e^{-x} - 2.
+\]
+
+\begin{enumerate}
+    \item Dresser le tableau de variations de \( g \).
+    \item 
+    \begin{enumerate}
+        \item Montrer que l’équation \( g(x) = 0 \) admet une solution unique \( \alpha \) dans \( \mathbb{R} \), puis vérifier que  
+        \[
+        \alpha \in ]-2; -1[.
+        \]
+        \item Donner le signe de \( g(x) \) dans \( \mathbb{R} \).
+    \end{enumerate}
+    \item Montrer que  
+    \[
+    \alpha = -1 - \sqrt{2} e^{\frac{\alpha}{2}}.
+    \]
+    \item Tracer la courbe \( (C_g) \) de \( g \) dans un repère orthonormé \( (O; \vec{i}, \vec{j}) \), d’unité \( 2cm \).
+\end{enumerate}
+
+\subsection*{\underline{\textbf{Partie B}}}
+
+Soit la fonction \( f \) définie par  
+\[
+f(x) = -1 - \sqrt{2} e^{\frac{x}{2}}
+\]
+si \( x \in I = [-2; -1] \).
+
+\begin{enumerate}
+    \item Étudier les variations de \( f \) sur \( I \).
+    \item En déduire que si \( x \in I \), alors \( f(x) \leq -1 \).
+    \item Montrer que si \( x \in I \), alors  
+    \[
+    |f(x) - \alpha| \leq \frac{1}{2} |x - \alpha|.
+    \]
+    \item Montrer que  
+    \[
+    |f(x) - \alpha| \leq \frac{1}{2} |x - \alpha|
+    \]
+    pour tout \( x \in I \).
+    \item Soit la suite \( (u_n) \) définie par  
+    \[
+    u_0 = -2, \quad u_{n+1} = f(u_n).
+    \]
+    \begin{enumerate}
+        \item Montrer que pour tout \( n \in \mathbb{N} \), \( u_n \in I \).
+        \item Montrer que pour tout \( n \in \mathbb{N} \),
+        \[
+        |u_{n+1} - \alpha| \leq \frac{1}{2} |u_n - \alpha|.
+        \]
+        \item Montrer que pour tout \( n \in \mathbb{N} \),
+        \[
+        |u_n - \alpha| \leq \left( \frac{1}{2} \right)^n |u_0 - \alpha|.
+        \]
+        \item En déduire que la suite \( (u_n) \) est convergente et préciser sa limite.
+        \item Donner une valeur approchée de \( \alpha \) à \( 10^{-3} \) près.
+    \end{enumerate}
+\end{enumerate}
+
 \end{document}

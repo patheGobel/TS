@@ -517,67 +517,244 @@ Soit \( f \) la fonction définie par :
           \end{enumerate}
 \end{enumerate}
 
-\section*{\fbox{\textbf{Exercice 15}} \quad \textbf{Partie A :}} 
+\section*{\fbox{\textbf{Exercice 15}}} 
 
-On considère la fonction \( g \) définie par  
-\[
-g(x) = (x+1)^2 e^{-x} - 2.
-\]
+\subsection*{\underline{\textbf{Partie A}}}
+
+On considère la fonction \( g \) définie par  \(g(x) = (x+1)^2 e^{-x} - 2.\)
 
 \begin{enumerate}
     \item Dresser le tableau de variations de \( g \).
     \item 
     \begin{enumerate}
-        \item Montrer que l’équation \( g(x) = 0 \) admet une solution unique \( \alpha \) dans \( \mathbb{R} \), puis vérifier que  
-        \[
-        \alpha \in ]-2; -1[.
-        \]
+        \item Montrer que l’équation \( g(x) = 0 \) admet une solution unique \( \alpha \) dans \( \mathbb{R} \), puis vérifier que \( \alpha \in ]-2; -1[ \).
         \item Donner le signe de \( g(x) \) dans \( \mathbb{R} \).
     \end{enumerate}
-    \item Montrer que  
-    \[
-    \alpha = -1 - \sqrt{2} e^{\frac{\alpha}{2}}.
-    \]
+    \item Montrer que \( \alpha = -1 - \sqrt{2} e^{\frac{\alpha}{2}} \)
     \item Tracer la courbe \( (C_g) \) de \( g \) dans un repère orthonormé \( (O; \vec{i}, \vec{j}) \), d’unité \( 2cm \).
 \end{enumerate}
 
 \subsection*{\underline{\textbf{Partie B}}}
 
-Soit la fonction \( f \) définie par  
-\[
-f(x) = -1 - \sqrt{2} e^{\frac{x}{2}}
-\]
+Soit la fonction \( f \) définie par \( f(x) = -1 - \sqrt{2} e^{\frac{x}{2}} \)
 si \( x \in I = [-2; -1] \).
 
 \begin{enumerate}
     \item Étudier les variations de \( f \) sur \( I \).
     \item En déduire que si \( x \in I \), alors \( f(x) \leq -1 \).
-    \item Montrer que si \( x \in I \), alors  
-    \[
-    |f(x) - \alpha| \leq \frac{1}{2} |x - \alpha|.
-    \]
-    \item Montrer que  
-    \[
-    |f(x) - \alpha| \leq \frac{1}{2} |x - \alpha|
-    \]
+    \item Montrer que si \( x \in I \), alors \( |f(x) - \alpha| \leq \frac{1}{2} |x - \alpha| \)
+    \item Montrer que \( |f(x) - \alpha| \leq \frac{1}{2} |x - \alpha| \)
     pour tout \( x \in I \).
-    \item Soit la suite \( (u_n) \) définie par  
-    \[
-    u_0 = -2, \quad u_{n+1} = f(u_n).
-    \]
+    \item Soit la suite \( (u_n) \) définie par \( u_0 = -2, \quad u_{n+1} = f(u_n) \)
     \begin{enumerate}
         \item Montrer que pour tout \( n \in \mathbb{N} \), \( u_n \in I \).
-        \item Montrer que pour tout \( n \in \mathbb{N} \),
-        \[
-        |u_{n+1} - \alpha| \leq \frac{1}{2} |u_n - \alpha|.
-        \]
-        \item Montrer que pour tout \( n \in \mathbb{N} \),
-        \[
-        |u_n - \alpha| \leq \left( \frac{1}{2} \right)^n |u_0 - \alpha|.
-        \]
+        \item Montrer que pour tout \( n \in \mathbb{N} \), \( |u_{n+1} - \alpha| \leq \frac{1}{2} |u_n - \alpha|\)
+        \item Montrer que pour tout \( n \in \mathbb{N} \), \( |u_n - \alpha| \leq \left( \frac{1}{2} \right)^n |u_0 - \alpha| \)
         \item En déduire que la suite \( (u_n) \) est convergente et préciser sa limite.
         \item Donner une valeur approchée de \( \alpha \) à \( 10^{-3} \) près.
     \end{enumerate}
+\end{enumerate}
+
+\section*{\fbox{\textbf{Exercice 16}}} 
+
+On considère la fonction \( f \) définie par :  
+
+\( f(x) =  
+\begin{cases}  
+x + 1 + \frac{3e^x}{e^x + 2 \ln(x+1)} \quad \text{si } x \leq 0 \\  
+x + 2 + \frac{x}{x+1} \quad \text{si } x > 0  
+\end{cases} \)  
+
+et \( (C_f) \) sa courbe représentative dans un repère orthonormé \( (O; \vec{i}, \vec{j}) \) d’unité graphique \( 1cm \).
+
+\begin{enumerate}
+    \item Etablir que \( f \) est définie sur \( \mathbb{R} \).
+    \item 
+    \begin{enumerate}
+        \item Etudier la continuité de \( f \) en \( 0 \).
+        \item Pour \( x < 0 \), montrer que  
+        \( \frac{f(x) - 2}{x - 0} = 1 + \frac{2(e^x - 1)}{x} \times \frac{1}{e^x} \) 
+         
+        En déduire que  
+        \( \lim_{x \to 0^-} \frac{f(x) - f(0)}{x - 0} \).
+        \item Conclure sur la dérivabilité de \( f \) en \( 0 \) et interpréter les résultats.
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+        \item En utilisant les variations de la \( h \) définie par \( h(x) = -x \), montrer que \( x < (x+1)^2 \) pour \( x > 0 \). En déduire que  
+        \( \ln(x+1) < (x+1)^2 \) pour \( x > 0 \).
+        \item Calculer \( f'(x) \) pour \( x > 0 \) et utiliser \( 3.a \) pour déterminer son signe.
+        \item Calculer \( f'(x) \) pour \( x < 0 \) et donner son signe.
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+        \item Calculer les limites de \( f \) aux bornes de son domaine de définition \( D_f \).
+        \item Calculer  
+        \( \lim_{x \to -\infty} [f(x) - (x+1)] \)  
+        et interpréter graphiquement le résultat.
+        \item Calculer  
+        \( \lim_{x \to +\infty} [f(x) - (x+2)] \)  
+        et interpréter graphiquement le résultat.
+        \item Etudier le signe de \( f(x) - (x+1) \) pour \( x < 0 \), montrer que  
+        \( f(x) - (x+2) > 0 \)  
+        pour \( x > 0 \) et interpréter graphiquement les résultats.
+    \end{enumerate}
+    \item Déterminer les coordonnées du point \( A \) de la courbe où la tangente est parallèle à l’asymptote pour \( x > 0 \).
+    \item Etablir que \( f \) est une bijection de \( \mathbb{R} \) sur un intervalle \( J \) à préciser.
+    \item Représenter graphiquement les courbes de \( f \) et de \( f^{-1} \) dans un même repère.
+    \item Calculer \( \int_{-\ln 3}^{0} (f(x) - (x+1))dx \).
+    \item Interpréter graphiquement le résultat précédent en terme d’aire.
+\end{enumerate}
+\section*{\fbox{\textbf{Exercice 17}} }
+
+\subsection*{\underline{\textbf{Partie A}}}
+
+On considère la fonction \( g \) définie par  
+\( g(x) = \ln x + 1 - e^{-x} \).
+
+\begin{enumerate}
+    \item Etudier les variations de \( g \).
+    \item Montrer que l’équation \( g(x) = 0 \) admet une solution unique \( \alpha \) telle que \( 0,6 < \alpha < 0,7 \).
+    \item En déduire le signe de \( g(x) \).
+\end{enumerate}
+
+\subsection*{\underline{\textbf{Partie B}}}
+
+On considère la fonction \( f \) définie par  
+
+\(
+f(x) =
+\begin{cases}
+    x \ln x + e^{-x} & \text{si } x > 0 \\
+    \frac{e^{\frac{1}{2} x}}{|x^2 - 1|} & \text{si } x \leq 0
+\end{cases}
+\)
+
+\begin{enumerate}
+    \item Justifier que \( D_f = \mathbb{R} \setminus \{-1\} \).
+    \item Ecrire \( f(x) \) sans valeur absolue.
+    \item Etudier la continuité et la dérivabilité de \( f \) en \( 0 \).  
+    On pourra montrer que si \( x \in ]-1; 0[ \),
+
+    \(
+    \frac{f(x) - f(0)}{x - 0} = \frac{-\frac{1}{2} \left( \frac{e^{\frac{1}{2} x} - 1}{\frac{1}{2} x} \right) - x}{x^2 - 1}\)
+    
+    
+    \item Déterminer les limites de \( f \) aux bornes de \( D_f \) puis étudier les branches infinies.
+    \item Dresser le tableau de variations de \( f \).
+    \item Montrer que \( f(\alpha) = (\alpha + 1) \ln \alpha + 1 \).
+    \item Soit \( h \) la restriction de \( f \) à \( ]\alpha; +\infty[ \)
+    \begin{enumerate}
+        \item Montrer que \( h \) admet une bijection réciproque \( h^{-1} \) définie sur un intervalle \( J \) à préciser.
+        \item \( h^{-1} \) est-elle dérivable sur \( J \) ? Justifier.
+        \item Calculer \( h(1) \) puis \( (h^{-1})' \left( \frac{1}{e} \right) \).
+    \end{enumerate}
+    \item Tracer \( C_f \) et \( C_{h^{-1}} \) dans le même repère d’unité \( 2cm \).
+    \item Soit \( \lambda > 1 \) et \( \mathcal{A}(\lambda) \) l’aire en \( cm^2 \) du domaine limité par \( C_h \), l’axe des abscisses et les droites d’équations \( x = 1 \) et \( x = \lambda \).  
+    Calculer \( \mathcal{A}(\lambda) \) et sa limite en \( +\infty \).
+\end{enumerate}
+
+\section*{\fbox{\textbf{Exercice 18}}}
+
+\subsection*{\underline{\textbf{Partie A}}}
+
+Soit \( f \) la fonction définie sur \( \mathbb{R} \) par \( f(x) = x - e^{2x-2} \).
+
+\begin{enumerate}
+    \item Déterminer la limite de \( f \) en \( -\infty \).
+    \item Vérifier que pour tout réel \( x \) non nul,  
+    \(
+    f(x) = x \left[ 1 - 2e^{-2} \left( \frac{e^{2x}}{2x} \right) \right].
+    \)
+    En déduire la limite de \( f \) en \( +\infty \).
+    \item Dresser le tableau de variations de \( f \).
+    \item Montrer que la droite \( (D) : y = x \) est asymptote à \( C_f \) en \( -\infty \).  
+    Étudier la position relative de \( C_f \) par rapport à \( (D) \).
+    \item Étudier la branche infinie de \( C_f \) en \( +\infty \).
+    \item Déterminer une équation de la tangente \( (T) \) au point d’abscisse \( 1 \).
+    \item Montrer que l’équation \( f(x) = 0 \) admet une solution unique \( \alpha \in I = ]0; \frac{1}{2}[ \).  
+    Donner une valeur approchée de \( \alpha \) à \( 10^{-1} \) près.
+    \item Tracer \( C_f \), \( (D) \) et \( (T) \).
+\end{enumerate}
+
+\subsection*{\underline{\textbf{Partie B}}}
+
+On définit la suite \( (u_n) \) définie par :\(
+\begin{cases}
+u_0 = 0\\ 
+u_{n+1} = e^{2u_n - 2}
+\end{cases}
+\)
+
+\begin{enumerate}
+    \item Soit \( g \) la fonction définie sur \( \mathbb{R} \) par \( g(x) = e^{2x-2} \).  
+    Démontrer que l’équation \( f(x) = 0 \) est équivalente à \( g(x) = x \).  
+    En déduire \( g(\alpha) \).
+    \item Démontrer que pour tout \( x \in I \), \( |g'(x)| \leq \frac{2}{e} \).
+    \item Démontrer que pour tout \( x \in I \), \( g(x) \in I \).
+    \item 
+    \begin{enumerate}
+        \item En utilisant l’inégalité des accroissements finis, démontrer que pour tout \( n \in \mathbb{N} \),\( |u_{n+1} - \alpha| \leq \frac{2}{e} |u_n - \alpha| \)
+        \item En déduire que 
+\( |u_n - \alpha| \leq \left( \frac{2}{e} \right)^n. \)
+        \item Montrer que \( (u_n) \) converge vers un réel à déterminer.
+        \item Déterminer le plus petit entier naturel \( n \) tel que  
+\( |u_n - \alpha| < 10^{-5}. \)
+    \end{enumerate}
+\end{enumerate}
+
+\section*{\fbox{\textbf{Exercice 19}}}
+
+\subsection*{\underline{\textbf{Partie B}}}
+
+Soit la fonction \( h \) définie par \( h(x) = 1 - (x^2 - 2x + 2)e^{-x} \).
+
+\begin{enumerate}
+    \item Dresser le tableau de variations de \( h \).
+    \item 
+    \begin{enumerate}
+        \item Démontrer que l’équation \( h(x) = 0 \) admet une unique solution \( \alpha \in ]0,1[ \).
+    \end{enumerate}
+\end{enumerate}
+
+\begin{enumerate}
+    \setcounter{enumi}{1}
+    \item Donner une valeur approchée de \( \alpha \) à \( 10^{-1} \) près.
+    \item En déduire le signe de \( h(x) \).
+\end{enumerate}
+
+\subsection*{\underline{\textbf{Partie B}}}
+
+Soit la fonction \( f \) définie par  
+\(
+f(x) =
+\begin{cases}
+    1 + \frac{1}{x}e^{\frac{1}{x}}  \quad \text{si } x < 0 \\
+    x - 1 + (x^2 + 2)e^{-x} \quad \text{si } x \geq 0
+\end{cases}
+\)
+
+\begin{enumerate}
+    \item Justifier que \( f \) est définie sur \( \mathbb{R} \).
+    \item Etudier la continuité et la dérivabilité de \( f \) en \( 0 \).  
+    Interpréter les résultats.
+    \item Etudier les branches infinies de \( C_f \).
+    \item Dresser le tableau de variations de \( f \).
+    \item Montrer que \( f(\alpha) = \alpha (1 + 2e^{-\alpha}) \).
+    \item Tracer \( C_f \) dans un repère orthonormé d’unité \( 2cm \).
+\end{enumerate}
+
+\subsection*{\underline{\textbf{Partie C}}}
+
+Soit \( g \) la restriction de \( f \) à \( ]-\infty, -1[ \).
+
+\begin{enumerate}
+    \item Prouver l’existence de \( g^{-1} \). Etudier la dérivabilité de \( g^{-1} \).
+    \item Résoudre \( g^{-1}(x) = 2 \), puis calculer  
+    \[
+    \left( g^{-1}\right)' \left( \frac{2-e^{-\frac{1}{2}}}{2} \right).
+    \]
+    \item Tracer la courbe de \( g^{-1} \) dans le même repère.
 \end{enumerate}
 
 \end{document}

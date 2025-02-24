@@ -1,0 +1,270 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, xcolor}
+
+\begin{document}
+
+\section*{6) \textit{Similitude plane directe}}
+
+Toute transformation du plan d’écriture complexe \( z' = a z + b,  a \in \mathbb{C} \setminus \mathbb{R} \) et \( |a| \neq 1 \) est une \textit{similitude plane directe}. La similitude plane directe est souvent notée \( S \).
+
+\( \lambda \), \( \theta \) et \( \Omega \) sont appelés \textit{les éléments caractéristiques de la similitude plane directe} :
+
+\begin{itemize}
+    \item \textbf{Son rapport :} \( \lambda = |a| \)
+    \item \textbf{Son angle :} \( \theta = \arg(a) \) [\(2\pi\)]
+    \item \textbf{Son centre :} son centre est \( \Omega \) tel que \( z_{\Omega} = \dfrac{b}{1 - a} \).
+\end{itemize}
+
+On dit que \( S \) est la similitude directe de rapport \( \lambda \), d’angle \( \theta \) et de centre \( \Omega \) et on note \(S(\Omega,\theta,\lambda) \).
+
+\vspace{0.3cm}
+
+Toute similitude plane directe \( z' = a z + b \) de rapport \( \lambda \), d’angle \( \theta \) et de centre \( \Omega \) s'écrit sous la forme :
+\[
+z' = \lambda e^{i\theta} z + b
+\]
+avec :
+\[
+a = \lambda e^{i\theta} \quad \text{et} \quad b = (1 - a) z_{\Omega}.
+\]
+
+\textbf{\textcolor{blue}{\textit{Démonstration}}}
+
+\vspace{0.3cm}
+
+On a : \( z' = a z + b \quad (1) \), \quad \( S(\Omega) = \Omega \) \quad donc \( z_{\Omega} = a z_{\Omega} + b \quad (2) \).
+
+\vspace{0.3cm}
+
+En faisant la différence de (1) et (2), on a : 
+\[
+z' - z_{\Omega} = a( z - z_{\Omega}) \quad \text{donc} \quad a = \frac{z' - z_{\Omega}}{z - z_{\Omega}}.
+\]
+
+\[
+\left| \frac{z' - z_{\Omega}}{z - z_{\Omega}} \right| = |a| = \lambda \quad (3),
+\]
+\[
+\arg \left( \frac{z' - z_{\Omega}}{z - z_{\Omega}} \right) = \arg(a) = \theta \quad (4).
+\]
+
+D’après (3) et (4), on a 
+\[
+\frac{z' - z_{\Omega}}{z - z_{\Omega}} = \lambda \times e^{i\theta} = \lambda e^{i\theta}.
+\]
+
+\[
+\frac{z' - z_{\Omega}}{z - z_{\Omega}} = \lambda e^{i\theta} \quad \text{donc} \quad z' - z_{\Omega} = \lambda e^{i\theta} (z - z_{\Omega}).
+\]
+
+\textbf{\textcolor{blue}{\textit{Exemple}}}
+
+\vspace{0.3cm}
+
+1) Soit la similitude directe \( S \) telle que 
+\[
+z_A - z_B = 2 e^{i \frac{\pi}{4}} (z_C - z_B).
+\]
+
+On a \quad \( S(C) = A \), \quad \( \lambda = 2 \), \quad \( \theta = \frac{\pi}{4} \).
+
+S est la similitude directe de rapport \( 2 \), d’angle \( \frac{\pi}{4} \) et son centre est le point \( B \).
+
+\vspace{0.5cm}
+
+2) Soit la similitude directe \( S \) telle que 
+\[
+z_E - z_D = 5 e^{i \frac{2\pi}{3}} (z_F - z_D).
+\]
+
+On a \quad \( S(F) = E \), \quad \( \lambda = 5 \), \quad \( \theta = \frac{2\pi}{3} \).
+
+S est la similitude directe de rapport \( 5 \), d’angle \( \frac{2\pi}{3} \) et son centre est le point \( D \).
+
+
+\vspace{0.5cm}
+
+\section*{6) \textit{Nature d’une similitude directe}}
+
+\begin{itemize}
+    \item \textbf{Translation :} Si \( a = 1 \), alors la similitude \( S \) est une translation de vecteur \( b \). 
+    Son rapport est \( \lambda = 1 \), son angle est \( \theta = 0 \), et elle n’a pas de centre.
+
+    \item \textbf{Homothétie :} Si \( a \in \mathbb{R} \setminus \{0,1\} \), alors la similitude \( S \) est une homothétie de rapport \( k = a \) et de centre \( \Omega \) tel que :
+    \[
+    z_{\Omega} = \frac{b}{1 - a}.
+    \]
+    Son rapport est \( \lambda = |a| \), et son angle est :
+    \[
+    \theta = 0 \quad \text{si } k > 0, \quad \theta = \pi \quad \text{si } k < 0.
+    \]
+
+    \item \textbf{Rotation :} Si \( a \in \mathbb{C} \setminus \mathbb{R} \) et \( |a| = 1 \), alors la similitude \( S \) est une rotation d’angle \( \theta = \arg(a) \) et de centre \( \Omega \) tel que :
+    \[
+    z_{\Omega} = \frac{b}{1 - a}.
+    \]
+    Son rapport est \( \lambda = 1 \) et son centre \( \Omega \) est d’affixe :
+    \[
+    \frac{b}{1 - a}.
+    \]
+
+    \item \textbf{Cas général :} Si \( a \in \mathbb{C} \setminus \mathbb{R} \) et \( |a| \neq 1 \), alors la similitude \( S \) est la composition d’une homothétie et d’une rotation de même centre.
+    \[
+    S = h \circ r = r \circ h.
+    \]
+    Avec :
+    \[
+    \text{Rotation de centre } \Omega \text{ et d’angle } \theta = \arg(a).
+    \]
+    \[
+    \text{Homothétie de centre } \Omega \text{ et de rapport } \lambda = |a|.
+    \]
+    Son centre est donné par :
+    \[
+    z_{\Omega} = \frac{b}{1 - a}.
+    \]
+\end{itemize}
+
+\textbf{\textcolor{blue}{\textit{Exercice d’application}}}
+
+\vspace{0.3cm}
+
+\noindent
+1) Déterminer les éléments caractéristiques de la similitude plane directe \( S \) d’écriture complexe :
+
+\[
+z' = (1 + i) z - 2i.
+\]
+
+\vspace{0.3cm}
+
+\noindent
+2) Donner l’écriture complexe de la similitude plane directe de rapport \( 2 \), d’angle \( -\dfrac{\pi}{3} \) et de centre \( \Omega \) d’affixe \( 1 + i \).
+
+\section*{8.Propriété}
+
+Une similitude plane directe est soit une translation, soit une homothétie, soit une rotation , soit une
+composition commutative de rotation et d’homothétie de même centre .
+
+\section*{9.Détermination d’une similitude à partir de ses éléments caractéristiques}
+
+\vspace{0.3cm}
+
+\textbf{\textit{a) À partir de deux points et de leurs images}}
+
+\vspace{0.3cm}
+
+Soit la similitude plane directe \( S \) telle que \quad \( S(A) = A' \) \quad et \quad \( S(B) = B' \).
+
+\vspace{0.3cm}
+
+La similitude plane directe \( S \) est d’écriture complexe :
+\[
+z' = a z + b
+\]
+avec 
+\[
+a = \frac{z_{A'} - z_{B'}}{z_A - z_B} \quad \text{et} \quad b = z_{A'} - a z_A.
+\]
+
+\textbf{\textcolor{blue}{\textit{Démonstration}}}
+
+\textbf{\textit{b) À partir de son centre, d’un point et son image}}
+
+\vspace{0.3cm}
+
+Soit la similitude plane directe \( S \) telle que \quad \( S(A) = A' \) \quad et \quad \( S(\Omega) = \Omega \).
+
+\vspace{0.3cm}
+
+La similitude plane directe \( S \) est d’écriture complexe :
+\[
+z' = a z + b
+\]
+avec 
+\[
+a = \frac{z_{A'} - z_{\Omega}}{z_A - z_{\Omega}} \quad \text{et} \quad b = z_{\Omega} - a z_{\Omega}.
+\]
+
+\textbf{\textcolor{blue}{\textit{Démonstration}}}
+
+\textbf{\textcolor{blue}{\textit{Exercice d’application}}}
+
+Dans le plan rapporté au repère orthonormé \( (O; \vec{i}; \vec{j}) \) soient les points : 
+\[
+A(2,0), \quad B(0,2), \quad C(2,4), \quad D(4,2).
+\]
+
+\begin{itemize}
+    \item[a)] \textit{Déterminer l’affixe de \( G \), l’isobarycentre de \( A, B, C, D \).}
+    
+    \item[b)] Soit \(\mathbf{R}\) la rotation de centre \( G \) et d’angle \( +\frac{\pi}{2} \). \textit{Donner une écriture complexe de \( R \).}
+    
+    \textit{Déterminer : \( R(A) \), \( R(D) \), \( R(C) \) et \( R(B) \).}
+\end{itemize}
+
+\section*{10.Similitude plane directe déterminée par son écriture complexe}
+
+\vspace{0.3cm}
+
+Soit \( S \) l’application du plan dans lui-même d’écriture complexe :
+\[
+z' = 3i z - 1 - 7i.
+\]
+
+\begin{enumerate}
+    \item Justifier que \( S \) est une similitude plane directe et préciser ses éléments caractéristiques.
+    
+    \item Déterminer l’expression analytique de \( S \).
+    
+    \item Déterminer une équation de l’image par \( S \) de la droite \( (BC) \), \( B \) et \( C \) étant les points d’affixes respectives \( 2 \) et \( 3 - i \).
+    \item Déterminer une équation de \( (C') \), image par \( S \) du cercle \( (C) \) d’équation :
+\[
+(x - 2)^2 + y^2 = 1.
+\]
+
+\end{enumerate}
+\section*{Similitude plane directe déterminée par son expression analytique}
+
+\vspace{0.3cm}
+
+Pour déterminer l’écriture complexe d’une application du plan dans lui-même d’expression analytique donnée, on peut procéder de la manière suivante :
+
+\begin{itemize}
+    \item \textbf{Écrire} \( z' = x' + i y' \) \textbf{et remplacer} \( x' \) \textbf{et} \( y' \) \textbf{en fonction de} \( x \) \textbf{et} \( y \).
+    \item \textbf{Remplacer} \( x \) \textbf{par} \( \dfrac{z + \bar{z}}{2} \), \quad \( y \) \textbf{par} \( \dfrac{z - \bar{z}}{2i} \) \textbf{et développer l’expression obtenue en fonction de} \( z \) \textbf{et} \( \bar{z} \).
+\end{itemize}
+
+\textbf{\textcolor{blue}{\textit{Exercice d’application}}}
+
+\vspace{0.3cm}
+
+Soit \( S \) l’application du plan dans lui-même d’expression analytique :
+
+\[
+\begin{cases}
+x' = x + y + 2 \\
+y' = -x + y - 1
+\end{cases}
+\]
+
+\begin{enumerate}
+    \item Déterminer l’écriture complexe de \( S \).
+    
+    \item En déduire la nature et les éléments caractéristiques de \( S \).
+\end{enumerate}
+\textbf{\textit{Propriété}}
+
+\vspace{0.3cm}
+
+Soit \( S \) la similitude plane directe de rapport \( k \).
+
+\begin{itemize}
+    \item \textbf{La similitude plane directe \( S \) conserve :} l’alignement, le parallélisme, l’orthogonalité, les angles orientés, les barycentres et le contact.
+    
+    \item \textbf{La similitude plane directe \( S \) multiplie :} les longueurs par \( k \) et les aires par \( k^2 \).
+    
+    \item \textbf{La similitude plane directe \( S \) transforme :} les droites en droites, les demi-droites en demi-droites, les segments en segments et les cercles en cercles.
+\end{itemize}
+
+\end{document}

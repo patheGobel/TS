@@ -1,0 +1,208 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amssymb,mathrsfs,tikz,times,pifont}
+\usepackage{enumitem}
+\newcommand\circitem[1]{%
+\tikz[baseline=(char.base)]{
+\node[circle,draw=gray, fill=red!55,
+minimum size=1.2em,inner sep=0] (char) {#1};}}
+\newcommand\boxitem[1]{%
+\tikz[baseline=(char.base)]{
+\node[fill=cyan,
+minimum size=1.2em,inner sep=0] (char) {#1};}}
+\setlist[enumerate,1]{label=\protect\circitem{\arabic*}}
+\setlist[enumerate,2]{label=\protect\boxitem{\alph*}}
+%%%::::::by chnini ameur :::::::%%%
+\everymath{\displaystyle}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=1.7cm]{geometry}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
+\usepackage{array,multirow}
+\usepackage[most]{tcolorbox}
+\usepackage{varwidth}
+\usepackage{float} %pour utiliser l'option [H] qui force l'image à apparaître exactement à l'endroit où elle est placée dans le code.
+\tcbuselibrary{skins,hooks}
+\usetikzlibrary{patterns}
+%%%::::::by chnini ameur :::::::%%%
+\newtcolorbox{exa}[2][]{enhanced,breakable,before skip=2mm,after skip=5mm,
+colback=yellow!20!white,colframe=black!20!blue,boxrule=0.5mm,
+attach boxed title to top left ={xshift=0.6cm,yshift*=1mm-\tcboxedtitleheight},
+fonttitle=\bfseries,
+title={#2},#1,
+% varwidth boxed title*=-3cm,
+boxed title style={frame code={
+\path[fill=tcbcolback!30!black]
+([yshift=-1mm,xshift=-1mm]frame.north west)
+arc[start angle=0,end angle=180,radius=1mm]
+([yshift=-1mm,xshift=1mm]frame.north east)
+arc[start angle=180,end angle=0,radius=1mm];
+\path[left color=tcbcolback!60!black,right color = tcbcolback!60!black,
+middle color = tcbcolback!80!black]
+([xshift=-2mm]frame.north west) -- ([xshift=2mm]frame.north east)
+[rounded corners=1mm]-- ([xshift=1mm,yshift=-1mm]frame.north east)
+-- (frame.south east) -- (frame.south west)
+-- ([xshift=-1mm,yshift=-1mm]frame.north west)
+[sharp corners]-- cycle;
+},interior engine=empty,
+},interior style={top color=yellow!5}}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{fancyhdr}
+\usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
+% Commande pour ajouter du texte en arrière-plan
+\usepackage{tkz-tab}
+\AddToShipoutPicture{
+    \AtTextCenter{%
+        \makebox[0pt]{\rotatebox{80}{\textcolor[gray]{0.7}{\fontsize{5cm}{5cm}\selectfont PGB}}}
+    }
+}
+\usepackage{lastpage}
+\fancyhf{}
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footruleskip}{10pt}
+\fancyfoot[R]{
+\color{blue}\ding{45}\ \textbf{2025}
+}
+\fancyfoot[L]{
+\color{blue}\ding{45}\ \textbf{Prof:M. BA}
+}
+\cfoot{\bf
+\thepage /
+\pageref{LastPage}}
+\begin{document}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\arrayrulewidth}{1.2pt}
+\begin{tikzpicture}[overlay,remember picture]
+    \node[draw=blue,line width=1.2pt,fill=purple,text=blue,inner sep=3mm,rounded corners,pattern=dots]at ([yshift=-2.5cm]current page.north) {\begingroup\setlength{\fboxsep}{0pt}\colorbox{white}{\begin{tabular}{|*1{>{\centering \arraybackslash}p{0.28\textwidth}} |*2{>{\centering \arraybackslash}p{0.2\textwidth}|} *1{>{\centering \arraybackslash}p{0.19\textwidth}|} }
+                \hline
+                \multicolumn{3}{|c|}{$\diamond$$\diamond$$\diamond$\ \textbf{Lycée de Dindéfélo}\ $\diamond$$\diamond$$\diamond$ } & \textbf{A.S. : 2024/2025}                                              \\ \hline
+                \textbf{Matière: Mathématiques}                                                                                    & \textbf{Niveau : T}\textbf{S2} & \textbf{Date: 21/02/2025} & \textbf{} \\ \hline
+                \multicolumn{4}{|c|}{\parbox[c]{10cm}{\begin{center}
+                                                                  \textbf{{\Large\sffamily Similitude }}
+                                                              \end{center}}}                                                                                                        \\ \hline
+            \end{tabular}}\endgroup};
+\end{tikzpicture}
+\vspace{3cm}
+
+\textbf{\underline{Exercice 1} :}
+
+\bigskip
+
+Dans chacun des cas suivants, déterminer l’écriture complexe de la similitude directe de centre \( \Omega \), de rapport \( k \) et d’angle \( \theta \).
+
+\begin{enumerate}
+    \item \( \Omega = O \), \( k = 2 \) et \( \theta = \dfrac{\pi}{6} \).
+    
+    \item \( \Omega \begin{pmatrix} 1 \\ 0 \end{pmatrix} \), \( k = \sqrt{2} \) et \( \theta = \dfrac{\pi}{2} \).
+    
+    \item \( \Omega \begin{pmatrix} 2 \\ -1 \end{pmatrix} \), \( k = 1 \) et \( \theta = \dfrac{5\pi}{6} \).
+    
+    \item \( \Omega (-2 + i \frac{1}{2}) \), \( k = \dfrac{1}{2} \), \( \theta = \dfrac{-\pi}{3} \).
+\end{enumerate}
+
+\textbf{\underline{Exercice 2} :}
+
+\bigskip
+
+Dans chacun des cas suivants, déterminer la nature et les éléments caractéristiques de l’application \( f \) du plan dans lui-même, qui au point \( M \) d’affixe \( z \) associe le point \( M' \) d’affixe \( z' \) :
+
+\begin{enumerate}
+    \item[a)] \( z' = (\sqrt{3} + i)z \);
+    \item[b)] \( z' = (\sqrt{3} - i)z + 1 + i(\sqrt{3} - 1) \);
+    \item[c)] \( z' = -2z + i \);
+    \item[d)] \( z' = -z + 2i \);
+    \item[e)] \( z' = \dfrac{3 + i\sqrt{3}}{4}z + \dfrac{1 - i\sqrt{3}}{2} \);
+    \item[f)] \( z' = iz + 1 \);
+    \item[g)] \( z' = z + 3 - i \).
+\end{enumerate}
+
+\textbf{\underline{Exercice 3} :}
+
+\bigskip
+
+Dans chacun des cas suivants, déterminer l’écriture complexe de la similitude directe \( s \) définie par :  
+\( S(A) = A' \) et \( S(B) = B' \).
+
+\begin{itemize}
+    \item[a)] \( A(3+2i), A'(3), B(1) \) et \( B'(i) \);
+    \item[b)] \( A(2+i), A'(3+2i), B(2) \) et \( B'(3i) \).
+\end{itemize}
+
+\bigskip
+
+\textbf{\underline{Exercice 4} :}
+
+\bigskip
+
+Soit \( s \) la similitude directe d’écriture complexe :  \( z' = 3iz - 9 - 3i. \)
+
+\begin{enumerate}
+    \item Déterminer les éléments caractéristiques de \( s \).
+    \item Déterminer l’expression analytique de \( s \).
+    \item Déterminer l’image par \( s \) :
+    \begin{enumerate}
+        \item[(a)] du cercle de centre \( K(1 - 3i) \) et de rayon 1;
+        \item[(b)] de la droite \( (\mathscr{D}) \) d’équation : \( x = 1 \);
+        \item[(c)] de la droite passant par le point \( A(5;3) \) et dont un vecteur directeur est \( \vec{u}(-1;3) \).
+    \end{enumerate}
+\end{enumerate}
+
+\textbf{\underline{Exercice 5} :}
+
+\bigskip
+
+Soit \( A, B \) et \( C \) les points d’affixes respectives :  
+\( i, 1 + i \) et \( 2 + 2i \).
+
+\begin{enumerate}
+    \item Déterminer l’affixe du barycentre \( G \) des points \( A, B \) et \( C \) affectés respectivement des coefficients \( 2, -2 \) et \( 1 \).
+    \item Démontrer que la similitude directe \( s \), qui transforme \( A \) en \( B \) et \( B \) en \( C \), a pour centre le point \( G \).
+    \item Déterminer l’angle et le rapport de \( s \).
+\end{enumerate}
+
+\textbf{\underline{Exercice 6} : (BAC)}
+
+\bigskip
+
+On considère les applications \( T_1 \) et \( T_2 \) dont les écritures complexes sont :  
+\( T_1 : z_1 = (\sqrt{3} + i)z \) et \( T_2 : z_2 = (1 - i\sqrt{3})z + 3 \).
+
+\begin{enumerate}
+    \item Déterminer la nature et les éléments caractéristiques de \( T_1 \) et \( T_2 \).
+    \item Déterminer l’écriture complexe, la nature et les éléments caractéristiques de \( T_2 \circ T_1 \).
+    \item Démontrer qu’il existe un seul point \( K \) tel que \( T_1(K) = T_2(K) \). Soit \( L = T_1(K) \).  
+          Calculer les affixes des points \( K \) et \( L \).
+    \item Démontrer que le point \( L \) est invariable pour chacune des applications \( T_2 \circ T_1^{-1} \) et \( T_1 \circ T_2^{-1} \).
+    \item Déterminer l’écriture complexe de chacune des applications \( T_2 \circ T_1^{-1} \) et \( T_1 \circ T_2^{-1} \).  
+          Préciser leurs natures et éléments caractéristiques.
+\end{enumerate}
+
+\bigskip
+
+\textbf{\underline{Exercice 7} :}
+
+\bigskip
+
+Soit \( S_1 \) l’application qui à tout point \( M(x,y) \) associe \( M'(x',y') \) définie par :
+
+\[
+\begin{cases}
+    x' = -\frac{1}{2}x - \frac{\sqrt{3}}{2}y + \frac{3}{2} \\
+    y' = \frac{\sqrt{3}}{2}x - \frac{1}{2}y - \frac{\sqrt{3}}{2}
+\end{cases}
+\]
+
+\begin{enumerate}
+    \item Déterminer l’écriture complexe de \( S_1 \).
+    \item En déduire la nature et les éléments caractéristiques de \( S_1 \).
+    \item Soient les points \( A(1) \) et \( B(-1) \). Déterminer l’écriture complexe de la similitude directe  
+          \( S_2 \) telle que \( S_2(A) = O \) et \( S_2(B) = B \) puis caractériser \( S_2 \).
+    \item On pose \( S = S_1 \circ S_2 \). Déterminer l’écriture complexe de \( S \).
+    \item Déterminer l’image par \( S \) :
+    \begin{enumerate}
+        \item[(a)] de la droite \( (\mathscr{D}) \) d’équation \( 2x + y - 1 = 0 \);
+        \item[(b)] du cercle \( (\mathscr{C}) \) d’équation \( (x + 3)^2 + (y - 2)^2 = 4 \).
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}

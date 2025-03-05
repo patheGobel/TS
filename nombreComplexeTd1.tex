@@ -147,7 +147,80 @@ Le plan est muni d'un rep\`ere orthonorm\'e direct.
         \item $U \in i\mathbb{R}$
     \end{enumerate}
 \end{enumerate}
+\section*{\textcolor{black}{Correction Exercice 3 :}}
+\begin{enumerate}
+    \item Pour tout complexe $z \neq i$, on pose
+    \(
+    U = \frac{z + i}{z - i}.
+    \)
+    
+    Déterminons l’ensemble des points $M$ d’affixe $z$ tels que :
+    \begin{enumerate}
+        \item $U \in \mathbb{R}^*_{-}$
 
+Nous cherchons l’ensemble des points \( M \) d’affixe \( z = x + iy \) tels que :
+
+\[
+U = \frac{x^2 + y^2 - 1 + 2ix}{x^2 + (y-1)^2}
+\]
+
+satisfait la condition :
+
+\[
+\operatorname{Im}(U) < 0.
+\]
+
+\section*{1. Expression de la partie imaginaire de \( U \)}
+
+On pose :
+
+\[
+U = \frac{A + iB}{D},
+\]
+
+où :
+\begin{itemize}
+    \item \( A = x^2 + y^2 - 1 \) est la partie réelle du numérateur ;
+    \item \( B = 2x \) est la partie imaginaire du numérateur ;
+    \item \( D = x^2 + (y-1)^2 \) est le dénominateur (strictement positif sauf en \( (0,1) \), où il s’annule).
+\end{itemize}
+
+La partie imaginaire de \( U \) est donc :
+
+\[
+\operatorname{Im}(U) = \frac{B}{D} = \frac{2x}{x^2 + (y-1)^2}.
+\]
+
+\section*{2. Condition pour que \( \operatorname{Im}(U) < 0 \)}
+
+On impose :
+
+\[
+\frac{2x}{x^2 + (y-1)^2} < 0.
+\]
+
+Le dénominateur \( x^2 + (y-1)^2 \) étant toujours strictement positif sauf en \( (0,1) \), le signe de \( \operatorname{Im}(U) \) dépend uniquement du numérateur \( 2x \).
+
+Ainsi, on doit avoir :
+
+\[
+2x < 0 \quad \Longrightarrow \quad x < 0.
+\]
+
+\section*{3. Conclusion}
+
+L’ensemble des points \( M(x, y) \) tels que \( \operatorname{Im}(U) < 0 \) est donné par :
+
+\[
+\{ (x, y) \in \mathbb{R}^2 \mid x < 0 \}.
+\]
+
+Autrement dit, il s’agit du demi-plan strictement à gauche de l’axe des ordonnées \( x = 0 \).
+
+        \item $U \in \mathbb{R}^*_{+}$
+        \item $U \in i\mathbb{R}$
+    \end{enumerate}
+\end{enumerate}
 \section*{\textcolor{black}{Exercice 4 :}}
 Soit le nombre complexe 
 \(

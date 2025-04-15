@@ -284,7 +284,10 @@ Calculer $p(A)$, $p(B)$, $p(C)$, $p(A\cap B)$, $p(A\cup B)$, $p(A\cap C)$ et $p(
 \underline{\textbf{\textcolor{red}{1.Définition}}}\\
 Soit $\Omega$ un univers, associe à une expérience aléatoire et $p$ la probabilité définie dans cet univers. $A$ et $B$ deux évèvenements de $\Omega$ tel que $p(B)\neq 0$
 
-$p_{\frac{A}{B}}=p_{B}(A)=\frac{p(A\cap B)}{p(B)}=\frac{card(A\cap B)}{card(B)}$
+$p_{\frac{A}{B}}=p_{B}(A)=\frac{p(A\cap B)}{p(B)}$
+
+\underline{\textbf{\textcolor{red}{1.Propriété}}}\\
+Dans une situation d’équiprobabilité, on a $p_{\frac{A}{B}}=p_{B}(A)=\frac{card(A\cap B)}{card(B)}$
 
 \underline{\textbf{\textcolor{red}{Exemple}}}\\
 Soit une expérience aléatoire comportant les évènements A et B. On sait que
@@ -294,7 +297,7 @@ Pour calculer la $1^{re}$ probabilité conditionnelle, on utilise la formule.
 
 $p_{A/B}=p_{B}(A)=\frac{p(A\cap B)}{p(B)}=\frac{card(A\cap B)}{card(B)}$
 
-\underline{\textbf{\textcolor{red}{Exemple}}}\\
+\underline{\textbf{\textcolor{red}{Solution}}}\\
 Soit une expérience aléatoire comportant les évènements A et B.
 
 On donne
@@ -329,7 +332,6 @@ Dans un lycée comportant 800 élèves, $55\%$ sont des filles. Parmi les filles
 
 On choisit un élève au hasard dans ce lycée et admet que ces choix sont équiprobables.
 
-On choisit un élève au hasard dans ce lycée et on admet que ces choix sont équiprobables.
 %(Présentation de l'arbre pondéré)
 
 On note F(resp. P) l'événement "l'élève choisi est une fille (resp. une pensionnaire)".
@@ -369,22 +371,15 @@ On obtient l'arbre probabiliste suivante:
 \end{tikzpicture}\\
 \begin{itemize}
 \item La somme des probabilités des deux premières branches (c'est-à-dire issues de la racine) est 1.
-\item La somme des probabilités des probabilités des branches issues du noeud F est 1.
-\item La somme des probabilité des probabilité des branches issues du noeud $\overline{F}$ est 1.
+\item La somme des probabilités des branches issues du noeud F est 1.
+\item La somme des probabilité des branches issues du noeud $\overline{F}$ est 1.
 \end{itemize}
 \underline{\textbf{\textcolor{red}{Propriété 1}}}\\
-La somme des probabilités inscrites sur les branches issues d'un même noeud est égale à 1.
+Quand plusieurs branches partent d’un même nœud dans un arbre de probabilités, les probabilités sur ces branches doivent toujours s’additionner pour donner 1, car elles représentent toutes les issues possibles à ce moment-là.
 
 \underline{\textbf{\textcolor{red}{Propriété 2}}}\\
-%\item La somme des probabilités des probabilités des branches issues du noeud F est 1.
-%\item La somme des probabilité des probabilité des branches issues du noeud $\overline{F}$ est 1.
-%\end{itemize}
-%\underline{\textbf{\textcolor{red}{Propriété 1}}}\\
-%La somme des probabilités inscrites sur les branches issues d'un même noeud est égale à 1.
 
-\underline{\textbf{\textcolor{red}{Propriété}}}\\
-%(Présentation de l'arbre pondéré)
-La probabilité de l'évènement représenté par un chemin est égale au produit des probabilités inscrites sur les branches de ce chemin.
+Lorsqu’on suit un chemin dans un arbre pondéré, la probabilité de l’événement associé à ce chemin est égale au produit des probabilités indiquées sur les branches empruntées.
 
 En considérant l'exemple précédent, la probabilité de l'évèvenement $F\cap \overline{P}$ est:
 
@@ -445,8 +440,20 @@ Et, si pour tout $p(A_{i}) \neq 0$, alors:
 \textcolor{blue}{$p(B)=p(A_{1})\times p_{A_{1}}(B)+p(A_{2})\times p_{A_{2}}(B)+...+p(A_{n})\times p_{A_{n}}(B)$}
 \subsection*{\underline{\textbf{\textcolor{red}{C.L'indépendance de deux évènements}}}}
 \underline{\textbf{\textcolor{red}{1.Définition}}}\\
-On dit que deux événement $A$ et $B$ de probabilités non nulles sont indépendants lorsque:\\
+Deux événements sont dits indépendants lorsque le fait que l’un se produise n’a aucune influence sur la probabilité que l’autre se produise.
+
+Si $A$ et $B$ sont deux évènements sont indépendants probabilités non nulles alors :
 $p(A\cap B)=p(A)\times p(B)$
+
+\underline{\textbf{\textcolor{red}{propriété}}}\\
+
+Soient A et B sont deux événements tels que $P(A) \neq 0 $ et $P(B) \neq 0 $ et qui sont indépendants, on a :
+
+\begin{itemize}
+\item $p_{B}(A)=p(A)$
+\item $p_{A}(B)=p(B)$
+\item $p(A\cap B)=p(A) + p(B)-p(A)\times p(B)$
+\end{itemize}
 
 \underline{\textbf{\textcolor{red}{Exemple}}}\\
 En considérant l'exemple précédent, montre que F et P sont deux événements indépendants.\\

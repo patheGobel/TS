@@ -1,0 +1,275 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,mathrsfs,tikz,times,pifont}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{lmodern}
+\usetikzlibrary{trees}
+\newcommand\circitem[1]{%
+\tikz[baseline=(char.base)]{
+\node[circle,draw=gray, fill=red!55,
+minimum size=1.2em,inner sep=0] (char) {#1};}}
+\newcommand\boxitem[1]{%
+\tikz[baseline=(char.base)]{
+\node[fill=cyan,
+minimum size=1.2em,inner sep=0] (char) {#1};}}
+\setlist[enumerate,1]{label=\protect\circitem{\arabic*}}
+\setlist[enumerate,2]{label=\protect\boxitem{\alph*}}
+%%%::::::by chnini ameur :::::::%%%
+\everymath{\displaystyle}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=1.7cm]{geometry}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
+\usepackage{array,multirow}
+\usepackage[most]{tcolorbox}
+\usepackage{varwidth}
+\usepackage{float} %pour utiliser l'option [H] qui force l'image à apparaître exactement à l'endroit où elle est placée dans le code.
+\tcbuselibrary{skins,hooks}
+\usetikzlibrary{patterns}
+%%%::::::by chnini ameur :::::::%%%
+\newtcolorbox{exa}[2][]{enhanced,breakable,before skip=2mm,after skip=5mm,
+colback=yellow!20!white,colframe=black!20!blue,boxrule=0.5mm,
+attach boxed title to top left ={xshift=0.6cm,yshift*=1mm-\tcboxedtitleheight},
+fonttitle=\bfseries,
+title={#2},#1,
+% varwidth boxed title*=-3cm,
+boxed title style={frame code={
+\path[fill=tcbcolback!30!black]
+([yshift=-1mm,xshift=-1mm]frame.north west)
+arc[start angle=0,end angle=180,radius=1mm]
+([yshift=-1mm,xshift=1mm]frame.north east)
+arc[start angle=180,end angle=0,radius=1mm];
+\path[left color=tcbcolback!60!black,right color = tcbcolback!60!black,
+middle color = tcbcolback!80!black]
+([xshift=-2mm]frame.north west) -- ([xshift=2mm]frame.north east)
+[rounded corners=1mm]-- ([xshift=1mm,yshift=-1mm]frame.north east)
+-- (frame.south east) -- (frame.south west)
+-- ([xshift=-1mm,yshift=-1mm]frame.north west)
+[sharp corners]-- cycle;
+},interior engine=empty,
+},interior style={top color=yellow!5}}
+%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fancyhdr}
+\usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
+% Commande pour ajouter du texte en arrière-plan
+\usepackage{tkz-tab}
+\AddToShipoutPicture{
+    \AtTextCenter{%
+        \makebox[0pt]{\rotatebox{80}{\textcolor[gray]{0.7}{\fontsize{5cm}{5cm}\selectfont PGB}}}
+    }
+}
+\usepackage{lastpage}
+\fancyhf{}
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footruleskip}{10pt}
+\fancyfoot[R]{
+\color{blue}\ding{45}\ \textbf{2025}
+}
+\fancyfoot[L]{
+\color{blue}\ding{45}\ \textbf{Prof:M. BA}
+}
+\cfoot{\bf
+\thepage /
+\pageref{LastPage}}
+% Création du compteur pour les exercices
+\newcounter{exercice}
+\renewcommand{\theexercice}{\arabic{exercice}}  % Définit l'affichage du compteur en chiffres arabes
+
+% Définir la commande \exo
+\newcommand{\exo}{\refstepcounter{exercice}\textbf{Exercice \theexercice} }
+\begin{document}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\arrayrulewidth}{1.2pt}
+\begin{tikzpicture}[overlay,remember picture]
+    \node[draw=blue,line width=1.2pt,fill=purple,text=blue,inner sep=3mm,rounded corners,pattern=dots]at ([yshift=-2.5cm]current page.north) {\begingroup\setlength{\fboxsep}{0pt}\colorbox{white}{\begin{tabular}{|*1{>{\centering \arraybackslash}p{0.28\textwidth}} |*2{>{\centering \arraybackslash}p{0.2\textwidth}|} *1{>{\centering \arraybackslash}p{0.19\textwidth}|} }
+                \hline
+                \multicolumn{3}{|c|}{$\diamond$$\diamond$$\diamond$\ \textbf{Lycée de Dindéfélo}\ $\diamond$$\diamond$$\diamond$ } & \textbf{A.S. : 2024/2025}                                              \\ \hline
+                \textbf{Matière: Mathématiques}                                                                                    & \textbf{Niveau : T}\textbf{S2} & \textbf{Date: 17/04/2025} & \textbf{} \\ \hline
+                \multicolumn{4}{|c|}{\parbox[c]{10cm}{\begin{center}
+                                                                  \textbf{{\Large\sffamily Td Probabilité}}
+                                                              \end{center}}}                                                                                                        \\ \hline
+            \end{tabular}}\endgroup};
+\end{tikzpicture}
+\vspace{3cm}
+\begin{multicols}{2}
+\setlength{\columnseprule}{0.1mm} % La largeur de la ligne verticale entre les colonnes
+\fbox{\textbf{\exo}} Calculer les intégrales :
+\begin{multicols}{2}
+\setlength{\columnseprule}{0.1mm} % La largeur de la ligne verticale entre les colonnes
+\begin{enumerate}
+    \item $\int_1^2 2t^2 \, dt$
+    \item $\int_{-1}^3 -t^4 \, dt$
+    \item $\int_1^2 \frac{1}{s^4} \, ds$
+    \item $\int_0^2 \frac{1}{(x+2)^2} \, dx$
+    \item $\int_0^2 \frac{x}{(x^2 + 2)^2} \, dx$
+    \item $\int_0^\frac{\pi}{2} (2 - 3\sin t) \, dt$
+    \item $\int_0^\frac{\pi}{2} \sin \left( x + \frac{\pi}{4} \right) \, dx$
+    \item $\int_0^2 \frac{e^{x}}{e^{x}+3} \, dx$
+    \item $\int_{-1}^5 \mid x^2 - 9 \mid \, dx$
+    \item $\int_0^2 e^{x}(e^x-3) \, dx$
+    \item $\int_e^{e^3} \frac{dx}{x\ln x}$
+    \item $\int_0^\frac{\pi}{4} \tan^2 x \, dx$
+    \item $\int_{-3}^{-2} \frac{x}{\sqrt{x^2 - 1}} \, dx$
+    \item $\int_0^\pi \frac{ \sin x}{(2 + \cos x)^2} \, dx$
+    \item $\int_0^\pi \frac{dx}{\cos^2 x}$
+    \item $\int_{\frac{\pi}{4}}^{\frac{\pi}{4}} \frac{1 + \tan^2 x}{\tan x} \, dx$
+    \item $\int_0^1 \frac{e^x + 1}{e^x + x} \, dx$
+    \item $\int_e^{e^2} \frac{\ln u}{u} \, du$
+    \item $\int_0^{\frac{\pi}{4}} \cos 2u \, du$
+    \item $\int_{-2}^1 |2x - 1| \, dx$
+    \item $\int_0^{\frac{\pi}{4}} \tan^2 x \, dx$
+\end{enumerate}
+\end{multicols}
+$\int_0^1 \left( \sqrt{2t + 1} + \frac{1}{\sqrt{t + 5}} \right) dt$
+,$\int_0^2 (2t + 3)\sqrt{t^2 + 3t} \, dt$
+
+\fbox{\textbf{\exo}}
+\begin{enumerate}
+    \item Sans chercher de primitives, calculer les intégrales :
+    \(
+\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}} \sin 4t \, dt \quad ; \quad \int_{-\frac{\pi}{3}}^{\frac{\pi}{3}} \cos 3x \, dx
+\)
+
+\(
+\int_{-1}^{1} \ln \left( \frac{2 - x}{2 + x} \right) \, dx \quad ; \quad \int_{\ln 2}^{\ln 2} \frac{1 - e^x}{1 + e^x} \, dx
+\)
+    \item Calculer les intégrales suivantes :
+
+\( \int_0^{\frac{\pi}{2}} \sin x \cos^2 x \, dx \quad ; \quad \int_0^{\frac{\pi}{3}} \sin^3 x \, dx \)
+
+\( \int_0^{\frac{\pi}{4}} \cos^4 u \, du \quad ; \quad \int_0^{\frac{\pi}{3}} \sin^2 x \cos^3 x \, dx \)
+\end{enumerate}
+
+\fbox{\textbf{\exo}}
+\begin{enumerate}
+    \item \begin{enumerate}
+    \item Vérifier que : 
+\(     \forall x \in \mathbb{R} \setminus \left\{-1 ; -\frac{1}{2}\right\}, \quad \frac{8x + 5}{2x^2 + 3x + 1} = \frac{3}{x+1} + \frac{2}{2x+1}. \)
+    
+    \item En déduire la valeur de :
+\( \int_0^2 \frac{8x + 5}{2x^2 + 3x + 1} \, dx. \)
+\end{enumerate}
+\item Soit la fonction $f$ définie par :\\
+\(f(x) = \frac{3x^3 - 5x^2 + 2x - 1}{(x-2)^2}.\)
+
+\begin{enumerate}
+    \item Déterminer les réels $a$, $b$, $c$ et $d$ tels que :
+    \(f(x) = ax + b + \frac{c}{x-2} + \frac{d}{(x-2)^2}.\)
+    \item En déduire une primitive de $f$ sur $[-1 ; 1]$ puis calculer :
+    \(\int_{-1}^1 f(x) \, dx.\)
+\end{enumerate}
+\end{enumerate}
+\fbox{\textbf{\exo}} : Calcul au moins d'une intégration par parties
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\int_0^{\frac{\pi}{2}} x \sin x \, dx$
+    \item $\int_1^e x \ln x \, dx$
+    \item $\int_0^{\frac{\pi}{2}} x \cos x \, dx$
+    \item $\int_1^e \ln x \, dx$
+    \item $\int_1^e (2 - t) e^t \, dt$
+    \item $\int_0^{\frac{\pi}{2}} (x - 1) \sin x \, dx$
+    \item $\int_1^3 (2x + 1) \ln x \, dx$
+    \item $\int_0^{\frac{\pi}{2}} (u - 1)^2 \sin u \, du$
+    \item $\int_0^{\frac{\pi}{2}} e^x \sin x \, dx$
+    \item $\int_0^1 (x^2 - 1) e^{2x} \, dx$
+    \item $\int_0^{\pi} e^{-x} \cos x \, dx$
+    \item $\int_1^2 x \sqrt{3 - x} \, dx$
+    \item $\int_1^2 (3x^2 + 1)^2 e^x \, dx$
+    \item $\int_1^2 u (\ln u)^2 \, du$
+    \item $\int_0^1 (x + 1)\sqrt{x + 1} \, dx$
+\end{enumerate}
+\end{multicols}
+\fbox{\textbf{\exo}}
+Soit $f$ la fonction numérique de la variable réelle $x$ définie par :\\
+\(f(x) = \frac{x+1}{x} + \ln x - \ln(x + 1).\)
+
+\begin{enumerate}
+    \item Étudier les variations de $f$ et tracer sa courbe.
+    \item Soit $\lambda$ un réel supérieur à 1 et\\
+    \(D_{\lambda} = \{M(x,y),\ 1 \leq x \leq \lambda \text{ et } 1 \leq y \leq f(x)\}.\)
+    Calculer l'aire $A(D_{\lambda})$ de $D_{\lambda}$. Étudier la limite de $A(D_{\lambda})$ quand $\lambda$ tend vers $+\infty$.
+\end{enumerate}
+
+\fbox{\textbf{\exo}}
+
+On pose 
+\(
+I = \int_0^{\frac{\pi}{4}} \left( \int_0^x \sin^5 t \cos t \, dt \right) dx.
+\)
+
+\begin{enumerate}
+    \item Liénéariser \( \sin^6 x \).
+    \item Démontrer que 
+    \(
+    I = \frac{15\pi - 44}{1152}.
+    \)
+\end{enumerate}
+
+\fbox{\textbf{\exo}}
+
+Soit \( f \) la fonction définie sur \( ]0 ; +\infty[ \) par :\\\( f(x) = \frac{2 \ln x}{x^2 + x} \). On se propose de trouver un encadrement de l'aire \( A \) de l'ensemble des points \( M(x; y) \) tels que \( 1 \leq x \leq \frac{3}{2} \) et \( 0 \leq y \leq f(x) \).
+
+\begin{enumerate}
+    \item Étudier et tracer \( (C_f) \).
+    \item Montrer que pour tout \( x \geq 1 \),\\ \( \frac{\ln x}{x^2} \leq f(x) \leq \frac{\ln x}{x} \).
+    \item Calculer \( I = \int_1^{\frac{3}{2}} \frac{\ln x}{x} \, dx \) et \( \int_1^{\frac{3}{2}} \frac{\ln x}{x^2} \, dx \).
+    \item En déduire un encadrement de \( \int_1^{\frac{3}{2}} f(x) \, dx \) puis un encadrement de \( A \).
+\end{enumerate}
+\fbox{\textbf{\exo}}
+On se propose de calculer l'intégrale 
+\( J = \int_0^1 \frac{x e^x}{(1 + e^x)^3} \, dx \).
+
+\begin{enumerate}
+    \item Calculer les deux intégrales suivantes :
+    \( A = \int_0^1 \frac{e^x}{e^x + 1} \, dx \) et \( \int_0^1 \frac{e^x}{(e^x + 1)^2} \, dx \).
+    \item Déterminer les réels \(a\), \(b\) et \(c\) tels que pour \( x \geq 0 \),
+\begin{equation}\tag{\textbf{1}}\frac{1}{(1 + t)^2} = a + \frac{b t}{t+1} + \frac{c t}{(1+t)^2}.\end{equation}
+    \item En posant \( t = e^x \) dans l'égalité (1), calculer l'intégrale 
+    \( I = \int_0^1 \frac{dx}{(1 + e^x)^2} \).
+    \item Établir une relation entre \(I\) et \(J\) et en déduire \(J\).
+\end{enumerate}
+\fbox{\textbf{\exo}}
+On pose, pour tout nombre entier naturel non nul :
+\( I_n = \int_1^0 x^n (\ln x)^n \, dx \),
+où \( \ln \) désigne la fonction logarithme népérien, et \( I_0 = \int_1^e x^2 \, dx \).
+
+\begin{enumerate}
+    \item Calculer \( I_0 \) et \( I_1 \).
+    \item En utilisant une intégration par parties, démontrer que pour tout entier naturel \( n \) non nul :
+    \begin{equation}\tag{\textbf{1}} 3 I_{n+1} + (n+1) I_n = e^3 .\end{equation} En déduire \( I_2 \).
+    \item 
+    \begin{enumerate}
+        \item Démontrer que pour tout entier naturel \( n \), \( I_n \) est positif.
+        \item Déduire de l'égalité \textbf{(1)} pour tout entier naturel non nul, \( I_n \leq \frac{e^{3}}{n+1} \).
+    \end{enumerate}
+\end{enumerate}
+\fbox{\textbf{\exo}}
+Soient \( f, g, h \) et \( k \) les fonctions de \( \mathbb{R} \) vers \( \mathbb{R} \) telles que : 
+\[
+f(x) = \sqrt{x^2 + 1}, \quad g(x) = x + \sqrt{x^2 + 1}, \quad h(x) = \ln(x + \sqrt{x^2 + 1}) \quad \text{et} \quad k(x) = x \sqrt{x^2 + 1}.
+\]
+Soit \( \alpha \) un réel, on pose \( \forall n \in \mathbb{N}, I_n = \int_0^\alpha \frac{x^n}{\sqrt{x^2 + 1}} \, dx \) et 
+\[
+F = \int_0^\alpha \sqrt{x^2 + 1} \, dx, \quad G = \int_0^\alpha (x + \sqrt{x^2 + 1}) \, dx, \quad H = \int_0^\alpha \ln(x + \sqrt{x^2 + 1}) \, dx.
+\]
+\begin{enumerate}
+    \item Démontrer que les fonctions \( f \), \( g \), \( h \) et \( k \) sont dérivables sur \( \mathbb{R} \), et déterminer leurs applications dérivées \( f' \), \( g' \), \( h' \) et \( k' \).
+    \item Justifier l'existence de \( I_n \) pour tout entier naturel \( n \). Calculer \( I_0 \) et \( I_1 \).
+    \item Justifier l'existence de \( F \). Calculer \( F + I_2 \) et \( F - I_2 \). En déduire \( I_2 \). Justifier l'existence de \( G \), calculer \( G \).
+    \item Justifier l'existence de \( H \). Par une intégration par parties, calculer \( H \).
+\end{enumerate}
+\fbox{\textbf{\exo}}
+\fbox{\textbf{\exo}}
+\fbox{\textbf{\exo}}
+\fbox{\textbf{\exo}}
+\fbox{\textbf{\exo}}
+\fbox{\textbf{\exo}}
+\fbox{\textbf{\exo}}
+\fbox{\textbf{\exo}}
+\fbox{\textbf{\exo}}
+\fbox{\textbf{\exo}}
+\fbox{\textbf{\exo}}
+\fbox{\textbf{\exo}}
+\end{multicols}
+\end{document}

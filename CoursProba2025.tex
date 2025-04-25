@@ -654,12 +654,131 @@ F(x) =
 \end{cases}
 \]
 
-\section*{\underline{\textbf{\textcolor{red}{V.Loi de probabilité}}}}
+\underline{\textbf{\textcolor{red}{Remarque}}}
 
-\subsection*{\underline{\textbf{\textcolor{red}{a. Epreuve de Bernoulli}}}}
+Soit X une fonction aléatoire de fonction de répartition \( F: \)
+
+$P(X > a) = 1 - P(X \leq a)$
+
+$P(X > a) = 1 - F(a)$
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{repartition.png} % Remplacez par le chemin de votre image
+    \label{fig:courbe_f}
+\end{figure}
+
+
+\subsection*{\underline{\textbf{\textcolor{red}{2. Loi de Binomiale}}}}
+
+\subsection*{\underline{\textbf{\textcolor{red}{a. Loi de Bernouilli}}}}
+
+Une variable aléatoire qui présente que 2 résultats possibles : succès (\(S\)) et échec (\(\overline{S}\)). 
+Soit \(X\) la variable aléatoire qui prend \(1\) si (\(S\)) se réalise et \(0\) si (\(\overline{S}\)) se réalise.
+On note par \(p = P(X = 1)\) et \(q = P(X = 0)\), on dit que \(X\) suit une loi de Bernoulli de paramètre \(p\).
+On note \(X \sim B(p)\).
+
+\textbf{Loi de probabilité de \( X \):}
+
+\[
+\begin{array}{|c|c|c|}
+\hline
+X_i & 0 & 1 \\
+\hline
+P_i & p & q \\
+\hline
+\end{array}
+\]
+
+\[
+p + q = 1 \Rightarrow q = 1 - p
+\]
+
+\[
+E(X) = p
+\]
+
+\[
+V(X) = p - p^2 = p q
+\]
 
 \underline{\textbf{\textcolor{red}{Remarque}}}
 
-\underline{\textbf{\textcolor{orange}{b.Schéma de Bernoulli}}}
+Dans toute épreuve aléatoire, il est possible de définir une variable aléatoire qui suit une loi de Bernoulli. Il suffit de prendre un événement et son événement contraire.
+
+\subsection*{\underline{\textbf{\textcolor{red}{b.Schéma de Bernoulli}}}}
+
+Soit une épreuve aléatoire qui présente 2 issues possibles \( S \) et \( \overline{S} \), \( n \in \mathbb{N} \). Si la répétition successive et indépendante \( n \) fois de la même épreuve aléatoire est appelée schéma de Bernoulli.
+
+\begin{tikzpicture}[level distance=5cm,
+  level 1/.style={sibling distance=7cm}, % Ecarte les branches des 1ere ramifications
+  level 2/.style={sibling distance=4cm}, % Ecarte les branches des 2eme ramifications
+  level 3/.style={sibling distance=2cm}, % Ecarte les branches des 3eme ramifications
+  every node/.style={text width=2cm, align=center}] % Permet de spécifier une largeur pour chaque nœud
+  \node {}
+    child {node {$\overline{S}$}
+      child {node {$\overline{S}$}
+        child {node {$\overline{S}$}}   % 1ère branche de $\overline{P}$
+        child {node {$S$}}   % 2ème branche de $\overline{P}$
+      }
+      child {node {$S$}
+        child {node {$\overline{S}$}}   % 1ère branche de $P$
+        child {node {$S$}}   % 2ème branche de $P$
+      }
+    } % 1ère branche      
+    child {node {$s$}  
+      child {node {$\overline{s}$}
+        child {node {$\overline{S}$}}   % 1ère branche de $\overline{P}$
+        child {node {$S$}}   % 2ème branche de $\overline{P}$
+      }
+      child {node {$S$}
+        child {node {$\overline{S}$}}   % 1ère branche de $P$
+        child {node {$S$}}   % 2ème branche de $P$
+      }
+    };
+
+  % Probabilités associées aux branches
+  \node at (-3,-1.5) [right] {$q$};
+  \node at (1,-1.5) [right] {$p$};
+
+  \node at (-6,-7) [right] {$q$};
+  \node at (-3,-7) [right] {$p$};
+
+  \node at (4,-7) [right] {$p$};
+  \node at (1,-7) [right] {$q$};
+
+   \node at (3.5,-13) [right] {$q$};
+  \node at (1.5,-13) [right] {$p$};
+    \node at (5.5,-13) [right] {$p$};
+  \node at (-0.5,-13) [right] {$q$};
+  \node at (-1.5,-13) [right] {$p$};
+  \node at (-4,-13) [right] {$q$};
+    \node at (-5.5,-13) [right] {$p$};
+  \node at (-8,-13) [right] {$q$};
+\end{tikzpicture}
+
+La variable aléatoire \( X \) qui prend le nombre de fois où l'événement succès s'est réalisé durant ces \( n \) répétitions suit une loi binomiale de paramètres \( n \) et \( p \), on note :\( X \sim B(n,p) \)
+
+\(X(\Omega)=\{0,1,2,...,n\} \forall k \in X(\Omega)\)
+
+\( P(X = k) = C_n^k p^k q^{n-k} \)
+
+\[
+\begin{array}{|c|c|c|c|c|c|}
+\hline
+X_i & 0 & 1 & 2 & \dots & n \\
+\hline
+P(X_i) & q^n & C_n^1 p^1 q^{n-1} & C_n^2 p^2 q^{n-2} & \dots & p^n \\
+\hline
+\end{array}
+\]
+\[
+E(X) = n p
+\]
+\[
+E(X) = n pq
+\]
+
+\underline{\textbf{\textcolor{red}{Exemple BAC 2004}}}
 
 \end{document}

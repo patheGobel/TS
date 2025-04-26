@@ -673,10 +673,18 @@ $P(X > a) = 1 - F(a)$
 
 \subsection*{\underline{\textbf{\textcolor{red}{a. Loi de Bernouilli}}}}
 
-Une variable aléatoire qui présente que 2 résultats possibles : succès (\(S\)) et échec (\(\overline{S}\)). 
+Une variable aléatoire qui présente que 2 résultats possibles : succès (\(S\)) et échec (\(\overline{S}\)) suit une loi de Bernoulli.
+ 
 Soit \(X\) la variable aléatoire qui prend \(1\) si (\(S\)) se réalise et \(0\) si (\(\overline{S}\)) se réalise.
 On note par \(p = P(X = 1)\) et \(q = P(X = 0)\), on dit que \(X\) suit une loi de Bernoulli de paramètre \(p\).
 On note \(X \sim B(p)\).
+++++++++++++++++++++
+\subsection*{\underline{\textbf{\textcolor{red}{a. Loi de Bernoulli}}}}
+
+Une variable aléatoire suit une loi de Bernoulli lorsqu'elle ne peut prendre que deux valeurs possibles : le succès (\(S\)) ou l’échec (\(\overline{S}\)). \\
+Soit \(X\) la variable aléatoire qui vaut \(1\) si le succès \(S\) se réalise, et \(0\) si l’échec \(\overline{S}\) se réalise. \\
+On note \(p = P(X = 1)\) et \(q = P(X = 0)\). \\
+On dit alors que \(X\) suit une loi de Bernoulli de paramètre \(p\), et on écrit : \(X \sim \mathcal{B}(p)\).
 
 \textbf{Loi de probabilité de \( X \):}
 
@@ -706,9 +714,11 @@ V(X) = p - p^2 = p q
 
 Dans toute épreuve aléatoire, il est possible de définir une variable aléatoire qui suit une loi de Bernoulli. Il suffit de prendre un événement et son événement contraire.
 
-\subsection*{\underline{\textbf{\textcolor{red}{b.Schéma de Bernoulli}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{b. Schéma de Bernoulli}}}}
 
-Soit une épreuve aléatoire qui présente 2 issues possibles \( S \) et \( \overline{S} \), \( n \in \mathbb{N} \). Si la répétition successive et indépendante \( n \) fois de la même épreuve aléatoire est appelée schéma de Bernoulli.
+Soit une épreuve aléatoire présentant deux issues possibles : succès \( S \) et échec \( \overline{S} \).\\
+La répétition \( n \) fois, de manière indépendante, de cette même épreuve aléatoire est appelée un \textbf{schéma de Bernoulli} d’ordre \( n \), avec \( n \in \mathbb{N}^* \).
+
 
 \begin{tikzpicture}[level distance=5cm,
   level 1/.style={sibling distance=7cm}, % Ecarte les branches des 1ere ramifications
@@ -762,6 +772,22 @@ La variable aléatoire \( X \) qui prend le nombre de fois où l'événement suc
 \(X(\Omega)=\{0,1,2,...,n\} \forall k \in X(\Omega)\)
 
 \( P(X = k) = C_n^k p^k q^{n-k} \)
+
+++++++++++++++++++++++++++++
+
+La variable aléatoire \( X \), qui représente le nombre de fois où l'événement succès se réalise au cours des \( n \) répétitions, suit une loi binomiale de paramètres \( n \) et \( p \).\\
+On note : \( X \sim \mathcal{B}(n, p) \).\\
+
+L'ensemble des valeurs possibles de \( X \) est : \( X(\Omega) = \{0, 1, 2, \ldots, n\} \).\\
+Pour tout entier \( k \in X(\Omega) \), la probabilité que \( X = k \) est donnée par :
+
+\[
+P(X = k) = \binom{n}{k} p^k q^{n-k}
+\quad \text{où } q = 1 - p.
+\]
+
+
+++++++++++++++++++++++++++++
 
 \[
 \begin{array}{|c|c|c|c|c|c|}

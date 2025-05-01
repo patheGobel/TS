@@ -35,22 +35,21 @@
 \section*{\underline{\textbf{\textcolor{red}{I. Intégrale d'une fonction continue: }}}}
 \subsection*{\underline{\textbf{\textcolor{red}{1.Introduction :}}}}
 
-Soit \( f \) une fonction continue sur un intervalle \( I \), et \( a \in I \), \( b \in I \), \( F \) et \( G \) 2 primitives de \( f \) sur \( I \)
-
-Pour tout \( x \in I \) ou \( G(x) = F(x) + c \) \( (c\in \mathbb{R}) \)
+Soit \( f \) une fonction continue sur un intervalle \( I \),\( F \) et \( G \) 2 primitives de \( f \) sur \( I \), \( a \) et \( b  \) deux éléments de I. On sait qu'il existe un nombre réel $c$ tel que :$\forall x\in I$, 
+ \( G(x) = F(x) + c \)
 
 \underline{\( 
 \begin{cases}
-a \in I,\quad  G(a) = F(a) + c\\
-b \in I,\quad G(b) = F(b) + c
+G(a) = F(a) + c\\
+G(b) = F(b) + c
 \end{cases}
 \)}
 
 \(
-\quad\quad=G(b) - G(a) = F(b) - F(a)
+\quad G(b) - G(a) = F(b) - F(a)
 \)
 
-Le nombre réel \( F(b) - F(a) \) est indépendant de la primitive \( F \) choisie sur \( I \).
+Le nombre réel \( F(b) - F(a) \) est donc indépendant de la primitive \( f \) choisie
 
 \subsection*{\underline{\textbf{\textcolor{red}{2.Définition :}}}}
 
@@ -130,72 +129,59 @@ En effet:
 
 \subsection*{\underline{\textbf{\textcolor{red}{4. Interprétation graphique de l'intégrale :}}}}
 
-Soit \( f \) une fonction continue et \textcolor{red}{positive} sur un intervalle \( I \), \( (Cf) \) sa courbe représentative, \( a \) et \( b \in I \) avec (\( a < b \)).
-
-
-\[
-\int_a^b f(x) \, dx .u.A  : \text{ aire du domaine (noté } A(D) \text{)}
-\]
-
-dellimité par la courbe \( (Cf) \), l'axe des abscisse (OI) et les droites d'équation \( x = a \), \( x = b \)
-
-\[
-A(D) = \{M\begin{pmatrix} x,y \end{pmatrix} / \quad a \leq x \leq b \quad \text{et} \quad 0 \leq y \leq f(x)\}
-\]
-
-++++++++++++++++++++
-
-\subsection*{\underline{\textbf{\textcolor{red}{4. Interprétation graphique de l'intégrale :}}}}
-
 Soit \( f \) une fonction continue et \textcolor{red}{positive} sur un intervalle \( I \), \( (Cf) \) sa courbe représentative, \( a \) et \( b \in I \) avec \( a < b \).
 
-\[
-\int_a^b f(x) \, dx \text{ est l'aire (en unité d'aire) du domaine D}
+\(
+\int_a^b f(x) \, dx \text{ est l'aire (en unité d'aire) du domaine D délimité par la courbe \( (Cf) \),}\\ \text{l'axe des abscisses \( (OI) \) et les droites d'équation \( x = a \), \( x = b \).}
+\)
+
+\(
+\text{ Ce domaine est aussi l'ensemble des points $M\begin{pmatrix} x \\ y \end{pmatrix}$  tel que}:
+\begin{cases}
+a \leq x \leq b \\
+0 \leq y \leq f(x)
+\end{cases}
+\)
+
+\[\text{Ainsi,en notant A(D), aire du domaine et u.a unité d'aire, on a: }
+A(D)=\int_a^b f(x) \, dx .u.a 
 \]
-
-délimité par la courbe \( (Cf) \), l'axe des abscisses \( (OI) \) et les droites d'équation \( x = a \), \( x = b \).
-
-\[
-A(D) = \left\{M\begin{pmatrix} x \\ y \end{pmatrix} \mid a \leq x \leq b \quad \text{et} \quad 0 \leq y \leq f(x) \right\}
-\]
-
-
-++++++++++++++++++
 
 \begin{center}
    \includegraphics[scale=0.5]{Screenshot from 2025-04-26 23-30-27.png}
 \end{center}
 
-\subsection*{\underline{\textbf{\textcolor{red}{Exerice d'application}}}}
-
-\[
-\textcolor{red}{\text{Valeur moyenne de l'intégrale:}} \quad u = \frac{1}{b-a} \int_a^b f(x) \, dx
-\]
-
 \section*{\textbf{\textcolor{red}{Remarque}}}
+Si \( f \) une fonction continue et \textcolor{red}{négative} sur \([a,b]\). La symétrie orthogonale d'axe \( (OI) \) transforme la courbe \(\mathcal{C}_f\) en celle de \( \mathcal{C}'_{-f} \) de f.
 
-\begin{itemize}
-\item Si \( f \) \textcolor{blue}{une fonction continue et négative sur} \([a,b]\). \textcolor{blue}{La symétrie orthogonale d'axe} \( (ox) \) \textcolor{blue}{transforme la courbe} \(\mathcal{C}_f\) \textcolor{blue}{en celle de} \( \mathcal{C}_{-f} \) de f.
-\[
-A(D)=\int_a^b -f(x) \, dx .u.A 
-\]
+Le domaine \( D \) est tranformé en un domaine \( D' \) de meme aire
+
+\( \text{on a :} A(D)=A(D')=\int_a^b -f(x) \, dx .u.a  \)
 \begin{center}
    \includegraphics[scale=0.5]{Screenshot from 2025-04-27 00-00-46.png}
 \end{center}
-\item Si  \( f \) \textcolor{red}{continue et négative sur } \([a,b]\) et \( f \) \textcolor{red}{continue et positive} sur \([b,c]\)
 
-\[
-\int_a^c f(x) \, dx = \int_a^b f(x) \, dx + \int_b^c f(x) \, dx
-\]
+\section*{\textbf{\textcolor{red}{Exemple 3}}}
 
-\[
-A(D) = \int_a^b -f(x) \, dx.u.A + \int_b^c f(x) \, dx.u.A
-\]
+L'unité graphique est $2cm$ sur chaque axes.
+
+Calculer l'aire, en $cm^{2}$ de l'ensemble D des points M(x,y) tels que :
+
+ \(-\frac{\pi}{2}\leq x \leq \frac{\pi}{2} \) et \( 0\leq y \leq \cos x \)
+
+\section*{\textbf{\textcolor{red}{Solution 3}}}
+
+La fonctionFonction cosinus est continue et positif sur \( \left[ -\frac{\pi}{2}, \frac{\pi}{2}\right]  \)
+
+On a : $\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}dx.u.a$ avec $u.a = 2cm \times 2cm=4cm^{2}$
+
+\section*{\textbf{\textcolor{red}{Exemple 4}}}
+
+La courbe ci-dessous est la representation graphique de la fonction $f(x)=x^{2}-1$ .Calculer l'aire du domaine colorié.
 
 \begin{center}
    \includegraphics[scale=0.5]{Screenshot from 2025-04-27 08-29-47.png}
-\end{center} 
-\end{itemize}  
+\end{center}  
 
 \section*{\textbf{\textcolor{red}{Exemple 3}}}
 
@@ -219,18 +205,25 @@ A(D) &= \left( \int_0^1 -f(x) \, dx + \int_1^2 f(x) \, dx \right) u.A\\
 \)  
 
 \[\boxed{A(D)=2cm^{2}}\]   
-  
-\subsection*{\underline{\textbf{\textcolor{red}{5.Propriétés:}}}}
 
-\subsubsection*{\underline{\textbf{\textcolor{red}{a.Relation de châles:}}}}
+\section*{\textbf{\textcolor{red}{5.Propriété algébrique de l'intégrale}}}
+\subsection*{\textbf{\textcolor{red}{a.Relation de Chasles}}}
 
-Soit \( f \) une fonction continue sur un intervalle \( I \) \(a,b,c \in I \).
+Si  \( f \) continue sur un intervalle  \( I \), $a$, $b$ et $c$ trois élément de $K$.
 
-on a:
+On a:
 
 \[
-\int_{a}^{b} f(x) \, dx = \int_{a}^{c} f(x) \, dx + \int_{c}^{b} f(x) \, dx
+\int_a^c f(x) \, dx = \int_a^b f(x) \, dx + \int_b^c f(x) \, dx
 \]
+
+%\[
+%A(D) = \int_a^b -f(x) \, dx.u.A + \int_b^c f(x) \, dx.u.A
+%\]
+
+\textbf{Preuve}
+
+\textbf{Interprétation graphique de la relation de Chasles}Voire Ciam pas 298 section 1.2  
 
 \subsubsection*{\underline{\textbf{\textcolor{red}{Exemples}}}}
 
@@ -276,8 +269,14 @@ i)Soit $f$ une fonction continue sur $I$, $a$ et $b\in I$  $(a<b)$
 \end{itemize}
 ii)Soit $f$ et $g$ deux fonctions continues sur $I$, $a$ et $b\in I$  $(a<b)$
 \begin{itemize}
-\item $ f \leq 0 $ $x\in[a,b]$ alors $\int_a^b f(x)dx \geq 0$
-\item Si $f \geq	 g$ $\forall x \in[a,b]$ alors $ \int_a^b f(x)dx \geq \int_a^b g(x)dx$
+\item Si $f \leq g$, $\forall x \in[a,b]$ alors $ \int_a^b f(x)dx \leq \int_a^b g(x)dx$
 \end{itemize}
 \section*{\underline{\textbf{\textcolor{red}{Exemples}}}}
+
+\subsection*{\underline{\textbf{\textcolor{red}{Remarque :}}}}
+
+Soit \( f \) une fonction continue sur \( I \), \( a \) et \( b \in I \), tel que \( a \leq b \).
+
+On a: \( -|f| \leq |f| \leq |f| \text{ sur } [a ; b] ; \text{on en déduit que} : \left| \int_a^b f(x) \, dx \right| \leq \int_a^b |f(x)| \, dx\)
+
 \end{document}

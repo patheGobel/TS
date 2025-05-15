@@ -279,4 +279,131 @@ Soit \( f \) une fonction continue sur \( I \), \( a \) et \( b \in I \), tel qu
 
 On a: \( -|f| \leq |f| \leq |f| \text{ sur } [a ; b] ; \text{on en déduit que} : \left| \int_a^b f(x) \, dx \right| \leq \int_a^b |f(x)| \, dx\)
 
+\subsection*{\underline{\textbf{\textcolor{red}{7. Inégalité de la moyenne :}}}}
+
+\textbf{i)} Soit \( f \) une fonction continue sur \( I \) (intervalle) \( a \) et \( b \in I \)
+
+Si \( m \) et \( M \) sont deux nombres réels tels que \( x \in [a, b] \) \( m \leq f(x) \leq M \),  
+
+\[
+\textbf{alors }m (b - a) \leq \int_a^b f(x) \, dx \leq M(b - a)
+\]  
+\textbf{ii)} Soit \( f \) une fonction continue sur un intervalle \( I \) tel que \( a \leq b \in I \).
+
+Si  \( M \) deux réels tels que \(|f(x)| \leq M, \quad \forall x \in [a,b]\)
+
+On en déduit :
+
+\[
+\left| \int_a^b f(x) \, dx \right| \leq M (b-a)
+\]
+
+\subsection*{\underline{\textbf{\textcolor{red}{8. Valeur moyenne d'une fonction :}}}}
+
+Soit \( f \) une fonction continue sur un intervalle \( [a, b] \), on appelle valeur moyenne de \( f \) sur \( [a, b] \) le nombre réel \( u \) défini par :
+
+\[
+u = \frac{1}{b - a} \int_a^b f(x) \, dx
+\]
+\subsection*{\underline{\textbf{\textcolor{red}{III. Techniques de calcul intégral}}}}
+
+\subsubsection*{\underline{\textcolor{red}{1. Primitives usuelles :}}}
+Le tableau suivant reprend quelques résultats concernant les primitives, vus dans les chapitres précédents. Dans ce tableau, \( u \) désigne une fonction dérivable sur un intervalle \( K \), \( v \) une fonction dérivable sur un intervalle contenant \( u(K) \) et \( \alpha \) un nombre réel différent de \( -1 \).
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Fonction} & \( \frac{u'}{u} \) & \( u' e^u \) & \( u' u^\alpha \) & \( u' \cdot v' \circ u \) \\
+\hline
+\textbf{Primitive} & \( \ln |u| \) & \( e^u \) & \( \frac{1}{\alpha + 1} u^{\alpha + 1} \) & \( v \circ u \) \\
+\hline
+\textbf{Commentaires} & \( u \neq 0 \) sur \( K \) & - & \( u > 0 \) sur \( K \) & - \\
+\hline
+\end{tabular}
+
+\section*{Examples}
+
+\begin{itemize}
+    \item \( \int_0^1 \left( t^3 + 2t + 1 \right) \, dt = \left[ \frac{t^4}{4} + t^2 + t \right]_0^1 = \frac{9}{4} \)
+    
+    \item \( \int_0^{\frac{\pi}{4}} \sin \left( 2t + \frac{\pi}{2} \right) \, dt = \left[ -\frac{1}{2} \cos \left( 2t + \frac{\pi}{2} \right) \right]_0^{\frac{\pi}{4}} = \frac{1}{2} \)
+    
+    \item \( \int_0^{\frac{1}{2}} \frac{2t}{t^2 - 1} \, dt = \left[ \ln |t^2 - 1| \right]_0^{\frac{1}{2}} = \ln \frac{3}{4} \)
+    
+    \item \( \int_0^{\frac{\pi}{2}} \cos t \, e^{\sin t} \, dt = \left[ e^{\sin t} \right]_0^{\frac{\pi}{2}} = e - 1 \)
+\end{itemize}
+
+\subsubsection*{\underline{\textcolor{red}{2. Intégration par parties :}}}
+Soit \( u \) et \( v \) deux fonctions dérivables sur un intervalle \( K \) telles que les dérivées \( u' \) et \( v' \) sont continues sur \( K \), \( a \) et \( b \) deux éléments de \( K \).
+
+On a :
+
+\[
+\int_a^b u(t) v'(t) \, dt = \left[ u(t) v(t) \right]_a^b - \int_a^b u'(t) v(t) \, dt
+\]
+
+\section*{Examples}
+
+\begin{itemize}
+    \item Calculer : \( \int_1^2 \ln t \, dt \).
+    
+    Posons : \( u(t) = \ln t \) et \( v'(t) = 1 \).
+    
+    On a : \( u'(t) = \frac{1}{t} \) ; choisissons : \( v(t) = t \).
+    
+    \( u' \) et \( v' \) sont continues sur \( [1 ; 2] \).
+    
+    Donc :
+    \[
+    \int_1^2 \ln t \, dt = \left[ t \ln t \right]_1^2 - \int_1^2 dt
+    \]
+    \[
+    = \left[ t \ln t \right]_1^2 - \left[ t \right]_1^2
+    \]
+    \[
+    = \left[ 2 \ln 2 - 2 \right] - \left[ 1 \ln 1 - 1 \right] = 2 \ln 2 - 1
+    \]
+    
+    \item Calculer : \( \int_0^{\frac{\pi}{2}} t \cos t \, dt \).
+    
+    Posons : \( u(t) = t \) et \( v'(t) = \cos t \).
+    
+    On a : \( u'(t) = 1 \) ; choisissons : \( v(t) = \sin t \).
+    
+    \( u' \) et \( v' \) sont continues sur \( [0 ; \frac{\pi}{2}] \).
+    
+    Donc :
+    \[
+    \int_0^{\frac{\pi}{2}} t \cos t \, dt = \left[ t \sin t \right]_0^{\frac{\pi}{2}} - \int_0^{\frac{\pi}{2}} \sin t \, dt
+    \]
+    \[
+    = \left[ t \sin t \right]_0^{\frac{\pi}{2}} - \left[ - \cos t \right]_0^{\frac{\pi}{2}}
+    \]
+    \[
+    = \left[ \frac{\pi}{2} \sin \frac{\pi}{2} - 0 \right] - \left[ - \cos \frac{\pi}{2} + \cos 0 \right]
+    \]
+    \[
+    = \left[ \frac{\pi}{2} \times 1 \right] - \left[ - 0 + 1 \right] = \frac{\pi}{2} - 1
+    \]
+\end{itemize}
+
+\subsubsection*{\underline{\textcolor{red}{3. Intégration de fonctions paires, impaires, périodiques :}}}
+\subsubsection*{\underline{\textcolor{red}{Propriété 1 :}}}
+Soit \(f\) une fonction continue sur un intervalle \(I\) symétrique par rapport à \(0\).
+
+\( \forall \alpha \in I \), on a:
+
+\begin{itemize}
+    \item Si \(f\) est paire, \( \int_{-\alpha}^{\alpha}f(x)dx = 2 \int_{0}^{\alpha}f(x)dx \)
+    \item Si \(f\) est impaire, \( \int_{-\alpha}^{\alpha}f(x)dx =  0 \)
+\end{itemize}
+\subsubsection*{\underline{\textcolor{red}{Propriété 2 :}}}
+Soit \(f\) une fonction continue sur \( \mathbb{R} \) et périodique, de période \(p\).
+
+Pour tous nombres réel \(a\) et \(b\), on a:
+
+\begin{itemize}
+    \item Si \(f\) est paire, \( \int_{a+p}^{b+p}f(x)dx = \int_{a}^{b}f(x)dx \)
+    \item Si \(f\) est impaire, \( \int_{a}^{a+p}f(x)dx =  \int_{0}^{p}f(x)dx = 0 \)
+\end{itemize}
+
 \end{document}

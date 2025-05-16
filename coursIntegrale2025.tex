@@ -305,7 +305,7 @@ Soit \( f \) une fonction continue sur un intervalle \( [a, b] \), on appelle va
 \[
 u = \frac{1}{b - a} \int_a^b f(x) \, dx
 \]
-\subsection*{\underline{\textbf{\textcolor{red}{III. Techniques de calcul intégral}}}}
+\section*{\underline{\textbf{\textcolor{red}{II. Techniques de calcul intégral}}}}
 
 \subsubsection*{\underline{\textcolor{red}{1. Primitives usuelles :}}}
 Le tableau suivant reprend quelques résultats concernant les primitives, vus dans les chapitres précédents. Dans ce tableau, \( u \) désigne une fonction dérivable sur un intervalle \( K \), \( v \) une fonction dérivable sur un intervalle contenant \( u(K) \) et \( \alpha \) un nombre réel différent de \( -1 \).
@@ -320,7 +320,7 @@ Le tableau suivant reprend quelques résultats concernant les primitives, vus da
 \hline
 \end{tabular}
 
-\section*{Examples}
+\subsection*{Examples}
 
 \begin{itemize}
     \item \( \int_0^1 \left( t^3 + 2t + 1 \right) \, dt = \left[ \frac{t^4}{4} + t^2 + t \right]_0^1 = \frac{9}{4} \)
@@ -341,7 +341,7 @@ On a :
 \int_a^b u(t) v'(t) \, dt = \left[ u(t) v(t) \right]_a^b - \int_a^b u'(t) v(t) \, dt
 \]
 
-\section*{Examples}
+\subsection*{Examples}
 
 \begin{itemize}
     \item Calculer : \( \int_1^2 \ln t \, dt \).
@@ -396,6 +396,8 @@ Soit \(f\) une fonction continue sur un intervalle \(I\) symétrique par rapport
     \item Si \(f\) est paire, \( \int_{-\alpha}^{\alpha}f(x)dx = 2 \int_{0}^{\alpha}f(x)dx \)
     \item Si \(f\) est impaire, \( \int_{-\alpha}^{\alpha}f(x)dx =  0 \)
 \end{itemize}
+\subsection*{Examples}
+CIAM
 \subsubsection*{\underline{\textcolor{red}{Propriété 2 :}}}
 Soit \(f\) une fonction continue sur \( \mathbb{R} \) et périodique, de période \(p\).
 
@@ -405,5 +407,14 @@ Pour tous nombres réel \(a\) et \(b\), on a:
     \item Si \(f\) est paire, \( \int_{a+p}^{b+p}f(x)dx = \int_{a}^{b}f(x)dx \)
     \item Si \(f\) est impaire, \( \int_{a}^{a+p}f(x)dx =  \int_{0}^{p}f(x)dx = 0 \)
 \end{itemize}
+\subsection*{Examples}
+CIAM
+\section*{\underline{\textbf{\textcolor{red}{III. Application du calcul intégral}}}}
+\subsubsection*{\underline{\textcolor{red}{Propriété :}}}
+Soit \(f\) et \(g\) deux fonctions continues sur un intervalle \(I\), \( (\mathcal{C}_f) \) et \( (\mathcal{C}_g) \) leurs réprésentations graphiques respectives \(a\) et \(b\) deux éléments de \(I\) (\(a<b\))
+Lorsque \(f \leq g\) sur \( [a;b] \), l'aire du domaine \(D\) délimité par \( (\mathcal{C}_f) \), \( (\mathcal{C}_g) \) et les droites d'équations \( x=a \) et \( x=b \) est: \(\mathcal{A}(D)=\int_{a}^{b} [g(x)-g(x)]dx \)
 
+\textbf{Voir dessin}
+\subsection*{Examples}
+CIAM
 \end{document}

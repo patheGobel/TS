@@ -1,0 +1,327 @@
+\documentclass{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+\usepackage{color, soul}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+
+\author{Lycée de Dindéfelo\\Mr BA}
+\title{\textbf{Equations Differnetielles Lineaires}}
+\date{\today}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, fit}
+
+% Commande pour la couleur d'accentuation
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\begin{document}
+\maketitle
+\newpage
+\section*{\underline{\textbf{\textcolor{red}{I. Définitions}}}}
+Soient $a_{0},a_{1},...,a_{n}$ des constantes réelles, $y=y(x)$ une fonction de 
+$x$. On appelle équation différentielle linéaire d'ordre $n$ à coefficients constants, une équation liant une fonction $y$ et ses dérivées successives $y',y'',\cdots , y^{n}$. On a $a_{n}y^{n}(x)+a_{n-1}y^{n-1}(x)+\cdots +a_{2}y''(x)+a_{1}y'(x)+a_{0}y(x)=g(x)$ où $g(x)$ est une fonction et $a_{n}\neq 0$
+\subsection*{\underline{\textbf{\textcolor{red}{Exemple}}}}
+$2y''-3y'+4y=\sin 2x$ est une équation différentielle linéaire du $2^{nd}$ ordre, à coefficients constants.
+\begin{itemize}
+    \item pour $a_{n}\neq 0$, \textbf{(E)}$:a_{n}y^{n}(x)+a_{n-1}y^{n-1}(x)+\cdots+a_{2}y''(x)+a_{1}y'(x)+a_{0}y(x)=g(x)$ est une équation différentielle Linéaire d'ordre $n$, à coefficients constants, non homogène ou avec second membre. 
+    \item pour $a_{n}\neq 0$, \textbf{(E')}$:a_{n}y^{n}+a_{n-1}y^{n-1}+\cdots+a_{2}y''+a_{1}y'+a_{0}y=0$ est une équation différentielle linéaire d'ordre $n$, à coefficients constants, non homogène ou sans second membre ou homogène. 	   
+    \item \textbf{(E')} est associée à \textbf{(E)}
+    \item  Les solutions d'une équation différentielle sont des fonctions.
+    \item $f$ est une solution d'une équation différentielle d'ordre $n$, à coefficients constants sur \textbf{I}, si $f$ est $n$ fois dérivables sur \textbf{I} et $f$ vérifie l'équation.
+    \item L'ensemble des solutions d'une équation différentielle est appelé solution générale de l'équation différentielle.
+    \item Toute fonction vérifiant l'équation différentielle est appelée solution particulière.
+    \item Une solution qui vérifie des conditions initiales est appelée solution singulière.
+\end{itemize}
+\section*{\underline{\textbf{\textcolor{red}{II. Théorèmes}}}}
+Soit l'équation différentielle linéaire d'ordre $n$ à coefficients constants avec $2^{nd}$ membre.
+ 
+\textbf{(E)}$:a_{n}y^{(n)}(x)+a_{n-1}y^{(n-1)}(x)+\cdot+a_{2}y''(x)+a_{1}y'(x)+a_{0}y(x)=g(x)$ et l'équation différentielle linéaire d'ordre $n$ à coefficients constants sans $2^{nd}$ membre.
+
+\textbf{(E')}$:a_{n}y^{(n)}+a_{n-1}y^{(n-1)}+\cdot+a_{2}y''+a_{1}y'+a_{0}y=0$.
+
+Si $f_{1}$ est une solution particulière de \textbf{(E)} et $f_{2}$ une solution générale de \textbf{(E')} alors, $f(x)=f_{1}(x)+f_{2}(x)$ est une solution générale de \textbf{(E)}.
+
+\subsection*{\underline{\textbf{\textcolor{green}{Preuve}}}}
+Soit $f_1$ une solution particulière de l'équation \textbf{(E)} avec second membre, et $f_2$ une solution générale de l'équation homogène associée \textbf{(E')}. Nous devons montrer que $f(x) = f_1(x) + f_2(x)$ est une solution générale de l'équation \textbf{(E)}.
+
+Puisque $f_1$ est une solution particulière de \textbf{(E)}, cela signifie que lorsque nous remplaçons $y$ par $f_1$ dans \textbf{(E)}, nous obtenons une équation vraie. 
+
+C'est-à-dire: \textcolor{green}{\[a_{n}f_1^{(n)}(x) + a_{n-1}f_1^{(n-1)}(x) + \ldots + a_{2}f_{1}''(x) + a_{1}f_{1}'(x) + a_{0}f_{1}(x)=0\]}
+
+De même, puisque $f_2$ est une solution générale de \textbf{(E')}, lorsque nous remplaçons $y$ par $f_2$ dans \textbf{(E')}, nous obtenons une équation vraie.
+
+C'est-à-dire: \textcolor{blue}{\[a_{n}f_{2}^{(n)}(x)+a_{n-1}f_{2}^{(n-1)}(x)+\cdots+a_{2}f_{2}^{''}(x)+a_{1}f_{2}^{'}(x)+a_{0}f_{2}(x)=g(x)\]}
+
+En ajoutant les deux équations, nous obtenons l'équation :
+
+$\textcolor{green}{a_{n}f_1^{(n)}(x) + a_{n-1}f_1^{(n-1)}(x) + \ldots + a_{2}f_{1}''(x) + a_{1}f_{1}'(x) + a_{0}f_{1}(x)}$ + $\textcolor{blue}{a_{n}f_2^{(n)}(x) + a_{n-1}f_2^{(n-1)}(x) +}$ 
+\[\textcolor{blue}{\ldots + a_{2}f_{2}''(x) + a_{1}f_{2}'(x) + a_{0}f_{2}(x)}\]
+\[=\textcolor{green}{0}+\textcolor{blue}{g(x)}\]
+
+\[a_{n}(f_{1}+f{2})^{(n)}(x)+a_{n-1}(f_{1}+f{2})^{(n-1)}(x)+\cdots+a_{2}(f_{1}+f{2})^{''}(x)+a_{1}(f_{1}+f{2})^{(')}(x)+a_{0}(f_{1}+f{2})(x)=g(x)\]
+Puisque $f_1$ est une solution de l'équation avec second membre \textbf{(E)} et $f_2$ est une solution de l'équation homogène \textbf{(E')}, la partie gauche de l'équation ci-dessus est égale à $g(x) + 0$, ce qui est simplement $g(x)$. Ainsi,\\ $f(x) = f_1(x) + f_2(x)$ satisfait l'équation différentielle \textbf{(E)}, ce qui prouve que c'est une solution générale de \textbf{(E)}.
+
+\section*{\underline{\textbf{\textcolor{red}{
+\begin{minipage}[t]{\textwidth}III. Équations différentielles linéaires d'ordre 1, à coefficients constants
+\end{minipage}}}}}
+Une équation différentielle linéaire d'ordre 1, à coefficients constants est une équation de la forme
+ \[\textbf{(E)}: ay'+by=g(x)\textbf{(avec second membre)} \]
+ \[\textbf{(E')}: ay'+by=0\textbf{(sans second membre ou équation homogène)}\]
+\subsection*{\underline{\textbf{\textcolor{red}{1. Recherche de la solution générale de l'équation homogène}}}}
+Soit \textbf{(E')}$:ay'+by=0$ alors,
+
+\[ay'=-by \Longrightarrow \frac{y'}{y}=-\frac{b}{a}\]
+\[\Longrightarrow \ln|y|=-\frac{b}{a}x+c\]
+\[\Longrightarrow |y|=e^{-\frac{b}{a}x+c}=e^{c}.e^{-\frac{b}{a}x}\]
+\[\Longrightarrow y=\pm e^{c}.e^{-\frac{b}{a}x}\]
+
+Soit \textbf{(E')}:$ay'+by=0$ alors $ay'=-by$ 
+
+Donc, $f_{2}$ est de la forme $f_{2}(x)=y_{2}(x)=ke^{-\frac{b}{a}x}$ où $K$ est une constante.
+\subsection*{\textbf{\textcolor{red}{
+\begin{minipage}[t]{\textwidth}
+\underline{2. Recherche d'une solution particulière de l'équation}\\
+\underline{différentielle linéaire d'ordre 1 avec 2\textsuperscript{nd} membre}
+\end{minipage}}}}
+\begin{itemize}
+    \item Une fonction $f_{1}$ est solution de \textbf{(E)} si elle est dérivable et si elle vérifie \textbf{(E)} \[af'_{1}(x)+bf_{1}(x)=g(x)\]
+    \item Si $g(x)$ est un polynôme de degré $n$, alors $f_{1}$ est aussi un polynôme de degré $n$.
+    \item Si \( g(x) \) est de la forme \( a\cos \beta x , a\sin \beta x \) , \( a\cos \beta x + b\sin \beta x \), alors \( f_1 \) sera de la forme \( A\cos \beta x + B\sin \beta x \).
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{3. Solution générale de \textbf{(E)}}}}}
+Une solution générale $y(x)$ de \textbf{(E)} est donnée par \[y(x)=f_{2}(x)+f_{1}(x)\] où $f_{2}$ est une solution générale de \textbf{(E')} et $f_{1}(x)$ une solution particulière de \textbf{(E).}
+\subsection*{\underline{\textbf{\textcolor{red}{Exercice d'application}}}}
+Soit $\phi$ la fonction dérivable sur $\mathbb{R}$ solution de l'équation différentielle\\
+\textbf{(E)}:$2y'-3y=x^{2}+5$ dont la dérivée s'annule en 0.
+\begin{enumerate}
+    \item Montrer qu'il existe un polynôme de degré 2, notée $f_{1}$, solution de \textbf{(E).}
+    \item Résoudre l'équation différentielle \textbf{(E):}$2y'=3y$ et en déduire l'ensemble des solutions de \textbf{(E).}
+    \item Déterminer $\phi$ puis construire $C_{\phi}$ sa courbe représentative. 
+\end{enumerate}
+\subsection*{\underline{\textbf{\textcolor{green}{Résolution }}}}
+\begin{enumerate}
+    \item 
+    Cherchons une solution particulière $y_p$ de l'équation \textbf{(E)} sous la forme d'un polynôme de degré 2 : $y_p = ax^2 + bx + c$.\\
+    Calculons $y_p'$ :
+    \[
+    y_p' = 2ax + b
+    \]
+    Substituons $y_p$ et $y_p'$ dans l'équation \textbf{(E)} :
+    \[
+    2(2ax + b) - 3(ax^2 + bx + c) = x^2 + 5
+    \]
+    \[
+    4ax + 2b - 3ax^2 - 3bx - 3c = x^2 + 5
+    \]
+    Regroupons les termes semblables :
+    \[
+    -3ax^2 + (4a - 3b)x + (2b - 3c) = x^2 + 5
+    \]
+    Égalons les coefficients :
+    \[
+    \begin{cases}
+    -3a = 1 \\
+    4a - 3b = 0 \\
+    2b - 3c = 5
+    \end{cases}
+    \]
+    Résolvons ce système :
+    \[
+    a = -\frac{1}{3}
+    \]
+    \[
+    4 \left(-\frac{1}{3}\right) - 3b = 0 \implies -\frac{4}{3} - 3b = 0 \implies b = -\frac{4}{9}
+    \]
+    \[
+    2 \left(-\frac{4}{9}\right) - 3c = 5 \implies -\frac{8}{9} - 3c = 5 \implies -3c = 5 + \frac{8}{9} \implies -3c = \frac{45 + 8}{9} \implies -3c = \frac{53}{9} \implies c = -\frac{53}{27}
+    \]
+    La solution particulière est donc :
+    \[
+    y_p = -\frac{1}{3}x^2 - \frac{4}{9}x - \frac{53}{27}
+    \]
+
+    \item
+    Résolvons maintenant l'équation homogène associée \textbf{(E')}: $2y' - 3y = 0$.
+    \[
+    2y' = 3y \implies \frac{y'}{y} = \frac{3}{2} \implies \int \frac{dy}{y} = \int \frac{3}{2} dx \implies \ln|y| = \frac{3}{2}x + C
+    \]
+    \[
+    y = Ce^{\frac{3}{2}x}
+    \]
+    L'ensemble des solutions de \textbf{(E)} est donc :
+    \[
+    y = Ce^{\frac{3}{2}x} + y_p
+    \]
+
+    \item
+    Puisque la dérivée de $\phi$ s'annule en 0, nous devons avoir $\phi'(0) = 0$.
+    \[
+    \phi(x) = Ce^{\frac{3}{2}x} - \frac{1}{3}x^2 - \frac{4}{9}x - \frac{53}{27}
+    \]
+    Calculons $\phi'(x)$ :
+    \[
+    \phi'(x) = \frac{3}{2}Ce^{\frac{3}{2}x} - \frac{2}{3}x - \frac{4}{9}
+    \]
+    \[
+    \phi'(0) = \frac{3}{2}C - \frac{4}{9} = 0 \implies \frac{3}{2}C = \frac{4}{9} \implies C = \frac{8}{27}
+    \]
+    La solution est donc :
+    \[
+    \phi(x) = \frac{8}{27}e^{\frac{3}{2}x} - \frac{1}{3}x^2 - \frac{4}{9}x - \frac{53}{27}
+    \]
+    
+    \item
+    Pour construire la courbe représentative $C_{\phi}$, nous traçons la fonction $\phi$ sur un graphique.
+
+    \begin{figure}[h!]
+        \centering
+        \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = middle,
+            xlabel = $x$,
+            ylabel = {$\phi(x)$},
+            domain=-2:2,
+            samples=100,
+            width=12cm,
+            height=8cm,
+            grid=both,
+        ]
+        \addplot [
+            color=blue,
+            thick
+        ]
+        { (8/27) * exp(3*x/2) - (1/3) * x^2 - (4/9) * x - 53/27 };
+        \end{axis}
+        \end{tikzpicture}
+        \caption{Courbe représentative de $\phi(x)$.}
+    \end{figure}
+    
+\end{enumerate}
+\section*{\underline{\textbf{\textcolor{red}{IV. Équations différentielles du 2nd ordre, à coefficients constants}}}}
+C'est une équation de la forme
+
+\textbf{(E)}: $ay''+by'+cy=g(x)$ ; $\neq 0$ (équation avec $2^{nd}$ membre)
+
+\textbf{(E')}: $ay''+by'+cy=0$ ; $\neq 0$ (équation homogène)
+
+$f$ est une solution de \textbf{(E):}(respectivement de \textbf{(E')}) sur \textbf{I} si $f$ est deux fois dérivables sur \textbf{I}  et $f$ vérifie \textbf{(E)}(respectivement $f$ vérifie \textbf{(E')})
+\subsection*{\underline{\textbf{\textcolor{red}{1. Recherche de la solution générale de (E')}}}}
+Soit $\textbf{(E':)}ay''+by'+cy=0$ avec $a\neq 0$, nous appelons équation\\\ caractéristique associée à \textbf{(E')} l'équation $ar^{2}+br+c=0$
+\subsection*{\underline{\textbf{\textcolor{red}{Théorème}}}}
+Soit \textbf{(E')}:$ay''+by'+cy=0$ et $ar^{2}+br+c=0$ équation caractéristique associée de discriminant $\Delta=b^{2}-4ac$, alors:
+\begin{itemize}
+    \item[$\bullet$] Si $\Delta >0$ alors, l'équation $ar^{2}+br+c=0$ admet deux solutions réelles distinctes \[r_{1}=\frac{-b-\sqrt{\Delta}}{2a}, r_{2}=\frac{-b+\sqrt{\Delta}}{2a}\]
+    Dans ce cas, \textbf{(E')}:$ay''+by'+cy=0$ admet comme solution générale $y_{2}$ de la forme\\
+    \[\textcolor{red}{ \boxed{ y_{2}(x)=Ae^{r_{1}x}+Be^{r_{2}x} } }\text{ Avec A et B des Constants déterminées par les conditions initales}\]
+    \item[$\bullet$] Si $\Delta = 0$ alors, l'équation $ar^{2}+br+c=0$ admet une solutions double réelle \[r_{0}=\frac{-b}{2a}\]
+    Et l'équation $(E')$ admet une solution générale de la forme 
+    \[\textcolor{red}{ \boxed{ y_{2}(x)=(Ax+B)e^{r_{0}x} } }\]
+    \item[$\bullet$] Si $\Delta <0$ alors, l'équation $ar^{2}+br+c=0$ admet deux solutions complexes conjuguées \[\alpha + i\beta, \alpha - i\beta\]
+    Ainsi, \textbf{(E')}:$ay''+by'+cy=0$ admet une solution générale de la forme 
+     \[\textcolor{red}{ \boxed{ y_{2}(x)=Ae^{\alpha x}(A\cos \beta x+B\sin \beta x) } }\]
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{Remarques}}}}
+Dans tous les cas, les constantes $A$ et $B$ sont dépendantes des conditions initiales.
+\subsection*{\underline{\textbf{\textcolor{red}{2. Recherche d'une solution particulière}}}}
+\begin{itemize}
+    \item[$\bullet$ ] Si $g$ est un polynôme de degré $n$, alors $f_{1}$ est aussi un polynôme de degré
+    \item $n+1$ si $c=0$.
+    \item $n$ si $c\neq 0$
+    \item[$\bullet$ ] Si $g(x)$ est de la forme \( a\cos \beta x / a\sin \beta x \),\( a\cos \beta x + b\sin \beta x \) alors, $f_{1}(x)$ sera de la forme \( A\cos \beta x + B\sin \beta x \).
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{3. Solution générale de (E)}}}}
+Soit $f_{2}(x)$ solution générale de \textbf{(E')}, si $f_{1}(x)$ donnée, est solution particulière de \textbf{(E)}, alors la solution générale de \textbf{(E)}; $y(x)$,sera de la forme \[y(x)=f_{2}(x)+f_{1}(x) \]
+\subsection*{\underline{\textbf{\textcolor{red}{Exemple}}}}
+Résoudre l'équation différentielle \textbf{(E:)}$y''-4y'+3y=0$ puis, déterminer et représenter graphiquement la solution qui passe par l'origine $O(0,0)$ du repère et dont la dérivée vaut 1 en 0.
+\subsection*{\underline{\textbf{\textcolor{green}{Solution}}}}
+\subsection*{\underline{\textbf{\textcolor{green}{1. Résolution de l'équation différentielle homogène}}}}
+L'équation différentielle donnée est une équation linéaire homogène d'ordre 2 à coefficients constants :
+\[
+y'' - 4y' + 3y = 0
+\]
+Pour résoudre cette équation, nous cherchons les racines de l'équation caractéristique associée :
+\[
+r^2 - 4r + 3 = 0
+\]
+Cette équation se factorise facilement :
+\[
+(r - 3)(r - 1) = 0
+\]
+Les racines sont :
+\[
+r_1 = 3 \quad \text{et} \quad r_2 = 1
+\]
+Ainsi, la solution générale de l'équation différentielle est :
+\[
+y(x) = C_1 e^{3x} + C_2 e^x
+\]
+
+\subsection*{\underline{\textbf{\textcolor{green}{2. Détermination de la solution particulière}}}}
+Nous devons maintenant déterminer les constantes $C_1$ et $C_2$ en utilisant les conditions initiales données :
+\[
+y(0) = 0 \quad \text{et} \quad y'(0) = 1
+\]
+Calculons $y'(x)$ à partir de la solution générale :
+\[
+y'(x) = 3C_1 e^{3x} + C_2 e^x
+\]
+En utilisant les conditions initiales :
+\[
+y(0) = C_1 e^0 + C_2 e^0 = C_1 + C_2 = 0 \quad \Rightarrow \quad C_2 = -C_1
+\]
+\[
+y'(0) = 3C_1 e^0 + C_2 e^0 = 3C_1 + C_2 = 1
+\]
+Substituons $C_2 = -C_1$ dans la deuxième équation :
+\[
+3C_1 - C_1 = 1 \quad \Rightarrow \quad 2C_1 = 1 \quad \Rightarrow \quad C_1 = \frac{1}{2}
+\]
+\[
+C_2 = -\frac{1}{2}
+\]
+La solution particulière est donc :
+\[
+y(x) = \frac{1}{2} e^{3x} - \frac{1}{2} e^x
+\]
+
+\subsection*{\underline{\textbf{\textcolor{green}{3. Représentation graphique}}}}
+
+Pour représenter graphiquement la solution $y(x) = \frac{1}{2} e^{3x} - \frac{1}{2} e^x$, nous traçons la courbe dans un repère.
+
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        axis lines = middle,
+        xlabel = $x$,
+        ylabel = {$y(x)$},
+        domain=-8:1,
+        xmin=-8, xmax=8,
+        ymin=-8, ymax=8,
+        samples=100,
+        width=12cm,
+        height=8cm,
+        grid=both,
+    ]
+    \addplot [
+        color=blue,
+        thick
+    ]
+    { (1/2) * exp(3*x) - (1/2) * exp(x) };
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Courbe représentative de $y(x) = \frac{1}{2} e^{3x} - \frac{1}{2} e^x$.}
+\end{figure}
+\end{document}

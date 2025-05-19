@@ -24,17 +24,63 @@ On dispose d’un pendule élastique horizontal non amorti composé d’un resso
 
 \vspace{0.5cm}
 
+\subsection*{\textcolor{red}{Correction de l'activité}}
+
+\begin{enumerate}
+    \item \textbf{Bilan des forces appliquées à $(S)$} :\\
+    On note $x(t)$ l'abscisse du centre d'inertie $G$ du solide $(S)$ à l'instant $t$, mesurée par rapport à la position d'équilibre.
+
+    \begin{itemize}
+        \item Le solide $(S)$ est soumis à la force de rappel du ressort, proportionnelle à l’allongement $x(t)$ et dirigée vers la position d'équilibre.\\
+        \textcolor{blue}{Donc :} \quad $\vec{F}_{\text{ressort}} = -k x(t) \, \vec{u}$
+
+        \item Il n'y a pas de frottement (hypothèse de l'énoncé).
+    \end{itemize}
+
+    Par le principe fondamental de la dynamique (PFD) appliqué au solide $(S)$ dans le repère $(O,\vec{u})$ :
+    \[
+    m \, \ddot{x}(t) = -k x(t)
+    \]
+
+    \item \textbf{Équation du mouvement du solide $(S)$} :\\
+    On obtient l'équation différentielle :
+    \[
+    m \, \ddot{x}(t) + k x(t) = 0
+    \quad \text{ou encore} \quad
+    \ddot{x}(t) + \omega^2 x(t) = 0 \quad \text{où } \omega^2 = \dfrac{k}{m}
+    \]
+
+    Il s’agit d’une EDL linéaire d’ordre 2 à coefficients constants sans second membre, modélisant un oscillateur harmonique non amorti.
+
+    \textbf{Solution générale} :
+    \[
+    x(t) = A \cos(\omega t) + B \sin(\omega t) \quad \text{où } A, B \in \mathbb{R}
+    \]
+
+    \textbf{Conditions initiales} :\\
+    Si le solide est relâché avec une vitesse initiale $v$ et une position initiale $x(0) = x_0$, alors :
+    \[
+    x(0) = A = x_0 \quad \text{et} \quad \dot{x}(0) = B \omega = v \Rightarrow B = \dfrac{v}{\omega}
+    \]
+
+    D’où la solution particulière :
+    \[
+    \boxed{x(t) = x_0 \cos(\omega t) + \dfrac{v}{\omega} \sin(\omega t)}
+    \]
+\end{enumerate}
+
+
 \section*{\textcolor{red}{II. \underline{Définitions et exemples}}}
 
 \begin{itemize}
     \item On appelle \textbf{équation différentielle linéaire (EDL)}, toute équation qui met en relation une fonction $f$ avec une ou plusieurs de ses dérivées. \textcolor{blue}{\underline{Résoudre}} ou \textcolor{blue}{\underline{intégrer}} une telle équation c’est donc déterminer l’expression de $f(x)$ qui constitue l’inconnue à rechercher. Une EDL admet toujours une infinité de solutions mais une seule des solutions vérifie $f(x_0)=y_0$
     
-    \item \textbf{\textcolor{red}{Exemple :}} $(E_1) : f''(x) - f'(x) + 2f(x) = 0$ ; $(E_2) : f''(x) + 2f(x) = x^2 + 1$ etc.
+    \item \textbf{\textcolor{red}{Exemple :}} $(E_1) : f''(x) - f'(x) + 2f(x) = 0$ ; $(E_2) : f'(x) + 2f(x) = x^2 + 1$ etc.
     
     \item Comme $y = f(x)$ ; on notera plus souvent $y' = f'(x)$ et $y'' = f''(x)$.\\
     Ainsi les équations précédentes s’écrivent : 
     \[
-        (E_1) : y'' - y' + 2y = 0 \quad \text{et} \quad (E_2) : y'' + 2y = x^2 + 1
+        (E_1) : y'' - y' + 2y = 0 \quad \text{et} \quad (E_2) : y' + 2y = x^2 + 1
     \]
     
     \item Si la dérivée $n^{\text{ième}}$ figure dans l’équation, on dit que l’EDL est d’ordre $n$.\\
@@ -45,13 +91,11 @@ On dispose d’un pendule élastique horizontal non amorti composé d’un resso
 \subsection*{1. \textcolor{red}{EDL sans second membre}}
 
 \subsubsection*{\textcolor{red}{a. EDL d’ordre 1 sans second membre}}
-Une EDL d’ordre 1 sans second membre est une équation de la forme : 
-\[
-\textcolor{yellow}{ay' + by = 0} ;
-\]
+Une EDL d’ordre 1 sans second membre est une équation de la forme : \(\textcolor{red}{ay' + by = 0} ;\)
+
 $a$ et $b$ sont des réels avec $a \neq 0$. Les solutions d’une telle équation sont de la forme : 
 \[
-\boxed{f(x) = Ae^{-\frac{b}{a}x}} \quad \text{où } A \in \mathbb{R}.
+\boxed{f(x) = Ke^{-\frac{b}{a}x}} \quad \text{où } K \in \mathbb{R}.
 \]
 
 \textbf{\textcolor{red}{Exemple}}\\
@@ -70,9 +114,6 @@ Pour résoudre une telle équation, on considère l’équation du second degré
 \boxed{(EC) : ar^2 + br + c = 0}
 \]
 appelée \textit{Équation caractéristique} puis on détermine son discriminant.
-
-\vspace{0.3cm}
-Si $\Delta = 0$ ; alors $(EC)$ admet une solution double $r_0$ et les solutions de l’EDL sont de la forme :
 
 \vspace{0.5cm}
 

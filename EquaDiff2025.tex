@@ -13,23 +13,21 @@ minimum size=1.2em,inner sep=0] (char) {#1};}}
 minimum size=1.2em,inner sep=0] (char) {#1};}}
 \setlist[enumerate,1]{label=\protect\circitem{\arabic*}}
 \setlist[enumerate,2]{label=\protect\boxitem{\alph*}}
-%%%::::::by chnini ameur :::::::%%%
 \everymath{\displaystyle}
 \usepackage[left=1cm,right=1cm,top=1cm,bottom=1.7cm]{geometry}
 \usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
 \usepackage{array,multirow}
 \usepackage[most]{tcolorbox}
 \usepackage{varwidth}
-\usepackage{float} %pour utiliser l'option [H] qui force l'image à apparaître exactement à l'endroit où elle est placée dans le code.
+\usepackage{float}
 \tcbuselibrary{skins,hooks}
 \usetikzlibrary{patterns}
-%%%::::::by chnini ameur :::::::%%%
+
 \newtcolorbox{exa}[2][]{enhanced,breakable,before skip=2mm,after skip=5mm,
 colback=yellow!20!white,colframe=black!20!blue,boxrule=0.5mm,
 attach boxed title to top left ={xshift=0.6cm,yshift*=1mm-\tcboxedtitleheight},
 fonttitle=\bfseries,
 title={#2},#1,
-% varwidth boxed title*=-3cm,
 boxed title style={frame code={
 \path[fill=tcbcolback!30!black]
 ([yshift=-1mm,xshift=-1mm]frame.north west)
@@ -45,11 +43,9 @@ middle color = tcbcolback!80!black]
 [sharp corners]-- cycle;
 },interior engine=empty,
 },interior style={top color=yellow!5}}
-%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{fancyhdr}
-\usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
-% Commande pour ajouter du texte en arrière-plan
+\usepackage{eso-pic}
 \usepackage{tkz-tab}
 \AddToShipoutPicture{
     \AtTextCenter{%
@@ -62,20 +58,13 @@ middle color = tcbcolback!80!black]
 \renewcommand{\footrulewidth}{1pt}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footruleskip}{10pt}
-\fancyfoot[R]{
-\color{blue}\ding{45}\ \textbf{2025}
-}
-\fancyfoot[L]{
-\color{blue}\ding{45}\ \textbf{Prof:M. BA}
-}
-\cfoot{\bf
-\thepage /
-\pageref{LastPage}}
+\fancyfoot[R]{\color{blue}\ding{45}\ \textbf{2025}}
+\fancyfoot[L]{\color{blue}\ding{45}\ \textbf{Prof : M. BA}}
+\cfoot{\bf \thepage / \pageref{LastPage}}
 
 \newcommand{\exo}[1]{%
         \textbf{\underline{Exercice #1}}
 }
-
 
 \begin{document}
 \renewcommand{\arraystretch}{1.5}
@@ -83,48 +72,223 @@ middle color = tcbcolback!80!black]
 \begin{tikzpicture}[overlay,remember picture]
     \node[draw=blue,line width=1.2pt,fill=purple,text=blue,inner sep=3mm,rounded corners,pattern=dots]at ([yshift=-2.5cm]current page.north) {\begingroup\setlength{\fboxsep}{0pt}\colorbox{white}{\begin{tabular}{|*1{>{\centering \arraybackslash}p{0.28\textwidth}} |*2{>{\centering \arraybackslash}p{0.2\textwidth}|} *1{>{\centering \arraybackslash}p{0.19\textwidth}|} }
                 \hline
-                \multicolumn{3}{|c|}{$\diamond$$\diamond$$\diamond$\ \textbf{Lycée de Dindéfélo}\ $\diamond$$\diamond$$\diamond$ } & \textbf{A.S. : 2024/2025}                                              \\ \hline
-                \textbf{Matière: Mathématiques}                                                                                    & \textbf{Niveau : 1}\textbf{S2} & \textbf{Date: 29/04/2025} & \textbf{} \\ \hline
+                \multicolumn{3}{|c|}{$\diamond$$\diamond$$\diamond$\ \textbf{Lycée de Dindéfélo}\ $\diamond$$\diamond$$\diamond$ } & \textbf{A.S. : 2024/2025} \\ \hline
+                \textbf{Matière : Mathématiques} & \textbf{Niveau : T S2} & \textbf{Date : 27/05/2025} & \textbf{} \\ \hline
                 \multicolumn{4}{|c|}{\parbox[c]{10cm}{\begin{center}
-                                                                  \textbf{{\Large\sffamily Td Dérivée et Application}}
-                                                              \end{center}}}                                                                                                        \\ \hline
+                  \textbf{{\Large\sffamily TD : Équations différentielles}}
+                \end{center}}} \\ \hline
             \end{tabular}}\endgroup};
 \end{tikzpicture}
 \vspace{3cm}
 
 \begin{multicols}{2}
-\setlength{\columnseprule}{0.1mm} % La largeur de la ligne verticale entre les colonnes
+\setlength{\columnseprule}{0.1mm}
+
 \exo{1} Résoudre les équations différentielles suivantes :
+\begin{multicols}{2}
 \begin{enumerate}[align=left]
-    \item \( \displaystyle  y' - y = 0 \)
-    \item \( \displaystyle 2y' + y = 0 \)
-    \item \( \displaystyle 3y' + \sqrt{2}y = 0 \)
-    \item \( \displaystyle y^{\prime 2} - yy' - 2y^2 = 0 \)
-    \item \( \displaystyle  y'' - 4y' + 3y = 0 \)
-    \item \( \displaystyle  9y'' + 6y' + y = 0 \)
-    \item \( \displaystyle  y'' - 4y' + 13y = 0 \)
-    \item \( \displaystyle 8y'' + y' - 9y = 0 \)
-    \item \( \displaystyle 2y'' - 2\sqrt{2}y' + y = 0 \)
-    \item \( \displaystyle \tfrac{1}{3}y'' - 2y' + 9y = 0 \)
-    \item \( \displaystyle y'' - 4y' + 8y = 0 \)
-    \item \( \displaystyle y'' + 4y = 0 \)
+    \item \( y' - y = 0 \)
+    \item \( 2y' + y = 0 \)
+    \item \( 3y' + \sqrt{2}y = 0 \)
+    \item \( y^{\prime 2} - yy' - 2y^2 = 0 \)
+    \item \( y'' - 4y' + 3y = 0 \)
+    \item \( 9y'' + 6y' + y = 0 \)
+    \item \( y'' - 4y' + 13y = 0 \)
+    \item \( 8y'' + y' - 9y = 0 \)
+    \item \( 2y'' - 2\sqrt{2}y' + y = 0 \)
+    \item \( \tfrac{1}{3}y'' - 2y' + 9y = 0 \)
+    \item \( y'' - 4y' + 8y = 0 \)
+    \item \( y'' + 4y = 0 \)
 \end{enumerate}
-\exo{2}
-Résoudre dans chacun des cas suivants l’équation différentielle proposée, puis déterminer la solution particulière satisfaisant aux conditions initiales données.
+\end{multicols}
+
+\exo{2} Résoudre dans chacun des cas suivants l’équation différentielle proposée, puis déterminer la solution particulière satisfaisant aux conditions initiales données.
+\begin{enumerate}
+    \item \( y' - 3y = 0 \ ;\ y(0) = -3 \)
+    \item \( 3y' + 5y = 0 \ ;\ y(3) = 5 \)
+    \item \( y'' - 2y' + y = 0 \ ;\ y(0) = y'(0) = 2 \)
+    \item \( y'' - 4y' + 3y = 0 \ ;\ y(0) = 6 ;\ y'(0) = 10 \)
+    \item \( 4y'' + 9y = 0 \ ;\ y(\pi) = 1 ;\ y'(\pi) = 0 \)
+    \item \( y'' + 6y' + 9y = 0 \ ;\ y(0) = y'(0) = 1 \)
+    \item \( y'' + y = 0 \ ;\ y(0) = 1 ;\ y'(0) = 0 \)
+    \item \( y'' - (\ln x)^2 y = 0 \ ;\ y(0) = 1 ;\ y'(2) = 1 \)
+\end{enumerate}
+
+\exo{3} Donner les solutions générales des équations différentielles suivantes après avoir trouvé leurs solutions particulières sous la forme indiquée :
+\begin{enumerate}
+    \item \( y'' + 2y' - 3y = \cos x \quad ;\quad f(x) = a \cos x + b \sin x \)
+    \item \( y'' - 2y' + 3y = e^{-x} \cos x \quad ;\quad f(x) = e^{-x}(a \cos x + b \sin x) \)
+    \item \( y'' + y' - 2y = \sin x \quad ;\quad f(x) = a \cos x + b \sin x \)
+    \item \( y'' + y' + y = xe^{-x} \quad ;\quad f(x) = (ax^2 + bx + c)e^{-x} \)
+\end{enumerate}
+
+\vspace{1em}
+
+\exo{4}
+\begin{enumerate}
+    \item Résoudre dans \( \mathbb{R} \) l’équation différentielle \( (E_0) : y'' - 2y' + y = 0 \).
+    \item Soit l’équation différentielle \( (E) : y'' - 2y' + y = x^2 - 4x + 2 \). Vérifier que le polynôme \( h(x) = x^2 \) est une solution particulière de \( (E_0) \).
+    \item
+    \begin{enumerate}
+        \item Montrer que si \( f \) est une solution, alors \( g \) telle que \( g = f - h \) est une solution de \( (E_0) \).
+    
+        \item Réciproquement, montrer que si \( g \) est une solution de \( (E_0) \), alors la fonction \( f \) telle que \( f = g + h \) est solution de \( (E) \).
+    
+        \item En déduire la générale des solutions de \( (E) \).
+    \end{enumerate}
+    \item En déduire une solution de \( (E) \) satisfaisant à la condition \( f(1) = 1 \) et \( f'(1) = 0 \).
+\end{enumerate}
+
+
+\vspace{1em}
+
+\exo{5}
+
+Soit l’équation différentielle : \(y'' + 4y' + 8y = 20 \sin 2x + 10 \cos 2x.\)
 
 \begin{enumerate}
-    \item \( \displaystyle y' - 3y = 0 \quad ; \quad y(0) = -3 \)
-    \item \( \displaystyle 3y' + 5y = 0 \quad ; \quad y(3) = 5 \)
-    \item \( \displaystyle y'' - 2y' + y = 0 \quad ; \quad y(0) = y'(0) = 2 \)
-    \item \( \displaystyle y'' - 4y' + 3y = 0 \quad ; \quad y(0) = 6 \text{ et } y'(0) = 10 \)
-    \item \( \displaystyle 4y'' + 9y = 0 \quad ; \quad y(\pi) = 1 \text{ et } y'(\pi) = 0 \)
-    \item \( \displaystyle y'' + 6y' + 9y = 0 \quad ; \quad y(0) = y'(0) = 1 \)
-    \item \( \displaystyle y'' + y = 0 \quad ; \quad y(0) = 1 \text{ et } y'(0) = 0 \)
-    \item \( \displaystyle y'' - (\ln x)^2 y = 0 \quad ; \quad y(0) = 1 \text{ et } y'(2) = 1 \)
+    \item Résoudre l’équation différentielle  \( y'' + 4y' + 8y = 0 \quad (E').\)
+    
+    \item Déterminer les réels \( a \) et \( b \) tels que la fonction \( g \) définie par : \(    g(x) = a \cos 2x + b \sin 2x\)
+    est solution de \( (E) \).
+    
+    \item Démontrer que \( f \) est solution de \( (E) \) si et seulement si \( f - g \) est solution de \( (E') \).
+    \item Donner la solution générale de \( (E) \).
+\end{enumerate}
+\exo{6}
+Soit \( f \) la solution de l’équation différentielle \( y' - 2y = 0 \), vérifiant \( f(0) = 1 \).
+
+\begin{enumerate}
+    \item Déterminer \( f(x) \) pour tout réel \( x \).
+    
+    \item Déterminer les réels \( a \) et \( b \) tels que la fonction \( g(x) = (ax + b)f(x) \) soit solution de l’équation différentielle \( y' - 2y = e^{2x} \) et vérifiant \( g(0) = 1 \).
+    
+    \item Déduisez-en sans intégration par parties la valeur des intégrales :  
+    \( I = \int_{0}^{1} (x + 1)e^{2x} \, dx \quad \) et \( \quad J = \int_{0}^{1} (2x + 1)e^{2x} \, dx \)
 \end{enumerate}
 
-\exo{3}
+\vspace{0.5cm}
 
+\exo{7} \textbf{BAC 2009}
+
+\begin{enumerate}
+    \item Résoudre l’équation différentielle\\ \( (E) :\quad y'' + 2y' + y = 0 \)
+    
+    \item Soit \( (E') \) l’équation différentielle\\ \( y'' + 2y' + y = x + 3 \).\\
+    Déterminer les réels \( a \) et \( b \) tels que la fonction \( h(x) = ax + b \) soit solution de \( (E') \).
+    \begin{enumerate}
+        \item Démontrer que \( g \) est solution de \( (E') \) si et seulement si \( g - h \) est solution de \( (E) \).
+        \item Résoudre alors \( (E') \).
+    \end{enumerate}
+    
+    \item Soit la fonction \( k \) définie par :\\ \( k(x) = (x + 2)e^{-x} \)
+    \begin{enumerate}
+        \item Étudier les variations de \( k \).
+        \item Déterminer l’équation de la tangente \( (T) \) à la courbe \( (C_k) \) de \( k \) au point d’abscisse 0.
+        \item Démontrer que le point \( I(0;2) \) est un point d’inflexion de la courbe \( (C_k) \).
+        \item Tracer \( (C_k) \) et \( (T) \) dans le même repère orthonormé \( (0,\vec{i},\vec{j}) \).
+    \end{enumerate}
+\end{enumerate}
+
+\exo{8} \textbf{BAC 2008}
+
+\begin{enumerate}
+    \item Soient les équations différentielles \\ 
+    \( (E_0) : y' + y = 0 \quad \text{et} \quad (E) : y' + y = e^{-x} \cos x \).
+    \begin{enumerate}
+        \item Déterminer les réels \( a \) et \( b \) tels que la fonction \( h \) définie par : \\ 
+        \( h(x) = e^{-x}(a \cos x + b \sin x) \) soit solution de \( (E) \).
+        
+        \item Démontrer que \( f \) est solution de \( (E) \) si et seulement si \( f - h \) est solution de \( (E_0) \).
+        
+        \item Résoudre \( (E_0) \).
+        
+        \item Déduire des questions précédentes la solution générale de \( (E) \).
+        
+        \item Déterminer la solution \( g \) de \( (E) \) telle que \( g(0) = 0 \).
+    \end{enumerate}
+    
+    \item Soit \( I(x) = e^{-x} \sin x \).
+    \begin{enumerate}
+        \item Exprimer \( \cos\left(x + \dfrac{\pi}{4}\right) \) en fonction de \( \cos x \) et \( \sin x \).
+        
+        \item Étudier les variations de \( I \) sur \( [0\,;\,2\pi[ \).
+        
+        \item Calculer \( \int_0^{\frac{\pi}{4}} I(x) \, dx \).
+        
+        \item En déduire la valeur de \( \int_0^{\frac{\pi}{4}} e^{-x} \cos x \, dx \)  
+        sans utiliser la technique d’intégration par parties.
+    \end{enumerate}
+\end{enumerate}
+
+\exo{9} \\
+
+\textbf{Partie A :}\\
+Soit \( (E) : y'' + 3y' + 2y = \dfrac{x - 1}{x^2} e^{-x} \), \( x \ne 0 \).
+
+\begin{enumerate}
+    \item Vérifier que \( h(x) = e^{-x} \ln x \) est solution de \( (E) \).
+    
+    \item Montrer que \( f \) est solution de \( (E) \) si et seulement si \( f - h \) est solution de  \\
+    \( (E') : y'' + 3y' + 2y = 0 \).
+    
+    \item Résoudre \( (E') \) puis \( (E) \).
+    
+    \item Trouver la solution de \( (E) \) dont la courbe passe par \( A(1 ; e^{-1}) \) et admet en ce point une tangente parallèle à l’axe \( (Ox) \).
+\end{enumerate}
+
+\vspace{0.3cm}
+
+\textbf{Partie B :} Soit la fonction \( f \) définie par :
+
+\( f(x) =
+\begin{cases}
+e^{-x}(1 + \ln x) - e^{-1} & \text{si } x \geq 1 \\
+(1 - x)e^{-\frac{1}{1 - x}} & \text{si } x < 1
+\end{cases} \)
+
+\begin{enumerate}
+    \item Vérifier que \( f \) est définie sur \( \mathbb{R} \) et calculer les limites aux bornes.
+    
+    \item Étudier la continuité de \( f \) en 1.
+    
+    \item 
+    \begin{enumerate}
+        \item Montrer que \( \forall x \in ]1 ; +\infty[ \),\\  
+        \( \dfrac{f(x) - f(1)}{x - 1} = e^{-x} \left( \dfrac{1 - e^{x-1}}{x - 1} + \dfrac{\ln x}{x - 1} \right) \).
+        
+        \item Étudier la dérivabilité de \( f \) en 1. Interpréter.
+    \end{enumerate}
+\end{enumerate}
+
+\vspace{0.3cm}
+
+\textbf{Partie C :} Soit la fonction \( g \) définie par\\  
+\( g(x) = -\ln x + \dfrac{2}{x} - 1 \).
+
+\begin{enumerate}
+    \item Dresser le tableau de variation de \( g \).
+    
+    \item Calculer \( g(1) \) et préciser le signe de \( g(x) \).
+    
+    \item
+    \begin{enumerate}
+        \item Calculer \( f'(x) \) sur les intervalles où \( f \) est dérivable.
+        
+        \item Étudier le signe de \( f'(x) \) et dresser le tableau de variations de \( f \).
+    \end{enumerate}
+    
+    \item
+    \begin{enumerate}
+        \item Donner la nature de la branche infinie en \( +\infty \).
+        
+        \item Montrer que \( (\Delta) : y = 1 - x \) est une asymptote à \( (C_f) \) en \( -\infty \).
+        
+        \item Étudier la position relative de \( (C_f) \) par rapport à \( (\Delta) \) sur \( ] -\infty\,;\,1[ \).
+    \end{enumerate}
+    
+    \item Tracer \( (C_f) \) dans un repère orthonormé \( (O,\vec{i},\vec{j}) \) unité \( 1\,\text{cm} \).
+\end{enumerate}
 \end{multicols}
 
 \end{document}

@@ -11,7 +11,17 @@
 \usepackage{multirow}
 \usepackage{diagbox}
 \usepackage{pgfplots}
+\usepackage{eso-pic} % ← NÉCESSAIRE POUR \AddToShipoutPicture
 \geometry{margin=2cm}
+
+% Filigrane avec signature
+\AddToShipoutPicture{
+  \AtPageCenter{%
+    \makebox(0,0){%
+      \rotatebox{60}{\textcolor[gray]{0.9}{\fontsize{4cm}{4cm}\selectfont PGB}}%
+    }
+  }
+}
 
 \begin{document}
 

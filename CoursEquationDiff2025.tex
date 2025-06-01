@@ -1,14 +1,36 @@
-\documentclass[12pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[french]{babel}
-\usepackage{amsmath, amssymb}
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath, amssymb, mathrsfs}
 \usepackage{xcolor}
-\usepackage{enumitem}
+\usepackage{colortbl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{yhmath}
 \usepackage{tcolorbox}
-\usepackage{geometry}
-\geometry{a4paper, margin=2.5cm}
-
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{tkz-tab}
+\usepackage{multicol}
+\usepackage[top=1.8cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
+% Commande pour ajouter du texte en arrière-plan
+\AddToShipoutPicture{
+    \AtTextCenter{%
+        \makebox[0pt]{\rotatebox{80}{\textcolor[gray]{0.7}{\fontsize{5cm}{5cm}\selectfont PGB}}}
+    }
+}
 \begin{document}
+\small
+
+% En-tête personnalisée
+\begin{center}
+    \Large\textbf{\underline{ÉQUATIONS DIFFÉRENTIELLES}}\\[-0.1cm]
+    \normalsize\textbf{Prof : M. BA} \hfill \textbf{Classe : Ts}\\[-0.1cm]
+    \textbf{Année scolaire : 2024 -- 2025}
+\end{center}
 
 \begin{center}
     \fcolorbox{red}{white}{\textbf{\textcolor{red}{CHAP 9 : ÉQUATIONS DIFFÉRENTIELLES}}}
@@ -184,5 +206,87 @@ Soit l’équation différentielle $(E) : y' - 2y = xe^x$
     \item En déduire toutes les solutions de $(E)$.
     \item Déterminer la solution de $(E)$ qui s’annule en $0$.
 \end{enumerate}
+\textbf{\textcolor{red}{Correction}}\\
 
+Soit l’équation différentielle \((E) : y' - 2y = xe^x\)
+
+\begin{enumerate}
+    \item \textbf{Déterminer les réels \(a\) et \(b\) pour que la fonction \(u(x) = (ax + b)e^x\) soit une solution de \((E)\).}
+
+    On pose \(u(x) = (ax + b)e^x\).\\
+
+    Calculons sa dérivée :
+    \[
+    u'(x) = \left[(ax + b)e^x\right]' = a e^x + (ax + b) e^x = (a + ax + b) e^x
+    \]
+
+    Donc :
+    \[
+    u'(x) - 2u(x) = (a + ax + b)e^x - 2(ax + b)e^x = (a - ax - b)e^x
+    \]
+
+    On veut que \(u'(x) - 2u(x) = xe^x\), donc :
+    \[
+    (a - ax - b)e^x = xe^x \Rightarrow a - ax - b = x
+    \]
+
+    Égalité entre deux polynômes :
+    \[
+    -a x + (a - b) = x
+    \]
+
+    Identification des coefficients :
+    \[
+    \begin{cases}
+    -a = 1 \Rightarrow a = -1 \\
+    a - b = 0 \Rightarrow -1 - b = 0 \Rightarrow b = -1
+    \end{cases}
+    \]
+
+    \textbf{Donc \(a = -1\) et \(b = -1\).}
+
+    \item \textbf{En déduire toutes les solutions de \((E)\).}
+
+    L’équation différentielle est linéaire du premier ordre.\\
+    L’ensemble des solutions est donné par :
+    \[
+    y(x) = y_p(x) + y_h(x)
+    \]
+
+    - Une solution particulière est \(y_p(x) = (-x - 1)e^x\) \\
+    - L’équation homogène associée est \(y' - 2y = 0\), dont la solution générale est \(y_h(x) = Ce^{2x}\)
+
+    \textbf{Toutes les solutions de \((E)\) sont donc :}
+    \[
+    \boxed{y(x) = (-x - 1)e^x + Ce^{2x}, \quad C \in \mathbb{R}}
+    \]
+
+    \item \textbf{Déterminer la solution de \((E)\) qui s’annule en \(x = 0\).}
+
+    On cherche \(C\) tel que \(y(0) = 0\).
+
+    \[
+    y(0) = (-0 - 1)e^0 + Ce^{0} = -1 + C
+    \]
+
+    On veut \(y(0) = 0\), donc :
+    \[
+    -1 + C = 0 \Rightarrow C = 1
+    \]
+
+    \textbf{La solution de \((E)\) qui s’annule en \(x = 0\) est donc :}
+    \[
+    \boxed{y(x) = (-x - 1)e^x + e^{2x}}
+    \]
+\end{enumerate}
+\begin{tcolorbox}[colframe=black, colback=gray!5, title=NB.]
+Soit une équation différentielle linéaire homogène de la forme :
+\[
+y' + a(x)y = 0
+\]
+Si \(u(x)\) et \(v(x)\) sont deux solutions de cette équation, alors \(u(x) + v(x)\) est aussi une solution.
+\end{tcolorbox}
+\begin{tcolorbox}[colframe=black, colback=gray!5, title=NB.]
+Si $u_{1}$ et $u_{1}$ sont deux solutions particulières de la même équation différentielle non homogène, alors $u_{1}+u_{1}$ n’est pas forcément solution.
+\end{tcolorbox}
 \end{document}
